@@ -1,0 +1,19 @@
+# Theme metadata
+name = "jim"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#268bd2"
+
+# Menu
+menu_primary = "#fdf6e3"
+menu_text = "#2aa198"
+menu_text_active = "#d33682"
+menu_title = "#dc322f"
+
+# Backgrounds
+background = "#fdf6e3"
+home_section_odd = "#fdf6e3"
+home_section_even = "#fdf6e3"

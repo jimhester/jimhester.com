@@ -3,5 +3,5 @@ header:
   caption: ""
   image: ""
 title: All Talks & Workshops
-view: 3
+view: 2
 ---
