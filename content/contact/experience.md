@@ -17,59 +17,41 @@ date_format = "January 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
 [[experience]]
-  title = "Data Scientist & Professional Educator"
+  title = "Software Engineer"
   company = "RStudio"
   company_url = "https://www.rstudio.com/"
-  location = "Oregon"
-  date_start = "2018-10-22"
+  location = "Remote - Cleveland, Ohio"
+  date_start = "2016-01-01"
   date_end = ""
-  description = """
-  """
-
-[[experience]]
-  title = "Associate Professor, Pediatrics"
-  company = "Oregon Health & Science University"
-  company_url = "https://www.ohsu.edu/"
-  location = "Portland, Oregon"
-  date_start = "2017-07-01"
-  date_end = "2018-10-19"
-  description = """ """
-  
-[[experience]]
-  title = "Assistant Director, Center for Spoken Language Understanding"
-  company = "Oregon Health & Science University"
-  company_url = "https://www.ohsu.edu/"
-  location = "Portland, Oregon"
-  date_start = "2017-09-01"
-  date_end = "2018-10-19"
   description = """ """
 
 [[experience]]
-  title = "Assistant Professor, Pediatrics"
-  company = "Oregon Health & Science University"
-  company_url = "https://www.ohsu.edu/"
-  location = "Portland, Oregon"
-  date_start = "2012-01-01"
-  date_end = "2017-06-30"
+  title = "System Analyst/Programmer III"
+  company = "Fred Hutch, Bioconductor core team"
+  company_url = "https://bioconductor.org"
+  location = "Remote - Cleveland, Ohio"
+  date_start = "2015-02-01"
+  date_end = "2015-12-31"
   description = """ """
   
 [[experience]]
-  title = "Senior Research Associate"
-  company = "Oregon Health & Science University"
-  company_url = "https://www.ohsu.edu/"
-  location = "Portland, Oregon"
-  date_start = "2010-03-01"
-  date_end = "2011-12-31"
+  title = "Data Scientist - Analytics"
+  company = "Explorys, Inc."
+  company_url = "https://www.explorys.com/"
+  location = "Cleveland, Ohio"
+  date_start = "2013-10-01"
+  date_end = "2015-01-31"
   description = """ """
-  
+
 [[experience]]
-  title = "Assistant Research Professor"
-  company = "Arizona State University"
-  company_url = "https://www.asu.edu/"
-  location = "Tempe, Arizona"
-  date_start = "2008-08-01"
-  date_end = "2010-02-01"
+  title = "Program Analyst"
+  company = "Cleveland Clinic"
+  company_url = "https://www.ccf.org/"
+  location = "Cleveland, Ohio"
+  date_start = "2008-06-01"
+  date_end = "2013-09-30"
   description = """ """
 
 +++

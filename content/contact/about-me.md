@@ -30,7 +30,7 @@ subtitle = ""
   
   # Background image.
   image = ""  # Name of image in `static/img/`.
-  image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+  image_darken = 0.0  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
 
   # Text color (true=light or false=dark).
   text_color_light = false
@@ -49,20 +49,31 @@ subtitle = ""
 
 
 
+I have lived in northeast Ohio for over 25 years and have long had an interest
+in computers and programming, starting with writing programs in BASIC on our
+family's IBM PS/1. I have also long had an interest in biology, particularly
+genetics. Combining my two interests led me to pursue Bioinformatics, where I
+worked at the Cleveland Clinic.
 
 
-I am originally from Atlanta, Georgia, and am a proud ramblin' wreck from [Georgia Tech](https://www.gatech.edu/). After college, I studied psychology and quantitative methods, receiving my Ph.D. from [Vanderbilt University](https://www.vanderbilt.edu/) (2008). I am now a data scientist and professional educator at [RStudio](https://www.rstudio.com/). Prior to that, I was an Assistant Professor at [Arizona State University](https://www.asu.edu/), and an Associate Professor at [Oregon Health & Science University (OHSU)](https://www.ohsu.edu/xd/).
+My [research at CCF](http://orcid.org/0000-0002-2739-7082) focused
+on using high-throughput sequencing to study a variety of issues, such as
+maternal obesity in mice, microbial populations in the Cuyahoga river, and
+Plasmodium Vivax malaria.
 
-<img src="maps.jpg" class="center-block" alt="OHSU Research Week Poster" style="width:60%;height:60%;">
+Since joining RStudio I have given a number of [talks](TODO) about R and R
+packages, which has allowed my to travel to Europe and Australia, as well as
+throughout the United States.
 
+<img src="jim-kangaroo.jpg" class="center-block" alt="OHSU Research Week Poster" style="width:60%;height:60%;">
 
+While at the Cleveland Clinic, I became an avid user of the statistical
+programming language R, using it to process, visualize, model and report our
+data. I also began writing R packages and contributing to open source packages
+on GitHub. I enjoyed working with open source software and being part of the R
+community, so looked for opportunities that allowed me to continue to do so,
+which eventually landed me at RStudio. You can follow my current work [on GitHub]
+(https://github.com/jimhester).
 
-My [research](https://profiles.impactstory.org/u/0000-0002-8082-1890) focused on health-related applications of Natural Language Processing-based methods, and was funded by the National Institutes of Health, the Oregon Clinical and Translational Research Institute, and Autism Speaks. I have written numerous scientific [publications](/publication) on autism and neurodevelopmental disorders and have presented my research at over 25 international conferences.
-
-<img src="students.jpg" class="center-block" alt="OHSU Research Week Poster" style="width:60%;height:60%;">
-
-While at OHSU, I became an avid user of the statistical programming language R, both in the lab as a Principal Investigator and in the classroom as a professor. I developed a passion for programming and education, and during my tenure at OHSU I developed and taught multiple graduate-level [data science courses](/categories/course/) and [workshops](/categories/workshop/). I also trained the [Office of Research Impact at the Oregon Clinical & Translational Research Institute](https://www.ohsu.edu/xd/research/centers-institutes/octri/) to use R, and consulted with the University of Oregon College of Education on the development of a [graduate data science specialization track](https://education.uoregon.edu/). I received an [Excellence in Education award](https://www.ohsu.edu/school-of-medicine/honors-and-awards-ceremony-2018-school-medicine) from OHSU in 2018.
-
-You can follow my current work for [RStudio Education on GitHub](https://github.com/rstudio-education). In my free time, I love spending time with my family and my two-year-old daughter. Thank you so much for reading.
-
-
+In my free time, I love spending time with my family, my two daughters and my
+dog.
