@@ -52,8 +52,8 @@ subtitle = ""
 I have lived in northeast Ohio for over 25 years and have long had an interest
 in computers and programming, starting with writing programs in BASIC on our
 family's IBM PS/1. I have also long had an interest in biology, particularly
-genetics. Combining my two interests led me to pursue Bioinformatics, where I
-worked at the Cleveland Clinic.
+genetics. Combining my two interests led me to pursue bioinformatics and a job
+as a Program Analyst at the the Cleveland Clinic.
 
 
 My [research at CCF](http://orcid.org/0000-0002-2739-7082) focused
@@ -61,19 +61,20 @@ on using high-throughput sequencing to study a variety of issues, such as
 maternal obesity in mice, microbial populations in the Cuyahoga river, and
 Plasmodium Vivax malaria.
 
-Since joining RStudio I have given a number of [talks](TODO) about R and R
-packages, which has allowed my to travel to Europe and Australia, as well as
-throughout the United States.
-
-<img src="jim-kangaroo.jpg" class="center-block" alt="OHSU Research Week Poster" style="width:60%;height:60%;">
-
 While at the Cleveland Clinic, I became an avid user of the statistical
 programming language R, using it to process, visualize, model and report our
 data. I also began writing R packages and contributing to open source packages
 on GitHub. I enjoyed working with open source software and being part of the R
 community, so looked for opportunities that allowed me to continue to do so,
-which eventually landed me at RStudio. You can follow my current work [on GitHub]
-(https://github.com/jimhester).
+which eventually landed me at RStudio.
+
+Since joining RStudio I have given a number of [talks and workshops](/talks) about R and R
+packages, which has allowed my to travel to Europe and Australia, as well as
+throughout the United States.
+
+<img src="jim-kangaroo.jpg" class="center-block" alt="OHSU Research Week Poster" style="width:60%;height:60%;">
 
 In my free time, I love spending time with my family, my two daughters and my
 dog.
+
+You can follow my current work [on GitHub] (https://github.com/jimhester).
