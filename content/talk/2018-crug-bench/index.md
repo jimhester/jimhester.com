@@ -29,4 +29,4 @@ tags: [talk, r, bench]
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/YTX_eDBhzC0?start=2045" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<script async class="speakerdeck-embed" data-id="70f794a655aa42b09cfce4780fab8871" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="//speakerdeck.com/player/70f794a655aa42b09cfce4780fab8871" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>

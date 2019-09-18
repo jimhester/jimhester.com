@@ -38,4 +38,4 @@ links:
 tags: [talk, r]
 ---
 
-<script async class="speakerdeck-embed" data-id="39abda396d6d4adaa4d545f89f7640a5" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="//speakerdeck.com/player/39abda396d6d4adaa4d545f89f7640a5" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>
