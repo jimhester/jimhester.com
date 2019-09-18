@@ -2,7 +2,7 @@
 title: devtools
 date: 2011-06-22T22:30:00Z
 authors: [Hadley Wickham, jim, Winston Chang]
-summary: Tools for package development
+summary: Tools to Make Developing R Packages Easier
 image:
   caption: '[Photo by Hunter Haley on Unsplash](https://unsplash.com/photos/wEJK4q_YlNQ)'
   focal_point: Center
