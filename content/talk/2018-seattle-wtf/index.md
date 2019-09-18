@@ -1,7 +1,7 @@
 ---
 aliases: [wtf]
 authors: [Jenny Bryan, jim]
-project: [wtf]
+projects: [wtf]
 abstract_short: ""
 abstract: >
   This is a two-day hands on workshop designed for experienced R and RStudio

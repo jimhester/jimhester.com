@@ -1,6 +1,6 @@
 ---
 aliases: [r-pkgs-crug]
-projects: [devtools]
+projects: [devtools, pkg-dev]
 authors: [jim]
 abstract_short: ""
 abstract: >

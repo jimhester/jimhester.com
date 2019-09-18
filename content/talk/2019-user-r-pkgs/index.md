@@ -1,7 +1,7 @@
 ---
 aliases: [r-pkg-workshop]
 authors: [Jenny Bryan, jim, Hadley Wickham]
-projects: [devtools]
+projects: [devtools, pkg-dev]
 abstract_short: ""
 abstract: |
   The key to well-documented, well-tested and easily-distributed R
