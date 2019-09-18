@@ -1,0 +1,40 @@
+---
+date: '2012-11-08'
+title: External Git Repositories
+tags: [R]
+comments: true
+---
+
+It is sometimes useful to have git tracking files stored in a different 
+location from your working directory, for instance if you would like to backup 
+the git files, and your working directory contains files which are much too 
+large to back up.  This could be accomplished by using symlinks, however this 
+is a fairly fragile solution.  A more robust solution is that given in [this 
+stackoverflow post][so].
+
+If you already have a git repository you would like to store outside the 
+working directory, say /path/to/repo.git and you are in the working directory
+
+```{r eval = F, engine = 'bash'}
+mv .git /path/to/repo.git
+echo "gitdir: /path/to/repo.git" > .git
+git config --add worktree `pwd -P`
+```
+
+This will move the .git folder to the new location, create a .git file pointing 
+to the new location, and update the git configuration to point to the current 
+working directory.  Everything will then work exactly as it did before
+
+If you are initializing a new empty repository you can do everything on one 
+line
+
+```{r eval = F, engine = 'bash'}
+git --git-dir=/path/to/repo.git --work.tree=`pwd -P` init && \
+  echo "gitdir: /path/to/repo.git" > .git
+```
+
+This is a very useful tip for keeping track of all of your repositories, and 
+also allows easy backup, as you can just mirror the folder which contains all 
+of them.
+
+[so]: http://stackoverflow.com/questions/505467/can-i-store-the-git-folder-outside-the-files-i-want-tracked

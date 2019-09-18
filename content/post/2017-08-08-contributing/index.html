@@ -1,0 +1,154 @@
+---
+date: '2017-08-08'
+title: Contributing Code to the Tidyverse
+tags: [R]
+comments: true
+---
+
+
+
+<p>Contributing code to open source projects can be intimidating. These projects
+are often widely used and have well known maintainers. Contributing code and
+having it accepted seems an almost insurmountable task.</p>
+<p>However if you follow a few simple strategies you can have your code accepted
+into even the most popular projects in the <a href="https://tidyverse.org">Tidyverse</a>.</p>
+<div id="dont-contribute-code-at-all" class="section level3">
+<h3>Don’t Contribute Code at all</h3>
+<p>The easiest way to contribute to an open source package is not to contribute
+code at all. Find a typo in the documentation, add a reproducible
+example to an open issue without one, post a solution to a question in an
+issue, on <a href="https://twitter.com/search?q=%23rstats">twitter</a> or
+<a href="https://stackoverflow.com/questions/tagged/r">stackoverflow</a>. These types of
+contributions are among the easiest things for maintainers to review and
+accept, so it is a great place to start getting used to the contribution
+process.</p>
+</div>
+<div id="read-contributing.md" class="section level3">
+<h3>Read CONTRIBUTING.md</h3>
+<p>Often projects will have a <code>CONTRIBUTING.md</code> document that has instructions for
+contributing to the project. These are guidelines the maintainers would like
+contributors to adhere to and exist to make the process flow more smoothly. As a
+contributor you should try to make accepting your code as easy as you
+can, this greatly increases the chance your contribution will be accepted.</p>
+</div>
+<div id="explore-previously-merged-contributions" class="section level3">
+<h3>Explore Previously Merged Contributions</h3>
+<p>Next you should read a few previously merged pull requests for additional
+context. If a project does not have a <code>CONTRIBUTING.md</code> (or similar)
+document this is your best source of information on expected practices for
+contributions.</p>
+<p>Things you should look for include how are the commit messages formatted? Are
+any additional files changed apart from the code changes (such as NEWS
+updates)? Do the contributions all include additional test cases? Do internal
+only changes need documentation?</p>
+<p>Read the reviewer comments in the pull request
+to get an idea of what in particular reviewers are looking for. Do they require
+certain code style, variable names or code organization? Are there common
+requests such as adding a note to the NEWS commonly forgotten? If you can
+handle these things <em>before</em> the reviewer even sees your code is greatly
+reduces the friction in merging your changes.</p>
+</div>
+<div id="write-good-commit-messages" class="section level3">
+<h3>Write good commit messages</h3>
+<p>Chris Beams has a great article on <a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit
+Message</a>. If there was one thing
+apart from the code itself that effects how maintainers see your contribution
+the commit message is it. A properly formatted message is a huge indicator of
+high quality acceptable code.</p>
+</div>
+<div id="make-your-changes-as-small-as-possible" class="section level3">
+<h3>Make your changes as <em>small</em> as possible</h3>
+<p>One of the most common mistakes contributors make is to add a complicated new
+feature as their first contribution.</p>
+<p>Accepting code as a maintainer means you
+have to <em>maintain</em> that code in the future, fixing bugs, updating
+documentation, refactoring it as the rest of the code evolves. This means the
+maintainer need to fully understand any code they accept.</p>
+<p>What this means for contributors is they should strive to make their
+contribution as simple to understand as possible. The best way to do this is to
+make the contribution as short and clear as possible, changing as little of the
+existing code as you can. First time contributions is not the time to do major
+restructuring or reformatting of existing code. The best way to check exactly
+what changes you are proposing is to use <code>git diff</code> <em>prior</em> to submitting your
+contribution. This will ensure it contains only the changes necessary for the
+new functionality.</p>
+</div>
+<div id="include-tests" class="section level3">
+<h3>Include tests</h3>
+<p>Contributions with test cases are easier to accept because the tests ensure the
+code does what it intends to do and nothing else. Without tests the maintainer
+needs to check the new functionality by hand, a burden you can lessen or remove
+by including tests. If you are not sure what parts of your code is covered by
+tests <a href="https://cran.r-project.org/package=covr">covr</a> is a great tool to use
+before submission. Just run the following to get a local coverage report of the
+package so you can see exactly what lines are not covered in the project.</p>
+<pre class="r"><code># install.packages(&quot;covr&quot;)
+co &lt;- covr::package_coverage()
+covr::report(co)</code></pre>
+<p>In addition adding tests to parts of the code base that is not currently
+covered is a great way to contribute to a project.</p>
+</div>
+<div id="follow-the-style" class="section level3">
+<h3>Follow the style</h3>
+<p>One of the first barriers to acceptance is coding style. Do not submit a
+contribution using camelCase to a project that uses snake_case, or use tabs
+when the project uses spaces. For Tidyverse projects read the <a href="http://style.tidyverse.org">Style
+Guide</a> and use the
+<a href="https://cran.r-project.org/package=lintr">lintr</a> package to find code which
+does not adhere to the style guide.</p>
+<pre class="r"><code># install.packages(&quot;lintr&quot;)
+lintr::lint_package()</code></pre>
+<p>Remember to include style changes only in code you are contributing. If you
+want to fix style overall in the package that is a great idea, but it should be
+in a separate pull request!</p>
+</div>
+<div id="contribute-to-active-projects" class="section level3">
+<h3>Contribute to active projects</h3>
+<p>Development of Tidyverse projects typically progresses in waves. We work
+intensely on a certain project for a period of time, then let it lie fallow for
+awhile and work on other things. Because of this contributions to projects
+which are not being actively developed may not be addressed for a long length
+of time. This does not mean the contribution is not appreciated, but it does
+mean you have to be patient and when it is reviewed be prompt with a response.</p>
+<p>You can avoid these lengthy wait times by contributing to projects being
+actively developed. Look at the GitHub contributions of members of the
+Tidyverse and times of recent commits of projects to see which are active and
+which are fallow.</p>
+</div>
+<div id="be-attentive-not-pushy" class="section level3">
+<h3>Be attentive, not pushy</h3>
+<p>When a maintainer does review a contribution, try to address the comments in
+short order, your changes are much more likely to be accepted if they
+are addressed in the next day than the next month. In addition occasional
+comments bumping the issue can be useful if changes have been made, but do not
+repeatably ‘ping’ an issue because you feel it is been opened too long without
+acceptance.</p>
+<p>If you absolutely need a feature from a development package an option is to
+install your personal fork with the features included, or even install the
+package directly from the pull request.</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+
+# install from personal fork
+devtools::install(&quot;/path/to/pkg&quot;)
+
+# install from a pull request #123
+devtools::install_github(&quot;tidyverse/glue#123&quot;)</code></pre>
+</div>
+<div id="view-contributing-as-a-relationship-not-a-one-night-stand" class="section level3">
+<h3>View contributing as a relationship, not a one night stand</h3>
+<p>The best way to be successful contributing to open source projects is to do so
+repeatably. This means cultivating trust between yourself and the maintainer by
+multiple contributions. After many small contributions have been successful
+added they will be much more willing to review and accept more substantial
+changes. As with any relationship being polite and considerate is a great way
+to improve trust. If you instead view the contribution as a single interaction
+to add your pet feature you are much less likely to be successful.</p>
+</div>
+<div id="contribute" class="section level3">
+<h3>Contribute!</h3>
+<p>Contributing to open source software will make you a better programmer, gain
+valuable feedback through code review, look great on your resume and increase
+your visibility in the community. It may even get you a job; I am on the
+Tidyverse team today mainly because I was a frequent open source contributor to
+Tidyverse packages over a number of years.</p>
+</div>

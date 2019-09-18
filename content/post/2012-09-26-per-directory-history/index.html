@@ -1,0 +1,46 @@
+---
+date: '2012-09-26'
+title: Per Directory, Cross Server History in ZSH
+tags: [R]
+comments: true
+---
+
+
+
+<p>I do most of my work sshing into linux boxes on the command line. In this
+environment having a nice history of previous commands is of enormous benefit.
+I also use <a href="http://tmux.sourceforge.net">tmux</a> terminal multiplexer to have multiple persistent
+terminal windows. Using bash’s default history with this setup is an excessive
+in frustration. All of the terminal windows have their own history, and the
+history is appended/overwritten when a given window is exited, so your history
+can get hopelessly confused based on the order in which you close your terminal
+sessions. <a href="http://www.zsh.org">zsh</a> has two options which remedy that specific situation
+however.</p>
+<pre class="zsh"><code>setopt inc_append_history
+setopt share_history</code></pre>
+<p>This allows history items from different shells to be interleaved properly, and
+also shares the history between sessions so that the commands you type in one
+window will be in the other windows history as well.</p>
+<p>A separate feature which is very nice to have is a history for the current
+directory, as often I am working on a number of different things at once, so
+rather than trying to search through a number of non-relevant commands, I have
+the last command that I executed in the directory I am currently working in.
+There are a couple of implementations of this online for bash <a href="http://www.compbiome.com/2010/07/bash-per-directory-bash-history.html">1</a>,<a href="http://dieter.plaetinck.be/per_directory_bash">2</a>,
+but no complete solutions that I could find for zsh. In addition I added the
+feature of being able to toggle between the global history and the current
+directory history on the fly, which has not been present in any of the other
+implementations I have seen. The default key binding for this is ctrl-g.</p>
+<p>The implementation of the per directory history has been added to the oh-my-zsh
+project as a plugin <a href="https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/per-directory-history/per-directory-history.plugin.zsh">per-directory-history</a>. If you are using oh-my-zsh,
+simply add “per-directory-history” to your plugins, otherwise simply source the
+plugin file directly and you will get the per directory history.</p>
+<p>The other interesting thing I set up in my personal configuration is a cross-server
+history. This was easy to do in my case because our servers all share a networked
+file system, so I simply stored the global and local histories on the file system
+by setting HISTORY_BASE and HISTFILE to be on the shared filesystem. This allows
+all history to be shared regardless of what server it is on.</p>
+<p>Another way you could set the same type of thing up is by using cloud storage,
+such as <a href="https://www.dropbox.com/">dropbox</a>. You would simply do the same thing as above, but
+point the history file to the cloud storage. The only issue you may have is waiting
+to allow the history to sync between servers when you switch servers, as otherwise
+the two history files will become conflicted.</p>

@@ -1,0 +1,27 @@
+---
+date: '2014-04-23'
+title: Responsive Remote Completion
+tags: [R]
+comments: true
+---
+
+
+
+<p>I have been using remote completion from remote boxes for a long time, as it is
+available in both zsh and bash. However because establishing an SSH connection
+is slow, the completion is not terribly useful, you spend more time waiting for
+it to complete than it saves in typing. However if you set up a few SSH
+options to keep a master connection alive and for subsequent SSH connections to
+use the master connection it then is very snappy.</p>
+<p>First you need to set up password-less authentication, the easiest way is to use ssh-copy-id.</p>
+<pre class="bash"><code>ssh-copy-id remote-server</code></pre>
+<p>then make a <code>controlmasters</code> directory in your <code>.ssh</code> directory, which will store the controlmaster session information.</p>
+<pre class="bash"><code>mkdir -p ~/.ssh/controlmasters/</code></pre>
+<p>Lastly add the following lines to your <code>.ssh/config</code> file.
+{% highlight text %}
+Host *
+ControlPath ~/.ssh/<a href="mailto:controlmasters/%r@%h" class="email">controlmasters/%r@%h</a>:%p
+ControlMaster auto
+ControlPersist yes
+{% endhighlight %}</p>
+<p>Then use your now snappy ssh completions!</p>

@@ -1,0 +1,207 @@
+---
+date: '2018-03-30'
+title: A debugging journey
+tags: [R]
+comments: true
+---
+
+
+
+<p>An issue was opened <a href="https://github.com/r-lib/fs/issues/95" class="uri">https://github.com/r-lib/fs/issues/95</a> in the <a href="https://fs.r-lib.org/">fs</a>
+package describing an unexpected error code (<code>ENOENT</code> rather than <code>EEXIST</code>)
+when copying the same file to the same destination twice. Tracking down the
+cause of this turned out to be one of the weirdest bugs I have seen.</p>
+<p>The fs package provides filesystem operations for the R language, it is built
+on top of filesystem functions in <a href="http://libuv.org/">libuv</a>. Libuv in
+turn relies on the native system calls for each operating system it supports.</p>
+<p>The first step in dealing with any bug is reproducing it. The original issue
+had a <a href="http://reprex.tidyverse.org/">reprex</a> (which is great!) and in this case I was able to simplify it to
+the following</p>
+<pre class="r"><code>fs::file_create(&quot;a&quot;)
+fs::file_create(&quot;b&quot;)
+
+fs::file_copy(&quot;a&quot;, &quot;b&quot;)
+#&gt; Error: [ENOENT] Failed to copy &#39;a&#39; to &#39;b&#39;: no such file or directory</code></pre>
+<p>The error being the error code <code>ENOENT</code>, which corresponds to an <code>errno</code> of
+<code>2</code>. The first interesting bit to this issue is that this incorrect error code
+only occurred the <em>first</em> time the copy was attempted in an R session.
+Subsequent attempts always returned the proper <code>EEXIST</code> error code.</p>
+<pre class="r"><code>fs::file_create(&quot;a&quot;)
+fs::file_create(&quot;b&quot;)
+
+try(fs::file_copy(&quot;a&quot;, &quot;b&quot;))
+#&gt; Error : [ENOENT] Failed to copy &#39;a&#39; to &#39;b&#39;: no such file or directory
+try(fs::file_copy(&quot;a&quot;, &quot;b&quot;))
+#&gt; Error : [EEXIST] Failed to copy &#39;a&#39; to &#39;b&#39;: file already exists</code></pre>
+<p>Usually if the behavior of code is different the first time it is run it is
+caused by failing to initialize an object.
+As always the first code to look at when debugging an error is your own, luckily in
+this case it had straightforward logic that looked correct.</p>
+<p><a href="https://github.com/r-lib/fs/blob/0f5b6191935fe4c862d2e5003655e6c1669f4afd/R/copy.R#L43-L51">R/copy.R#L43-51</a></p>
+<pre class="r"><code>file_copy &lt;- function(path, new_path, overwrite = FALSE) {
+  # TODO: copy attributes, e.g. cp -p?
+  assert_no_missing(path)
+  assert_no_missing(new_path)
+
+
+  copyfile_(path_expand(path), path_expand(new_path), isTRUE(overwrite))
+
+
+  invisible(path_tidy(new_path))
+}</code></pre>
+<p><a href="https://github.com/r-lib/fs/blob/0f5b6191935fe4c862d2e5003655e6c1669f4afd/src/file.cc#L289-L304">src/file.cc#L280-L304</a></p>
+<pre class="cpp"><code>void copyfile_(CharacterVector path, CharacterVector new_path, bool overwrite) {
+  for (R_xlen_t i = 0; i &lt; Rf_xlength(path); ++i) {
+    uv_fs_t req;
+    const char* p = CHAR(STRING_ELT(path, i));
+    const char* n = CHAR(STRING_ELT(new_path, i));
+    uv_fs_copyfile(
+        uv_default_loop(),
+        &amp;req,
+        p,
+        n,
+        !overwrite ? UV_FS_COPYFILE_EXCL : 0,
+        NULL);
+    stop_for_error2(req, &quot;Failed to copy &#39;%s&#39; to &#39;%s&#39;&quot;, p, n);
+    uv_fs_req_cleanup(&amp;req);
+  }
+}</code></pre>
+<p>Essentially we iterate over the old and new paths in turn and pass them to
+<code>uv_fs_copyfile()</code>, specifying the <code>UV_FS_COPYFILE_EXCL</code> option to indicate we
+want to fail the copy if the destination file already exists.</p>
+<p>My first thought was there was a race condition when creating the file and
+copying, however we observe the same behavior if the files exist prior to
+opening the R session, so that hypothesis was quickly ruled out.</p>
+<p>The next idea was there was a bug in libuv, so lets go look at the
+implementation for <code>uv_fs_copyfile</code>. Luckily for us the
+implementation it is also very short on macOS.</p>
+<p><a href="https://github.com/libuv/libuv/blob/1489c98b7fc17f1702821a269eb0c5e730c5c813/src/unix/fs.c#L787-L797">libuv/src/unix/fs.c#L787-L797</a></p>
+<pre class="c"><code>static ssize_t uv__fs_copyfile(uv_fs_t* req) {
+#if defined(__APPLE__) &amp;&amp; !TARGET_OS_IPHONE
+  /* On macOS, use the native copyfile(3). */
+  copyfile_flags_t flags;
+
+
+  flags = COPYFILE_ALL;
+
+
+  if (req-&gt;flags &amp; UV_FS_COPYFILE_EXCL)
+    flags |= COPYFILE_EXCL;
+
+
+  return copyfile(req-&gt;path, req-&gt;new_path, NULL, flags);</code></pre>
+<p>So this is a very short shim over the system function <a href="https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man3/copyfile.3.html">copyfile(3)</a> with
+the <code>COPYFILE_EXCL</code> flag.</p>
+<p>Therefore we can rule out the issue being libuv by calling <code>copyfile(3)</code> directly in our package.</p>
+<pre class="r"><code>void copyfile_(CharacterVector path, CharacterVector new_path, bool overwrite) {
+  for (R_xlen_t i = 0; i &lt; Rf_xlength(path); ++i) {
+    uv_fs_t req;
+    const char* p = CHAR(STRING_ELT(path, i));
+    const char* n = CHAR(STRING_ELT(new_path, i));
+
+    int res = copyfile(&quot;a&quot;, &quot;b&quot;, NULL, COPYFILE_ALL | COPYFILE_EXCL);
+    Rcpp::Rcout &lt;&lt; res &lt;&lt; &#39;:&#39; &lt;&lt; errno &lt;&lt; &#39;\n&#39;;
+  }
+}</code></pre>
+<p>Unfortunately we see the same behavior from this function the first time it is
+called in a new R session, the <code>errno</code> is set to <code>2</code> (<code>ENOENT</code>) instead of <code>17</code>
+(<code>EEXIST</code>) and is <code>17</code> as expected the rest of the time. This rules out libuv
+as the culprit.</p>
+<p>So the next idea, maybe it is a weird interaction with Rcpp or C++? To test
+this we can create a new <a href="https://github.com/copyfile">copyfile</a> R package, that uses only C and
+<code>copyfile(3)</code>. Unfortunately after running the resultatnt
+<code>copyfile::copyfile()</code> in a new session the issue was still present. So this
+must not be an issue with C++ or Rcpp.</p>
+<p>Next, maybe it is an R issue, lets try reproduce it with a standalone C program.</p>
+<pre class="c"><code>#include &lt;copyfile.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;string.h&gt;
+
+int main(int argc, char **argv) {
+  errno = 0;
+  int res = copyfile(argv[1], argv[2], NULL, COPYFILE_ALL | COPYFILE_EXCL);
+  strerror(errno);
+  if (res == -1) {
+    printf(&quot;%i:%i:%s&quot;, res, errno, strerror(errno));
+  }
+  return errno;
+}</code></pre>
+<p>In this case it does <em>not</em> reproduce the error, we always get <code>17</code> from <code>errno</code>
+regardless of which call it is.</p>
+<p>So this leaves only a few possibilities. It is a genuine issue in R, an issue in the
+implementation of <code>copyfile(3)</code>, an issue elsewhere in the OS, or a compiler
+bug.</p>
+<p>R does not use <a href="https://github.com/wch/r-source/search?utf8=%E2%9C%93&amp;q=copyfile&amp;type="><code>copyfile()</code>
+itself</a>
+and does not seem to <a href="https://github.com/wch/r-source/search?utf8=%E2%9C%93&amp;q=errno&amp;type=">change
+errno</a> so
+it seemed unlikely to be the culprit.</p>
+<p>Apple releases the source code to some of its utilities and system functions,
+<code>copyfile(3)</code> is one of them, so we can look at the source <a href="https://opensource.apple.com/source/copyfile/copyfile-138/copyfile.c.auto.html">copyfile-138</a>.
+One thing to note in the source is there is logging being used by the
+<code>copyfile(3)</code> function. So lets see if the system logs can tell us anything
+more.</p>
+<p>If we run <code>log stream --predicate 'processImpagePath ENDSWITH &quot;R&quot;'</code> we can
+capture any system logs from R processes. Then we can run our
+<code>copyfile::copyfile()</code> function in another window. Doing this gives us this
+interesting output from the log.</p>
+<pre><code>&gt; log stream --predicate &#39;processImagePath ENDSWITH &quot;R&quot;&#39;
+Filtering the log data using &quot;processImagePath ENDSWITH &quot;R&quot;&quot;
+Timestamp                       Thread     Type        Activity PID
+2018-03-30 12:23:45.134161-0400 0x4925ce   Default     0x0      75117  R: (libcopyfile.dylib) open on b: File exists</code></pre>
+<p>But this output from R.</p>
+<pre class="r"><code>copyfile::copyfile()
+#&gt; -1:2:No such file or directory</code></pre>
+<p>So the <code>errno</code> is set correctly when it is logged (<code>File exists</code>), but <em>changed</em>
+(<code>No such file or directory</code>) when <code>copyfile(3)</code> returns. The other clue from
+the log is the log message “open on b:”. If we search for “open on” in the
+<code>copyfile(3)</code> source code we find two instances.</p>
+<pre class="c"><code>if ((s-&gt;src_fd = open(s-&gt;src, O_RDONLY | osrc , 0)) &lt; 0)
+{
+  copyfile_warn(&quot;open on %s&quot;, s-&gt;src);
+  return -1;
+}</code></pre>
+<p>Then a little further down</p>
+<pre class="c"><code>copyfile_warn(&quot;open on %s&quot;, s-&gt;dst);
+return -1;</code></pre>
+<p>Because <code>b</code> is the destination filename that means the latter one
+must be where the log occurred. Because the function returns immediately after
+the logging and the <code>errno</code> is correct when the log is printed <em>maybe the <code>errno</code> is being
+changed in the logging function</em>????</p>
+<p>If we look at the <code>copyfile_warn()</code> definition we see it is</p>
+<pre class="c"><code># define copyfile_warn(str, ...) syslog(LOG_WARNING, str &quot;: %m&quot;, ## __VA_ARGS__)</code></pre>
+<p>Which seems innocuous enough. However exploring the available sources we can see
+there are multiple versions of the copyfile source available, if we use a
+higher version number <a href="https://opensource.apple.com/source/copyfile/copyfile-146/copyfile.c.auto.html">copyfile-146</a> (aside: does anyone know what macOS versions
+correspond to these numbers?) we see the following definition of
+<code>copyfile_warn()</code>.</p>
+<pre class="c"><code>// These macros preserve the value of errno.
+#ifndef _COPYFILE_TEST
+# define copyfile_warn(str, ...) \
+    do { \
+        errno_t _errsv = errno; \
+        syslog(LOG_WARNING, str &quot;: %m&quot;, ## __VA_ARGS__); \
+        errno = _errsv; \
+    } while (0)```</code></pre>
+<p>So it seems as though the code has been changed at some point to preserve the
+<code>errno</code>; indicating that previous versions did <em>not</em> preserve this in all cases
+exactly the behavior we are seeing!</p>
+<p>We can then test this hypothesis by disabling logging for our R process and
+seeing if it fixes the bug.</p>
+<p>First we need to get the R PID</p>
+<pre class="r"><code>Sys.getpid()
+#&gt; [1] 77310</code></pre>
+<p>Then we can disable logging on the command line for that PID</p>
+<pre class="shell"><code>sudo log config --process=77310 --mode &#39;level:off&#39;</code></pre>
+<p>Last we can run our test command</p>
+<pre class="r"><code>copyfile::copyfile()
+#&gt; -1:17:File exists</code></pre>
+<p><strong>SUCCESS!!!</strong> With logging turned off we get the expected error number <code>17</code> and
+proper error message <code>File exists</code>.</p>
+<p>So after this lengthy exploration this seems like a bug in either the
+<code>copyfile()</code> or <code>syslog()</code> implementations, and may possibly be
+fixed in newer versions of macOS than I am using (10.12.6 Sierra). This was
+truly one of the weirder bugs I have encountered, which is why I took the time
+to document it. I am still not entirely sure the exact cause, but we have
+enough evidence to show the likely culprit is the system logging.</p>

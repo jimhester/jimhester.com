@@ -1,0 +1,27 @@
+---
+date: '2012-11-27'
+title: 'R: Parsing Fasta Files'
+tags: [R]
+comments: true
+---
+
+
+
+<p>As a quick follow-up to my <a href="http://scriptogr.am/jimhester/post/perl-vs-python-vs-ruby-parsing-fasta-files">previous</a> <a href="http://scriptogr.am/jimhester/post/perl-vs-python-vs-ruby-fasta-reading-using-bio-packages">posts</a>
+about parsing fasta files in perl, python, and ruby I wanted to make a quick note
+about a efficient way to get the data into R.</p>
+<script src="https://gist.github.com/4156738.js?file=read_fasta.cpp"></script>
+<pre class="r"><code>library(Rcpp)
+sourceCpp(&quot;read_fasta.cpp&quot;)
+library(microbenchmark)
+fasta_lengths &lt;- function(file) {
+    records = read_fasta(file)
+    sapply(records, nchar)
+}
+microbenchmark(fasta_lengths(&quot;Hg19.fa&quot;), times = 1)</code></pre>
+<p>And the results</p>
+<pre class="r"><code>## Unit: seconds
+##                       expr   min    lq median    uq   max
+## 1 fasta_lengths(&quot;Hg19.fa&quot;) 33.99 33.99  33.99 33.99 33.99</code></pre>
+<p>So this is actually faster than the python implementation, an impressive feat,
+Rcpp is a very nice package!</p>

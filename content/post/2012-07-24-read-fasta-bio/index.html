@@ -1,0 +1,40 @@
+---
+date: '2012-07-24'
+title: 'Perl vs Python vs Ruby: Fasta reading using Bio packages'
+tags: [R]
+comments: true
+---
+
+
+
+<p>Since all the languages I mentioned in my <a href="http://jimhester.calepin.co/perl-vs-python-vs-ruby-parsing-fasta-files.html">previous
+post</a>
+have Bio packages which can parse fasta files, I did a quick comparison of the
+performance of the three implementations. Here are the implementations, they
+are highly similar.</p>
+<div id="perl" class="section level3">
+<h3>Perl</h3>
+<script src="https://gist.github.com/3169859.js?file=fasta-bioperl.pl"></script>
+</div>
+<div id="ruby" class="section level3">
+<h3>Ruby</h3>
+<script src="https://gist.github.com/3169859.js?file=fasta-bioruby.rb"></script>
+</div>
+<div id="python" class="section level3">
+<h3>Python</h3>
+<script src="https://gist.github.com/3169859.js?file=fasta-biopython.py"></script>
+<pre class="bash"><code>fastaLengths-bio.pl Hg19.fa 65.15s user 11.84s system 99% cpu 1:17.00 total
+fastaLengths-bio.rb Hg19.fa 56.07s user 14.18s system 99% cpu 1:10.26 total
+fastaLengths-bio.py Hg19.fa 46.85s user 13.11s system 99% cpu 59.969 total</code></pre>
+<p>This highlights a major implementation deficiency in the perl and ruby bio
+projects for reading fasta files as the results here are the exact reverse of
+the simple parsers from my previous post. This performance regression is due to
+the bioperl SeqIO method attempting to identify the sequence as dna or protein
+every time next_seq is called, setting the type in the SeqIO constructor brings
+the perl implementation back in the lead by a fair margin.</p>
+</div>
+<div id="perl-2" class="section level3">
+<h3>Perl 2</h3>
+<script src="https://gist.github.com/3169859.js?file=fasta-bioperl2.pl"></script>
+<pre class="bash"><code>fastaLengths-bio.pl Hg19.fa 38.50s user 10.76s system 99% cpu 49.267 total</code></pre>
+</div>

@@ -1,0 +1,62 @@
+---
+date: '2015-05-20'
+title: covr - Test Coverage for R Packages
+tags: [R, covr]
+projects: [covr]
+comments: true
+---
+
+
+
+<p>Being primarily a statistical language R lacks a number of common code analysis
+tools available for languages used more often for general programming. Testing
+has been done in the R source from <a href="https://github.com/wch/r-source/tree/7685a96319d94bac3d82e06eff4a469feec72a9a/tests">very early
+on</a>
+(Martin Maechler started adding tests on April 9th, 1998, 17 years ago!)
+However most of this testing was ad hoc, either requiring visual examination of
+the outputs, or simply testing current vs previous outputs. The
+<a href="http://cran.r-project.org/web/packages/RUnit/index.html">RUnit</a> (2005),
+<a href="http://cran.r-project.org/web/packages/svUnit/index.html">svUnit</a> (2009) and
+<a href="http://cran.r-project.org/web/packages/testthat/index.html">testthat</a> (2009)
+packages brought more formal unit testing into R community.</p>
+<p>So while tools existed to show authors <em>how</em> to test, there were very limited
+tools to show <em>what</em> to test. Code coverage has a very long history (<a href="http://dl.acm.org/citation.cfm?doid=366246.366248">Miller
+et al. 1963</a>) in the
+software development community and remains a useful metric today. Unfortunately
+the R community has had very few options to track and report on code coverage.
+<a href="http://r2d2.quartzbio.com/posts/r-coverage-docker.html">R-coverage</a> by Karl
+Forner and
+<a href="https://github.com/MangoTheCat/testCoverage">testCoverage</a> by Tom Taverner,
+Chris Campbell, Suchen Jin were two existing solutions, however both were
+somewhat problematic to use. The former required a patch to the R source,
+which is a non-starter for widespread use (particularly on Windows). The
+latter had a complicated implementation which was difficult to use
+interactively and supported only a limited output format. Neither project
+supported tracking coverage of compiled code in addition to R source or
+supported coverage tracking services such as <a href="http://codecov.io" class="uri">http://codecov.io</a> or
+<a href="http://coveralls.io" class="uri">http://coveralls.io</a>.</p>
+<p>Covr aims to make code coverage both easy to use and informative in R. Package
+coverage can be tracked and tests run very simply</p>
+<pre class="r"><code>library(covr)
+cov &lt;- package_coverage()</code></pre>
+<p>The results can be summarized with an informative <code>print()</code> method, as well as
+coerced to a <code>data.frame</code>. There is also an interactive Shiny App available
+via <code>shine()</code> which can be used to inspect the code visually and identify
+coverage gaps.</p>
+<p>In addition covr supports both the <a href="http://codecov.io" class="uri">http://codecov.io</a> and
+<a href="http://coveralls.io" class="uri">http://coveralls.io</a> coverage reporting services. These services will track
+the coverage of a project over time and report on coverage changes as well as
+exploration of the source code. They are designed to work seamlessly within a
+CI system such as <a href="https://travis-ci.org/" class="uri">https://travis-ci.org/</a> or <a href="http://wercker.com/" class="uri">http://wercker.com/</a>. Simple
+functions exist to instrument the code, run tests and submit the results for
+both services and can easily be added to the CI build script to automatically
+run coverage for every build.</p>
+<pre class="r"><code>library(covr)
+# for codecov.io
+codecov()
+
+# for coveralls.io
+coveralls()</code></pre>
+<p>Covr version 1.0.0 is now <a href="http://cran.r-project.org/web/packages/covr/index.html">on CRAN</a>
+and Covr development is ongoing at <a href="https://github.com/jimhester/covr" class="uri">https://github.com/jimhester/covr</a>, pull
+requests for additional features or bug fixes are always welcome!</p>

@@ -1,0 +1,70 @@
+---
+date: '2017-11-01'
+title: Using git clean filters to remove local path information.
+tags: [R]
+comments: true
+---
+
+Error messages in many programming languages (including R) often have the full
+paths to files included in the error message. (e.g.
+"/Users/jhester/projects/pkgname/R/pkg.R"). This feature is very helpful when
+working with a package locally as it makes it easy to find exactly what file
+has an issue. However if these errors are included in documentation examples or
+in check output the local directory information is extraneous and possibly
+sensitive.
+
+These output files could be modified by hand before committing them, e.g.
+changing the above path to ".../R/pkg.R". A script could be written to do it
+automatically as well, but this still requires diligence to remember to run it
+before committing files to the repository.
+
+Instead, using [git clean and smudge
+filters](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#Keyword-Expansion)
+we can have git automatically sanitize our files before they are committed to
+the repository.
+
+# Setting up a clean filter
+
+First we need to write a script that takes input from standard input and writes
+the cleaned output to standard output. In our case we want to substitute any text
+that matches the current directory with `...`, which will remove the local
+directory information. A simple perl script which does this is below (sanitize.pl)
+
+```perl
+#!/usr/bin/env perl
+
+use Cwd;
+
+my $cwd = getcwd();
+
+while(<>) {
+  s{$cwd}{...}g;
+  print;
+}
+```
+
+Once we have this script we next need to tell git what file types we want to
+run our filter on by adding it to a `.gitattributes` file. In this case we are
+defining the filter for both markdown and HTML files.
+
+```
+*.md filter=sanitize-paths
+*.html filter=sanitize-paths
+```
+
+If we want to use this only on the current repository it should be defined in a
+`.gitattributes` file in the repository root. If however we want to define this
+globally by setting the git config option `core.attributeFile` (by default this
+will be `$HOME/.config/git/attributes`).
+
+We then need to define the `sanitize-paths` filter above to use our
+`sanitize.pl` file. In this case we are not using a smudge filter, so we do not
+need to set it explicitly. If you only want this to be set for the local
+repository remove `--global` from the command.
+
+```
+git config --global filter.sanitize-paths.clean sanitize.pl
+```
+
+With that we are done, Git will now automatically remove the path information
+before we commit markdown and html files to any of our repositories!

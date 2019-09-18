@@ -1,0 +1,52 @@
+---
+date: '2012-07-31'
+title: 'Perl vs Python vs Ruby: Restriction enzyme regular expression performance'
+tags: [R]
+comments: true
+---
+
+
+
+<p>As a continuation of my <a href="http://jimhester.calepin.co/perl-vs-python-vs-ruby-parsing-fasta-files.html">previous</a> <a href="http://jimhester.calepin.co/perl-vs-python-vs-ruby-fasta-reading-using-bio-packages.html">posts</a> comparing the three major scripting languages used in bioinformatics
+I wanted to take a look at the regular expression performance of the three
+languages. A common use case of regular expressions in bioinformatics is
+searching for restriction enzyme cut sites in a genome of interest. To
+benchmark this case I downloaded a list of known restriction enzymes from
+REBASE in the <a href="http://rebase.neb.com/rebase/rebase.f13.html">simple bionet format</a>, then parsed that format and converted it into regular expressions with the <a href="https://gist.github.com/3217832#file_parse_rebase.pl">this code</a>.</p>
+<p>This gives one a list of restriction enzymes and a regular expression for each enzyme,
+which is used as the input for the searching scripts for each language. To
+test the relative performance I randomly sampled 10 restriction enzymes and
+searched human chromosome 10 for them. Here are the implementations for each
+language.</p>
+<div id="perl" class="section level3">
+<h3>Perl</h3>
+<script src="https://gist.github.com/3217832.js?file=regex.pl"></script>
+</div>
+<div id="python" class="section level3">
+<h3>Python</h3>
+<script src="https://gist.github.com/3217832.js?file=regex.py"></script>
+</div>
+<div id="ruby" class="section level3">
+<h3>Ruby</h3>
+<script src="https://gist.github.com/3217832.js?file=regex.rb"></script>
+<p>To sample the enzymes and run them for each language</p>
+<pre class="bash"><code>sort -R enzymes | head &gt; top
+regex.pl top Hg18.fa &gt;&gt; out
+regex.py top Hg18.fa &gt;&gt; out
+regex.rb top Hg18.fa &gt;&gt; out</code></pre>
+<p>And the results</p>
+<pre class="bash"><code>perl: 0.4926 secs per enzyme
+python: 7.6647 secs per enzyme
+ruby:   0.4685 secs per enzyme</code></pre>
+<p>Clearly python’s regular expression engine leaves a lot to be desired compared
+to that of perl’s and ruby’s, with speed more than 15 fold slower. These
+results are very consistent with repeated runs of different enzymes. This
+clearly shows a lack of suitability for python to complete this common task.</p>
+<p>Addendum: using google’s re2 regular expression engine and the <a href="http://pypi.python.org/pypi/re2/">python extension which uses it</a>
+in python brings the performance much closer to the other languages</p>
+<pre class="bash"><code>python: 0.8421 secs per enzyme</code></pre>
+<p>I cannot easily test the re2 bindings in perl and ruby, the perl package
+requires perl 5.10 or newer, which we do not have installed, and the ruby
+bindings do not implement global matching from what I can tell. It is not
+a huge issue there however as both languages regex engines are natively fast.</p>
+</div>

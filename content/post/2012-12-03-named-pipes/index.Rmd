@@ -1,0 +1,41 @@
+---
+date: '2012-12-03'
+title: On the fly bam to sam conversion using named pipes
+tags: [R]
+comments: true
+---
+
+In bioinformatics the common format developed for storing short read alignments
+is the [SAM](http://samtools.sourceforge.net/SAM1.pdf) format which has a binary
+representation and an ASCII text form.  There exists a C API to work with the
+binary format directly, as well as language bindings for most of the common
+programming languages.  Heng Li, the author of the format and the bwa
+short read aligner, created the samtools program to work with the SAM format and
+convert between bam/sam among many other tasks.  However often third-party
+programs will only read the ASCII SAM files, which typically have a .sam
+extension, rather than the binary files, with a .bam extension.  In addition,
+the sam files are completely uncompressed, so can take upwards of 3x or more
+disk space than the compressed BAM files.  This gives us motivation to avoid
+having uncompressed SAM files at any point, even as a temporary file which will
+be deleted.
+
+If the third-party program in question has the ability to accept input from
+standard input, the solution is very straightforward.
+
+```{r eval = F, engine = 'bash'}
+samtools view file.bam | my_program --arguments
+```
+
+However, if the program can only accept named files, often people think the only
+option is to create the temporary file. Luckily, this is not the case, and
+linux has long had functionality to treat a pipe as though it were a file. So
+there exists a very clean solution to the problem.
+
+```{r eval = F, engine = 'bash'}
+mkfifo file.sam; samtools view file.bam > file.sam& my_program --arguments file.sam; rm file.sam
+```
+
+This creates a named pipe using mkfifo, converts the file using samtools view
+and puts that in the background, the runs the third-party program with the named
+pipe, then removes the pipe once the program is complete.  The sam file is never
+stored on disk.

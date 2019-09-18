@@ -1,0 +1,28 @@
+---
+date: '2013-03-11'
+title: Setting ggplot2 default color scales
+tags: [R]
+comments: true
+---
+
+
+
+<p><a href="http://www.ggplot2.org">ggplot2</a> is a very nice R plotting library, however some
+people do not like the default color scales for plots. You can explicitly set
+the color scale for each one of your plots, but a better solution would be to
+simply change the defaults.</p>
+<pre><code>## Warning in rm(scale_colour_discrete): object &#39;scale_colour_discrete&#39; not
+## found</code></pre>
+<pre class="r"><code>library(ggplot2)
+
+#default colors
+qplot(data=iris, Petal.Length, Petal.Width, color=Species, size=I(4))</code></pre>
+<p><img src="/post/2013-03-11-ggplot-color-scales/index_files/figure-html/ggplot_default_color_scales_Title-1.png" width="672" /></p>
+<pre class="r"><code>#change default without arguments
+scale_colour_discrete &lt;- scale_colour_grey
+last_plot()</code></pre>
+<p><img src="/post/2013-03-11-ggplot-color-scales/index_files/figure-html/ggplot_default_color_scales_Title-2.png" width="672" /></p>
+<pre class="r"><code>#change default with arguments
+scale_colour_discrete &lt;- function(...) scale_color_brewer(palette=&quot;Set1&quot;)
+last_plot()</code></pre>
+<p><img src="/post/2013-03-11-ggplot-color-scales/index_files/figure-html/ggplot_default_color_scales_Title-3.png" width="672" /></p>

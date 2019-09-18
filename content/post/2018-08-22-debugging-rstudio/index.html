@@ -1,0 +1,57 @@
+---
+date: '2018-08-22'
+title: Using a C level debugger in Rstudio
+tags: [R]
+comments: true
+---
+
+
+
+<p>I often use C level debuggers such as <a href="https://lldb.llvm.org/">lldb</a> and <a href="https://www.gnu.org/s/gdb/">gdb</a> when debugging R
+packages with compiled code. If you are unfamiliar with doing this <a href="http://kevinushey.github.io/blog/2015/04/13/debugging-with-lldb/">Kevin Ushey
+has an excellent
+post</a> on the topic.
+Usually bugs are reproducible both from the R terminal and RStudio. If this is
+the case then running R under the debugger is easy; just start R from the
+terminal with <code>R -d lldb</code>.</p>
+<p>However more rarely there will be a bug that only occurs when the code is run
+in <a href="http://rstudio.com/">RStudio</a>, and in these cases you would ideally like to
+be able to attach to the internal RStudio Rsession process.</p>
+<p>You can get the PID (process identifier) of any R process by calling <code>Sys.getpid()</code> from the
+R console. Then you can have the debugger attach to this PID with the <code>-p</code>
+argument to lldb, e.g. <code>lldb -p 45323</code>. However if you do this with the current
+RStudio release (v1.1) you will get this!</p>
+<p><img src="http://lh3.googleusercontent.com/-IzfBppQwNQI/WAUEsgJwmnI/AAAAAAAAAXU/9aG6xKFRxY8/rstudio-bomb.png" /></p>
+<p>I believe this occurs because of how RStudio detects if the R process
+is still running. When the debugger interrupts internal rsession process
+RStudio no longer thinks it has an active R session running, so shows the error
+message.</p>
+<p>However you can work around this by using a feature of lldb I hadn’t used until
+encountering this problem, <code>--waitfor</code>. This allows you to have lldb attach to
+a process (by name) as soon as it starts.</p>
+<p>To do this first start lldb from a separate console (<code>lldb</code>). This will launch
+you into the lldb prompt. Then tell lldb you would like to attach to the
+rsession process using <code>--waitfor</code>.</p>
+<pre><code>process attach --name rsession --waitfor</code></pre>
+<p>lldb will then wait for this rsession process to start. Now we can start up
+RStudio. The lldb session will then print something like the following</p>
+<pre><code>Process 50879 stopped
+* thread #1, queue = &#39;com.apple.main-thread&#39;, stop reason = signal SIGSTOP
+    frame #0: 0x000000010085b4f8 rsession`rstudio_boost::filesystem::path::path&lt;char const*&gt;(char const*, char const*) + 88
+rsession`rstudio_boost::filesystem::path::path&lt;char const*&gt;:
+-&gt;  0x10085b4f8 &lt;+88&gt;: movb   %al, (%r13)
+    0x10085b4fc &lt;+92&gt;: jmp    0x10085b50c               ; &lt;+108&gt;
+    0x10085b4fe &lt;+94&gt;: movq   %r13, %rdi
+    0x10085b501 &lt;+97&gt;: movq   %r12, %rsi
+Target 0: (rsession) stopped.</code></pre>
+<p>And the RStudio session will be stopped with RStudio only partially loaded. You can then
+continue execution in lldb with <code>c</code> and the RStudio session will continue to load.
+From here you can set breakpoints / interrupt execution as you normally would
+when debugging with lldb.</p>
+<p>While this process isn’t <em>too</em> cumbersome, it is certainly more work than is ideal, and
+the workaround is somewhat esoteric. Luckily, RStudio 1.2+ (now available as a
+<a href="https://www.rstudio.com/products/rstudio/download/preview/">preview release</a>) makes this extra workaround unnecessary! In v1.2 you <em>can</em>
+attach lldb directly to a running RStudio session without causing RStudio to
+fail!</p>
+<p>Thanks again to Jonathan McPherson and Kevin Ushey for their pointers on how get this
+working for RStudio 1.1.</p>

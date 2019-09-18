@@ -1,0 +1,1000 @@
+chr10	SWEmbl_R015	AnnotatedFeature	3107923	3108302	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3108140; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3108008	3108313	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3108139; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	3108450	3118050	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3111825
+chr10	ccat_histone	AnnotatedFeature	3108650	3118100	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3112475
+chr10	SWEmbl_R015	AnnotatedFeature	3109286	3110642	.		.	Name=H4K20me3; Alias=ES_H4K20me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3110250
+chr10	SWEmbl_R015	AnnotatedFeature	3109290	3110642	.		.	Name=H3K9me3; Alias=ES_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3110256
+chr10	SWEmbl_R015	AnnotatedFeature	3109291	3110637	.		.	Name=H3K9me3; Alias=NPC_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3110247
+chr10	SWEmbl_R015	AnnotatedFeature	3109297	3110629	.		.	Name=H3K9me3; Alias=MEF_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=3110177
+chr10	ccat_histone	AnnotatedFeature	3109300	3118150	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=3114675
+chr10	SWEmbl_R015	AnnotatedFeature	3109305	3110632	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3110157
+chr10	SWEmbl_R015	AnnotatedFeature	3109307	3110542	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=3110120
+chr10	SWEmbl_R015	AnnotatedFeature	3109311	3110528	.		.	Name=PolII; Alias=ES_PolII_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=3110030
+chr10	SWEmbl_R015	AnnotatedFeature	3109326	3110582	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3110247
+chr10	SWEmbl_R015_D150	AnnotatedFeature	3109652	3110533	.		.	Name=H3K36me3; Alias=NPC_H3K36me3_Mikkelsen2007_PMID17603471_SWEmbl_R015_D150; Class=Histone; Cell_type=NPC; Summit=3110252
+chr10	SWEmbl_R015	AnnotatedFeature	3109925	3110295	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3110141
+chr10	SWEmbl_R015_D150	AnnotatedFeature	3110165	3110407	.		.	Name=H3K27me3; Alias=NPC_H3K27me3_Mikkelsen2007_PMID17603471_SWEmbl_R015_D150; Class=Histone; Cell_type=NPC; Summit=3110261
+chr10	SWEmbl_R015	AnnotatedFeature	3111105	3117289	.		.	Name=H3K9me3; Alias=ES_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3113772
+chr10	SWEmbl_R015	AnnotatedFeature	3111107	3117289	.		.	Name=H4K20me3; Alias=ES_H4K20me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3113793
+chr10	SWEmbl_R015	AnnotatedFeature	3111115	3117275	.		.	Name=H3K9me3; Alias=MEF_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=3116576
+chr10	SWEmbl_R015	AnnotatedFeature	3111119	3117309	.		.	Name=H3K9me3; Alias=NPC_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3116963
+chr10	SWEmbl_R015	AnnotatedFeature	3111131	3117275	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3112630
+chr10	SWEmbl_R015_D150	AnnotatedFeature	3111180	3117201	.		.	Name=H3K36me3; Alias=NPC_H3K36me3_Mikkelsen2007_PMID17603471_SWEmbl_R015_D150; Class=Histone; Cell_type=NPC; Summit=3112949
+chr10	SWEmbl_R015	AnnotatedFeature	3111183	3115762	.		.	Name=PolII; Alias=ES_PolII_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=3115274
+chr10	SWEmbl_R015	AnnotatedFeature	3111224	3111443	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3111292
+chr10	SWEmbl_R015	AnnotatedFeature	3111239	3115412	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=3112855
+chr10	SWEmbl_R015_D150	AnnotatedFeature	3111351	3111956	.		.	Name=H3K27me3; Alias=NPC_H3K27me3_Mikkelsen2007_PMID17603471_SWEmbl_R015_D150; Class=Histone; Cell_type=NPC; Summit=3111683
+chr10	SWEmbl_R015	AnnotatedFeature	3111582	3117254	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3116877
+chr10	SWEmbl_R015_D150	AnnotatedFeature	3112020	3113142	.		.	Name=H3K27me3; Alias=NPC_H3K27me3_Mikkelsen2007_PMID17603471_SWEmbl_R015_D150; Class=Histone; Cell_type=NPC; Summit=3112993
+chr10	SWEmbl_R015	AnnotatedFeature	3112736	3113073	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3112874
+chr10	SWEmbl_R015_D150	AnnotatedFeature	3113600	3114103	.		.	Name=H3K27me3; Alias=NPC_H3K27me3_Mikkelsen2007_PMID17603471_SWEmbl_R015_D150; Class=Histone; Cell_type=NPC; Summit=3113955
+chr10	SWEmbl_R015	AnnotatedFeature	3113700	3114160	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3113847
+chr10	SWEmbl_R015	AnnotatedFeature	3114365	3114792	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=3114644
+chr10	SWEmbl_R015_D150	AnnotatedFeature	3114545	3114815	.		.	Name=H3K27me3; Alias=NPC_H3K27me3_Mikkelsen2007_PMID17603471_SWEmbl_R015_D150; Class=Histone; Cell_type=NPC; Summit=3114693
+chr10	SWEmbl_R015	AnnotatedFeature	3115826	3117268	.		.	Name=PolII; Alias=ES_PolII_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=3116932
+chr10	SWEmbl_R015	AnnotatedFeature	3115862	3117277	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=3116759
+chr10	SWEmbl_R015_D150	AnnotatedFeature	3116380	3116653	.		.	Name=H3K27me3; Alias=NPC_H3K27me3_Mikkelsen2007_PMID17603471_SWEmbl_R015_D150; Class=Histone; Cell_type=NPC; Summit=3116507
+chr10	SWEmbl_R015_D150	AnnotatedFeature	3116904	3117186	.		.	Name=H3K27me3; Alias=NPC_H3K27me3_Mikkelsen2007_PMID17603471_SWEmbl_R015_D150; Class=Histone; Cell_type=NPC; Summit=3117044
+chr10	SWEmbl_R015	AnnotatedFeature	3172837	3173344	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3173040
+chr10	SWEmbl_R0025	AnnotatedFeature	3172910	3173354	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3173122
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3172932	3173299	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3173132
+chr10	SWEmbl_R015	AnnotatedFeature	3172966	3173367	.		.	Name=Sox2; Alias=ES_Sox2_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3173120
+chr10	SWEmbl_R0025	AnnotatedFeature	3191588	3191838	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3191713
+chr10	ccat_histone	AnnotatedFeature	3236400	3238250	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=3237075
+chr10	ccat_histone	AnnotatedFeature	3236550	3237600	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3237075
+chr10	SWEmbl_R0025	AnnotatedFeature	3236628	3237532	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3237224
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3236797	3237101	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3236938
+chr10	ccat_histone	AnnotatedFeature	3239950	3241650	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=3240625
+chr10	SWEmbl_R0025	AnnotatedFeature	3241964	3242201	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3242082
+chr10	SWEmbl_R015	AnnotatedFeature	3242106	3242546	.		.	Name=PolII; Alias=ES_PolII_Stadler2011_PMID22170606_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=3242344
+chr10	SWEmbl_R0025	AnnotatedFeature	3243219	3243620	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3243409
+chr10	SWEmbl_R0025	AnnotatedFeature	3254722	3254955	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3254838
+chr10	SWEmbl_R0025	AnnotatedFeature	3271099	3271340	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3271219
+chr10	SWEmbl_R0025	AnnotatedFeature	3281078	3281344	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3281211
+chr10	SWEmbl_R0025	AnnotatedFeature	3302527	3302817	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3302672
+chr10	ccat_histone	AnnotatedFeature	3306750	3309500	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=3308225
+chr10	SWEmbl_R0025	AnnotatedFeature	3307755	3308055	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3307906
+chr10	SWEmbl_R0025	AnnotatedFeature	3308332	3308597	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3308464
+chr10	SWEmbl_R015	AnnotatedFeature	3316848	3317204	.		.	Name=H4K20me3; Alias=ES_H4K20me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3316992
+chr10	SWEmbl_R015	AnnotatedFeature	3325469	3325808	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3325651
+chr10	SWEmbl_R015	AnnotatedFeature	3332852	3333221	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3333063; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3332897	3333265	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3333068
+chr10	SWEmbl_R015	AnnotatedFeature	3332902	3333189	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3333045; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3332910	3333190	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3333050
+chr10	SWEmbl_R015	AnnotatedFeature	3332923	3333217	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3333070; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3332934	3333228	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3333081; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3333061	3333249	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3333155
+chr10	ccat_histone	AnnotatedFeature	3364250	3369300	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3367325
+chr10	ccat_histone	AnnotatedFeature	3365500	3369750	.		.	Name=H3K27me3; Alias=MEF_H3K27me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=3366875
+chr10	SWEmbl_R015	AnnotatedFeature	3365978	3366655	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3366228
+chr10	SWEmbl_R015	AnnotatedFeature	3366030	3367310	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3367021
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3366091	3366380	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3366235
+chr10	SWEmbl_R015	AnnotatedFeature	3366216	3367238	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3366646
+chr10	SWEmbl_R015	AnnotatedFeature	3366251	3367123	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3366976
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3366382	3366610	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3366496
+chr10	SWEmbl_R015	AnnotatedFeature	3366701	3367585	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3366989
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3366722	3366986	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3366854
+chr10	SWEmbl_R015	AnnotatedFeature	3366767	3367226	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=3366906
+chr10	SWEmbl_R015	AnnotatedFeature	3397461	3397744	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3397596; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3397509	3397715	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3397612
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3406395	3406678	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3406536
+chr10	SWEmbl_R015	AnnotatedFeature	3466184	3466509	.		.	Name=CEBPB; Alias=MEF_CEBPB_Steger_PMID_20478996_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3466327
+chr10	SWEmbl_R015	AnnotatedFeature	3501977	3502316	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3502167; Note=Contains the following PWMs:MA0141.1 MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	3518910	3519370	.		.	Name=H3K9me3; Alias=ES_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3519246
+chr10	ccat_histone	AnnotatedFeature	3520200	3521500	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3520825
+chr10	ccat_histone	AnnotatedFeature	3521500	3526550	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=3522775
+chr10	SWEmbl_R0025	AnnotatedFeature	3522749	3523040	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3522894
+chr10	SWEmbl_R015	AnnotatedFeature	3522980	3523282	.		.	Name=CEBPB; Alias=MEF_CEBPB_Steger_PMID_20478996_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3523139
+chr10	SWEmbl_R0025	AnnotatedFeature	3523055	3524066	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3523506
+chr10	SWEmbl_R015	AnnotatedFeature	3523066	3523751	.		.	Name=p300; Alias=MEL_p300_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3523473
+chr10	SWEmbl_R015	AnnotatedFeature	3523245	3523651	.		.	Name=cMyb; Alias=MEL_cMyb_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3523482
+chr10	SWEmbl_R0025	AnnotatedFeature	3524525	3524903	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3524682
+chr10	SWEmbl_R015	AnnotatedFeature	3531380	3531796	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3531601
+chr10	SWEmbl_R015	AnnotatedFeature	3531385	3531798	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3531620; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3531439	3531746	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3531602; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3531442	3531762	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3531598
+chr10	SWEmbl_R015	AnnotatedFeature	3531461	3531760	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3531610; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3531487	3531775	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3531631
+chr10	SWEmbl_R015	AnnotatedFeature	3531491	3531798	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3531637; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3531492	3531785	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3531638
+chr10	SWEmbl_R015	AnnotatedFeature	3534243	3534628	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3534510; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3534359	3534797	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3534536; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3534374	3534768	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3534552
+chr10	ccat_histone	AnnotatedFeature	3538100	3539800	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3539075
+chr10	SWEmbl_R015	AnnotatedFeature	3555177	3555482	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3555326; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3562162	3562523	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3562336; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3562178	3562516	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3562317; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3562234	3562519	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3562376
+chr10	SWEmbl_R015	AnnotatedFeature	3567798	3568203	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3568038; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3567823	3568114	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3568018
+chr10	SWEmbl_R0025	AnnotatedFeature	3572890	3573337	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3573132
+chr10	SWEmbl_R015	AnnotatedFeature	3572915	3573349	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3573142; Note=Contains the following PWMs:MA0139.1 MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3572948	3573280	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3573139; Note=Contains the following PWMs:MA0139.1 MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3573015	3573309	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3573162; Note=Contains the following PWMs:MA0139.1 MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3573151	3573411	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3573281
+chr10	SWEmbl_R015	AnnotatedFeature	3573944	3574325	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3574090; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3574208	3574556	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3574407; Note=Contains the following PWMs:MA0141.1 MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	3577828	3578078	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3577953
+chr10	SWEmbl_R015	AnnotatedFeature	3577828	3578076	.		.	Name=Smad1; Alias=ES_Smad1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3577952
+chr10	SWEmbl_R015	AnnotatedFeature	3589552	3589909	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3589710; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	3606757	3607256	.		.	Name=H4K20me3; Alias=ES_H4K20me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3607063
+chr10	SWEmbl_R015	AnnotatedFeature	3620728	3621818	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3621572
+chr10	SWEmbl_R015	AnnotatedFeature	3620747	3621827	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3621502
+chr10	SWEmbl_R0025	AnnotatedFeature	3621123	3621363	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3621243
+chr10	SWEmbl_R0025	AnnotatedFeature	3646164	3646894	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3646675
+chr10	SWEmbl_R015	AnnotatedFeature	3646464	3646859	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3646613; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3646506	3646902	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3646622
+chr10	SWEmbl_R015	AnnotatedFeature	3646525	3646874	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3646675
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3656846	3657128	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3656987
+chr10	ccat_histone	AnnotatedFeature	3694100	3696050	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3695325
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3730449	3730685	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3730567
+chr10	ccat_histone	AnnotatedFeature	3736950	3741850	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3739425
+chr10	SWEmbl_R015	AnnotatedFeature	3740084	3741280	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3740865
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3740109	3740980	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3740366
+chr10	SWEmbl_R015	AnnotatedFeature	3740135	3741093	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=3740890
+chr10	SWEmbl_R015	AnnotatedFeature	3740162	3741244	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3740849
+chr10	SWEmbl_R015	AnnotatedFeature	3740208	3740587	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3740356
+chr10	SWEmbl_R0025	AnnotatedFeature	3740230	3740560	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3740396
+chr10	SWEmbl_R015	AnnotatedFeature	3740341	3740619	.		.	Name=PolII; Alias=NPC_PolII_Goldberg_PMID_20211137_SWEMBL_R015; Class=Polymerase; Cell_type=NPC; Summit=3740470
+chr10	SWEmbl_R015	AnnotatedFeature	3740605	3741391	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3740843
+chr10	SWEmbl_R015	AnnotatedFeature	3740623	3741295	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3741015
+chr10	SWEmbl_R015	AnnotatedFeature	3740655	3741264	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=3740817
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3741044	3741606	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3741344
+chr10	SWEmbl_R015	AnnotatedFeature	3741130	3741522	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3741300; Note=Contains the following PWMs:MA0139.1 MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3741135	3741510	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3741300
+chr10	ccat_histone	AnnotatedFeature	3747500	3748600	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3748025
+chr10	SWEmbl_R015	AnnotatedFeature	3753181	3753565	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3753417; Note=Contains the following PWMs:MA0141.1 MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	3760838	3761198	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3761050
+chr10	ccat_histone	AnnotatedFeature	3782950	3785000	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3783825
+chr10	SWEmbl_R015	AnnotatedFeature	3785461	3785776	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3785616
+chr10	SWEmbl_R015	AnnotatedFeature	3801315	3801622	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3801474; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3801321	3801551	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3801436
+chr10	SWEmbl_R015	AnnotatedFeature	3805394	3805759	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3805573; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3805401	3805750	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3805541
+chr10	SWEmbl_R015	AnnotatedFeature	3805429	3805688	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3805558; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3834084	3834440	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3834272; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3834134	3834355	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3834244
+chr10	SWEmbl_R015	AnnotatedFeature	3834143	3834367	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3834255; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3842193	3842468	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3842330
+chr10	SWEmbl_R015	AnnotatedFeature	3849904	3850360	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3850188; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3849981	3850312	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3850175; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3852395	3852808	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3852569; Note=Contains the following PWMs:MA0145.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3863393	3863835	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3863608
+chr10	SWEmbl_R015	AnnotatedFeature	3867351	3867630	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3867490; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3872537	3872953	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3872734; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	3873478	3873804	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3873659
+chr10	SWEmbl_R0025	AnnotatedFeature	3873533	3873829	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3873681
+chr10	SWEmbl_R015	AnnotatedFeature	3881180	3881473	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3881327; Note=Contains the following PWMs:MA0145.1
+chr10	SWEmbl_R015	AnnotatedFeature	3890972	3891542	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3891242
+chr10	SWEmbl_R0025	AnnotatedFeature	3891688	3892372	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3892000
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3891708	3892330	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3891982
+chr10	SWEmbl_R015	AnnotatedFeature	3891777	3892166	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3891989
+chr10	SWEmbl_R015	AnnotatedFeature	3891787	3892211	.		.	Name=Oct4; Alias=ES_Oct4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3892040
+chr10	SWEmbl_R015	AnnotatedFeature	3891795	3892129	.		.	Name=Oct4; Alias=ES_Oct4_Ang11_PMID21477851_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3891938
+chr10	SWEmbl_R015	AnnotatedFeature	3891845	3892173	.		.	Name=Sox2; Alias=ES_Sox2_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3891993; Note=Contains the following PWMs:MA0143.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3892363	3892628	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3892495
+chr10	SWEmbl_R0025	AnnotatedFeature	3892403	3892707	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3892551
+chr10	SWEmbl_R015	AnnotatedFeature	3913245	3913620	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3913427; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3933340	3933643	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3933496
+chr10	ccat_histone	AnnotatedFeature	3935100	3936600	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=3935875
+chr10	SWEmbl_R015	AnnotatedFeature	3939194	3939577	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3939388
+chr10	SWEmbl_R015	AnnotatedFeature	3940076	3940993	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3940844
+chr10	SWEmbl_R015	AnnotatedFeature	3940162	3940617	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3940413
+chr10	SWEmbl_R0025	AnnotatedFeature	3940941	3941823	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3941445
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3941001	3941843	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3941144
+chr10	SWEmbl_R015	AnnotatedFeature	3941169	3941837	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3941632
+chr10	SWEmbl_R015	AnnotatedFeature	3941174	3941964	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3941517
+chr10	SWEmbl_R015	AnnotatedFeature	3941250	3941756	.		.	Name=STAT3; Alias=ES_STAT3_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3941572
+chr10	SWEmbl_R015	AnnotatedFeature	3941272	3941867	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3941673
+chr10	SWEmbl_R015	AnnotatedFeature	3941286	3941761	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3941528
+chr10	SWEmbl_R015	AnnotatedFeature	3943836	3944297	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3944058; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3943849	3944244	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3944072
+chr10	SWEmbl_R0025	AnnotatedFeature	3943868	3944210	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3944056
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3943882	3944256	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3943985
+chr10	SWEmbl_R015	AnnotatedFeature	3943904	3944212	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3944070; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3943912	3944198	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3944055; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3943926	3944204	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3944056; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3943946	3944225	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3944078; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3949304	3949793	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3949506
+chr10	SWEmbl_R015	AnnotatedFeature	3949341	3949763	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3949569
+chr10	SWEmbl_R015	AnnotatedFeature	3949355	3949664	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3949504; Note=Contains the following PWMs:MA0141.1
+chr10	ccat_histone	AnnotatedFeature	3956750	3958250	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=3957425
+chr10	SWEmbl_R015	AnnotatedFeature	3958548	3959040	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3958793; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3958640	3958923	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3958781
+chr10	SWEmbl_R015	AnnotatedFeature	3958645	3958950	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3958795
+chr10	SWEmbl_R015	AnnotatedFeature	3958649	3958944	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3958796; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3958653	3958951	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3958802; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3958706	3958896	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3958801
+chr10	ccat_histone	AnnotatedFeature	3959300	3960750	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=3959925
+chr10	ccat_histone	AnnotatedFeature	3971500	3973600	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=3972475
+chr10	SWEmbl_R0025	AnnotatedFeature	3972414	3972651	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3972532
+chr10	SWEmbl_R015	AnnotatedFeature	3972500	3974237	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3973272
+chr10	SWEmbl_R015	AnnotatedFeature	3972601	3973809	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=3973375
+chr10	SWEmbl_R0025	AnnotatedFeature	3972735	3974294	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3973870
+chr10	SWEmbl_R015	AnnotatedFeature	3972773	3974134	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=3973694
+chr10	SWEmbl_R015	AnnotatedFeature	3972780	3974038	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3973275
+chr10	SWEmbl_R015	AnnotatedFeature	3972830	3973352	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3973120; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3972844	3974212	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=3973318
+chr10	SWEmbl_R0025	AnnotatedFeature	3972854	3973318	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3973103
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3972856	3974165	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3973818
+chr10	SWEmbl_R015	AnnotatedFeature	3972859	3974145	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3973875; Note=Contains the following PWMs:MA0024.1 MA0024.1
+chr10	SWEmbl_R015	AnnotatedFeature	3972865	3973364	.		.	Name=NELFe; Alias=MEL_NELFe_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3973170
+chr10	SWEmbl_R015	AnnotatedFeature	3972890	3973204	.		.	Name=Klf4; Alias=ES_Klf4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3973056
+chr10	SWEmbl_R015	AnnotatedFeature	3972892	3973843	.		.	Name=PolII; Alias=MEL_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEL; Summit=3973652
+chr10	SWEmbl_R015	AnnotatedFeature	3972915	3973512	.		.	Name=PolII; Alias=NPC_PolII_Goldberg_PMID_20211137_SWEMBL_R015; Class=Polymerase; Cell_type=NPC; Summit=3973147
+chr10	SWEmbl_R015	AnnotatedFeature	3972921	3973272	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3973084; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3972937	3973311	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3973110; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3972949	3973290	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3973097; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3972956	3973950	.		.	Name=nMyc; Alias=ES_nMyc_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3973744; Note=Contains the following PWMs:MA0104.2 MA0104.1 MA0104.1
+chr10	SWEmbl_R015	AnnotatedFeature	3972970	3973295	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3973107; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3973018	3974043	.		.	Name=PolII; Alias=ES_PolII_Stadler2011_PMID22170606_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=3973721
+chr10	SWEmbl_R015	AnnotatedFeature	3973031	3973730	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3973319
+chr10	SWEmbl_R015	AnnotatedFeature	3973037	3973439	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3973213
+chr10	SWEmbl_R015	AnnotatedFeature	3973068	3973771	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=3973485
+chr10	SWEmbl_R015	AnnotatedFeature	3973160	3973768	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=3973510
+chr10	SWEmbl_R0025	AnnotatedFeature	3973410	3974081	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3973869
+chr10	SWEmbl_R015	AnnotatedFeature	3973461	3974212	.		.	Name=NELFe; Alias=MEL_NELFe_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3973695
+chr10	SWEmbl_R015	AnnotatedFeature	3973488	3973943	.		.	Name=Cmyc; Alias=ES_Cmyc_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3973732; Note=Contains the following PWMs:MA0147.1 MA0059.1
+chr10	SWEmbl_R015	AnnotatedFeature	3973547	3973961	.		.	Name=Max; Alias=MEL_Max_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3973753; Note=Contains the following PWMs:PB0043.1
+chr10	SWEmbl_R015	AnnotatedFeature	3973661	3973997	.		.	Name=Klf4; Alias=ES_Klf4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3973805
+chr10	SWEmbl_R015	AnnotatedFeature	3973663	3974217	.		.	Name=PolII; Alias=NPC_PolII_Goldberg_PMID_20211137_SWEMBL_R015; Class=Polymerase; Cell_type=NPC; Summit=3973836
+chr10	SWEmbl_R015	AnnotatedFeature	3973770	3974710	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=3973965
+chr10	SWEmbl_R015	AnnotatedFeature	3973783	3974703	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=3974062
+chr10	SWEmbl_R015	AnnotatedFeature	3973848	3974458	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=3973981
+chr10	SWEmbl_R015	AnnotatedFeature	3973849	3974330	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=3974065
+chr10	ccat_histone	AnnotatedFeature	3973850	3977600	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=3975525
+chr10	ccat_histone	AnnotatedFeature	3974450	3976550	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=3975025
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3974874	3975073	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3974973
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3975190	3975625	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3975316
+chr10	ccat_histone	AnnotatedFeature	3977150	3986600	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=3980525
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3977677	3978011	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3977816
+chr10	SWEmbl_R015	AnnotatedFeature	3979827	3980996	.		.	Name=H3K36me3; Alias=ESHyb_H3K36me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=3980133
+chr10	ccat_histone	AnnotatedFeature	3983750	3986300	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=3984625
+chr10	ccat_histone	AnnotatedFeature	3987300	4005400	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=3988575
+chr10	ccat_histone	AnnotatedFeature	3991350	3995500	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=3993025
+chr10	ccat_histone	AnnotatedFeature	3991900	3995250	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=3993575
+chr10	SWEmbl_R0025	AnnotatedFeature	3993758	3994025	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3993891
+chr10	SWEmbl_R015	AnnotatedFeature	3995289	3995645	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3995455; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3995297	3995652	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3995508; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3995306	3995608	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3995461; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3996181	3996402	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3996291
+chr10	SWEmbl_R015	AnnotatedFeature	3996421	3996847	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3996628; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3996468	3996831	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3996655
+chr10	SWEmbl_R015	AnnotatedFeature	3996482	3996803	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3996638; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3996494	3996827	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=3996656
+chr10	SWEmbl_R015	AnnotatedFeature	3996504	3996801	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=3996652; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	3996507	3996762	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=3996634; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	3996511	3996751	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=3996631
+chr10	SWEmbl_R015	AnnotatedFeature	3996520	3996818	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=3996669; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	3996541	3996776	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=3996658
+chr10	ccat_histone	AnnotatedFeature	3987300	4005400	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=3988575
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4002840	4003033	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4002936
+chr10	ccat_histone	AnnotatedFeature	4006900	4011950	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4007975
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4010603	4010788	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4010695
+chr10	ccat_histone	AnnotatedFeature	4012650	4034350	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4031275
+chr10	ccat_histone	AnnotatedFeature	4013700	4020050	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4018525
+chr10	ccat_histone	AnnotatedFeature	4025450	4030300	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4028375
+chr10	ccat_histone	AnnotatedFeature	4030950	4034900	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4032525
+chr10	SWEmbl_R015	AnnotatedFeature	4032604	4033086	.		.	Name=H3K36me3; Alias=ESHyb_H3K36me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4032940
+chr10	SWEmbl_R0025	AnnotatedFeature	4032813	4033061	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4032937
+chr10	ccat_histone	AnnotatedFeature	4034650	4038550	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4036525
+chr10	SWEmbl_R015	AnnotatedFeature	4037154	4037430	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4037280
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4037156	4037375	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4037265
+chr10	SWEmbl_R0025	AnnotatedFeature	4037668	4037912	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4037790
+chr10	SWEmbl_R015	AnnotatedFeature	4037687	4037983	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4037835
+chr10	ccat_histone	AnnotatedFeature	4039300	4045600	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4043075
+chr10	ccat_histone	AnnotatedFeature	4041400	4045450	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4042475
+chr10	SWEmbl_R015	AnnotatedFeature	4041535	4042073	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4041844; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4041626	4042089	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4041875; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4041675	4042024	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4041838
+chr10	SWEmbl_R015	AnnotatedFeature	4041713	4042002	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4041853
+chr10	SWEmbl_R015	AnnotatedFeature	4041716	4042013	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4041864; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4041727	4042028	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4041875
+chr10	SWEmbl_R015	AnnotatedFeature	4041733	4042007	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=4041855; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	4046450	4054900	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4050225
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4048021	4048255	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4048138
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4053834	4054070	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4053952
+chr10	ccat_histone	AnnotatedFeature	4055000	4059450	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4057225
+chr10	ccat_histone	AnnotatedFeature	4055650	4061350	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4057775
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4056036	4056283	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4056159
+chr10	SWEmbl_R015	AnnotatedFeature	4056672	4057106	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4056924
+chr10	SWEmbl_R0025	AnnotatedFeature	4057235	4057766	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4057578
+chr10	SWEmbl_R015	AnnotatedFeature	4057424	4057822	.		.	Name=p300; Alias=MEL_p300_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4057601
+chr10	SWEmbl_R015	AnnotatedFeature	4060920	4061577	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4061363; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4061099	4061522	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4061283
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4061131	4061561	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4061253
+chr10	ccat_histone	AnnotatedFeature	4062050	4064800	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4062825
+chr10	ccat_histone	AnnotatedFeature	4063250	4068450	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4065775
+chr10	SWEmbl_R0025	AnnotatedFeature	4065594	4066086	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4065917
+chr10	SWEmbl_R015	AnnotatedFeature	4065687	4066148	.		.	Name=p300; Alias=MEL_p300_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4065950
+chr10	SWEmbl_R015	AnnotatedFeature	4065695	4066147	.		.	Name=cMyb; Alias=MEL_cMyb_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4065893; Note=Contains the following PWMs:PB0149.1 MA0100.1
+chr10	SWEmbl_R015	AnnotatedFeature	4065794	4066068	.		.	Name=CEBPB; Alias=MEF_CEBPB_Steger_PMID_20478996_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=4065931
+chr10	ccat_histone	AnnotatedFeature	4068200	4072600	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4069925
+chr10	ccat_histone	AnnotatedFeature	4068800	4074450	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4071875
+chr10	SWEmbl_R0025	AnnotatedFeature	4071135	4071456	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4071298
+chr10	SWEmbl_R0025	AnnotatedFeature	4072538	4072841	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4072686
+chr10	ccat_histone	AnnotatedFeature	4072650	4075550	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4073375
+chr10	ccat_histone	AnnotatedFeature	4078000	4080650	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4079775
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4079805	4080065	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4079935
+chr10	SWEmbl_R015	AnnotatedFeature	4079843	4080157	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4080010
+chr10	SWEmbl_R0025	AnnotatedFeature	4079919	4080198	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4080058
+chr10	ccat_histone	AnnotatedFeature	4080700	4081950	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4081275
+chr10	ccat_histone	AnnotatedFeature	4083200	4094150	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4089125
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4088742	4089107	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4088945
+chr10	SWEmbl_R015	AnnotatedFeature	4088752	4089128	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4088927
+chr10	SWEmbl_R015	AnnotatedFeature	4088757	4089088	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4088904
+chr10	SWEmbl_R0025	AnnotatedFeature	4088845	4089063	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4088954
+chr10	ccat_histone	AnnotatedFeature	4094250	4099400	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4097975
+chr10	ccat_histone	AnnotatedFeature	4099600	4102350	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4100625
+chr10	SWEmbl_R015	AnnotatedFeature	4100085	4100457	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4100268; Note=Contains the following PWMs:MA0141.1
+chr10	ccat_histone	AnnotatedFeature	4102700	4105200	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4104025
+chr10	ccat_histone	AnnotatedFeature	4104850	4108900	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4107575
+chr10	ccat_histone	AnnotatedFeature	4105700	4112750	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4108575
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4105717	4106470	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4106323
+chr10	SWEmbl_R0025	AnnotatedFeature	4106108	4106431	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4106311
+chr10	SWEmbl_R015	AnnotatedFeature	4106158	4107213	.		.	Name=H3K4me1; Alias=MEF_H3K4me1_Koche_PMID_21211784_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4106691
+chr10	SWEmbl_R015	AnnotatedFeature	4106233	4107117	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4106497
+chr10	SWEmbl_R015	AnnotatedFeature	4107539	4107897	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4107684
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4107542	4108306	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4107967
+chr10	SWEmbl_R0025	AnnotatedFeature	4107561	4108309	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4107921
+chr10	SWEmbl_R015	AnnotatedFeature	4107572	4108170	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4107941
+chr10	SWEmbl_R015	AnnotatedFeature	4107640	4107983	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4107800
+chr10	SWEmbl_R015	AnnotatedFeature	4107693	4108165	.		.	Name=Oct4; Alias=ES_Oct4_Ang11_PMID21477851_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4107939
+chr10	SWEmbl_R0025	AnnotatedFeature	4107716	4107952	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4107834
+chr10	SWEmbl_R015	AnnotatedFeature	4108169	4108663	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4108519
+chr10	SWEmbl_R015	AnnotatedFeature	4108395	4108681	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4108538; Note=Contains the following PWMs:MA0145.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4111050	4111405	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4111188
+chr10	SWEmbl_R0025	AnnotatedFeature	4111061	4111438	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4111294
+chr10	SWEmbl_R015	AnnotatedFeature	4111115	4112035	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4111339
+chr10	ccat_histone	AnnotatedFeature	4112800	4115300	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4113775
+chr10	ccat_histone	AnnotatedFeature	4117950	4122050	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4119225
+chr10	ccat_histone	AnnotatedFeature	4119550	4128150	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4125925
+chr10	SWEmbl_R015	AnnotatedFeature	4120683	4121059	.		.	Name=CEBPB; Alias=MEF_CEBPB_Steger_PMID_20478996_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=4120911
+chr10	SWEmbl_R015	AnnotatedFeature	4122500	4122851	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4122649
+chr10	SWEmbl_R0025	AnnotatedFeature	4122812	4123054	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4122933
+chr10	SWEmbl_R0025	AnnotatedFeature	4123116	4123545	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4123259
+chr10	ccat_histone	AnnotatedFeature	4123400	4129150	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4124275
+chr10	SWEmbl_R015	AnnotatedFeature	4123504	4123951	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4123652
+chr10	SWEmbl_R0025	AnnotatedFeature	4126320	4126883	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4126590
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4129089	4129272	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4129180
+chr10	ccat_histone	AnnotatedFeature	4129900	4133750	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4132725
+chr10	ccat_histone	AnnotatedFeature	4138900	4141000	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4140425
+chr10	SWEmbl_R015	AnnotatedFeature	4139311	4139665	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4139517
+chr10	ccat_histone	AnnotatedFeature	4141750	4142950	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4142275
+chr10	SWEmbl_R015	AnnotatedFeature	4142443	4143321	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4143075
+chr10	SWEmbl_R0025	AnnotatedFeature	4142808	4143189	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4143010
+chr10	SWEmbl_R015	AnnotatedFeature	4142810	4143193	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4143029
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4143151	4143770	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4143599
+chr10	SWEmbl_R015	AnnotatedFeature	4143368	4143788	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4143582
+chr10	SWEmbl_R0025	AnnotatedFeature	4143378	4143841	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4143618
+chr10	SWEmbl_R015	AnnotatedFeature	4143399	4143780	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4143560
+chr10	SWEmbl_R015	AnnotatedFeature	4145238	4145595	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4145417
+chr10	SWEmbl_R0025	AnnotatedFeature	4145260	4145739	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4145476
+chr10	SWEmbl_R015	AnnotatedFeature	4145919	4146296	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4146067
+chr10	ccat_histone	AnnotatedFeature	4147800	4157900	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4150525
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4149853	4150123	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4149988
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4151132	4151457	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4151288
+chr10	SWEmbl_R015	AnnotatedFeature	4151181	4151525	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4151354
+chr10	SWEmbl_R015	AnnotatedFeature	4151192	4151516	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4151367; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4151206	4151486	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4151346; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	4154600	4156600	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4155775
+chr10	SWEmbl_R015	AnnotatedFeature	4155569	4155896	.		.	Name=CEBPB; Alias=MEF_CEBPB_Steger_PMID_20478996_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=4155736
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4163822	4164025	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4163923
+chr10	SWEmbl_R015	AnnotatedFeature	4166861	4167170	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4167027; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4176928	4177244	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4177119; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	4178000	4180050	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4179175
+chr10	ccat_histone	AnnotatedFeature	4181100	4184100	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4182525
+chr10	SWEmbl_R015	AnnotatedFeature	4181806	4182247	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4182101
+chr10	SWEmbl_R0025	AnnotatedFeature	4182296	4182818	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4182613
+chr10	SWEmbl_R015	AnnotatedFeature	4182638	4183014	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4182818
+chr10	SWEmbl_R0025	AnnotatedFeature	4203600	4204056	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4203830
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4203642	4203979	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4203833
+chr10	SWEmbl_R015	AnnotatedFeature	4210502	4210851	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4210679
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4210807	4211046	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4210926
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4221634	4221868	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4221751
+chr10	ccat_histone	AnnotatedFeature	4226350	4227400	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4226875
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4230426	4230840	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4230624
+chr10	ccat_histone	AnnotatedFeature	4232100	4234100	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4232975
+chr10	SWEmbl_R0025	AnnotatedFeature	4242159	4242859	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4242439
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4242223	4242640	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4242484
+chr10	SWEmbl_R015	AnnotatedFeature	4242328	4243138	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4242499
+chr10	SWEmbl_R015	AnnotatedFeature	4242343	4243224	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4242906
+chr10	SWEmbl_R015	AnnotatedFeature	4242351	4242895	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4242673; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4242390	4243527	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4242922
+chr10	SWEmbl_R015	AnnotatedFeature	4242402	4242914	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4242709
+chr10	SWEmbl_R015	AnnotatedFeature	4243283	4244565	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4243623
+chr10	SWEmbl_R015	AnnotatedFeature	4243339	4243681	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4243485
+chr10	SWEmbl_R0025	AnnotatedFeature	4243502	4243978	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4243792
+chr10	SWEmbl_R015	AnnotatedFeature	4243555	4243964	.		.	Name=Klf4; Alias=ES_Klf4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4243760; Note=Contains the following PWMs:MA0039.2
+chr10	SWEmbl_R015	AnnotatedFeature	4243570	4243943	.		.	Name=PolII; Alias=ES_PolII_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=4243770
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4243617	4243832	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4243724
+chr10	SWEmbl_R015	AnnotatedFeature	4247574	4248035	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4247808; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4249055	4249813	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4249377
+chr10	SWEmbl_R015	AnnotatedFeature	4249122	4249678	.		.	Name=Sox2; Alias=ES_Sox2_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4249270; Note=Contains the following PWMs:MA0143.1
+chr10	SWEmbl_R015	AnnotatedFeature	4249126	4249667	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4249435
+chr10	SWEmbl_R0025	AnnotatedFeature	4249208	4249759	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4249498
+chr10	SWEmbl_R015	AnnotatedFeature	4249225	4249625	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4249379
+chr10	SWEmbl_R015	AnnotatedFeature	4249229	4249707	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4249535
+chr10	ccat_histone	AnnotatedFeature	4250350	4252150	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4251375
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4250593	4251184	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4250915
+chr10	SWEmbl_R0025	AnnotatedFeature	4250794	4251109	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4250962
+chr10	SWEmbl_R015	AnnotatedFeature	4251095	4251508	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4251284; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4251889	4252151	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4252020
+chr10	SWEmbl_R015	AnnotatedFeature	4253535	4254082	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4253741
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4253701	4254043	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4253927
+chr10	SWEmbl_R0025	AnnotatedFeature	4253724	4254032	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4253883
+chr10	SWEmbl_R015	AnnotatedFeature	4253757	4254088	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4253906
+chr10	SWEmbl_R015	AnnotatedFeature	4254077	4254528	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4254224
+chr10	SWEmbl_R0025	AnnotatedFeature	4254429	4254845	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4254684
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4254574	4254827	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4254700
+chr10	SWEmbl_R015	AnnotatedFeature	4261440	4261881	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4261735; Note=Contains the following PWMs:MA0146.1
+chr10	SWEmbl_R015	AnnotatedFeature	4263963	4264281	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4264132
+chr10	SWEmbl_R015	AnnotatedFeature	4264007	4264521	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4264156; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4264320	4264616	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4264468
+chr10	SWEmbl_R015	AnnotatedFeature	4265397	4268452	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4266415
+chr10	SWEmbl_R0025	AnnotatedFeature	4265491	4266529	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4266267
+chr10	SWEmbl_R015	AnnotatedFeature	4265498	4265972	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4265762
+chr10	SWEmbl_R015	AnnotatedFeature	4265516	4265945	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4265664
+chr10	SWEmbl_R015	AnnotatedFeature	4265527	4267306	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4266570
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4265629	4266385	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4265880
+chr10	SWEmbl_R015	AnnotatedFeature	4266094	4267384	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4266579
+chr10	SWEmbl_R015	AnnotatedFeature	4266152	4266555	.		.	Name=PolII; Alias=ES_PolII_Stadler2011_PMID22170606_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=4266400
+chr10	SWEmbl_R015	AnnotatedFeature	4266213	4268543	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4267270
+chr10	SWEmbl_R015	AnnotatedFeature	4266225	4266619	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=4266395
+chr10	SWEmbl_R015	AnnotatedFeature	4266309	4267857	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4266678
+chr10	SWEmbl_R015	AnnotatedFeature	4266315	4267062	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=4266463
+chr10	SWEmbl_R015	AnnotatedFeature	4266336	4267665	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4266970
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4266523	4266830	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4266671
+chr10	SWEmbl_R0025	AnnotatedFeature	4267475	4267876	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4267707
+chr10	SWEmbl_R015	AnnotatedFeature	4267795	4268093	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4267944
+chr10	SWEmbl_R0025	AnnotatedFeature	4267974	4268298	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4268147
+chr10	ccat_histone	AnnotatedFeature	4268000	4269900	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4268875
+chr10	SWEmbl_R015	AnnotatedFeature	4268093	4268499	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4268287
+chr10	SWEmbl_R015	AnnotatedFeature	4268117	4268774	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4268635
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4268172	4268430	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4268301
+chr10	SWEmbl_R015	AnnotatedFeature	4268582	4269406	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4268729
+chr10	ccat_histone	AnnotatedFeature	4270350	4272650	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4271275
+chr10	ccat_histone	AnnotatedFeature	4270600	4273100	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4271725
+chr10	SWEmbl_R015	AnnotatedFeature	4270906	4271145	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4271025; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	4272700	4277200	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4273925
+chr10	ccat_histone	AnnotatedFeature	4275950	4278100	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4276575
+chr10	ccat_histone	AnnotatedFeature	4277500	4279750	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4278375
+chr10	SWEmbl_R0025	AnnotatedFeature	4278138	4278411	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4278274
+chr10	ccat_histone	AnnotatedFeature	4279100	4281300	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4280325
+chr10	SWEmbl_R0025	AnnotatedFeature	4282420	4282768	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4282580
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4282519	4282792	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4282655
+chr10	ccat_histone	AnnotatedFeature	4282550	4286450	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4285625
+chr10	SWEmbl_R0025	AnnotatedFeature	4284726	4285278	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4284961
+chr10	ccat_histone	AnnotatedFeature	4288100	4289550	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4288825
+chr10	SWEmbl_R015	AnnotatedFeature	4288862	4289608	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4289025
+chr10	SWEmbl_R0025	AnnotatedFeature	4288880	4289141	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4289010
+chr10	SWEmbl_R015	AnnotatedFeature	4289288	4289805	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4289459
+chr10	SWEmbl_R0025	AnnotatedFeature	4289400	4290940	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4289873
+chr10	SWEmbl_R015	AnnotatedFeature	4289470	4290010	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4289773; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4289551	4290105	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4289729
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4289552	4290147	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4289721
+chr10	SWEmbl_R015	AnnotatedFeature	4289558	4289983	.		.	Name=Sox2; Alias=ES_Sox2_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4289769
+chr10	SWEmbl_R015	AnnotatedFeature	4289562	4289997	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4289788; Note=Contains the following PWMs:MA0145.1
+chr10	SWEmbl_R015	AnnotatedFeature	4289566	4289897	.		.	Name=Smad1; Alias=ES_Smad1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4289705
+chr10	SWEmbl_R015	AnnotatedFeature	4289571	4290619	.		.	Name=Klf4; Alias=ES_Klf4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4289756; Note=Contains the following PWMs:MA0039.2
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4290218	4290457	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4290337
+chr10	SWEmbl_R015	AnnotatedFeature	4290354	4290749	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4290580; Note=Contains the following PWMs:MA0141.1
+chr10	ccat_histone	AnnotatedFeature	4291350	4293050	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4291925
+chr10	SWEmbl_R015	AnnotatedFeature	4292381	4292884	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4292564; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4295785	4296045	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4295915
+chr10	ccat_histone	AnnotatedFeature	4295900	4297500	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4296625
+chr10	ccat_histone	AnnotatedFeature	4300300	4304100	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4301075
+chr10	SWEmbl_R0025	AnnotatedFeature	4303524	4303978	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4303783
+chr10	SWEmbl_R015	AnnotatedFeature	4303553	4303878	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4303717
+chr10	SWEmbl_R015	AnnotatedFeature	4303596	4304043	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4303767
+chr10	SWEmbl_R015	AnnotatedFeature	4304625	4305018	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4304874
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4308323	4308660	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4308474
+chr10	SWEmbl_R0025	AnnotatedFeature	4308397	4308692	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4308544
+chr10	ccat_histone	AnnotatedFeature	4309400	4318200	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4314875
+chr10	ccat_histone	AnnotatedFeature	4309750	4318100	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4313575
+chr10	ccat_histone	AnnotatedFeature	4318700	4326550	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4321875
+chr10	ccat_histone	AnnotatedFeature	4318750	4325700	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4323425
+chr10	ccat_histone	AnnotatedFeature	4324800	4326600	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4325625
+chr10	SWEmbl_R015	AnnotatedFeature	4325151	4325526	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4325347; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4325906	4326215	.		.	Name=Klf4; Alias=ES_Klf4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4326068; Note=Contains the following PWMs:MA0039.2
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4332241	4332637	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4332493
+chr10	SWEmbl_R0025	AnnotatedFeature	4332343	4332919	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4332751
+chr10	SWEmbl_R015	AnnotatedFeature	4332361	4332913	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4332714; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4332852	4333669	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4333431
+chr10	SWEmbl_R0025	AnnotatedFeature	4333066	4333744	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4333450
+chr10	SWEmbl_R015	AnnotatedFeature	4333174	4333510	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4333348
+chr10	SWEmbl_R015	AnnotatedFeature	4333190	4333678	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4333420
+chr10	SWEmbl_R015	AnnotatedFeature	4333283	4333734	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4333571; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4333293	4333647	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4333499
+chr10	SWEmbl_R015	AnnotatedFeature	4333300	4333635	.		.	Name=Oct4; Alias=ES_Oct4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4333479
+chr10	SWEmbl_R015	AnnotatedFeature	4333318	4333677	.		.	Name=Klf4; Alias=ES_Klf4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4333465
+chr10	SWEmbl_R015	AnnotatedFeature	4333329	4333700	.		.	Name=Oct4; Alias=ES_Oct4_Ang11_PMID21477851_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4333471
+chr10	SWEmbl_R015	AnnotatedFeature	4333346	4333632	.		.	Name=Sox2; Alias=ES_Sox2_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4333489; Note=Contains the following PWMs:MA0143.1
+chr10	SWEmbl_R015	AnnotatedFeature	4333378	4333814	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4333578
+chr10	SWEmbl_R015	AnnotatedFeature	4333414	4333718	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4333563; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4333417	4333688	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4333552; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4333418	4333708	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4333563; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4333421	4333703	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=4333568; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4333462	4333746	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4333604
+chr10	SWEmbl_R0025	AnnotatedFeature	4333961	4334762	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4334493
+chr10	SWEmbl_R015	AnnotatedFeature	4333988	4334785	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4334581
+chr10	SWEmbl_R015	AnnotatedFeature	4334074	4334435	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4334208
+chr10	SWEmbl_R015	AnnotatedFeature	4334227	4334759	.		.	Name=PolII; Alias=ES_PolII_Stadler2011_PMID22170606_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=4334581
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4334247	4334796	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4334454
+chr10	SWEmbl_R0025	AnnotatedFeature	4334248	4334766	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4334496
+chr10	SWEmbl_R015	AnnotatedFeature	4334250	4334760	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=4334591
+chr10	SWEmbl_R015	AnnotatedFeature	4334298	4334606	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4334446
+chr10	SWEmbl_R015	AnnotatedFeature	4334329	4334716	.		.	Name=Klf4; Alias=ES_Klf4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4334534; Note=Contains the following PWMs:MA0039.2 MA0039.2
+chr10	SWEmbl_R015	AnnotatedFeature	4334484	4335196	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4334705
+chr10	SWEmbl_R015	AnnotatedFeature	4334525	4335194	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4334730
+chr10	SWEmbl_R015	AnnotatedFeature	4334531	4334994	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4334679
+chr10	SWEmbl_R015	AnnotatedFeature	4334553	4334788	.		.	Name=PolII; Alias=ES_PolII_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=4334665
+chr10	SWEmbl_R015	AnnotatedFeature	4335258	4336059	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4335469
+chr10	SWEmbl_R015	AnnotatedFeature	4336947	4337298	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4337133
+chr10	ccat_histone	AnnotatedFeature	4337850	4342450	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4339225
+chr10	SWEmbl_R0025	AnnotatedFeature	4338909	4339352	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4339133
+chr10	SWEmbl_R0025	AnnotatedFeature	4339190	4339439	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4339314
+chr10	SWEmbl_R015	AnnotatedFeature	4339282	4339955	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4339580
+chr10	ccat_histone	AnnotatedFeature	4340100	4342200	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4340975
+chr10	SWEmbl_R0025	AnnotatedFeature	4341415	4341763	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4341577
+chr10	SWEmbl_R015	AnnotatedFeature	4341461	4341775	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4341608
+chr10	SWEmbl_R015	AnnotatedFeature	4341467	4341762	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=4341614
+chr10	SWEmbl_R015	AnnotatedFeature	4341468	4341776	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4341627
+chr10	SWEmbl_R015	AnnotatedFeature	4341477	4341804	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4341639
+chr10	SWEmbl_R015	AnnotatedFeature	4341494	4341741	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4341617
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4341555	4341811	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4341649
+chr10	ccat_histone	AnnotatedFeature	4345650	4347500	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4346925
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4346325	4347206	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4346942
+chr10	SWEmbl_R015	AnnotatedFeature	4346711	4347020	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4346858
+chr10	SWEmbl_R015	AnnotatedFeature	4346753	4347260	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4346985; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4346767	4347137	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4346940; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4346786	4347153	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4346983; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4346800	4347165	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4346982
+chr10	SWEmbl_R0025	AnnotatedFeature	4346836	4347125	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4346980
+chr10	SWEmbl_R0025	AnnotatedFeature	4346846	4347292	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4347016
+chr10	SWEmbl_R015	AnnotatedFeature	4346848	4347118	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=4346984; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4346852	4347129	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4346981; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4346940	4347277	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4347089; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4347606	4347923	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4347775; Note=Contains the following PWMs:MA0145.1
+chr10	ccat_histone	AnnotatedFeature	4350100	4361550	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4353675
+chr10	SWEmbl_R015	AnnotatedFeature	4351144	4351426	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4351278; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	4352000	4360850	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4355375
+chr10	SWEmbl_R015	AnnotatedFeature	4352655	4353218	.		.	Name=H3K36me3; Alias=ESHyb_H3K36me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4353077
+chr10	SWEmbl_R015	AnnotatedFeature	4354627	4354965	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4354807; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4354688	4354970	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4354829
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4356976	4357186	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4357081
+chr10	SWEmbl_R015	AnnotatedFeature	4358177	4358653	.		.	Name=H3K36me3; Alias=ESHyb_H3K36me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4358327
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4361686	4361950	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4361818
+chr10	ccat_histone	AnnotatedFeature	4364300	4369650	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4367175
+chr10	SWEmbl_R0025	AnnotatedFeature	4364636	4364966	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4364755
+chr10	SWEmbl_R015	AnnotatedFeature	4364651	4364979	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4364799; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4368581	4369333	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4369198
+chr10	SWEmbl_R015	AnnotatedFeature	4368630	4369471	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4369084
+chr10	SWEmbl_R015	AnnotatedFeature	4369483	4370376	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4370181; Note=Contains the following PWMs:MA0146.1 MA0146.1
+chr10	ccat_histone	AnnotatedFeature	4369950	4374550	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4373225
+chr10	SWEmbl_R015	AnnotatedFeature	4370011	4370435	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4370192
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4370199	4370446	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4370322
+chr10	SWEmbl_R015	AnnotatedFeature	4371174	4371463	.		.	Name=Oct4; Alias=ES_Oct4_Ang11_PMID21477851_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4371318
+chr10	SWEmbl_R015	AnnotatedFeature	4371856	4372306	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4372142; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4371919	4372363	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4372147; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4371945	4372491	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4372204
+chr10	SWEmbl_R015	AnnotatedFeature	4371980	4372280	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4372128
+chr10	SWEmbl_R0025	AnnotatedFeature	4371996	4372481	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4372172
+chr10	SWEmbl_R015	AnnotatedFeature	4373390	4373951	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4373760; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4374812	4375114	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4374960; Note=Contains the following PWMs:MA0145.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4374846	4375058	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4374952
+chr10	SWEmbl_R0025	AnnotatedFeature	4375105	4375748	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4375436
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4375136	4375721	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4375439
+chr10	SWEmbl_R015	AnnotatedFeature	4375165	4375568	.		.	Name=Oct4; Alias=ES_Oct4_Ang11_PMID21477851_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4375410
+chr10	SWEmbl_R015	AnnotatedFeature	4375253	4375712	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4375558
+chr10	ccat_histone	AnnotatedFeature	4384200	4386550	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4385575
+chr10	SWEmbl_R015	AnnotatedFeature	4385683	4386126	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4385891
+chr10	SWEmbl_R015	AnnotatedFeature	4386216	4386658	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4386481
+chr10	SWEmbl_R0025	AnnotatedFeature	4386274	4387607	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4386780
+chr10	SWEmbl_R015	AnnotatedFeature	4386276	4386805	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4386637
+chr10	SWEmbl_R015	AnnotatedFeature	4386310	4386705	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4386593
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4386323	4387918	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4386698
+chr10	SWEmbl_R015	AnnotatedFeature	4386349	4386803	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4386663
+chr10	SWEmbl_R015	AnnotatedFeature	4386354	4386651	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=4386502
+chr10	SWEmbl_R015	AnnotatedFeature	4386403	4386833	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4386615
+chr10	SWEmbl_R0025	AnnotatedFeature	4386414	4387397	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4387132
+chr10	SWEmbl_R015	AnnotatedFeature	4386422	4386725	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4386571
+chr10	SWEmbl_R015	AnnotatedFeature	4386463	4386874	.		.	Name=PolII; Alias=ES_PolII_Stadler2011_PMID22170606_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=4386644
+chr10	SWEmbl_R015	AnnotatedFeature	4386474	4386856	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=4386667
+chr10	SWEmbl_R015	AnnotatedFeature	4387021	4387468	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=4387193
+chr10	SWEmbl_R015	AnnotatedFeature	4387038	4387373	.		.	Name=PolII; Alias=ES_PolII_Stadler2011_PMID22170606_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=4387196
+chr10	SWEmbl_R015	AnnotatedFeature	4387038	4387553	.		.	Name=Oct4; Alias=ES_Oct4_Ang11_PMID21477851_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4387174
+chr10	SWEmbl_R015	AnnotatedFeature	4387049	4387407	.		.	Name=NELFe; Alias=MEL_NELFe_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4387201
+chr10	SWEmbl_R015	AnnotatedFeature	4387054	4387631	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4387199; Note=Contains the following PWMs:MA0146.1 MA0146.1
+chr10	SWEmbl_R015	AnnotatedFeature	4387066	4387516	.		.	Name=PolII; Alias=MEL_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEL; Summit=4387214
+chr10	SWEmbl_R015	AnnotatedFeature	4387072	4388969	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4387390
+chr10	SWEmbl_R015	AnnotatedFeature	4387082	4387395	.		.	Name=PolII; Alias=NPC_PolII_Goldberg_PMID_20211137_SWEMBL_R015; Class=Polymerase; Cell_type=NPC; Summit=4387218
+chr10	SWEmbl_R015	AnnotatedFeature	4387152	4388163	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4387385
+chr10	SWEmbl_R015	AnnotatedFeature	4387163	4388959	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4388338
+chr10	SWEmbl_R015	AnnotatedFeature	4387212	4387645	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4387381
+chr10	SWEmbl_R015	AnnotatedFeature	4387244	4388037	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4387391
+chr10	ccat_histone	AnnotatedFeature	4387650	4430250	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4416375
+chr10	SWEmbl_R0025	AnnotatedFeature	4387884	4388238	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4388071
+chr10	SWEmbl_R015	AnnotatedFeature	4387933	4388224	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4388078
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4387934	4388555	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4388164
+chr10	SWEmbl_R015	AnnotatedFeature	4388181	4389021	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4388547
+chr10	ccat_histone	AnnotatedFeature	4388200	4397250	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4389925
+chr10	SWEmbl_R015	AnnotatedFeature	4388254	4389828	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4388553
+chr10	SWEmbl_R015	AnnotatedFeature	4388300	4389035	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4388551
+chr10	SWEmbl_R015	AnnotatedFeature	4388329	4389153	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4388570
+chr10	SWEmbl_R015	AnnotatedFeature	4388334	4389159	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4388735
+chr10	SWEmbl_R0025	AnnotatedFeature	4388364	4388864	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4388709
+chr10	SWEmbl_R015	AnnotatedFeature	4388403	4388798	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4388546
+chr10	SWEmbl_R015	AnnotatedFeature	4388427	4389112	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=4388961
+chr10	ccat_histone	AnnotatedFeature	4388600	4397900	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4393625
+chr10	SWEmbl_R0025	AnnotatedFeature	4389046	4389379	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4389220
+chr10	SWEmbl_R0025	AnnotatedFeature	4391861	4392197	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4392047
+chr10	SWEmbl_R015	AnnotatedFeature	4391876	4392200	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4392022; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4391876	4392132	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4392004
+chr10	SWEmbl_R015	AnnotatedFeature	4391887	4392170	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4392031; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4391896	4392188	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4392042; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4391934	4392247	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4392099
+chr10	SWEmbl_R0025	AnnotatedFeature	4391948	4392211	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4392079
+chr10	SWEmbl_R015	AnnotatedFeature	4392900	4393496	.		.	Name=H3K36me3; Alias=ESHyb_H3K36me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4393204
+chr10	SWEmbl_R015	AnnotatedFeature	4394962	4395411	.		.	Name=H3K4me1; Alias=MEF_H3K4me1_Koche_PMID_21211784_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4395226
+chr10	SWEmbl_R015	AnnotatedFeature	4395790	4396307	.		.	Name=H3K4me1; Alias=MEF_H3K4me1_Koche_PMID_21211784_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4396032
+chr10	SWEmbl_R015	AnnotatedFeature	4397958	4398361	.		.	Name=PolII; Alias=NPC_PolII_Goldberg_PMID_20211137_SWEMBL_R015; Class=Polymerase; Cell_type=NPC; Summit=4398236
+chr10	ccat_histone	AnnotatedFeature	4402100	4410850	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4407375
+chr10	SWEmbl_R015	AnnotatedFeature	4404831	4405309	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4405078; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4404878	4405172	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4405025
+chr10	SWEmbl_R015	AnnotatedFeature	4404905	4405255	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4405085
+chr10	SWEmbl_R0025	AnnotatedFeature	4404935	4405305	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4405161
+chr10	SWEmbl_R015	AnnotatedFeature	4404955	4405241	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4405093; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4404986	4405272	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4405129; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4405006	4405209	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4405107
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4410433	4410709	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4410571
+chr10	ccat_histone	AnnotatedFeature	4423950	4428350	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4425425
+chr10	SWEmbl_R015	AnnotatedFeature	4425266	4425625	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4425416; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	4427900	4432350	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4430875
+chr10	SWEmbl_R015	AnnotatedFeature	4428304	4428718	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4428552
+chr10	SWEmbl_R015	AnnotatedFeature	4430022	4432306	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4431957
+chr10	SWEmbl_R0025	AnnotatedFeature	4430351	4430714	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4430558
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4431270	4431466	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4431368
+chr10	SWEmbl_R015	AnnotatedFeature	4431476	4432361	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4432129
+chr10	SWEmbl_R015	AnnotatedFeature	4431503	4432365	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4432123
+chr10	SWEmbl_R015	AnnotatedFeature	4431570	4432318	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=4432008
+chr10	SWEmbl_R015	AnnotatedFeature	4431572	4432291	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4432115
+chr10	SWEmbl_R015	AnnotatedFeature	4431588	4432386	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4432095
+chr10	SWEmbl_R015	AnnotatedFeature	4431656	4433028	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4432231
+chr10	SWEmbl_R015	AnnotatedFeature	4431684	4432389	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4432162
+chr10	SWEmbl_R015	AnnotatedFeature	4431854	4432321	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4432001; Note=Contains the following PWMs:MA0146.1 MA0146.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4431876	4433727	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4432409
+chr10	SWEmbl_R015	AnnotatedFeature	4431924	4432543	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4432360; Note=Contains the following PWMs:MA0141.1 MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4432048	4432878	.		.	Name=NELFe; Alias=MEL_NELFe_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4432224
+chr10	SWEmbl_R015	AnnotatedFeature	4432051	4432436	.		.	Name=PolII; Alias=MEL_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEL; Summit=4432227
+chr10	SWEmbl_R015	AnnotatedFeature	4432056	4432566	.		.	Name=Max; Alias=MEL_Max_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4432407; Note=Contains the following PWMs:PB0147.1
+chr10	SWEmbl_R015	AnnotatedFeature	4432062	4432466	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=4432266
+chr10	SWEmbl_R015	AnnotatedFeature	4432072	4432460	.		.	Name=PolII; Alias=ES_PolII_Stadler2011_PMID22170606_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=4432259
+chr10	SWEmbl_R0025	AnnotatedFeature	4432073	4432701	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4432390
+chr10	SWEmbl_R015	AnnotatedFeature	4432076	4432409	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4432223
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4432092	4432917	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4432385
+chr10	SWEmbl_R015	AnnotatedFeature	4432148	4432453	.		.	Name=Cmyc; Alias=ES_Cmyc_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4432296
+chr10	SWEmbl_R015	AnnotatedFeature	4432168	4432519	.		.	Name=nMyc; Alias=ES_nMyc_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4432351; Note=Contains the following PWMs:MA0104.1 MA0104.1 MA0104.1 MA0104.1
+chr10	SWEmbl_R015	AnnotatedFeature	4432173	4432575	.		.	Name=Klf4; Alias=ES_Klf4_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4432321; Note=Contains the following PWMs:MA0039.2 MA0039.2
+chr10	SWEmbl_R015	AnnotatedFeature	4432221	4432558	.		.	Name=Oct4; Alias=ES_Oct4_Ang11_PMID21477851_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4432368
+chr10	SWEmbl_R015	AnnotatedFeature	4432224	4432556	.		.	Name=USF2; Alias=MEL_USF2_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4432398
+chr10	SWEmbl_R015	AnnotatedFeature	4432372	4432779	.		.	Name=cMyb; Alias=MEL_cMyb_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4432588; Note=Contains the following PWMs:MA0100.1
+chr10	SWEmbl_R015	AnnotatedFeature	4432494	4432826	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=4432665
+chr10	SWEmbl_R015	AnnotatedFeature	4432514	4433612	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4432946
+chr10	SWEmbl_R015	AnnotatedFeature	4432552	4433453	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4432971
+chr10	SWEmbl_R015	AnnotatedFeature	4432552	4433292	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4432863
+chr10	SWEmbl_R015	AnnotatedFeature	4432559	4433103	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4432836
+chr10	SWEmbl_R015	AnnotatedFeature	4432574	4433030	.		.	Name=PolII; Alias=MEL_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEL; Summit=4432719
+chr10	SWEmbl_R015	AnnotatedFeature	4432580	4433406	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4432985
+chr10	SWEmbl_R015	AnnotatedFeature	4432590	4433291	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4433118
+chr10	SWEmbl_R015	AnnotatedFeature	4432599	4433780	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4433141
+chr10	SWEmbl_R015	AnnotatedFeature	4432640	4433360	.		.	Name=H3K4me3; Alias=NPC_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=4432950
+chr10	ccat_histone	AnnotatedFeature	4432950	4437000	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4434175
+chr10	ccat_histone	AnnotatedFeature	4434350	4442800	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4438175
+chr10	SWEmbl_R0025	AnnotatedFeature	4435435	4435752	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4435583
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4435543	4435773	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4435658
+chr10	ccat_histone	AnnotatedFeature	4444900	4450250	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4448475
+chr10	ccat_histone	AnnotatedFeature	4450450	4457200	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4455675
+chr10	ccat_histone	AnnotatedFeature	4453300	4457750	.		.	Name=H3K36me3; Alias=ES_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4454425
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4460179	4460555	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4460349
+chr10	SWEmbl_R0025	AnnotatedFeature	4460263	4460476	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4460369
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4465857	4466097	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4465977
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4466201	4466687	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4466312
+chr10	ccat_histone	AnnotatedFeature	4468300	4470850	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4469475
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4469280	4469630	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4469399
+chr10	SWEmbl_R0025	AnnotatedFeature	4469370	4469754	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4469495
+chr10	ccat_histone	AnnotatedFeature	4474550	4476700	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4475875
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4479802	4479974	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4479888
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4480097	4480363	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4480230
+chr10	SWEmbl_R015	AnnotatedFeature	4481466	4481785	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4481613; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4482167	4482744	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4482315
+chr10	SWEmbl_R0025	AnnotatedFeature	4482314	4482757	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4482538
+chr10	SWEmbl_R015	AnnotatedFeature	4482333	4482800	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4482621
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4482377	4482880	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4482518
+chr10	SWEmbl_R015	AnnotatedFeature	4482395	4482782	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4482532
+chr10	ccat_histone	AnnotatedFeature	4483700	4486500	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4485225
+chr10	SWEmbl_R0025	AnnotatedFeature	4483912	4484191	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4484051
+chr10	SWEmbl_R015	AnnotatedFeature	4484120	4484502	.		.	Name=E2F1; Alias=ES_E2F1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4484275
+chr10	SWEmbl_R0025	AnnotatedFeature	4484891	4485502	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4485240
+chr10	SWEmbl_R015	AnnotatedFeature	4486227	4486557	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4486373
+chr10	ccat_histone	AnnotatedFeature	4488900	4493400	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4490325
+chr10	SWEmbl_R015	AnnotatedFeature	4490253	4490674	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4490420
+chr10	SWEmbl_R015	AnnotatedFeature	4491411	4491781	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4491617
+chr10	SWEmbl_R0025	AnnotatedFeature	4492918	4493327	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4493175
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4492973	4493371	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4493120
+chr10	SWEmbl_R015	AnnotatedFeature	4492976	4493319	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4493158; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R015	AnnotatedFeature	4500036	4500196	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4500051
+chr10	ccat_histone	AnnotatedFeature	4521950	4524400	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4523225
+chr10	SWEmbl_R015	AnnotatedFeature	4522099	4522469	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4522273; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4522127	4522443	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4522269
+chr10	SWEmbl_R0025	AnnotatedFeature	4522188	4522409	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4522298
+chr10	SWEmbl_R015	AnnotatedFeature	4530699	4531041	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4530884; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4545549	4545779	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4545664
+chr10	SWEmbl_R015	AnnotatedFeature	4545570	4545977	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4545754; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4545586	4545921	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4545772
+chr10	SWEmbl_R015	AnnotatedFeature	4545643	4545901	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4545775; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4545646	4545915	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4545780
+chr10	SWEmbl_R015	AnnotatedFeature	4545665	4545933	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4545799; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	4548650	4551550	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4550075
+chr10	ccat_histone	AnnotatedFeature	4558450	4560650	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4559625
+chr10	ccat_histone	AnnotatedFeature	4562750	4567550	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4564725
+chr10	SWEmbl_R0025	AnnotatedFeature	4564786	4565906	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4565330
+chr10	SWEmbl_R015	AnnotatedFeature	4565059	4565557	.		.	Name=cMyb; Alias=MEL_cMyb_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4565389; Note=Contains the following PWMs:PB0045.1
+chr10	SWEmbl_R015	AnnotatedFeature	4565126	4565584	.		.	Name=p300; Alias=MEL_p300_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4565411
+chr10	SWEmbl_R015	AnnotatedFeature	4565657	4566360	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4565932
+chr10	SWEmbl_R015	AnnotatedFeature	4593850	4594199	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4594035
+chr10	SWEmbl_R015	AnnotatedFeature	4593896	4594182	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4594039
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4593912	4594186	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4594049
+chr10	SWEmbl_R0025	AnnotatedFeature	4596118	4596531	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4596286
+chr10	ccat_histone	AnnotatedFeature	4596150	4598650	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4597225
+chr10	SWEmbl_R0025	AnnotatedFeature	4596194	4596470	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4596332
+chr10	ccat_histone	AnnotatedFeature	4598150	4604900	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4601575
+chr10	SWEmbl_R015	AnnotatedFeature	4598258	4598680	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4598455
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4598259	4598617	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4598471
+chr10	SWEmbl_R015	AnnotatedFeature	4598274	4598670	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4598451; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4598316	4598610	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4598463; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4598323	4598596	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4598459; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4598351	4598587	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4598469
+chr10	SWEmbl_R0025	AnnotatedFeature	4601192	4602127	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4601946
+chr10	SWEmbl_R0025	AnnotatedFeature	4611496	4611787	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4611641
+chr10	SWEmbl_R015	AnnotatedFeature	4611556	4612240	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4612090
+chr10	SWEmbl_R015	AnnotatedFeature	4611827	4612132	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4611975
+chr10	SWEmbl_R0025	AnnotatedFeature	4611952	4612950	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4612499
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4612068	4612318	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4612193
+chr10	SWEmbl_R015	AnnotatedFeature	4612194	4612753	.		.	Name=NELFe; Alias=MEL_NELFe_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4612578
+chr10	SWEmbl_R015	AnnotatedFeature	4612327	4612705	.		.	Name=Max; Alias=MEL_Max_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4612556
+chr10	SWEmbl_R015	AnnotatedFeature	4612429	4613145	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4612630
+chr10	ccat_histone	AnnotatedFeature	4612500	4614200	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4613425
+chr10	ccat_histone	AnnotatedFeature	4613500	4615550	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4614025
+chr10	SWEmbl_R0025	AnnotatedFeature	4614285	4614471	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4614378
+chr10	SWEmbl_R015	AnnotatedFeature	4614286	4614596	.		.	Name=Cmyc; Alias=ES_Cmyc_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4614435
+chr10	SWEmbl_R015	AnnotatedFeature	4614288	4614604	.		.	Name=H3K9me3; Alias=ES_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4614422
+chr10	SWEmbl_R015	AnnotatedFeature	4614288	4614595	.		.	Name=H4K20me3; Alias=ES_H4K20me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4614503
+chr10	SWEmbl_R015	AnnotatedFeature	4614296	4614578	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4614437
+chr10	SWEmbl_R015	AnnotatedFeature	4614296	4614463	.		.	Name=Oct4; Alias=ES_Oct4_Ang11_PMID21477851_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4614336
+chr10	SWEmbl_R015	AnnotatedFeature	4614297	4614473	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4614385
+chr10	SWEmbl_R015	AnnotatedFeature	4614298	4614587	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=4614442
+chr10	SWEmbl_R015	AnnotatedFeature	4614408	4614599	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4614503
+chr10	SWEmbl_R015	AnnotatedFeature	4614408	4614582	.		.	Name=H3K9me3; Alias=NPC_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=NPC; Summit=4614433
+chr10	SWEmbl_R015	AnnotatedFeature	4614410	4614589	.		.	Name=H3K9me3; Alias=MEF_H3K9me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=4614468
+chr10	SWEmbl_R015	AnnotatedFeature	4614412	4614574	.		.	Name=PolII; Alias=ES_PolII_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Polymerase; Cell_type=ES; Summit=4614493
+chr10	ccat_histone	AnnotatedFeature	4625900	4632300	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4629375
+chr10	SWEmbl_R015	AnnotatedFeature	4626401	4626813	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4626640; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4626462	4626784	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4626639
+chr10	SWEmbl_R015	AnnotatedFeature	4626465	4626783	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4626634; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4626484	4626799	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4626659; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	4626490	4626767	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4626628
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4626554	4626745	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4626649
+chr10	SWEmbl_R0025	AnnotatedFeature	4627127	4627949	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4627587
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4627540	4627853	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4627685
+chr10	SWEmbl_R015	AnnotatedFeature	4631840	4633801	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4632424
+chr10	SWEmbl_R0025	AnnotatedFeature	4631868	4633053	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4632423
+chr10	SWEmbl_R015	AnnotatedFeature	4632368	4632782	.		.	Name=NELFe; Alias=MEL_NELFe_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4632626
+chr10	SWEmbl_R0025	AnnotatedFeature	4633056	4633935	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4633571
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4661734	4661963	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4661848
+chr10	SWEmbl_R015	AnnotatedFeature	4674974	4675425	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4675169; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4674992	4675277	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4675134; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	4675014	4675393	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4675187
+chr10	ccat_histone	AnnotatedFeature	4702450	4704050	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4703175
+chr10	ccat_histone	AnnotatedFeature	4705850	4708000	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4706975
+chr10	SWEmbl_R0025	AnnotatedFeature	4706738	4706977	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4706857
+chr10	ccat_histone	AnnotatedFeature	4708850	4715000	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4712575
+chr10	ccat_histone	AnnotatedFeature	4709150	4714300	.		.	Name=H3K27me3; Alias=MEF_H3K27me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=4712775
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4709976	4710288	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4710121
+chr10	SWEmbl_R015	AnnotatedFeature	4711863	4713039	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4712729
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4712037	4712279	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4712158
+chr10	SWEmbl_R015	AnnotatedFeature	4712109	4712959	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4712437
+chr10	SWEmbl_R015	AnnotatedFeature	4712615	4712919	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4712753
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4713134	4713330	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4713232
+chr10	ccat_histone	AnnotatedFeature	4715050	4716800	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=4716075
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	4724852	4725247	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=4725100
+chr10	SWEmbl_R015	AnnotatedFeature	4724866	4725221	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4725071
+chr10	SWEmbl_R015	AnnotatedFeature	4724873	4725262	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4725065
+chr10	SWEmbl_R015	AnnotatedFeature	4724882	4725176	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4725029
+chr10	SWEmbl_R015	AnnotatedFeature	4724916	4725204	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4725061
+chr10	SWEmbl_R0025	AnnotatedFeature	4724928	4725215	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4725071
+chr10	SWEmbl_R0025	AnnotatedFeature	4724928	4725196	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4725062
+chr10	SWEmbl_R015	AnnotatedFeature	4767063	4767218	.		.	Name=Smad1; Alias=ES_Smad1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4767140
+chr10	ccat_histone	AnnotatedFeature	4773800	4788800	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4781025
+chr10	SWEmbl_R015	AnnotatedFeature	4775320	4775796	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4775564
+chr10	SWEmbl_R015	AnnotatedFeature	4776047	4776358	.		.	Name=CEBPB; Alias=MEF_CEBPB_Steger_PMID_20478996_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=4776212
+chr10	SWEmbl_R0025	AnnotatedFeature	4778074	4778313	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4778193
+chr10	SWEmbl_R015	AnnotatedFeature	4778357	4778686	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4778505
+chr10	SWEmbl_R015	AnnotatedFeature	4780569	4781070	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=4780727
+chr10	SWEmbl_R0025	AnnotatedFeature	4780714	4781543	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4781051
+chr10	SWEmbl_R015	AnnotatedFeature	4780929	4781450	.		.	Name=p300; Alias=MEL_p300_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4781136
+chr10	SWEmbl_R015	AnnotatedFeature	4780946	4781315	.		.	Name=cMyb; Alias=MEL_cMyb_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4781106
+chr10	SWEmbl_R0025	AnnotatedFeature	4786873	4787730	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4787178
+chr10	SWEmbl_R015	AnnotatedFeature	4786943	4787585	.		.	Name=p300; Alias=MEL_p300_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4787196
+chr10	SWEmbl_R015	AnnotatedFeature	4787038	4787430	.		.	Name=cMyb; Alias=MEL_cMyb_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4787196
+chr10	ccat_histone	AnnotatedFeature	4796900	4800450	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4799025
+chr10	SWEmbl_R0025	AnnotatedFeature	4798266	4798758	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4798464
+chr10	SWEmbl_R015	AnnotatedFeature	4837347	4837926	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4837665
+chr10	SWEmbl_R0025	AnnotatedFeature	4911150	4911482	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=4911333
+chr10	SWEmbl_R015	AnnotatedFeature	4911152	4912646	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4911643
+chr10	SWEmbl_R015	AnnotatedFeature	4911155	4912835	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4912491
+chr10	SWEmbl_R015	AnnotatedFeature	4911296	4912459	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=4912239
+chr10	SWEmbl_R015	AnnotatedFeature	4911420	4911937	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4911567
+chr10	SWEmbl_R015	AnnotatedFeature	4912148	4912593	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=4912395
+chr10	ccat_histone	AnnotatedFeature	4991900	4998400	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=4996875
+chr10	SWEmbl_R0025	AnnotatedFeature	4993374	4994190	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4993959
+chr10	SWEmbl_R0025	AnnotatedFeature	4996498	4997070	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=4996810
+chr10	SWEmbl_R015	AnnotatedFeature	4996635	4996965	.		.	Name=p300; Alias=MEL_p300_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=4996784
+chr10	ccat_histone	AnnotatedFeature	5020350	5049450	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5040975
+chr10	SWEmbl_R015	AnnotatedFeature	5027312	5027609	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5027460
+chr10	SWEmbl_R0025	AnnotatedFeature	5027321	5027590	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5027455
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5027473	5027701	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5027587
+chr10	ccat_histone	AnnotatedFeature	5050650	5058850	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5055775
+chr10	ccat_histone	AnnotatedFeature	5057950	5061100	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=5059625
+chr10	SWEmbl_R0025	AnnotatedFeature	5059919	5060429	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=5060180
+chr10	ccat_histone	AnnotatedFeature	5060400	5062700	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5061275
+chr10	ccat_histone	AnnotatedFeature	5067650	5070400	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5068875
+chr10	ccat_histone	AnnotatedFeature	5070500	5073450	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5071875
+chr10	ccat_histone	AnnotatedFeature	5074750	5079600	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5076075
+chr10	ccat_histone	AnnotatedFeature	5079050	5084500	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=5081125
+chr10	ccat_histone	AnnotatedFeature	5079750	5086550	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5082225
+chr10	SWEmbl_R0025	AnnotatedFeature	5079805	5080616	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=5080182
+chr10	ccat_histone	AnnotatedFeature	5079900	5084100	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=5082075
+chr10	SWEmbl_R015	AnnotatedFeature	5080841	5082108	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5081634
+chr10	ccat_histone	AnnotatedFeature	5087200	5088400	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5087825
+chr10	SWEmbl_R015	AnnotatedFeature	5089666	5090064	.		.	Name=Zfx; Alias=ES_Zfx_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5089930
+chr10	SWEmbl_R015	AnnotatedFeature	5089672	5090748	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5089865
+chr10	SWEmbl_R015	AnnotatedFeature	5089756	5090450	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5090113
+chr10	SWEmbl_R015	AnnotatedFeature	5089765	5090731	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5090582
+chr10	SWEmbl_R0025	AnnotatedFeature	5089824	5090663	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5089963
+chr10	ccat_histone	AnnotatedFeature	5096700	5100450	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5098775
+chr10	ccat_histone	AnnotatedFeature	5100600	5109800	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5105925
+chr10	ccat_histone	AnnotatedFeature	5110400	5112150	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=5111125
+chr10	ccat_histone	AnnotatedFeature	5110600	5119050	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5116275
+chr10	ccat_histone	AnnotatedFeature	5120550	5129200	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5126725
+chr10	ccat_histone	AnnotatedFeature	5130700	5133100	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5132025
+chr10	ccat_histone	AnnotatedFeature	5137900	5158450	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5156475
+chr10	SWEmbl_R015	AnnotatedFeature	5139803	5140113	.		.	Name=CEBPB; Alias=MEF_CEBPB_Steger_PMID_20478996_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=5139970
+chr10	ccat_histone	AnnotatedFeature	5158850	5163200	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5160325
+chr10	ccat_histone	AnnotatedFeature	5158900	5167100	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=5163725
+chr10	SWEmbl_R015	AnnotatedFeature	5159689	5160040	.		.	Name=CEBPB; Alias=MEF_CEBPB_Steger_PMID_20478996_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=5159891
+chr10	SWEmbl_R015	AnnotatedFeature	5161484	5162027	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5161752
+chr10	SWEmbl_R015	AnnotatedFeature	5161591	5161956	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5161752; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5161613	5161920	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5161771; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	5161616	5162024	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=5161755
+chr10	SWEmbl_R0025	AnnotatedFeature	5161625	5161902	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5161763
+chr10	SWEmbl_R015	AnnotatedFeature	5161637	5161892	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5161763; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5161658	5161972	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5161760
+chr10	ccat_histone	AnnotatedFeature	5163700	5173600	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5165825
+chr10	SWEmbl_R015	AnnotatedFeature	5170406	5170847	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5170623; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5170437	5170793	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5170646; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5170476	5170828	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5170639
+chr10	SWEmbl_R015	AnnotatedFeature	5170497	5170758	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5170643; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	5175200	5180500	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5177475
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5176536	5176755	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5176645
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5177531	5177755	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5177643
+chr10	ccat_histone	AnnotatedFeature	5181550	5194050	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5185125
+chr10	SWEmbl_R0025	AnnotatedFeature	5188949	5189248	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5189102
+chr10	ccat_histone	AnnotatedFeature	5190650	5194750	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=5193825
+chr10	SWEmbl_R015	AnnotatedFeature	5194156	5194835	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=5194667
+chr10	SWEmbl_R015	AnnotatedFeature	5194183	5195084	.		.	Name=H3K4me3; Alias=MEL_H3K4me3_ENCODE_YALE-M_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=5194581
+chr10	SWEmbl_R015	AnnotatedFeature	5194284	5194851	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5194641
+chr10	SWEmbl_R015	AnnotatedFeature	5194306	5194986	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5194519
+chr10	SWEmbl_R0025	AnnotatedFeature	5194325	5195785	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=5194915
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5194377	5195170	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5194751
+chr10	SWEmbl_R015	AnnotatedFeature	5194425	5194877	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=5194680
+chr10	SWEmbl_R015	AnnotatedFeature	5194485	5195012	.		.	Name=NELFe; Alias=MEL_NELFe_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5194693
+chr10	SWEmbl_R015	AnnotatedFeature	5194503	5194989	.		.	Name=PolII; Alias=MEL_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEL; Summit=5194718
+chr10	SWEmbl_R0025	AnnotatedFeature	5194597	5195053	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5194773
+chr10	ccat_histone	AnnotatedFeature	5194800	5198600	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=5196575
+chr10	SWEmbl_R015	AnnotatedFeature	5194977	5195312	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5195153
+chr10	ccat_histone	AnnotatedFeature	5195550	5197700	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5196525
+chr10	SWEmbl_R015	AnnotatedFeature	5195639	5196071	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=5195875
+chr10	SWEmbl_R015	AnnotatedFeature	5196670	5197132	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=5196911
+chr10	SWEmbl_R0025	AnnotatedFeature	5197453	5197783	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=5197604
+chr10	ccat_histone	AnnotatedFeature	5199100	5208100	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5204975
+chr10	ccat_histone	AnnotatedFeature	5201100	5212150	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=5207075
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5204696	5205017	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5204843
+chr10	SWEmbl_R0025	AnnotatedFeature	5205565	5206433	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=5206188
+chr10	SWEmbl_R015	AnnotatedFeature	5205591	5206114	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=5205740
+chr10	SWEmbl_R015	AnnotatedFeature	5205954	5206311	.		.	Name=Max; Alias=MEL_Max_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5206119
+chr10	SWEmbl_R015	AnnotatedFeature	5206004	5206427	.		.	Name=p300; Alias=MEL_p300_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5206184
+chr10	SWEmbl_R015	AnnotatedFeature	5206417	5206832	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=5206578
+chr10	SWEmbl_R015	AnnotatedFeature	5206956	5207409	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=5207096
+chr10	SWEmbl_R0025	AnnotatedFeature	5207444	5208760	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=5208088
+chr10	SWEmbl_R015	AnnotatedFeature	5207640	5208498	.		.	Name=p300; Alias=MEL_p300_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5207976
+chr10	SWEmbl_R015	AnnotatedFeature	5207765	5208209	.		.	Name=cMyb; Alias=MEL_cMyb_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5207994
+chr10	ccat_histone	AnnotatedFeature	5208450	5213100	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5209875
+chr10	SWEmbl_R015	AnnotatedFeature	5208458	5208892	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=5208606
+chr10	SWEmbl_R015	AnnotatedFeature	5209694	5210148	.		.	Name=H3K4me1; Alias=MEL_H3K4me1_ENCODE_LICR_SWEMBL_R015; Class=Histone; Cell_type=MEL; Summit=5209916
+chr10	ccat_histone	AnnotatedFeature	5213400	5215900	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5214475
+chr10	ccat_histone	AnnotatedFeature	5213900	5215950	.		.	Name=H3K36me3; Alias=MEL_H3K36me3_ENCODE_LICR_CCAT_HISTONE; Class=Histone; Cell_type=MEL; Summit=5215175
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5215720	5216375	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5216069
+chr10	SWEmbl_R015	AnnotatedFeature	5215961	5216354	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5216207
+chr10	SWEmbl_R0025	AnnotatedFeature	5215969	5216327	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5216098
+chr10	ccat_histone	AnnotatedFeature	5216250	5218750	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5217725
+chr10	SWEmbl_R015	AnnotatedFeature	5217238	5217572	.		.	Name=Nanog; Alias=ES_Nanog_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5217426
+chr10	ccat_histone	AnnotatedFeature	5218900	5223600	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5222125
+chr10	ccat_histone	AnnotatedFeature	5225100	5241200	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5235775
+chr10	SWEmbl_R015	AnnotatedFeature	5227331	5227719	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5227558; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5227345	5227780	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5227568; Note=Contains the following PWMs:MA0139.1 MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5227349	5227704	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5227522
+chr10	SWEmbl_R015	AnnotatedFeature	5227415	5227708	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5227561; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5227456	5227734	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5227595
+chr10	ccat_histone	AnnotatedFeature	5227650	5229250	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=5228225
+chr10	ccat_histone	AnnotatedFeature	5241900	5266400	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5264925
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5251088	5251341	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5251214
+chr10	ccat_histone	AnnotatedFeature	5267000	5274600	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5271125
+chr10	SWEmbl_R015	AnnotatedFeature	5287772	5289786	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=5288089
+chr10	SWEmbl_R015	AnnotatedFeature	5288025	5290148	.		.	Name=H3K9ac; Alias=MEF_H3K9ac_Steger_PMID_20478996_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=5289108
+chr10	SWEmbl_R015	AnnotatedFeature	5288766	5289158	.		.	Name=CEBPB; Alias=MEF_CEBPB_Steger_PMID_20478996_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=5288947
+chr10	SWEmbl_R015	AnnotatedFeature	5289111	5289842	.		.	Name=PolII; Alias=MEF_PolII_ENCODE_LICR_SWEMBL_R015; Class=Polymerase; Cell_type=MEF; Summit=5289400
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5289461	5289733	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5289597
+chr10	ccat_histone	AnnotatedFeature	5290700	5292750	.		.	Name=H3K36me3; Alias=MEF_H3K36me3_Mikkelsen2007_PMID17603471_CCAT_HISTONE; Class=Histone; Cell_type=MEF; Summit=5291575
+chr10	SWEmbl_R015	AnnotatedFeature	5305607	5305942	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5305794; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5305658	5305934	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=5305805; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5309991	5310301	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5310117
+chr10	SWEmbl_R015	AnnotatedFeature	5317569	5318032	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5317803; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5317640	5317933	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5317786; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5317650	5317971	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5317804; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	5317661	5317940	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5317800
+chr10	SWEmbl_R015	AnnotatedFeature	5317665	5317978	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5317816
+chr10	SWEmbl_R015	AnnotatedFeature	5317678	5317965	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=5317827; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5317690	5317995	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5317797
+chr10	SWEmbl_R015	AnnotatedFeature	5336426	5336748	.		.	Name=Rad21; Alias=MEL_Rad21_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5336575
+chr10	SWEmbl_R015	AnnotatedFeature	5336444	5336730	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5336592; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5337442	5337797	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5337624; Note=Contains the following PWMs:MA0145.1
+chr10	SWEmbl_R015	AnnotatedFeature	5388602	5389654	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5389379
+chr10	SWEmbl_R0025	AnnotatedFeature	5388879	5389138	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5389008
+chr10	SWEmbl_R015	AnnotatedFeature	5480078	5480433	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5480261; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5480090	5480421	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_SydhTfbs_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5480240; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5480117	5480415	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5480266; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5480120	5480405	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5480262; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5480129	5480380	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=5480267; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5480159	5480489	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5480340
+chr10	SWEmbl_R0025	AnnotatedFeature	5480262	5480492	.		.	Name=DNase1; Alias=MEL_DNase1_ENCODE_Uw_SWEMBL_R0025; Class=Open Chromatin; Cell_type=MEL; Summit=5480377
+chr10	SWEmbl_R015	AnnotatedFeature	5480631	5480941	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5480757; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5480639	5480912	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5480775; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5480706	5480942	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5480824
+chr10	SWEmbl_R015	AnnotatedFeature	5490028	5490435	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5490242; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5490072	5490401	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5490221
+chr10	SWEmbl_R015	AnnotatedFeature	5490115	5490403	.		.	Name=CTCF; Alias=MEL_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEL; Summit=5490259; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5490130	5490438	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5490277; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5512314	5512670	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5512465; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5512331	5512570	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5512450; Note=Contains the following PWMs:MA0139.1
+chr10	ccat_histone	AnnotatedFeature	5549000	5550650	.		.	Name=H3K27me3; Alias=ES_H3K27me3_Stadler2011_PMID22170606_CCAT_HISTONE; Class=Histone; Cell_type=ES; Summit=5549975
+chr10	SWEmbl_R0025	AnnotatedFeature	5549905	5550176	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5550040
+chr10	SWEmbl_R015	AnnotatedFeature	5549984	5550967	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5550496
+chr10	SWEmbl_R015	AnnotatedFeature	5550110	5551046	.		.	Name=H3K4me2; Alias=ES_H3K4me2_Stadler2011_PMID22170606_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5550361
+chr10	SWEmbl_R015	AnnotatedFeature	5550125	5550864	.		.	Name=H3K4me3; Alias=ES_H3K4me3_Ang11_PMID21477851_SWEMBL_R015; Class=Histone; Cell_type=ES; Summit=5550372
+chr10	SWEmbl_R015	AnnotatedFeature	5550203	5550626	.		.	Name=H3K4me3; Alias=MEF_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=MEF; Summit=5550420
+chr10	SWEmbl_R0025	AnnotatedFeature	5550270	5550505	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5550387
+chr10	SWEmbl_R015	AnnotatedFeature	5550301	5550822	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5550474; Note=Contains the following PWMs:MA0145.1
+chr10	SWEmbl_R015	AnnotatedFeature	5550315	5550796	.		.	Name=H3K4me3; Alias=ESHyb_H3K4me3_Mikkelsen2007_PMID17603471_SWEMBL_R015; Class=Histone; Cell_type=ESHyb; Summit=5550464
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5550423	5550977	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5550829
+chr10	SWEmbl_R0025	AnnotatedFeature	5550516	5551006	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5550754
+chr10	SWEmbl_R015	AnnotatedFeature	5554932	5555346	.		.	Name=CTCF; Alias=ES_CTCF_Stadler2011_PMID22170606_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5555129; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025	AnnotatedFeature	5554983	5555296	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5555132
+chr10	SWEmbl_R015	AnnotatedFeature	5555001	5555327	.		.	Name=CTCF; Alias=ES_CTCF_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5555145; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R015	AnnotatedFeature	5555006	5555291	.		.	Name=CTCF; Alias=MEF_CTCF_ENCODE_LICR_SWEMBL_R015; Class=Transcription Factor; Cell_type=MEF; Summit=5555148; Note=Contains the following PWMs:MA0139.1
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5555065	5555311	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5555188
+chr10	SWEmbl_R015	AnnotatedFeature	5560540	5560931	.		.	Name=Esrrb; Alias=ES_Esrrb_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5560766; Note=Contains the following PWMs:MA0141.1
+chr10	SWEmbl_R0025	AnnotatedFeature	5560543	5560844	.		.	Name=DNase1; Alias=ES_DNase1_wgEncodeEM001728_SWEMBL_R0025; Class=Open Chromatin; Cell_type=ES; Summit=5560694
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5560604	5560896	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5560750
+chr10	SWEmbl_R0025_D150	AnnotatedFeature	5561737	5561996	.		.	Name=DNase1; Alias=ES_DNase1_FlicekCrawfordAdams_SWEmbl_R0025_D150; Class=Open Chromatin; Cell_type=ES; Summit=5561866
+chr10	SWEmbl_R015	AnnotatedFeature	5564039	5564349	.		.	Name=Tcfcp2l1; Alias=ES_Tcfcp2l1_Chen2008_PMID18555785_SWEMBL_R015; Class=Transcription Factor; Cell_type=ES; Summit=5564200

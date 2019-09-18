@@ -1,0 +1,60 @@
+---
+date: '2012-12-26'
+title: Plotting manual fitted model predictions using ggplot
+tags: [R]
+comments: true
+---
+
+
+
+<p>ggplot provides convenient smoothing functions for fitting models to data with
+the built in geom_smooth and stat_smooth methods.</p>
+<pre class="r"><code>library(ggplot2)
+(points = ggplot(data=mtcars, aes(x=hp,y=mpg)) + geom_point())</code></pre>
+<p><img src="/post/2012-12-26-manual-predictions/index_files/figure-html/manual_predictions_ex1-1.png" width="672" /></p>
+<pre class="r"><code>(points_smoothed = points + geom_smooth(method=&quot;lm&quot;, se=F))</code></pre>
+<p><img src="/post/2012-12-26-manual-predictions/index_files/figure-html/manual_predictions_ex1-2.png" width="672" /></p>
+<pre class="r"><code>(one_facet &lt;- points_smoothed + facet_wrap(~cyl))</code></pre>
+<p><img src="/post/2012-12-26-manual-predictions/index_files/figure-html/manual_predictions_ex1-3.png" width="672" />
+When you are faceting data, either spatially or by color/linetype/shape doing the subsetting and model fitting manually can be somewhat daunting.</p>
+<pre class="r"><code>(two_facet = points_smoothed + facet_grid(cyl~gear))</code></pre>
+<p><img src="/post/2012-12-26-manual-predictions/index_files/figure-html/manual_predicitons_ex2-1.png" width="672" />
+However once you understand the process, and are familiar with the plyr library of
+functions it is actually very straightforward.
+## One facet ##</p>
+<pre class="r"><code>library(plyr)
+models = dlply(mtcars, .(cyl), function(df) lm(mpg ~ hp,data=df))
+predictions = ldply(models, function(mod) {
+  grid = expand.grid(hp=sort(unique(mod$model$hp)))
+  grid$pred = predict(mod,newdata=grid)
+  grid
+})
+one_facet + geom_line(data=predictions,aes(y=pred),linetype=&quot;dashed&quot;,size=2)</code></pre>
+<p><img src="/post/2012-12-26-manual-predictions/index_files/figure-html/manual_predictions_one-1.png" width="672" />
+The only change for two facets is how you break up the models
+## Two facets ##</p>
+<pre class="r"><code>models = dlply(mtcars, .(cyl, gear), function(df) lm(mpg ~ hp,data=df))
+predictions = ldply(models, function(mod) {
+  grid = expand.grid(hp=sort(unique(mod$model$hp)))
+  grid$pred = predict(mod,newdata=grid)
+  grid
+})
+two_facet + geom_line(data=predictions,aes(y=pred),linetype=&quot;dashed&quot;,size=2)</code></pre>
+<p><img src="/post/2012-12-26-manual-predictions/index_files/figure-html/manual_predictions_two-1.png" width="672" /></p>
+<p>If you want to perform predictions across the full range of data you can use
+expand.grid with the full dataset rather than just the subset, this is
+analogous to the fullrange option in stat_smooth</p>
+<pre class="r"><code>grid = expand.grid(hp=sort(unique(mtcars$hp)))
+models = dlply(mtcars, .(cyl, gear), function(df) lm(mpg ~ hp,data=df))
+predictions = ldply(models, function(mod) {
+  grid$pred = predict(mod,newdata=grid)
+  grid
+})
+points +
+  stat_smooth(fullrange=T,se=F,method=&quot;lm&quot;) +
+  facet_grid(cyl~gear) +
+  geom_line(data=predictions, aes(y=pred), linetype=&quot;dashed&quot;, size=2)</code></pre>
+<p><img src="/post/2012-12-26-manual-predictions/index_files/figure-html/manual_predictions_full-1.png" width="672" /></p>
+<p>So you can see that plotting manual predictions is actually very
+straightforward, and this can be a powerful technique in exploratory data
+analysis.</p>

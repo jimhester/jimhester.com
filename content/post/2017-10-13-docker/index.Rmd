@@ -1,0 +1,162 @@
+---
+date: '2017-10-13'
+title: Docker for R Package Development
+tags: [R, devtools]
+projects: [devtools]
+comments: true
+---
+
+[Docker] and the [rocker] projects have been widely touted in the R community
+as a way to provide reproducibility in analysis by explicitly describing system
+dependencies for a given project. See [An Introduction to Rocker: Docker
+Containers for R](https://arxiv.org/abs/1710.03675) for details of the project
+goals and use-cases. However a different use case than those described in the
+paper where docker is also useful is for testing R packages during package
+development.
+
+Services like [Travis-CI][travis] are an excellent way to run automated checks for a
+package on linux environments. However each build takes at least a few minutes
+to run, so trying to debug something using only travis can be a time consuming,
+frustrating process. Travis has recently introduced a [travis-debug-mode],
+which allows ssh access into a build, however for public jobs anyone who is
+looking at the build logs has the same access, so it is not really practical to
+use.
+
+Docker provides a nice way to setup and run linux environments on a wide
+variety of distributions. Because these environments are run
+on your local computer you can have a very tight feedback loop, which can make
+debugging issues much less time consuming.
+
+## Installing Docker
+
+I use MacOS for my primary development machine, and fortunately there is now a
+nice [docker for mac](https://docs.docker.com/docker-for-mac/install/)
+installer available to install the docker client.
+
+[installation
+procedures](https://docs.docker.com/engine/installation/#supported-platforms)
+for the windows client are also available and most popular linux distributions
+have docker clients in their distributions package manager.
+
+## Docker Containers
+
+Before you can begin using docker, you need to decide what container to use.
+Containers are basically a saved set of instructions on how to setup an environment.
+Fortunately for R use there are a number of containers already available. In
+particular the [rocker] project by Carl Boettiger, Dirk Eddelbuettel, et al.
+provides a large set of containers with various configurations. Gábor Csárdi's
+[rhub] project also uses docker for it's linux builders which provide a
+nice way to replicate environments used to build packages on rhub.
+
+I have found the most useful containers for R package development to be
+
+- [rocker/r-ver](https://github.com/rocker-org/rocker#versioned-stack-builds-on-r-ver)
+  which provides version specific R on a debian base, e.g. `rocker/r-ver:3.1.0`
+  will lets you test on older R versions easily.
+- [rocker/r-devel](https://github.com/rocker-org/rocker/tree/master/r-devel)
+  For using recent versions of R-devel. Note in this image the R devel is
+  installed along side the release version of R, you need to access it with
+  `RD` instead of `R`.
+- [rocker/r-apt](https://github.com/rocker-org/rocker/tree/master/r-apt), which
+  gives you access to a specific ubuntu releases. This lets you test on older
+  ubuntu releases such as precise or trusty. These releases are used on travis,
+  so using `rocker/r-apt:trusty` will get you a local environment very close to
+  what is being run with your travis jobs.
+- The [rhub containers](https://github.com/r-hub/rhub-linux-builders) for
+  fedora, centos and others with both gcc and clang flavors, e.g `rhub/fedora-gcc`.
+- [r-devel-san](https://hub.docker.com/r/rocker/r-devel-san/) and
+  [r-devel-ubsan-clang](https://hub.docker.com/r/rocker/r-devel-ubsan-clang/)
+  which build R using [address sanitizers], very helpful for detecting memory
+  errors in C/C++ code used in R packages.
+
+## Running docker for development
+
+So once you have picked out what container you want to use how do you actually
+go about testing your R package with it? Lets say you have a package on your
+local machine at `/a/certain/directory`. What I do is
+
+```shell
+# Change to the directory
+cd /a/certain/directory
+
+# Start docker in that directory, mapping the current directory to a directory
+# in the docker image using the `rocker/r-apt:trusty` container and starting a
+# bash prompt in that container.
+docker run -v "$(pwd)":"/opt/$(basename $(pwd))" -it rocker/r-apt:trusty /bin/bash
+```
+
+Docker will then download the files necessary to start the container, and drop
+you into a bash shell. You can then navigate to `/opt/pkgname` and you will be in
+your local package directory.
+
+This installs R, but not your package or its dependencies.
+One efficient way to do this is to use the
+[remotes](https://cran.r-project.org/package=remotes) package, which has no
+external dependencies, and is useful if you only want to run `R CMD build . &&
+R CMD check *tar.gz` to verify building and checking the package works.
+
+```r
+install.packages("remotes")
+remotes::install_local(".", dependencies = TRUE)
+```
+
+If you want to install a full development environment using
+[devtools](https://cran.r-project.org/package=devtools),
+[roxygen2](https://cran.r-project.org/package=roxygen2) and
+[testthat](https://cran.r-project.org/package=testthat) there are a few system
+dependencies you need also need to install first.
+
+```shell
+apt-get update &&
+apt-get install -y libcurl4-openssl-dev libssl-dev libssh2-1-dev libxml2-dev
+```
+
+devtools does not install `testthat` and `roxygen2` by default, so usually it
+is best to install all three at once.
+
+```r
+install.packages(c("devtools", "testthat", "roxygen2"))
+```
+
+You can then use the same workflow in the docker container as you do normally.
+You can even continue editing the source files on your local machine using your
+normal editor. You just need to build and run the code in the container using
+`devtools::load_all()` and `devtools::test()`.
+
+## Additional tips / notes
+
+As noted above the rocker r-devel builds (and sanitizer builds) install R
+devel as RD. Make sure you are using that instead of R to run R-devel.
+
+If your package has compiled code and you have been testing it outside of the
+docker, you likely have old object files in the `src/` directory. If you then
+try to compile it in docker you will get an error `invalid ELF header`
+indicating the library was built for the wrong architecture. To fix this clean
+the object files using `devtools::clean_dll()` or `rm src/*o` from the shell.
+
+If you want to run [gdb](https://www.gnu.org/software/gdb/) within docker you will need to pass
+`--security-opt=seccomp:unconfined` to your docker run command, which disables
+the security sandboxing used by default in docker and allows you to run
+executables under gdb. You also need to install gdb `apt-get install gdb` and
+run R with it as the debugger `R -d gdb`.
+
+If you are running the address sanitizers and want to abort on the error (so
+you can get a backtrace of the location) you can do so with
+`ASAN_OPTIONS=abort_on_error=1 RD -d gdb`.
+
+If using docker on MacOS the host can be accessed from the container with the
+stable ip `192.168.65.1.` This is useful if you have a database or other
+service running on the host machine.
+
+## Conclusion
+
+While docker commands are somewhat esoteric, if you use the workflow detailed
+in this post docker and the rocker project are invaluable tools for verifying
+your package works on a variety of systems and reproducing errors observed by
+users.
+
+[Docker]: https://www.docker.com
+[travis]: https://www.travis-ci.org
+[travis-debug-mode]: https://docs.travis-ci.com/user/running-build-in-debug-mode/
+[rocker]: https://github.com/rocker-org/rocker
+[address sanitizers]: https://github.com/google/sanitizers/wiki/AddressSanitizer

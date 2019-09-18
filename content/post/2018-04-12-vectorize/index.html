@@ -1,0 +1,213 @@
+---
+date: '2018-04-12'
+title: 'Beware of Vectorize'
+tags: [R]
+comments: true
+---
+
+
+
+<blockquote>
+<p>I would first like to thank Dean Attali for writing the original post that
+inspired this one. Creating vectorized functions is definitely a common problem
+when dealing with vectors and creating functions in R and having public
+discourse on the best ways to do this is great for the whole community, thanks
+Dean!</p>
+</blockquote>
+<p>The <a href="https://www.rdocumentation.org/packages/base/versions/3.4.3/topics/Vectorize">Vectorize</a> function is sometimes suggested as a solution to the problem of
+iterating over elements of a vector, such as <a href="https://deanattali.com/blog/mutate-non-vectorized/">How to use dplyr’s mutate in R
+without a vectorized function</a> by Dean Attali. This function at first
+seems a perfect solution to this problem (automatically turn any function in a
+vectorized one!). However like many things in life you may find it to be too
+good to be true.</p>
+<div id="are-you-sure-your-function-cannot-be-vectorized" class="section level2">
+<h2>Are you <em>sure</em> your function cannot be vectorized?</h2>
+<p>Many (most?) functions in base R and extension packages such as those in the
+<a href="https://www.tidyverse.org">tidyverse</a> are vectorized over their primary arguments. To be vectorized means the
+function works not just on a single value, but on the whole vector of values at
+the same time.</p>
+<p>Some examples of vectorized functions are <a href="https://www.rdocumentation.org/packages/base/versions/3.4.3/topics/Arithmetic">+</a> and <a href="equality">==</a> and <a href="https://www.rdocumentation.org/packages/base/versions/3.4.3/topics/NA">is.na()</a>.</p>
+<pre class="r"><code>1:3 + 1</code></pre>
+<pre><code>## [1] 2 3 4</code></pre>
+<pre class="r"><code>1:2 == 2</code></pre>
+<pre><code>## [1] FALSE  TRUE</code></pre>
+<pre class="r"><code>is.na(c(1, NA, 3))</code></pre>
+<pre><code>## [1] FALSE  TRUE FALSE</code></pre>
+<p>However even functions you may not first think are vectorized often are, such as <a href="https://www.rdocumentation.org/packages/base/versions/3.4.3/topics/paste">paste()</a>.</p>
+<pre class="r"><code>color &lt;- c(&quot;blue&quot;, &quot;red&quot;, &quot;green&quot;)
+object &lt;- c(&quot;ball&quot;, &quot;hat&quot;, &quot;coat&quot;)
+name &lt;- c(&quot;Sally&quot;, &quot;Hank&quot;, &quot;Darla&quot;)
+
+paste(&quot;A&quot;, color, object, &quot;for&quot;, name)</code></pre>
+<pre><code>## [1] &quot;A blue ball for Sally&quot;  &quot;A red hat for Hank&quot;    
+## [3] &quot;A green coat for Darla&quot;</code></pre>
+<p>Often when people think they need to loop over elements their problem can
+actually be rewritten to work with the already vectorized functions in R.</p>
+<p>For instance Dean’s example function to perform the following task.</p>
+<blockquote>
+<p>Given a path some/path/abc/001.txt, this function will return abc_001.txt</p>
+</blockquote>
+<pre class="r"><code>library(tidyverse)
+patient_name &lt;- function(path) {
+  path_list &lt;- str_split(path, &quot;/&quot;) %&gt;% unlist()
+  paste(path_list[length(path_list) - 1], path_list[length(path_list)], sep = &quot;_&quot;)
+}
+
+# Vectorize it with Vectorize
+patient_name_v &lt;- Vectorize(patient_name)</code></pre>
+<p>At first it seems like this code would require you to iterate element by element to
+have a vectorized form. However note the <code>unlist()</code> in the implementation.
+Often needing to <code>unlist()</code> is an indication that you are dealing with an already vectorized
+function. This is true in this case, <code>stringr::str_split()</code> is vectorized over
+its inputs. Knowing this we can use <code>vapply()</code> with the <code>tail()</code> function to
+extract and then paste the rows.</p>
+<pre class="r"><code>patient_name_better &lt;- function(path) {
+  path_list &lt;- str_split(path, &quot;/&quot;)
+  last_two &lt;- vapply(path_list, tail, character(2), 2)
+  paste0(last_two[1, ], &quot;_&quot;, last_two[2, ])
+}</code></pre>
+<p>This is an improvement, the code is easier to read and while we have a loop in
+the <code>vapply()</code> call, we are taking advantage of the vectorized <code>paste0()</code>.</p>
+<p>However in this case an even better alternative is available. R has vectorized
+functions <a href="https://www.rdocumentation.org/packages/base/versions/3.4.3/topics/basename">basename()</a> and <a href="https://www.rdocumentation.org/packages/base/versions/3.4.3/topics/basename">dirname()</a> to retrieve the
+basename (filename) and directory name of a file path. So we can use these
+directly along with <code>paste()</code>.</p>
+<pre class="r"><code>patient_name_best &lt;- function(path) {
+  paste0(basename(dirname(path)), &quot;_&quot;, basename(path))
+}</code></pre>
+<p>This gives us a very concise implementation and because all of these functions
+are implemented directly in C this is also very fast.</p>
+<pre class="r"><code># Construct 100 paths
+paths &lt;- rep(c(&quot;some/path/abc/001.txt&quot;, &quot;another/directory/xyz/002.txt&quot;), 100)
+
+res &lt;- microbenchmark::microbenchmark(
+  patient_name_v(paths),
+  patient_name_better(paths),
+  patient_name_best(paths)
+)
+
+bench &lt;- summary(res)[c(&quot;expr&quot;, &quot;median&quot;)]
+bench</code></pre>
+<pre><code>##                         expr    median
+## 1      patient_name_v(paths) 18824.948
+## 2 patient_name_better(paths)  1162.661
+## 3   patient_name_best(paths)   159.825</code></pre>
+<p>In this simple case the median runtime is 16x faster for the better version and
+117x faster for the best version!</p>
+</div>
+<div id="but-what-if-my-problem-really-cannot-use-vectorized-functions" class="section level2">
+<h2>But what if my problem really cannot use vectorized functions?</h2>
+<p>There are cases where your code really cannot be rewritten in this way, so
+is <code>Vectorize()</code> a good solution in that case? I argue no it is not, for the
+following reasons.</p>
+<div id="vectorize-does-not-generate-type-stable-functions." class="section level3">
+<h3>Vectorize does not generate type stable functions.</h3>
+<p>The function generated by <code>Vectorize</code> wraps the input function in a call to
+<code>mapply()</code> under the hood, with the default argument <code>SIMPLIFY = TRUE</code>. This
+means the type of the function output depends on the input. For example</p>
+<pre class="r"><code># Everything seems good, character vector output
+patient_name_v(&quot;some/path/abc/001.txt&quot;)</code></pre>
+<pre><code>## some/path/abc/001.txt 
+##         &quot;abc_001.txt&quot;</code></pre>
+<pre class="r"><code># But now my output is a named list()!
+patient_name_v(character())</code></pre>
+<pre><code>## named list()</code></pre>
+<pre class="r"><code># And now it is a list with no names!
+patient_name_v(NULL)</code></pre>
+<pre><code>## list()</code></pre>
+<p>Type stability is also the reason it is best to avoid <code>sapply()</code> or <code>mapply()</code>
+in favor of the type stable <code>vapply()</code> or <code>purrr::map_*()</code> and
+<code>purrr::pmap_*()</code> functions.</p>
+<p>You can call <code>Vectorize(SIMPLIFY = FALSE)</code> when you generate the vectorized
+function, but this will cause the function to return a list of values rather
+than a vector. Because many vectorized functions do not work with list inputs,
+this often means you will then need to post-process your output.</p>
+</div>
+<div id="vectorize-does-not-generate-functions-with-easily-inspect-able-code" class="section level3">
+<h3>Vectorize does not generate functions with easily inspect-able code</h3>
+<p>Because of the way <code>Vectorize()</code> generates the function all generated functions
+have the same body when printed.</p>
+<pre class="r"><code>patient_name_v</code></pre>
+<pre><code>## function (path) 
+## {
+##     args &lt;- lapply(as.list(match.call())[-1L], eval, parent.frame())
+##     names &lt;- if (is.null(names(args))) 
+##         character(length(args))
+##     else names(args)
+##     dovec &lt;- names %in% vectorize.args
+##     do.call(&quot;mapply&quot;, c(FUN = FUN, args[dovec], MoreArgs = list(args[!dovec]), 
+##         SIMPLIFY = SIMPLIFY, USE.NAMES = USE.NAMES))
+## }
+## &lt;environment: 0x7fcb24915508&gt;</code></pre>
+<p>This means you lose the easy inspectibility of functions. Being able to easily
+see the implementation of functions in R is one of the strengths of the
+ecosystem. So losing this behavior makes your functions much more difficult for
+users (or yourself in the future) to understand. It <em>is</em> possible to retrieve
+the original function definition, but doing so requires you to examine how
+<code>Vectorize()</code> works; by storing the function in a variable called <code>FUN</code>.</p>
+<pre class="r"><code>environment(patient_name_v)$FUN</code></pre>
+<pre><code>## function(path) {
+##   path_list &lt;- str_split(path, &quot;/&quot;) %&gt;% unlist()
+##   paste(path_list[length(path_list) - 1], path_list[length(path_list)], sep = &quot;_&quot;)
+## }
+## &lt;bytecode: 0x7fcb24eeeeb0&gt;</code></pre>
+</div>
+<div id="vectorize-functions-use-do.call-which-can-have-unexpected-performance-consequences" class="section level3">
+<h3>Vectorize functions use <code>do.call()</code>, which can have unexpected performance consequences</h3>
+<p>This is best explained by Hadley Wickham in <a href="http://rpubs.com/hadley/do-call2" class="uri">http://rpubs.com/hadley/do-call2</a>,
+but the gist is <code>do.call()</code> ends up doing a lot more work than you might expect
+and in some cases has performance implications, although in this particular
+case they will be of minor concern. So because all functions generated with <code>Vectorize()</code> use <code>do.call()</code> they inherit these issues.</p>
+</div>
+<div id="vectorize-does-not-actually-make-your-code-execute-faster" class="section level3">
+<h3>Vectorize does not actually make your code execute faster</h3>
+<p>Perhaps the most important reason is that <code>Vectorize()</code> will not make your code
+faster. People often want to vectorize their function because they have observed that vectorized functions are fast. This is usually true,
+however it is true not because they are vectorized, but because vectorized
+functions are often written in C code (or call other functions which are).
+<code>Vectorize()</code> essentially just wraps your code in a loop and runs it
+repeatedly, so it cannot improve the running time.</p>
+</div>
+</div>
+<div id="so-what-should-i-do" class="section level2">
+<h2>So what should I do?</h2>
+<p>Because of these issues I think a cleaner solution is first, try to rewrite
+your function to take advantage of existing vectorized functions. If that is
+not possible define your original function in an internal helper, which then
+calls the equivalent type stable <code>map_()</code> or <code>vapply()</code> function on the
+original function.</p>
+<pre class="r"><code>patient_name2 &lt;- function(path) {
+  patient_name_one &lt;- function(path) {
+    path_list &lt;- str_split(path, &quot;/&quot;) %&gt;% unlist()
+    paste(path_list[length(path_list) - 1], path_list[length(path_list)], sep = &quot;_&quot;)
+  }
+  vapply(patient_name_one, path, character(1))
+}</code></pre>
+<p>This takes only a few more lines of code than the original and solves the
+majority of the issues with <code>Vectorize()</code>. The function is now type stable for
+all inputs, the function body remains inspectable and you avoid the potential
+pitfalls of using <code>do.call()</code>.</p>
+<p>In Dean’s original case he was trying to use <code>patient_name</code> in a call to
+<code>dplyr::mutate()</code>. Rather than using <code>Vectorize()</code> to generate a new function
+in this case I would instead suggest an idiom like the following.</p>
+<pre class="r"><code>df &lt;- data_frame(path = paths)</code></pre>
+<pre><code>## Warning: `data_frame()` is deprecated, use `tibble()`.
+## This warning is displayed once per session.</code></pre>
+<pre class="r"><code>df %&gt;% mutate(name = map_chr(path, patient_name))</code></pre>
+<pre><code>## # A tibble: 200 x 2
+##    path                          name       
+##    &lt;chr&gt;                         &lt;chr&gt;      
+##  1 some/path/abc/001.txt         abc_001.txt
+##  2 another/directory/xyz/002.txt xyz_002.txt
+##  3 some/path/abc/001.txt         abc_001.txt
+##  4 another/directory/xyz/002.txt xyz_002.txt
+##  5 some/path/abc/001.txt         abc_001.txt
+##  6 another/directory/xyz/002.txt xyz_002.txt
+##  7 some/path/abc/001.txt         abc_001.txt
+##  8 another/directory/xyz/002.txt xyz_002.txt
+##  9 some/path/abc/001.txt         abc_001.txt
+## 10 another/directory/xyz/002.txt xyz_002.txt
+## # … with 190 more rows</code></pre>
+<p>This is similarly concise to using <code>Vectorize()</code> but is also type stable for all possible
+inputs.</p>
+</div>

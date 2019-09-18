@@ -1,0 +1,140 @@
+---
+date: '2015-04-28'
+title: 'Wercker and Rocker: Finally Performant Continuous Integration for R'
+tags: [R]
+comments: true
+---
+
+## The Problem ##
+
+[Continuous Integration][CI] is a great technique for both developers,
+contributers and users to ensure that the development build of a project
+remains in a working state.  In the R community there are a few different CI
+setups in use. The [CRAN][CRAN] and [Bioconductor][BioC] package repositories
+both run nightly build checks for all of their packages using custom build
+servers.  More recently continuous builds with [Travis-CI][Travis] on
+[Github][Github] repositories have grown in popularity.
+
+I personally have found great utility of using Travis for my projects.  [Gmailr][gmailr], [rex][rex], 
+[lintr][lintr] and [covr][covr] all were developed using Travis and lintr and
+covr were both conceived with continuous integration in mind. 
+
+Unfortunately I have found over time that builds on Travis have been taking
+longer and longer in both queue time and runtime. I think is due to two main
+points,
+
+1. Travis has risen in popularity over the past few years and their build stack
+   has not kept pace.
+2. The build environments for R projects have gotten more feature-full and take
+   longer to build.
+
+Point one will eventually happen to any CI system that gains popularity, but it
+does show an advantage to using a less popular system.  Point two occurs
+largely due to a deficiency in the Travis build model.  Travis’ container
+support allows only their pre-built containers and you cannot use any sudo
+commands in your build steps.  R projects require somewhat heavy dependencies
+to build ([Latex][Latex] being the largest culprit), and many package
+dependencies have to be compiled from the source. As a result often a build
+spends 90% or more of it’s time downloading and installing the dependencies.
+
+## Docker Containers ##
+
+One solution to this dependency problem is [Docker][Docker] containers.  These
+containers allow you to distribute an application stack as a self-contained and
+standalone package.  The benefit for using Docker containers for continuous
+integration is that once you have downloaded the container for the first time,
+subsequent builds using it become instantaneous.
+
+Fortunately the R community has realized the utility of Docker containers and
+maintains an up to date collection of R containers in the [Rocker][Rocker]
+project.  These containers contain all the necessary dependencies for both the
+release versions of R as well as daily version of R-devel.  In addition there
+are containers with pre-installed packages from the [Hadleyverse][Hadley] and
+[ROpenSci][ROpenSci] projects.  [Bioconductor][BioC] also maintains a set of
+[Docker Containers][Bioc Docker] based on the Rocker base which contain
+pre-built Bioconductor packages.  All of these containers can be found on the
+[Docker Hub][Docker Hub], which is a large collection of community contributed
+Docker containers.
+
+## Wercker ##
+
+[Wercker][Wercker] is described as
+
+> an open automation platform for developing, building and delivering your applications
+
+It was historically based on a traditional build stack, however on April 2nd
+they introduced a new [Docker based stack][DS] which they call Ewok.  This
+allows you to use any Docker container hosted on Docker Hub as the base image
+for your build.
+
+Each Wercker build consists of a series of steps, which can be either
+a series of shell commands to run or pre-defined steps from the
+[Step Registry][Step Registry].  Anyone can create a new step and add it to the
+registry, and I have created a seriers of [steps for R][Steps].
+
+In addition because Wercker stores the results of the build as a Docker
+container you can download them afterwards and inspect the results
+(`wercker pull`).  Builds can even be re-run locally under the same environment
+as the build server using `wercker build`.
+
+## The Solution ##
+
+So using this new Docker based Ewok stack we can use a Rocker container and
+have our dependencies nearly instantly after the first build!
+
+Once you have the new Application setup in Wercker you simply can add the
+following content to a `wercker.yml` file in your packages root directory.
+
+{% highlight yaml %}
+box: rocker/hadleyverse
+build:
+  steps:
+    - jimhester/r-dependencies
+    - jimhester/r-check
+    - jimhester/r-lint
+    - jimhester/r-coverage
+{% endhighlight %}
+
+This will install all dependencies for your package, build and check it, run it
+through lint the code with [lintr][lintr], and generate code coverage with
+[covr][covr] and upload the results to [Codecov][codecov].
+
+For more detailed setup instructions please see [jimhester/wercker-r-example][example].
+
+## Custom Containers ##
+
+The above is already a large improvement over Travis builds, however perhaps your
+package has a large package dependency which is not already present in the
+Rocker or Bioconductor images.  Never fear, you can simply create your
+own custom image with the dependency installed and upload it to Docker Hub.
+Then simply change the `box:` value in `wercker.yml` to the location of your
+new image and get instant builds even with heavy dependencies!
+
+## See Also ##
+
+- [From zero to tested in five minutes](http://krlmlr.github.io/from-zero-to-tested-in-five-minutes/) by
+  Kirill Müller who has a similar setup with his [makeR fork](https://github.com/krlmlr/makeR)
+  which provided inspiration in setting this up.
+
+[Github]: https://github.com
+[CI]: http://en.wikipedia.org/wiki/Continuous_integration
+[CRAN]: http://cran.r-project.org/web/checks/check_summary.html
+[BioC]: http://bioconductor.org/checkResults/devel/bioc-LATEST/
+[Travis]: http://docs.travis-ci.com/user/languages/r/
+[gmailr]: https://github.com/jimhester/gmailr
+[rex]: https://github.com/kevinushey/rex
+[lintr]: https://github.com/jimhester/lintr
+[covr]: https://github.com/jimhester/covr
+[Latex]: https://www.tug.org/texlive/
+[Docker]: https://www.docker.com/
+[Rocker]: https://registry.hub.docker.com/repos/rocker/
+[Bioc Docker]: http://www.bioconductor.org/help/docker/
+[Docker Hub]: https://registry.hub.docker.com/search?q=rocker&searchfield=
+[Hadley]: https://registry.hub.docker.com/u/rocker/hadleyverse/
+[ROpenSci]: https://registry.hub.docker.com/u/rocker/ropensci/
+[DS]: http://blog.wercker.com/2015/04/02/Introducing-our-docker-stack.html?ref=producthunt
+[Step Registry]: https://app.wercker.com/#explore
+[Steps]: https://app.wercker.com/#search/steps/jimhester
+[codecov]: https://codecov.io
+[example]: https://github.com/jimhester/wercker-r-example
+[Wercker]: http://wercker.com/

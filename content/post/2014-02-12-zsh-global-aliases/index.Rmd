@@ -1,0 +1,61 @@
+---
+date: '2014-02-12'
+title: ZSH global aliases
+tags: [R]
+comments: true
+---
+
+Just a short post about two useful global aliases I created.  ZSH global
+aliases are basically variables which are expanded before the command is
+executed.  This allows them to be placed anywhere on the line, not just at the
+start like traditional aliases.  Bash (as far as I know) does not have an
+analog to ZSH global aliases, but I have found them very useful.
+
+Both of them produce exactly the same output (unique lines in a file), but in two different ways.
+
+```{r eval = F, engine = 'bash'}
+alias -g U="awk '!a[\$0]++'"
+alias -g SU='\(sort | uniq\)'
+```
+
+The first uses awk to hash the lines seen, and only print the line if the current
+line is not in the hash.  This finds the unique lines without sorting, which
+preserves the original order is usually much much faster.  The only issue is it
+can exhaust system memory if used on extremely large files.
+
+How much faster is hashing for uniques rather than sorting for uniques?
+
+*Note these commands use GNU shuf to randomly shuffle*
+
+```{r eval = F, engine = 'bash'}
+gshuf /usr/share/dict/words | head -n 100000 > words #get 100000 random words
+(for i in {1..100};do gshuf words | head -n 1000;done;cat words) | gshuf > dup_words #randomly pick 1000 words to duplicate 100 times, append the full list and randomize
+```
+
+Now lets count unique lines in the files
+
+```{r eval = F, engine = 'bash'}
+time awk '!a[$0]++'< dup_words | wc -l
+#  100000
+#  awk '!a[$0]++' < dup_words  0.14s user 0.00s system 99% cpu 0.149 total
+#  wc -l  0.00s user 0.00s system 2% cpu 0.147 total
+time (sort | uniq) < dup_words | wc -l
+#  100000
+#  ( sort | uniq; ) < dup_words  2.45s user 0.01s system 100% cpu 2.438 total
+#  wc -l  0.00s user 0.00s system 0% cpu 2.437 total
+```
+
+So you get the same results 16X faster using the hashing strategy.
+
+And lets use the aliases which started this whole mess
+
+```{r eval = F, engine = 'bash'}
+U < dup_words | wc -l
+SU < dup_words | wc -l
+
+cat dup_words | U | wc -l
+cat dup_words | SU | wc -l
+```
+
+All in all this allows you to do sorting faster and with less typing than the
+ubiquitous `| sort | uniq` pattern.

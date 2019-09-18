@@ -1,0 +1,35 @@
+---
+date: '2016-07-25'
+title: Assignment Conversion
+tags: [R]
+comments: true
+---
+
+
+
+<p>The R language has two common methods of assignment. The <code>=</code> and <code>&lt;-</code> binary
+operators are semantically equivalent in most cases, so which to use largely
+comes down to convention for the particular project. At times it may be
+desirable to convert between the two styles.</p>
+<p>Converting all instances of <code>&lt;-</code> to use <code>=</code> assignment is fairly straightforward.
+<code>&lt;-</code> only performs assignment and is unique, so one can simply do a regular
+expression replacement for all occurrences of <code>&lt;-</code>. The regex uses a <a href="http://www.regular-expressions.info/lookaround.html#lookbehind">negative
+lookbehind</a> to
+avoid corner cases such as user defined <code>%&lt;-%</code> operator or the <code>&lt;&lt;-</code> operator
+and should work in nearly every case.</p>
+<script src="https://gist.github.com/jimhester/96539a09055402d194002e8d3e2ea172.js?file=changeArrowAssign.R"></script>
+<p>Converting all instances of <code>=</code> to use <code>&lt;-</code> is more challenging. <code>=</code> can also
+occur in the equality operators <code>==</code>, <code>&gt;=</code>, <code>&lt;=</code> as well as named arguments in
+function calls <code>fun(x = 1)</code>. It is not possible to use a regular expression to
+disambiguate all cases for this transformation.</p>
+<p>Fortunately we can use information provided by R’s parser to handle this issue
+for us. The
+<a href="https://github.com/jimhester/lintr/blob/master/R/assignment_linter.R#L3-L17"><code>assignment_linter</code></a>
+in the <a href="https://github.com/jimhester/lintr#readme">lintr</a> uses this method, so
+we can discriminate the assignment <code>=</code> from the argument <code>=</code>. So we can lint
+the file using the <code>assignment_linter</code> to find the locations of all <code>=</code>
+assignments, and convert them to <code>&lt;-</code> assignments using a little Rcpp.</p>
+<script src="https://gist.github.com/jimhester/96539a09055402d194002e8d3e2ea172.js?file=changeEqualAssign.R"></script>
+<p>This gives us a robust method of performing this replacement without error for
+any number of files. A similar linter and replacement function could be written
+to replace the regular expression approach for modifying arrow assignment.</p>

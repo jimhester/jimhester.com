@@ -1,0 +1,54 @@
+---
+date: '2012-12-17'
+title: Setting up a local cpan using cpanminus without root access
+tags: [R]
+comments: true
+---
+
+When asked why colleagues do not use perl modules in their work, often the
+response is that they do not know how to install them without having root
+access to the server they are working on. Cpan can be configured to install to
+a different base directory, however this requires a number of options to be set
+correctly, and can be a pain to get set up.
+
+However using [cpan minus](http://search.cpan.org/dist/App-cpanminus/lib/App/cpanminus.pm) and the [local::lib](http://search.cpan.org/dist/local-lib/lib/local/lib.pm) module makes this process as
+painless as running three simple commands, easy enough to set up for just about
+anyone.  Note that I turn off testing in the following commands, which
+I encourage you to do as well, I have found there are some false positive
+failures, and it will save time as well.
+
+First you have to download cpanminus and install it and the local::lib module,
+change /foo to the directory you would like to install the modules to
+
+```{r eval = F, engine = 'bash'}
+wget -O- http://cpanmin.us | perl - -l /foo App::cpanminus local::lib --notest
+```
+
+Then use the local::lib package to set up the required environment variables to
+point to your new module path for the current login session
+
+```{r eval = F, engine = 'bash'}
+eval $(perl -I /foo/lib/perl5 -Mlocal::lib=/foo)
+```
+
+Finally add that command to a login script for your shell so it will be run
+automatically when you login, i.e. (.profile, .bash_profile, .zshenv) ect.
+
+```{r eval = F, engine = 'bash'}
+echo 'eval $(perl -I /foo/lib/perl5 -Mlocal::lib=/foo)' >> .profile
+```
+
+I also like to set a default --notest, so I don't have to test every module
+I install
+
+```{r eval = F, engine = 'bash'}
+echo export PERL_CPANM_OPT="--notest" >> .profile
+```
+
+Then you can then install a module in the correct directory , e.g. the Statistics::Descriptive package, with
+
+```{r eval = F, engine = 'bash'}
+cpanm Statistics::Descriptive
+```
+
+It doesn't get much easier than that!
