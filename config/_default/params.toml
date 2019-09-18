@@ -12,7 +12,7 @@ day_night = false
 font = "alison"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = "Personal website of Alison Presmanes Hill where I blog about data science, programming, education, and R."
+description = "Personal website of Jim Hester where I blog about data science and programming in R."
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
 sharing_image = "avatar.jpg"
@@ -37,7 +37,7 @@ math = false
 # Privacy pack
 #   Show a cookie consent message to visitors
 #   Anonymize IP in Google Analytics (if enabled)
-privacy_pack = true
+privacy_pack = false
 
 # Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
 #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
@@ -64,7 +64,7 @@ appointment_url = ""
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/jimhester_"},
-  #{icon = "github", icon_pack = "fab", name = "Follow Me", link = "https://github.com/jimhester"},
+  {icon = "github", icon_pack = "fab", name = "Follow Me", link = "https://github.com/jimhester"},
   # {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
   #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
   #{icon = "discourse", icon_pack = "fab", name = "Discuss on RStudio Community", link = "https://community.rstudio.com/"},
@@ -99,7 +99,7 @@ zoom = 15
 # Load CSS and JS plugins
 #   E.g. To load `/assets/css/custom.css`, set `plugins_css = ["custom"]`.
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-#plugins_css = ["jim"]
+plugins_css = ["alison"]
 plugins_js  = []
 
 ############################
@@ -113,7 +113,7 @@ gravatar = false
 menu_align_right = true
 
 # Show estimated reading time for posts? (true/false)
-reading_time = true
+reading_time = false
 
 # Display comment count (if commenting enabled in config.toml)? (true/false)
 comment_count = true

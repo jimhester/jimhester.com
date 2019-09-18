@@ -1,6 +1,6 @@
 ---
 aliases: [lintr-covr]
-projects: [lintr]
+projects: [lintr, covr]
 authors: [jim]
 abstract: A talk on my R packages, lintr and covr
 abstract_short: ""

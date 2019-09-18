@@ -24,23 +24,19 @@ subtitle = ""
   [[content.filter_button]]
     name = "All"
     tag = "*"
-  
+
   [[content.filter_button]]
     name = "R"
     tag = "R"
-    
+
   [[content.filter_button]]
-    name = "Software"
-    tag = "software"
+    name = "Package"
+    tag = "package"
 
   [[content.filter_button]]
     name = "Workshop"
     tag = "workshop"
-  
-  [[content.filter_button]]
-    name = "Course"
-    tag = "course"
-    
+
   [[content.filter_button]]
     name = "Book"
     tag = "book"

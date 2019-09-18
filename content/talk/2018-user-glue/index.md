@@ -2,7 +2,7 @@
 aliases: [glue]
 authors: [jim]
 abstract_short: ""
-project: glue
+projects: [glue]
 abstract: >
   String interpolation, evaluating a variable name to a value within a string,
   isa feature of many programming languages including Python, Julia,
