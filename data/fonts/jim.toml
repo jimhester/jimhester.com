@@ -1,0 +1,15 @@
+# Font style metadata
+name = "jim"
+
+# Optional Google font URL
+google_fonts = "Lato:400,400i|Montserrat:400,700|Source+Code+Pro"
+
+# Font families
+heading_font = "Lato"
+body_font = "Montserrat"
+nav_font = "Montserrat"
+mono_font = "Source Code Pro"
+
+# Font size
+font_size = "18"
+font_size_small = "16"

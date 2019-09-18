@@ -9,7 +9,7 @@ day_night = false
 
 # Font style.
 #   Choose from `default`, `classic`, or `playfair`.
-font = "alison"
+font = "jim"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
 description = "Personal website of Jim Hester where I blog about data science and programming in R."
