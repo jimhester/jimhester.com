@@ -29,7 +29,6 @@ image:
 location: Cleveland, OH
 selected: true
 title: "Database Best Practices"
-projects: [odbc]
 links:
 - icon: images
   icon_pack: fas

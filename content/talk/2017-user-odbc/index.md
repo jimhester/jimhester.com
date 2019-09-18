@@ -1,6 +1,7 @@
 ---
 aliases: [odbc]
 authors: [jim]
+projects: [odbc]
 abstract_short: ""
 abstract: >
     Getting data into and out of databases is one of the most fundamental parts of data science. Much of the
@@ -26,7 +27,6 @@ image:
 location: Brussels, Belgium
 selected: true
 title: "odbc: A modern database interface"
-project: odbc
 links:
 - icon: images
   icon_pack: fas

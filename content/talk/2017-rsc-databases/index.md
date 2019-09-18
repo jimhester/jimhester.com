@@ -27,7 +27,6 @@ image:
   focal_point: Smart
 selected: true
 title: "Database Best Practices"
-projects: [odbc]
 links:
 - icon: images
   icon_pack: fas
