@@ -1,6 +1,7 @@
 ---
 date: '2019-04-05'
 title: Debugging compiled code in R with lldb
+video: true
 summary: >
   In this video I will show how I debugged a real world issue in the vroom
   package with the lldb debugger and successfully submitted a pull request to

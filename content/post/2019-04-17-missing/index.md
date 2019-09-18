@@ -2,7 +2,7 @@
 date: '2019-04-17'
 title: 'RStats tip #2: avoid missing(), prefer NULL'
 summary: This video explains why it is best to avoid using `missing()` when writing R functions.
-
+video: true
 image:
   focal_point: Center
 tags: [R, video]

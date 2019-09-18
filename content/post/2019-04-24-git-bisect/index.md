@@ -2,6 +2,7 @@
 date: '2019-04-24'
 title: 'Using git bisect to pinpoint bugs in your commit history'
 summary: This video demonstrates one of my favorite lesser known features of git, git bisect.
+video: true
 image:
   focal_point: Center
 tags: [R, video, git]

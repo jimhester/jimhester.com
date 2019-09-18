@@ -2,6 +2,7 @@
 date: '2019-05-01'
 title: 'Submitting vroom to CRAN, LIVE!'
 summary: Today I am going to be submitting my vroom package to CRAN, so I thought it would be fun to do it as a live demo.
+video: true
 image:
   focal_point: Center
 tags: [R, video]

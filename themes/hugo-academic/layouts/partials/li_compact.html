@@ -31,7 +31,11 @@
   <div class="media-body">
 
     <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="{{ $item.RelPermalink }}" itemprop="url">{{ $item.Title }}</a>
+      <a href="{{ $item.RelPermalink }}" itemprop="url">
+        {{if $item.Params.video }}
+          <i class="fab fa-youtube"></i>
+        {{end}}
+        {{ $item.Title }}</a>
     </h3>
 
     {{ with $summary }}

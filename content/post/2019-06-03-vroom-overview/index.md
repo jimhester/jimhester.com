@@ -1,6 +1,7 @@
 ---
 date: '2019-06-03'
 title: 'vroom: Read and Write Rectangular Text Data Quickly'
+video: true
 summary: A tour of the recently released vroom package (http://vroom.r-lib.org/)
 image:
   focal_point: Center

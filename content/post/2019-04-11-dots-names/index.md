@@ -1,6 +1,7 @@
 ---
 date: '2019-04-11'
 title: 'RStats tip #1: avoid dots in names'
+video: true
 summary: >
   In this video I explain why using dots in your function and object names
   causes ambiguities that make your code harder to understand and can cause
