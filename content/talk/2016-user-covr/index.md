@@ -25,7 +25,6 @@ image:
 location: Stanford, CA
 selected: true
 title: "Covr: Bringing Test Coverage to R"
-projects: [covr]
 links:
 - icon: images
   icon_pack: fas

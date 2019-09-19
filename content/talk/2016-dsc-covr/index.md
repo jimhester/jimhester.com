@@ -15,7 +15,6 @@ image:
 location: Stanford, CA
 selected: true
 title: "Covr: Test coverage of multiple processes"
-projects: [covr]
 links:
 - icon: images
   icon_pack: fas
