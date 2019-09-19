@@ -39,7 +39,7 @@ date_format = "January 2006"
 [[experience]]
   title = "Data Scientist - Analytics"
   company = "Explorys, Inc."
-  company_url = "https://www.explorys.com/"
+  company_url = "https://www.cleveland.com/business/2015/04/ibm_buys_cleveland-based_explo.html"
   location = "Cleveland, Ohio"
   date_start = "2013-10-01"
   date_end = "2015-01-31"
