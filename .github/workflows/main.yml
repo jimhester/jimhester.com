@@ -1,7 +1,7 @@
-on: push
-  #schedule:
-    ## run every day at midnight
-    #- cron: '0 0 * * *'
+on:
+  schedule:
+    # run every day at midnight
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -56,4 +56,4 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
           npm install netlify-cli -g
-          netlify deploy
+          netlify deploy --prod
