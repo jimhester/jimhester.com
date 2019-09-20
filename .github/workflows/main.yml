@@ -31,6 +31,15 @@ jobs:
            curl -fLo /tmp/pandoc.pkg "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-macOS.pkg"
            sudo installer -pkg "/tmp/pandoc.pkg" -target /
            rm /tmp/pandoc.pkg
+      - name: Setup XQuartz
+        env:
+          XQUARTZ_VERSION: 2.7.11
+        run: |
+           curl -fLo /tmp/XQuartz.dmg "https://dl.bintray.com/xquartz/downloads/XQuartz-${XQUARTZ_VERSION}.dmg"
+           sudo hdiutil attach /tmp/XQuartz.dmg
+           sudo installer -pkg "/Volumes/XQuartz-${XQUARTZ_VERSION}/XQuartz.pkg" -target /
+           sudo hdiutil detach /Volumes/XQuartz-${XQUARTZ_VERSION}
+           rm /tmp/XQuartz.dmg
       - name: Build site
         run: |
           # We need to update the timestamps so this is re-built
