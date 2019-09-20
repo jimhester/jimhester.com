@@ -20,6 +20,7 @@ jobs:
       - name: Setting up R dependencies
         env:
           CRAN: https://cloud.r-project.org
+          CI: true
         run: |
           echo 'options(repos = Sys.getenv("CRAN"), Ncpus = 2)' > ~/.Rprofile
           R -e 'install.packages(c("BiocManager", "remotes"))'
