@@ -135,7 +135,6 @@ Imports:
   readxl,
   rematch,
   rematch2,
-  renv,
   reprex,
   reshape,
   reshape2,
