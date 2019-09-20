@@ -1,7 +1,11 @@
 on:
   schedule:
-    # run every day at 2 pm
-    - cron:  '0 2 * * *'
+    # run every 5 minutes
+    - cron: '*/5 * * * *'
+
+  #schedule:
+    ## run every day at 2 pm
+    #- cron: '0 2 * * *'
 
 jobs:
   build:
