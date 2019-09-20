@@ -22,8 +22,8 @@ jobs:
           CRAN: https://cloud.r-project.org
         run: |
           echo 'options(repos = Sys.getenv("CRAN"), Ncpus = 2)' > ~/.Rprofile
-          R -e 'install.packages("BiocManager")'
-          R -e 'renv::restore()'
+          R -e 'install.packages(c("BiocManager", "remotes"))'
+          R -e 'remotes::install_deps()'
       - name: Build site
         run: |
           # We need to update the timestamps so this is re-built
