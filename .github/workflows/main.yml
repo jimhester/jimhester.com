@@ -24,6 +24,13 @@ jobs:
           echo 'options(repos = Sys.getenv("CRAN"), Ncpus = 2)' > ~/.Rprofile
           R -e 'install.packages(c("BiocManager", "remotes"))'
           R -e 'remotes::install_deps()'
+      - name: Setup pandoc
+        env:
+          PANDOC_VERSION: 2.7.3
+        run: |
+           curl -fLo /tmp/pandoc.pkg "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-macOS.pkg"
+           sudo installer -pkg "/tmp/pandoc.pkg" -target /
+           rm /tmp/pandoc.pkg
       - name: Build site
         run: |
           # We need to update the timestamps so this is re-built
