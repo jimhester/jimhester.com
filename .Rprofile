@@ -1,9 +1,11 @@
+source("renv/activate.R")
+
 if (file.exists("~/.Rprofile")) {
   base::sys.source("~/.Rprofile", envir = environment())
 }
 
 options(
-  blogdown.author = "Alison Hill",
+  blogdown.author = "Jim Hester",
   blogdown.ext = ".Rmd",
   blogdown.subdir = "post",
   blogdown.yaml.empty = TRUE,
