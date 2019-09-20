@@ -34,6 +34,8 @@
       <a href="{{ $item.RelPermalink }}" itemprop="url">
         {{if $item.Params.video }}
           <i class="fab fa-youtube"></i>
+        {{else if $item.Params.package_release }}
+          <i class="fas fa-box-open"></i>
         {{end}}
         {{ $item.Title }}</a>
     </h3>

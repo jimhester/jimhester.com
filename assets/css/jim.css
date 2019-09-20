@@ -304,6 +304,10 @@ iframe {
 	color: #fff;
 }
 
-h3.article-title i.fab {
+h3.article-title i.fa-youtube {
 	color: #dc322f;
+}
+
+h3.article-title i.fa-box-open {
+	color: #b58900 ;
 }

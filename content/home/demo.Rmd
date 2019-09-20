@@ -134,7 +134,7 @@ counts <- count(p_data, type, .drop = FALSE) %>%
   na.omit() %>%
   mutate(
     n = case_when(
-      type == "github" ~ count(p_data, type, wt = as.integer(count)) %>% pull(),
+      type == "github" ~ count(na.omit(p_data), type, wt = as.integer(count)) %>% pull(),
       TRUE ~ n),
     emoji = c("💻", "📹", "📋", "📽", "⚒", "📦"),
     nice = c("GitHub", "videos", "posts", "talks", "workshops", "CRAN"),
@@ -171,8 +171,13 @@ p <- ggplot() +
   ) +
   guides(
     alpha = "none",
-    fill = guide_legend(NULL, label.theme = element_text(hjust = .3, family = "Lato", size = 7),
-      label.position = "right", keywidth = unit(.6, "cm"), keyheight = unit(.25, "cm")
+    fill = guide_legend(
+      title = NULL,
+      label.theme = element_text(hjust = .3, family = "Lato", size = 7),
+      label.position = "right",
+      keywidth = unit(.6, "cm"),
+      keyheight = unit(.25, "cm"),
+      nrow = 1
     )
   ) +
   labs(x = NULL, y = NULL)
