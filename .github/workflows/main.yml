@@ -29,8 +29,9 @@ jobs:
           # We need to update the timestamps so this is re-built
           touch content/home/demo.Rmd
           R -e 'blogdown::build_site(TRUE)'
-      - name: Deploy to Netlify
+      - name: Setup npm
         uses: actions/setup-node@v1
+      - name: Deploy to Netlify
         run: |
           npm install netlify-cli -g
           netlify deploy
