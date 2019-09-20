@@ -171,5 +171,6 @@ Imports:
   yaml,
   zeallot,
   zlibbioc
+BiocViews: blah
 Remotes:
   r-hub/crandb
