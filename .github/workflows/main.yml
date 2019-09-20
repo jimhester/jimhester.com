@@ -26,7 +26,10 @@ jobs:
           CRAN: https://cloud.r-project.org
         run: |
           echo 'options(repos = Sys.getenv("CRAN"), Ncpus = 2)' > ~/.Rprofile
-          R -e 'install.packages("remotes")' -e 'remotes::install_github("rstudio/renv#192")' -e 'renv::restore()'
+          mv .Rprofile{,bak}
+          R -e 'install.packages("remotes")' -e 'remotes::install_github("rstudio/renv#192")'
+          mv .Rprofile{bak,}
+          R -e 'renv::restore()'
       - name: Build site
         run: |
           # We need to update the timestamps so this is re-built
