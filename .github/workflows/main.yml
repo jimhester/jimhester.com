@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: macOS-latest
     steps:
-      - name: Re-build site
+      - name: Setup
         uses: actions/checkout@master
       - uses: actions/setup-node@v1
       - name: Installing R
@@ -27,7 +27,7 @@ jobs:
         run: |
           echo 'options(repos = Sys.getenv("CRAN"), Ncpus = 2)' > ~/.Rprofile
           mv .Rprofile{,bak}
-          R -e 'install.packages("remotes")' -e 'remotes::install_github("rstudio/renv#192")'
+          R -e 'install.packages("BiocManager")' -e 'install.packages("remotes")' -e 'remotes::install_github("rstudio/renv#192")'
           mv .Rprofile{bak,}
           R -e 'renv::restore()'
       - name: Build site
