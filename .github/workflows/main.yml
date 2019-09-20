@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Setup
         uses: actions/checkout@master
-      - uses: actions/setup-node@v1
       - name: Installing R
         env:
           CRAN: https://cloud.r-project.org
@@ -23,9 +22,7 @@ jobs:
           CRAN: https://cloud.r-project.org
         run: |
           echo 'options(repos = Sys.getenv("CRAN"), Ncpus = 2)' > ~/.Rprofile
-          mv .Rprofile{,bak}
-          R -e 'install.packages("BiocManager")' -e 'install.packages("remotes")' -e 'remotes::install_github("rstudio/renv#192")'
-          mv .Rprofile{bak,}
+          R -e 'install.packages("BiocManager")'
           R -e 'renv::restore()'
       - name: Build site
         run: |
@@ -33,6 +30,7 @@ jobs:
           touch content/home/demo.Rmd
           R -e 'blogdown::build_site(TRUE)'
       - name: Deploy to Netlify
+        uses: actions/setup-node@v1
         run: |
           npm install netlify-cli -g
           netlify deploy
