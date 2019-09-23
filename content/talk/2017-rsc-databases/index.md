@@ -39,5 +39,8 @@ links:
 tags: [talk, r, odbc]
 ---
 
+<script src="//fast.wistia.com/embed/medias/wwn952e832.jsonp" async></script>
 <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-<div class="wistia_embed wistia_async_wwn952e832" style="height: 353px; width: 627px">&nbsp;</div>
+<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+<div class="wistia_embed wistia_async_wwn952e832 popover=true popoverAnimateThumbnail=true" style="height:100%;width:100%">&nbsp;</div></div></div>
