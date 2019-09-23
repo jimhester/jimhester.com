@@ -120,7 +120,8 @@ all_data <- bind_rows(
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 ## prepare data for plots
-p_data <- filter(all_data, date > today() - years(1)) %>%
+last_year <- today() - years(1)
+p_data <- filter(all_data, date >= last_year, date <= today()) %>%
   mutate(
     x = floor_date(date, "week"),
     y = fct_rev(lubridate::wday(date, label = TRUE)),
