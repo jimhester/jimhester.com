@@ -22,7 +22,7 @@ library(rvest)
 library(lubridate)
 ```
 
-```{r, include = FALSE, cache = TRUE}
+```{r, include = FALSE, cache = FALSE}
 # Get GitHub contributions
 
 html <- xml2::read_html("https://github.com/jimhester")
@@ -75,7 +75,7 @@ talk_data <- map_dfr(set_names(talks, dirname(talks)), function(file) {
   select(-is_workshop)
 ```
 
-```{r, include = FALSE, cache = TRUE}
+```{r, include = FALSE, cache = FALSE}
 ## Get pkg releases
 get_pkgs <- function(search, size = 100) {
   url <- str_glue("http://seer.r-pkg.org:9200/_search?q=Maintainer:{search}&size={size}")
