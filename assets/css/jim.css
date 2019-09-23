@@ -311,3 +311,11 @@ h3.article-title i.fa-youtube {
 h3.article-title i.fa-box-open {
 	color: #b58900 ;
 }
+
+.wistia_placebo_close_button img {
+  color: #2A2D35; /* this is our “black” */
+  font-family: Walsheim;
+  font-feature-settings: "kern" 1, "liga" 1, "ss01" 1, "ss04" 1;
+  font-synthesis: style;
+  font-weight: 400;
+}
