@@ -1,0 +1,104 @@
+
+
+
+<pre class="r"><code>knitr::opts_chunk$set(eval = FALSE)</code></pre>
+<div id="pipe-connections" class="section level1">
+<h1>pipe connections</h1>
+<pre class="r"><code>fs::file_size(&quot;~/data/trip_fare_1.csv&quot;)
+
+data &lt;- data.table::fread(&quot;grep -w UNK ~/data/trip_fare_1.csv&quot;)
+data
+nrow(data)</code></pre>
+<p>R 1.2.0 - <a href="https://www.r-project.org/doc/Rnews/Rnews_2001-1.pdf">R-news 2001</a></p>
+<pre class="r"><code>?connections
+
+tf1 &lt;- read.csv(pipe(&quot;grep -w UNK ~/data/trip_fare_1.csv&quot;))
+
+# gzip compression
+write.csv(tf1, gzfile(&quot;tf_1.csv.gz&quot;))
+tf1 &lt;- read.csv(gzfile(&quot;tf_1.csv.gz&quot;))
+
+write.csv(tf1, &quot;tf_1.csv&quot;)
+fs::dir_info(glob = &quot;tf_1.csv*&quot;)[c(&quot;path&quot;, &quot;size&quot;)]
+
+# remote files
+read.csv(url(&quot;https://github.com/r-lib/vroom/raw/master/inst/extdata/mtcars.csv&quot;))
+
+# multi-threaded compression
+write.csv(tf1, pipe(&quot;pigz &gt; tf_1.csv.gz&quot;))
+
+# Other archive formats
+write.csv(tf1, pipe(&quot;7z a -sitf_1.csv tf.7z&quot;))
+
+tf2 &lt;- read.csv(pipe(&quot;grep -w UNK ~/data/trip_fare_2.csv&quot;))
+
+write.csv(tf2, pipe(&quot;7z a -sitf_2.csv tf.7z&quot;))
+
+system(&quot;7z l tf.7z&quot;)
+
+read.csv(pipe(&quot;7z e tf.7z -so tf_2.csv&quot;), header = FALSE)
+
+# Other compression formats
+write.csv(tf1, pipe(&quot;zstd -T0 &gt; tf_1.csv.zst&quot;))
+tf1 &lt;- read.csv(pipe(&quot;zstdcat tf_1.csv.zst&quot;))
+
+write.csv(tf1, pipe(&quot;lz4 &gt; tf_1.csv.lz4&quot;))
+read.csv(pipe(&quot;lz4cat tf_1.csv.lz4&quot;))
+
+fs::dir_info(glob = &quot;tf_1.csv*&quot;)[c(&quot;path&quot;, &quot;size&quot;)]</code></pre>
+<pre class="r"><code># install.packages(&quot;readr&quot;)
+library(readr)
+
+# install.packages(&quot;vroom&quot;)
+library(vroom)
+
+tf_1M &lt;- vroom(
+  &quot;~/data/trip_fare_1.csv&quot;, 
+  n_max = 1e6, 
+  col_types = list(pickup_datetime = &quot;c&quot;),
+  altrep_opts = FALSE
+)
+
+bench::bench_time(vroom_write(tf_1M, &quot;tf1_1M.csv&quot;, delim = &quot;,&quot;))
+
+bench::mark(iterations = 1, check = FALSE,
+  write.csv = write.csv(tf_1M, pipe(&quot;zstd -T0 &gt; tf1_1M.csv.zst&quot;)),
+  readr = readr::write_csv(tf_1M, pipe(&quot;zstd -T0 &gt; tf1_1M.csv.zst&quot;)),
+  vroom = vroom_write(tf_1M, pipe(&quot;zstd -T0 &gt; tf1_1M.csv.zst&quot;), delim = &quot;,&quot;)
+)
+
+fs::dir_info(glob = &quot;tf1_1M.csv*&quot;)[c(&quot;path&quot;, &quot;size&quot;)]
+
+bench::mark(iterations = 1, check = FALSE,
+  read.csv = read.csv(pipe(&quot;zstdcat tf1_1M.csv.zst&quot;)),
+  readr = readr::read_csv(pipe(&quot;zstdcat tf1_1M.csv.zst&quot;), 
+                          col_types = list()),
+  vroom = vroom::vroom(pipe(&quot;zstdcat tf1_1M.csv.zst&quot;),
+                       col_types = list(), altrep_opts = FALSE)
+)</code></pre>
+</div>
+<div id="download-with-curl-pipe-to-grep" class="section level1">
+<h1>download with curl, pipe to grep</h1>
+<p><a href="https://twitter.com/isbrutussick/status/1159499486936231938" class="uri">https://twitter.com/isbrutussick/status/1159499486936231938</a></p>
+<pre class="r"><code>read.csv(header = FALSE,
+  pipe(
+  &quot;curl -sL https://github.com/r-lib/vroom/raw/master/inst/extdata/mtcars.csv |
+    grep -i merc&quot;
+  )
+)
+
+read.csv(
+  pipe(
+  &quot;curl -sL https://github.com/r-lib/vroom/raw/master/inst/extdata/mtcars.csv |
+    perl -ne &#39;use English; print if $INPUT_LINE_NUMBER == 1 || /merc/i&#39;&quot;
+  )
+)
+
+read.csv(
+  pipe(
+  &quot;curl -sL https://github.com/r-lib/vroom/raw/master/inst/extdata/mtcars.csv.gz |
+    gzcat |
+    perl -ne &#39;use English; print if $INPUT_LINE_NUMBER == 1 || /merc/i&#39;&quot;
+  )
+)</code></pre>
+</div>
