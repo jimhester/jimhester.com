@@ -77,15 +77,14 @@ talk_data <- map_dfr(set_names(talks, dirname(talks)), function(file) {
 
 ```{r, include = FALSE, cache = FALSE}
 ## Get pkg releases
-get_pkgs <- function(search, size = 100) {
-  url <- str_glue("http://seer.r-pkg.org:9200/_search?q=Maintainer:{search}&size={size}")
+get_pkgs <- function(emails, size = 100) {
+  emails <- glue::glue_collapse(glue::double_quote(emails), ",")
+  url <- str_glue("http://crandb.r-pkg.org/-/maintainer?keys=[{emails}]")
 
   res <- jsonlite::read_json(url)
 
-  map_chr(res$hits$hits, list("_source", "Package"))
+  map_chr(res, 2L)
 }
-
-pkgs <- get_pkgs("Hester")
 
 get_releases <- function(data) {
   out <- map(set_names(data), ~ crandb::package(.x, "all"))
@@ -93,7 +92,7 @@ get_releases <- function(data) {
   map_dfr(out, ~ list(version = names(.x$timeline), date = readr::parse_datetime(map_chr(.x$timeline, function(y) y %||% NA_character_))), .id = "package")
 }
 
-pkg_data <- get_releases(get_pkgs("Hester")) %>%
+pkg_data <- get_releases(get_pkgs(c("james.f.hester@gmail.com", "jim.hester@rstudio.com", "james.hester@rstudio.com"))) %>%
   mutate(
     type = "pkg",
     link = str_glue("https://CRAN.R-project.org/package={package}"),
