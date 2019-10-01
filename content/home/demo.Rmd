@@ -152,8 +152,8 @@ rebase <- ggthemes:::solarized_rebase()
 
 library(ggiraph)
 p <- ggplot() +
-  geom_tile(data = filter(p_data, is.na(type)), width = 6, height = .8, aes(x, y, fill = type)) +
-  geom_tile_interactive(data = filter(p_data, !is.na(type)), width = 6, height = .8, aes(x, y, fill = type, alpha = log(as.numeric(count)), tooltip = tip, onclick = on_click, data_id = data_id)) +
+  geom_tile(data = filter(p_data, is.na(type)), width = 6, height = .8, aes(x, y, fill = type), key_glyph = draw_key_point) +
+  geom_tile_interactive(data = filter(p_data, !is.na(type)), width = 6, height = .8, aes(x, y, fill = type, alpha = log(as.numeric(count)), tooltip = tip, onclick = on_click, data_id = data_id), key_glyph = draw_key_point) +
   scale_fill_manual(
     values = c("github" = my_pal[[1]], "video" = my_pal[[2]], "post" = my_pal[[3]], "talk" = my_pal[[4]], workshop = my_pal[[5]], pkg = my_pal[[6]]),
     breaks = c("github", "video", "post", "talk", "workshop", "pkg"),
@@ -173,10 +173,10 @@ p <- ggplot() +
     alpha = "none",
     fill = guide_legend(
       title = NULL,
-      label.theme = element_text(hjust = .3, family = "Lato", size = 7),
-      label.position = "right",
-      keywidth = unit(.6, "cm"),
-      keyheight = unit(.25, "cm"),
+      override.aes = list(shape = 'square filled', size = 3),
+      keywidth = 3,
+      label.theme = element_text(family = "Lato", size = 7),
+      label.position = "bottom",
       nrow = 1
     )
   ) +
