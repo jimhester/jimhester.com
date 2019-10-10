@@ -63,7 +63,6 @@ Imports:
   crandb,
   crayon,
   curl,
-  data.table,
   dbplyr,
   dichromat,
   digest,

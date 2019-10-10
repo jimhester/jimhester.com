@@ -5,9 +5,7 @@ on:
 
 jobs:
   build:
-    env:
-      CRAN: 'https://demo.rstudiopm.com/all/__linux__/xenial/latest'
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     container: rstudio/r-base:3.6-xenial
     steps:
       - name: Checkout repo
