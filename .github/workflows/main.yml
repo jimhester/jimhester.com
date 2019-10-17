@@ -15,7 +15,7 @@ jobs:
           R -e 'install.packages(c("BiocManager", "remotes"))'
           curl -LO 'https://cran.r-project.org/bin/macosx/el-capitan/contrib/3.6/data.table_1.12.2.tgz'
           R -e 'install.packages("data.table_1.12.2.tgz", repos = NULL)'
-          R -e 'remotes::install_deps()'
+          R -e 'remotes::install_deps(upgrade = "never")'
       - name: Install pandoc
         env:
           PANDOC_VERSION: 2.7.3
