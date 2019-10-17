@@ -1,7 +1,7 @@
-on: [push]
-  #schedule:
+on:
+  schedule:
     # run every day at 11 PM
-    #- cron: '0 23 * * *'
+    - cron: '0 23 * * *'
 
 jobs:
   build:
