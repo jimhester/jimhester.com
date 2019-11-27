@@ -171,4 +171,5 @@ Imports:
   zlibbioc
 BiocViews: blah
 Remotes:
-  r-hub/crandb
+  r-hub/crandb,
+  cran/ggiraph@0.6.1
