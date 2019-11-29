@@ -11,9 +11,6 @@ jobs:
         uses: actions/checkout@master
       - name: Setup R
         uses: r-lib/actions/setup-r@master
-      - run: |
-          R -e 'install.packages(c("BiocManager", "remotes"))'
-          R -e 'remotes::install_deps(upgrade = "never")'
       - name: Install pandoc
         env:
           PANDOC_VERSION: 2.7.3
@@ -30,6 +27,9 @@ jobs:
            sudo installer -pkg "/Volumes/XQuartz-${XQUARTZ_VERSION}/XQuartz.pkg" -target /
            sudo hdiutil detach /Volumes/XQuartz-${XQUARTZ_VERSION}
            rm /tmp/XQuartz.dmg
+      - run: |
+          R -e 'install.packages(c("BiocManager", "remotes"))'
+          R -e 'remotes::install_deps(upgrade = "never")'
       - name: Install hugo
         run: |
           R -e 'blogdown::install_hugo()'
