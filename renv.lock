@@ -303,7 +303,7 @@
     },
     "bench": {
       "Package": "bench",
-      "Version": "1.0.4.9000",
+      "Version": "1.0.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "bff589d702841ac9a3d044d17b8f0f22"
@@ -1202,7 +1202,7 @@
     },
     "vroom": {
       "Package": "vroom",
-      "Version": "1.0.2.9000",
+      "Version": "1.0.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "b03c0e2102de2bb1f0d958dca1d56bed"
