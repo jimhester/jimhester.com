@@ -1105,14 +1105,6 @@
       "Repository": "CRAN",
       "Hash": "0759e6b6c0957edb1311028a49a35e76"
     },
-    "survival": {
-      "Package": "survival",
-      "Version": "3.1-1",
-      "Source": "Local",
-      "RemoteType": "local",
-      "RemoteUrl": "/Users/jhester/pkg/survival",
-      "Hash": "f61c49b7aff1ac6ff536a4aa6b553d69"
-    },
     "sys": {
       "Package": "sys",
       "Version": "3.3",
