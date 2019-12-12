@@ -1,7 +1,4 @@
-on:
-  schedule:
-    # run every day at 11 PM
-    - cron: '0 23 * * *'
+on: push
 
 jobs:
   build:
@@ -28,8 +25,8 @@ jobs:
            sudo hdiutil detach /Volumes/XQuartz-${XQUARTZ_VERSION}
            rm /tmp/XQuartz.dmg
       - run: |
-          R -e 'install.packages(c("BiocManager", "remotes"))'
-          R -e 'remotes::install_deps(upgrade = "never")'
+          R -e 'install.packages("renv")'
+          R -e 'renv::init()'
       - name: Install hugo
         run: |
           R -e 'blogdown::install_hugo()'
