@@ -9,19 +9,12 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r@master
       - name: Install pandoc
-        env:
-          PANDOC_VERSION: 2.7.3
-        run: |
-           curl -fLo /tmp/pandoc.pkg "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-macOS.pkg"
-           sudo installer -pkg "/tmp/pandoc.pkg" -target /
-           rm /tmp/pandoc.pkg
+        run: brew cask install pandoc
       - name: Install XQuartz
-        env:
-          XQUARTZ_VERSION: 2.7.11
         run: brew cask install xquartz
       - run: |
           R -e 'install.packages("renv")'
-          R -e 'renv::init()'
+          R -e 'options(renv.consent = TRUE); renv::init()'
       - name: Install hugo
         run: |
           R -e 'blogdown::install_hugo()'
