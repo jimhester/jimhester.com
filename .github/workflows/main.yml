@@ -9,7 +9,7 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r@master
       - name: Install pandoc
-        run: brew cask install pandoc
+        run: brew install pandoc
       - name: Install XQuartz
         run: brew cask install xquartz
       - run: |
