@@ -14,15 +14,15 @@
   "Packages": {
     "AnnotationDbi": {
       "Package": "AnnotationDbi",
-      "Version": "1.46.1",
+      "Version": "1.48.0",
       "Source": "Bioconductor",
-      "Hash": "3e00d5619c01adfe3c18b1b2b7c6f07d"
+      "Hash": "c5f3f140470b1941580859d3fc5c6bc0"
     },
     "AnnotationFilter": {
       "Package": "AnnotationFilter",
-      "Version": "1.8.0",
+      "Version": "1.10.0",
       "Source": "Bioconductor",
-      "Hash": "ee3d96bd93a5a27a059c3306a55b9253"
+      "Hash": "32e2c269be734c9b07bc530b0ca97540"
     },
     "BH": {
       "Package": "BH",
@@ -33,21 +33,27 @@
     },
     "BSgenome": {
       "Package": "BSgenome",
-      "Version": "1.52.0",
+      "Version": "1.54.0",
       "Source": "Bioconductor",
-      "Hash": "cf2493e6c6156c0d22b38d609ebbf0f3"
+      "Hash": "b09372da4a6b4cf370f9372327399c65"
     },
     "Biobase": {
       "Package": "Biobase",
-      "Version": "2.44.0",
+      "Version": "2.46.0",
       "Source": "Bioconductor",
-      "Hash": "b2d0a5189e0a56121a476ca32d861745"
+      "Hash": "ddbfe185296ede75aadb84a51724ac88"
+    },
+    "BiocFileCache": {
+      "Package": "BiocFileCache",
+      "Version": "1.10.2",
+      "Source": "Bioconductor",
+      "Hash": "6b036e16fdfecc74e515a92b74983b20"
     },
     "BiocGenerics": {
       "Package": "BiocGenerics",
-      "Version": "0.30.0",
+      "Version": "0.32.0",
       "Source": "Bioconductor",
-      "Hash": "b34ea3cdd5fcd4072d21b5784232aa3c"
+      "Hash": "b2dabf833cc349c2cd9cba38de7af085"
     },
     "BiocManager": {
       "Package": "BiocManager",
@@ -58,9 +64,9 @@
     },
     "BiocParallel": {
       "Package": "BiocParallel",
-      "Version": "1.18.1",
+      "Version": "1.20.0",
       "Source": "Bioconductor",
-      "Hash": "d9c53e2f3d7bd89fdeeb9b11e6100cd6"
+      "Hash": "03d8e08a5402feac792d7165ad55fcfb"
     },
     "BiocVersion": {
       "Package": "BiocVersion",
@@ -70,9 +76,9 @@
     },
     "Biostrings": {
       "Package": "Biostrings",
-      "Version": "2.52.0",
+      "Version": "2.54.0",
       "Source": "Bioconductor",
-      "Hash": "e4b0ef00948c2f7d3af0552a7cd813e5"
+      "Hash": "edf03f0e37fc3c09c95dcf8bf3900972"
     },
     "DBI": {
       "Package": "DBI",
@@ -83,9 +89,9 @@
     },
     "DelayedArray": {
       "Package": "DelayedArray",
-      "Version": "0.10.0",
+      "Version": "0.12.0",
       "Source": "Bioconductor",
-      "Hash": "4567db98afc12df3a289f013fd0ea0e8"
+      "Hash": "d46048fa73b969ec611190c98e160ab3"
     },
     "Formula": {
       "Package": "Formula",
@@ -103,33 +109,33 @@
     },
     "GenomeInfoDb": {
       "Package": "GenomeInfoDb",
-      "Version": "1.20.0",
+      "Version": "1.22.0",
       "Source": "Bioconductor",
-      "Hash": "8ae3bbd0707db32b4174e2bb2bcfb655"
+      "Hash": "b77f2f9b5d9018ef5a15e0717b737bb2"
     },
     "GenomeInfoDbData": {
       "Package": "GenomeInfoDbData",
-      "Version": "1.2.1",
+      "Version": "1.2.2",
       "Source": "Bioconductor",
-      "Hash": "2d686a9ecf32a9c7218a2854debc7034"
+      "Hash": "de42132c04371f624cdea8de86e8fc5d"
     },
     "GenomicAlignments": {
       "Package": "GenomicAlignments",
-      "Version": "1.20.1",
+      "Version": "1.22.1",
       "Source": "Bioconductor",
-      "Hash": "51b7aa38a782fb403c6d58ef451881a1"
+      "Hash": "0bc774dd3636e0aff56a80da6f928211"
     },
     "GenomicFeatures": {
       "Package": "GenomicFeatures",
-      "Version": "1.36.4",
+      "Version": "1.38.0",
       "Source": "Bioconductor",
-      "Hash": "d281b4ea3a32c3a7694fc27d9dd9038c"
+      "Hash": "d78d8eac00aa82ce9bc5dca99ae680df"
     },
     "GenomicRanges": {
       "Package": "GenomicRanges",
-      "Version": "1.36.0",
+      "Version": "1.38.0",
       "Source": "Bioconductor",
-      "Hash": "cb5eb61ae6de8458b5b7abfa8ea08727"
+      "Hash": "8ff54983afa8eda100fa0fcadd6816bf"
     },
     "Hmisc": {
       "Package": "Hmisc",
@@ -140,9 +146,9 @@
     },
     "IRanges": {
       "Package": "IRanges",
-      "Version": "2.18.1",
+      "Version": "2.20.1",
       "Source": "Bioconductor",
-      "Hash": "7046a9adcb0b4e9eb301f85f2c9b6970"
+      "Hash": "a17a0b4e2169f7d449138a114376a81d"
     },
     "MASS": {
       "Package": "MASS",
@@ -159,28 +165,22 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.2-17",
+      "Version": "1.2-18",
       "Source": "Repository",
       "Repository": "CRAN",
-      "RemoteType": "standard",
-      "RemotePkgRef": "Matrix",
-      "RemoteRef": "Matrix",
-      "RemoteRepos": "https://cloud.r-project.org",
-      "RemotePkgType": "macos",
-      "RemoteSha": "1.2-17",
-      "Hash": "39ea11fb3ad0d759f9f1c053fd442957"
+      "Hash": "08588806cba69f04797dab50627428ed"
     },
     "OrganismDbi": {
       "Package": "OrganismDbi",
-      "Version": "1.26.0",
+      "Version": "1.28.0",
       "Source": "Bioconductor",
-      "Hash": "e22b3942c6a8ec0224e2b179b5959814"
+      "Hash": "174b4ace2a753e6bd4eb492c03ac3146"
     },
     "ProtGenerics": {
       "Package": "ProtGenerics",
-      "Version": "1.16.0",
+      "Version": "1.18.0",
       "Source": "Bioconductor",
-      "Hash": "f80510815fd06e9db722fd3adafcb359"
+      "Hash": "40797f337889e6cde32c07c41a1aaebe"
     },
     "R6": {
       "Package": "R6",
@@ -191,9 +191,9 @@
     },
     "RBGL": {
       "Package": "RBGL",
-      "Version": "1.60.0",
+      "Version": "1.62.1",
       "Source": "Bioconductor",
-      "Hash": "9076cc5a2fc61db6e01f5fd4b013ca30"
+      "Hash": "024b41579d9000f5bdc40e0e6ad9952a"
     },
     "RColorBrewer": {
       "Package": "RColorBrewer",
@@ -211,10 +211,10 @@
     },
     "RSQLite": {
       "Package": "RSQLite",
-      "Version": "2.1.2",
+      "Version": "2.1.4",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "f6d6ef3b97781e2836055c6275ba8c03"
+      "Hash": "b6c4ce6169ff2929e9454fd5395e6107"
     },
     "Rcpp": {
       "Package": "Rcpp",
@@ -225,33 +225,33 @@
     },
     "Rhtslib": {
       "Package": "Rhtslib",
-      "Version": "1.16.3",
+      "Version": "1.18.0",
       "Source": "Bioconductor",
-      "Hash": "a3adb92c187a0a9a074d93c691e6e7da"
+      "Hash": "fc3c9283db7acda5673960ed462ac397"
     },
     "Rsamtools": {
       "Package": "Rsamtools",
-      "Version": "2.0.3",
+      "Version": "2.2.1",
       "Source": "Bioconductor",
-      "Hash": "640324e99a6fb9c309b03e65130c0d2e"
+      "Hash": "051664357b2ad8565677f1e078715219"
     },
     "S4Vectors": {
       "Package": "S4Vectors",
-      "Version": "0.22.0",
+      "Version": "0.24.1",
       "Source": "Bioconductor",
-      "Hash": "ea609fc62257249a77337d8e045f16a8"
+      "Hash": "57d4fa11a8f7fd2f87b444a5de69b113"
     },
     "SummarizedExperiment": {
       "Package": "SummarizedExperiment",
-      "Version": "1.14.1",
+      "Version": "1.16.0",
       "Source": "Bioconductor",
-      "Hash": "4a00b00da2d1e0d283c8928165c1b376"
+      "Hash": "b3570539c6d57df023b03ac4a2d055e3"
     },
     "VariantAnnotation": {
       "Package": "VariantAnnotation",
-      "Version": "1.30.1",
+      "Version": "1.32.0",
       "Source": "Bioconductor",
-      "Hash": "4255b86c9377a186713f36ceb605b192"
+      "Hash": "51930eaf6f901255d96407681e4007ab"
     },
     "XML": {
       "Package": "XML",
@@ -262,9 +262,9 @@
     },
     "XVector": {
       "Package": "XVector",
-      "Version": "0.24.0",
+      "Version": "0.26.0",
       "Source": "Bioconductor",
-      "Hash": "bbb0bebfe7ad442f6b5a448164260f5d"
+      "Hash": "b72b7c53049b71fbfd0792fb7ec66987"
     },
     "acepack": {
       "Package": "acepack",
@@ -310,15 +310,15 @@
     },
     "biomaRt": {
       "Package": "biomaRt",
-      "Version": "2.40.5",
+      "Version": "2.42.0",
       "Source": "Bioconductor",
-      "Hash": "3d24e233be315d3b0258c1d2fc00f79d"
+      "Hash": "1179421c1e80e3c66a58c14f896bec14"
     },
     "biovizBase": {
       "Package": "biovizBase",
-      "Version": "1.32.0",
+      "Version": "1.34.1",
       "Source": "Bioconductor",
-      "Hash": "bc280f8f6bc79d8c2ac72bf6ea2fb357"
+      "Hash": "8d04b2af2e00d48da580b469ee82baff"
     },
     "bit": {
       "Package": "bit",
@@ -428,8 +428,14 @@
     "crandb": {
       "Package": "crandb",
       "Version": "1.0.0",
-      "Source": "Repository",
-      "Repository": "CRAN"
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "crandb",
+      "RemoteUsername": "r-hub",
+      "RemoteRef": "master",
+      "RemoteSha": "821bbd963872aaf4d761096b95097cabc4593ff4",
+      "Hash": "e3921119ee0287974e94053a38428555"
     },
     "crayon": {
       "Package": "crayon",
@@ -484,19 +490,21 @@
       "Package": "dplyr",
       "Version": "0.8.3",
       "Source": "Repository",
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Hash": "c426258a806b7e69613432b197b9954d"
     },
     "ellipsis": {
       "Package": "ellipsis",
       "Version": "0.3.0",
       "Source": "Repository",
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Hash": "7067d90c1c780bfe80c0d497e3d7b49d"
     },
     "ensembldb": {
       "Package": "ensembldb",
-      "Version": "2.8.1",
+      "Version": "2.10.2",
       "Source": "Bioconductor",
-      "Hash": "0d798486c2c22f1198d128a43d8f387a"
+      "Hash": "e9d088b5ad5e9d6fad8b966a85a4aaf4"
     },
     "evaluate": {
       "Package": "evaluate",
@@ -528,10 +536,10 @@
     },
     "foreign": {
       "Package": "foreign",
-      "Version": "0.8-71",
+      "Version": "0.8-72",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "cf285837c1587867535424bb608bc1bf"
+      "Hash": "74acef15af489322725cf8233e6dd943"
     },
     "formatR": {
       "Package": "formatR",
@@ -577,15 +585,16 @@
     },
     "ggbio": {
       "Package": "ggbio",
-      "Version": "1.32.0",
+      "Version": "1.34.0",
       "Source": "Bioconductor",
-      "Hash": "773d44303c2fa553692b3c4e20e5fd34"
+      "Hash": "a63cc0896399ea8f71b128f30468cb46"
     },
     "ggiraph": {
       "Package": "ggiraph",
       "Version": "0.6.1",
       "Source": "Repository",
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Hash": "11000dfc1a49c34bc2105d6fcf3e52ef"
     },
     "ggplot2": {
       "Package": "ggplot2",
@@ -610,9 +619,9 @@
     },
     "graph": {
       "Package": "graph",
-      "Version": "1.62.0",
+      "Version": "1.64.0",
       "Source": "Bioconductor",
-      "Hash": "a061fbb90e164f115824aa7b46720d3a"
+      "Hash": "b133290bd94320ed101d32cf556f78d8"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -658,10 +667,10 @@
     },
     "htmlTable": {
       "Package": "htmlTable",
-      "Version": "1.13.2",
+      "Version": "1.13.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "3d46e8618efbfe3410208a5ad466cf31"
+      "Hash": "90d75b22931af95e2dbb17188e1dfa0c"
     },
     "htmltools": {
       "Package": "htmltools",
@@ -760,13 +769,6 @@
       "Repository": "CRAN",
       "Hash": "dc0e9c03b3635ff433b045ce6bf0612d"
     },
-    "lobstr": {
-      "Package": "lobstr",
-      "Version": "1.1.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "3354c874f6008f7f1e418526df8ecd8a"
-    },
     "lubridate": {
       "Package": "lubridate",
       "Version": "1.7.4",
@@ -804,10 +806,10 @@
     },
     "mgcv": {
       "Package": "mgcv",
-      "Version": "1.8-29",
+      "Version": "1.8-31",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "580c326446cf8601f33313e3027df211"
+      "Hash": "4bb7e0c4f3557583e1e8d3c9ffb8ba5c"
     },
     "microbenchmark": {
       "Package": "microbenchmark",
@@ -839,16 +841,10 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-141",
+      "Version": "3.1-143",
       "Source": "Repository",
       "Repository": "CRAN",
-      "RemoteType": "standard",
-      "RemotePkgRef": "nlme",
-      "RemoteRef": "nlme",
-      "RemoteRepos": "https://cloud.r-project.org",
-      "RemotePkgType": "macos",
-      "RemoteSha": "3.1-141",
-      "Hash": "cebdbe755f3d628b6afd82490b1eb63a"
+      "Hash": "7518d3b54a24f9291735a25467997858"
     },
     "nnet": {
       "Package": "nnet",
@@ -875,7 +871,8 @@
       "Package": "pillar",
       "Version": "1.4.2",
       "Source": "Repository",
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Hash": "9f20924c27aee3d09296c22fb84bc9de"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
@@ -946,6 +943,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "22aca7d1181718e927d403a8c2d69d62"
+    },
+    "rappdirs": {
+      "Package": "rappdirs",
+      "Version": "0.3.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8c8298583adbbe76f3c2220eef71bebc"
     },
     "readr": {
       "Package": "readr",
@@ -1052,9 +1056,9 @@
     },
     "rtracklayer": {
       "Package": "rtracklayer",
-      "Version": "1.44.4",
+      "Version": "1.46.0",
       "Source": "Bioconductor",
-      "Hash": "134f6882b09374ee7c29e65fcf508656"
+      "Hash": "a635995c99bc0e67fd23167f859893af"
     },
     "rvest": {
       "Package": "rvest",
@@ -1105,6 +1109,13 @@
       "Repository": "CRAN",
       "Hash": "0759e6b6c0957edb1311028a49a35e76"
     },
+    "survival": {
+      "Package": "survival",
+      "Version": "3.1-8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ad25122f95d04988f6f79d69aaadd53d"
+    },
     "sys": {
       "Package": "sys",
       "Version": "3.3",
@@ -1123,7 +1134,8 @@
       "Package": "tibble",
       "Version": "2.1.3",
       "Source": "Repository",
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Hash": "8248ee35d1e15d1e506f05f5a5d46a75"
     },
     "tidyr": {
       "Package": "tidyr",
@@ -1148,10 +1160,10 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.17",
+      "Version": "0.18",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "9f259855f66a72efd6a49f1689af935b"
+      "Hash": "e2ce80882682180c2b5f86d2b47c9951"
     },
     "utf8": {
       "Package": "utf8",
@@ -1160,11 +1172,19 @@
       "Repository": "CRAN",
       "Hash": "4a5081acfb7b81a572e4384a7aaf2af1"
     },
+    "uuid": {
+      "Package": "uuid",
+      "Version": "0.1-2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a7b4e18971d6981361712704c76f50f3"
+    },
     "vctrs": {
       "Package": "vctrs",
       "Version": "0.2.0",
       "Source": "Repository",
-      "Repository": "CRAN"
+      "Repository": "CRAN",
+      "Hash": "c40cfd786b30c20ea9f1247f06a7ee56"
     },
     "viridis": {
       "Package": "viridis",
@@ -1231,9 +1251,9 @@
     },
     "zlibbioc": {
       "Package": "zlibbioc",
-      "Version": "1.30.0",
+      "Version": "1.32.0",
       "Source": "Bioconductor",
-      "Hash": "d17a3a218ae8b686e0809f4841357467"
+      "Hash": "f7a31247eadfb45098bcf2e8c4aebb49"
     }
   }
 }
