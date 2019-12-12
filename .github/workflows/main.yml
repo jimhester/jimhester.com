@@ -37,5 +37,5 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
-          npm install netlify-cli -g
+          npm install netlify-cli@2.23.0 -g
           netlify deploy --prod
