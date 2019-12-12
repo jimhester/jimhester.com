@@ -15,6 +15,7 @@ jobs:
       - run: |
           R -e 'install.packages("renv")'
           R -e 'options(renv.consent = TRUE); renv::init()'
+          R -e 'renv::init()'
       - name: Install hugo
         run: |
           R -e 'print(.libPaths())'
