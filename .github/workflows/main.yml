@@ -17,7 +17,8 @@ jobs:
           R -e 'options(renv.consent = TRUE); renv::init()'
       - name: Install hugo
         run: |
-          R -e 'print(tibble::as_tibble(installed.packages())[, 1:2], n = Inf)'
+          R -e 'print(.libPaths())'
+          R -e 'print(installed.packages()[, 2, drop = FALSE])'
           R -e 'blogdown::install_hugo()'
       - name: Build site
         run: |
