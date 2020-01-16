@@ -138,7 +138,7 @@ counts <- count(p_data, type, .drop = FALSE) %>%
       TRUE ~ n),
     emoji = c("💻", "📹", "📋", "📽", "⚒", "📦"),
     nice = c("GitHub", "videos", "posts", "talks", "workshops", "CRAN"),
-    label = str_glue("{scales::comma_format()(n)} {emoji}\n{nice}")
+    label = str_glue("{scales::comma_format(accuracy = 1)(n)} {emoji}\n{nice}")
   )
 
 library(ggthemes)
