@@ -77,4 +77,4 @@ throughout the United States.
 In my free time, I love spending time with my family, my two daughters and my
 dog.
 
-You can follow my current work [on GitHub] (https://github.com/jimhester).
+You can follow my current work [on GitHub](https://github.com/jimhester).
