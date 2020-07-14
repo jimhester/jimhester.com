@@ -22,7 +22,7 @@ R console. Then you can have the debugger attach to this PID with the `-p`
 argument to lldb, e.g. `lldb -p 45323`. However if you do this with the current
 RStudio release (v1.1) you will get this!
 
-![](http://lh3.googleusercontent.com/-IzfBppQwNQI/WAUEsgJwmnI/AAAAAAAAAXU/9aG6xKFRxY8/rstudio-bomb.png)
+![](https://lh3.googleusercontent.com/-IzfBppQwNQI/WAUEsgJwmnI/AAAAAAAAAXU/9aG6xKFRxY8/rstudio-bomb.png)
 
 I believe this occurs because of how RStudio detects if the R process
 is still running. When the debugger interrupts internal rsession process
