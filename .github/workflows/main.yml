@@ -20,7 +20,7 @@ jobs:
       - name: Install XQuartz
         run: |
           brew cask install xquartz
-          brew install cario
+          brew install cairo
       - name: Cache Renv
         uses: actions/cache@v1
         with:
