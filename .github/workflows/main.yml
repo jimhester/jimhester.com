@@ -1,5 +1,6 @@
 on:
-  - push: master
+  - push: 
+      branches: master
   - schedule:
     # run every day at 11 PM
     - cron: '0 23 * * *'
