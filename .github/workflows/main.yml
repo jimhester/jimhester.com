@@ -15,7 +15,9 @@ jobs:
       - name: Install pandoc
         run: brew install pandoc
       - name: Install XQuartz
-        run: brew cask install xquartz
+        run: |
+          brew cask install xquartz
+          brew install cario
       - name: Cache Renv
         uses: actions/cache@v1
         with:
