@@ -1,0 +1,144 @@
+---
+date: '2020-08-20'
+title: Best OS for R users
+tags: [R]
+comments: true
+image:
+  caption: '[Photo by Paweł Czerwiński on Unsplash](https://unsplash.com/photos/T3XUccTgw7s)'
+  focal_point: Smart
+---
+
+Recently there have been a couple of [people](https://twitter.com/sharlagelfand/status/1293624190671691783) [looking](https://twitter.com/garenkay/status/1296180690137092099) to buy a new computer and asked on twitter which OS is best for R users.
+
+There are three main choices you can make, Windows, Linux and macOS.
+I have used R extensively on all three operating systems.
+I used Windows and linux when I worked at the Cleveland Clinic.
+Linux when I was on the Bioconductor core team, and macOS at Explorys and RStudio.
+
+My standard advice to this question is for R macOS or linux are much better experiences than Windows.
+
+## Windows
+
+There are some advantages to using R on windows.
+
+One advantage is that CRAN provides R package binaries for all CRAN packages on Windows.
+This means if you are only installing CRAN packages you don't need to worry about compiling R packages with FORTRAN, C, or C++ code.
+
+Another advantage is most of the popular R packages that have extra system dependencies use static libraries available from the [rwinlib](https://github.com/rwinlib) project.
+This means that R users on Windows typically don't need to download any additional software to install and use the vast majority of R packages on CRAN.
+This is even true for most packages on GitHub or elsewhere as well.
+
+However using R on windows also comes with a large number of disadvantages.
+In my opinion these disadvantages outweigh the above advantages significantly.
+
+### Rtools
+
+The first major disadvantage to R on windows is the fact that Windows does not ship with a built in C, C++ or FORTRAN compiler.
+This means R users on Windows need to install [Rtools](https://cran.r-project.org/bin/windows/Rtools/) in order to compile packages with compiled code in them.
+Many R users do not have Rtools installed, as it is not needed unless you are compiling packages themselves.
+Also Rtools comes with a number of additional command line tools, which can sometimes cause bad interactions with other software on your machine if you put Rtools on your `%PATH%`, or on the wrong place on your `%PATH%`.
+
+### Installation issues
+
+Windows users report substantially increased numbers of package installation issues compared to other OSs.
+
+Ultimately most of these issues are caused by DLL locking.
+DLLs (Dynamic-link libaries) are what R packages use to link compiled code to the R executable so the compiled code can be run by R.
+Any file on Windows cannot be deleted if another process has a handle to it.
+This applies to all open files, but crucially in R's case to the DLL files used by an R package with compiled code.
+
+This restriction means that if you have an R package loaded and try to install a new version of that package, the DLL will be locked.
+Because the DLL is locked the old version will not be removed and the new version cannot be copied, so users can end up with a package with new R code and an old DLL, which will break the next time they try to load the package.
+
+Also if you have multiple versions of R running at the same time this restriction still applies, so if you forgot you had a package loaded in one session and try to update to the latest version in another process your installation will be broken.
+This issue is compounded by the fact that `install.packages()` does not fail in these cases, it only issues a warning, so users do not always even realize something has gone wrong until they try to load the package.
+
+This issue is fundamental to the way Windows is designed, so there are limited things we can do to address it.
+The [pak](https://pak.r-lib.org/) installer has some workarounds and will definitely have a more informative error message if this occurs.
+
+### Unicode encodings
+
+Internally unicode strings in R have a 'native' encoding.
+On macOS and linux by default this native encoding is UTF-8, which can handle basically any of unicode's 140,000+ characters without issue.
+
+On windows however the native encoding is not UTF-8, but instead is one of the many [code pages](https://en.wikipedia.org/wiki/Code_page) chosen based on the particular locale set on your machine.
+Each of these code pages can only encode a limited subset of unicode.
+This means that you are dealing with data that is not in the same locale as your machine you will likely run into characters that R cannot convert to your native locale.
+In these cases where R cannot translate the data it will degrade it to characters that look like `U+XYZ123`.
+If you ever see this in your data this is the cause.
+
+R does support UTF-8 for strings on Windows, but these strings need to be explicitly marked as UTF-8.
+Crucially this encoding needs to be maintained throughout all of your data manipulations with those strings.
+Unfortunately there are many places internally where R will implicitly convert strings into the native encoding and back.
+If your happens to encounter any of these they will be converted to the `U+XYZ` format and you will lose the UTF-8 representation, with no real way to retrieve it.
+
+3rd party R packages can also cause problems with encodings on Windows unless they are _very_ careful.
+Dealing with encodings as a package developer is very much a [Pit of Dispair](https://blog.codinghorror.com/falling-into-the-pit-of-success/) rather than a Pit of Success.
+It is much easier to unwittingly do the wrong thing than write code to handle the encodings correctly.
+
+These issues are compounded by the fact that most of the R core developers and many packages authors do _not_ use Windows as their primary OS, so users are often the first to see any encoding issues.
+
+This makes dealing with non-english text on Windows a fraught experience.
+If you work with this type of data often I would strongly suggest looking into using R on linux or macOS instead.
+
+## Linux
+
+R on linux is generally a pretty nice experience, provided you are comfortable using the command line and debugging build systems.
+The major package managers all have R available, though often the R versions in the official repositories are somewhat old.
+However often backports of more recent versions of R are available, and compiling R on linux is usually just a standard `./configure && make install` away.
+
+Unlike Windows linux does not have any issues with shared library locking when installing packages.
+When you delete a file on linux only the name in the file system is removed, the file itself remains until there are no processes with handles to it.
+This means you can happily have a package loaded in the same R session, or another R session and install a new version few the package.
+
+Linux also does not have issues with string encodings.
+As mentioned in the windows section the native encoding on linux by default is UTF-8, which can happily encode basically all of unicode and there is no worries about accidentally being translated to the native encoding.
+
+The largest downside of using R on linux is the lack of R package binaries from CRAN.
+
+Fortunately RStudio now provides a public version of the [RStudio Package Manager](https://packagemanager.rstudio.com) which _does_ provide R package binaries for ubuntu, CentOS, Red Hat Linux and SUSE Linux.
+Choosing a linux distribution that is supported by RSPM and configuring R to use these binaries will greatly improve your experience with R on linux.
+RSPM also provides a database of needed system dependencies for each package, so they can be installed as needed.
+The system package managers, `apt-get`, `yum` etc. are all generally very good and work well to install system dependencies.
+RSPM even has a helpful listing of needed system dependencies for their R binaries.
+
+Without R package binaries users will have to compile all packages themselves, which can take additional time and require extensive debugging if package compilation fails.
+
+One additional issue with R on linux, particularly with CentOS and Red Hat distributions is the age of the default compilers.
+Often they are 5-10+ years old and may not have all the features needed for R packages targeting newer versions of C++ standards.
+
+However there are methods to install newer compilers on these systems if needed.
+
+## macOS
+
+R on macOS generally has all of same benefits to R on linux.
+
+It also has the added benefit that CRAN provides R package binaries on macOS.
+However some people unknowingly remove this advantage by installing R from homebrew with `brew install r`, which does _not_ use the CRAN binaries!
+If you want to use R on macOS you should instead use `brew cask install r` which installs the CRAN version of R, or use the manual installers.
+
+The clang toolchain on macOS is also very current.
+
+While Apple doesn't provide a built in command line package manager, [homebrew](https://brew.sh/) has become the de-facto package manager for most people and works very well.
+
+One wrinkle to be aware of is Apple's switch to ARM based architectures in the future.
+As of August 2020 gfortran (or any other FORTRAN compiler) is not (yet) available for Apple Silicon.
+R requires a FORTRAN compiler to compile R itself, so R would have to be run using Apple's Rosetta 2 translation.
+This will result in a speed decrease relative to running the equivalent code natively, and potentially other issues.
+Hopefully by the time macOS machines with Apple Silicon are available to purchase this will no longer be a concern.
+
+## Conclusion
+
+No solution for R is perfect.
+For many Windows may be most familiar.
+It has the best price per performance for hardware compared to macOS and has much better support for games.
+However for R Windows has a lot of drawbacks, particularly around Rtools, DLL locking and Unicode.
+In addition Windows support for a unix style command line is still lacking compared to linux and macOS, though this has improved with the [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
+
+Linux is a good alternative if you are comfortable with debugging system issues and unix command line tools.
+Particularly if you take advantage of R package binaries from the RStudio Package Manager.
+
+macOS has arguably the best experience for R out of the box.
+However macOS hardware is also the most expensive, and Apple Silicon in the future may make this less ideal.
+
+I hope this post helps illuminate some of the differences between operating systems and inform you in choosing which would be best for you.
