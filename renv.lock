@@ -303,10 +303,10 @@
     },
     "bench": {
       "Package": "bench",
-      "Version": "1.1.1.9000",
+      "Version": "1.1.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "9164efbef130eec00e22cea9ca36b062"
+      "Hash": "ada12891b62d0de111660ff350e7888f"
     },
     "biomaRt": {
       "Package": "biomaRt",
@@ -557,10 +557,10 @@
     },
     "fs": {
       "Package": "fs",
-      "Version": "1.4.1.9000",
+      "Version": "1.4.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "d4ac8e24219bdaf8c175e6841dee2197"
+      "Hash": "780713bd2f53156fae001443dcdbdcd5"
     },
     "futile.logger": {
       "Package": "futile.logger",
@@ -890,10 +890,10 @@
     },
     "pkgbuild": {
       "Package": "pkgbuild",
-      "Version": "1.1.0.9000",
+      "Version": "1.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "13638a5e8e98f8510964de1a86399709"
+      "Hash": "404684bc4e3685007f9720adf13b06c1"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
@@ -1232,10 +1232,10 @@
     },
     "vroom": {
       "Package": "vroom",
-      "Version": "1.2.1.9000",
+      "Version": "1.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "e46b603235417aa7dfc0db1cf23cb2a6"
+      "Hash": "5f341c32a91bcf79aca8287822b3d8da"
     },
     "whisker": {
       "Package": "whisker",
