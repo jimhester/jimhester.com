@@ -5,8 +5,14 @@ library(crandb)
 library(ggthemes)
 library(ggiraph)
 
-github_data <- function(from = to - years(1), to = today(), user = "jimhester") {
-  html <- xml2::read_html(str_glue("https://github.com/users/jimhester/contributions?from={from}&to={to}&tab=overview"))
+github_data <- function(from = NULL, user = "jimhester") {
+  if (is.null(from)) {
+    url <- str_glue("https://github.com/users/{user}/contributions")
+  } else {
+    url <- str_glue("https://github.com/users/{user}/contributions?from={from}")
+  }
+
+  html <- xml2::read_html(url)
 
   calendar <- html_node(html, ".js-calendar-graph-svg")
   calendar_days <- html_nodes(calendar, "rect")
@@ -15,7 +21,7 @@ github_data <- function(from = to - years(1), to = today(), user = "jimhester") 
     count = xml_attr(calendar_days, "data-count"),
     type = "github",
     tip = str_glue("{count} contributions"),
-    link = str_glue("https://github.com/jimhester?from={date}&to={date}&tab=overview")
+    link = str_glue("https://github.com/{user}?from={date}&to={date}&tab=overview")
   )
   gh_data
 }
@@ -83,11 +89,16 @@ pkg_data <- function(emails = c("james.f.hester@gmail.com", "jim.hester@rstudio.
 }
 
 
-calendar_data <- function(from = to - years(1), to = today(), github_user = "jimhester", email = c("james.f.hester@gmail.com", "jim.hester@rstudio.com", "james.hester@rstudio.com")) {
-  to <- lubridate::as_date(to)
-  from <- lubridate::as_date(from)
+calendar_data <- function(from = NULL, to = from + years(1), github_user = "jimhester", email = c("james.f.hester@gmail.com", "jim.hester@rstudio.com", "james.hester@rstudio.com")) {
+  github_data <- github_data(from, github_user)
+  if (is.null(from)) {
+    from <- today() - years(1)
+  } else {
+    from <- lubridate::as_date(from)
+  }
 
-  github_data <- github_data(from, to, github_user)
+  to <- lubridate::as_date(to)
+
 
   all_data <- bind_rows(
     select(filter(github_data, count > 0), date, type, tip, link, count),
@@ -101,7 +112,7 @@ calendar_data <- function(from = to - years(1), to = today(), github_user = "jim
   bind_rows(
     all_data,
     empty_days
-  ) %>% filter(date >= from, date < to)
+  ) %>% filter(date >= from, date <= to)
 }
 
 calendar_plot <- function(data = calendar_data()) {
