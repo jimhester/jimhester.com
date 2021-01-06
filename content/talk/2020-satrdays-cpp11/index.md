@@ -20,7 +20,7 @@ abstract: |
     - Applying newer C++11 features.
 
     We will also discuss the mechanics of transitioning packages from Rcpp to cpp11 and why we feel cpp11 is a solid foundation to build upon in the years ahead.
-date: 2020-11-14T11:00:00Z
+date: 2020-11-14T09:00:00Z
 event: satRday Columbus
 event_url: https://columbus2020.satrdays.org/
 location: Virtual
