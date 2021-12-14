@@ -28,6 +28,7 @@ ul.nav > li {
 
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#current">Current</a></li>
+  <li><a data-toggle="tab" href="#year-2021">2021</a></li>
   <li><a data-toggle="tab" href="#year-2020">2020</a></li>
   <li><a data-toggle="tab" href="#year-2019">2019</a></li>
   <li><a data-toggle="tab" href="#year-2018">2018</a></li>
@@ -39,6 +40,11 @@ ul.nav > li {
   <div id="current" class="tab-pane fade active show">
 ```{r current, echo = FALSE, cache = FALSE, warning = FALSE}
 calendar_plot()
+```
+  </div>
+  <div id="year-2021" class="tab-pane fade">
+```{r 2021, echo = FALSE, cache = TRUE, warning = FALSE}
+calendar_plot(data = calendar_data(from = "2021-01-01"))
 ```
   </div>
   <div id="year-2020" class="tab-pane fade">
