@@ -47,14 +47,11 @@ subtitle = ""
  css_class = "mini"
 +++
 
-
-
 I have lived in northeast Ohio for over 25 years and have long had an interest
 in computers and programming, starting with writing programs in BASIC on our
 family's IBM PS/1. I have also long had an interest in biology, particularly
 genetics. Combining my two interests led me to pursue bioinformatics and a job
-as a Program Analyst at the the Cleveland Clinic.
-
+as a Program Analyst at the Cleveland Clinic.
 
 My [research at CCF](http://orcid.org/0000-0002-2739-7082) focused
 on using high-throughput sequencing to study a variety of issues, such as
@@ -68,13 +65,17 @@ on GitHub. I enjoyed working with open source software and being part of the R
 community, so looked for opportunities that allowed me to continue to do so,
 which eventually landed me at RStudio.
 
-Since joining RStudio I have given a number of [talks and workshops](/talks) about R and R
-packages, which has allowed my to travel to Europe and Australia, as well as
-throughout the United States.
+At RStudio I have worked on numerious [projects](/projects) including writing
+and/or maintaining 25+ R packages on CRAN. I have also given a number of [talks
+and workshops](/talks) about R and R packages, which has allowed my to travel
+to Europe and Australia, as well as throughout the United States.
 
 <img src="jim-kangaroo.jpg" class="center-block" alt="OHSU Research Week Poster" style="width:60%;height:60%;">
 
+After a number of years at RStudio I decided to pursue an exciting opportunity
+and Netflix, building infrastructure and supporting the R community there.
+
 In my free time, I love spending time with my family, my two daughters and my
-dog.
+dog Reese.
 
 You can follow my current work [on GitHub](https://github.com/jimhester).
