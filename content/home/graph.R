@@ -78,8 +78,40 @@ get_releases <- function(data) {
   map_dfr(out, ~ list(version = names(.x$timeline), date = readr::parse_datetime(map_chr(.x$timeline, function(y) y %||% NA_character_))), .id = "package")
 }
 
+jim_pkgs <- function() {
+  c("devtools",
+    "available",
+    "bench",
+    "covr",
+    "fs",
+    "glue",
+    "gmailr",
+    "knitrBootstrap",
+    "lintr",
+    "primerTree",
+    "rex",
+    "types",
+    "archive",
+    "brio",
+    "cpp11",
+    "decor",
+    "devtools",
+    "memoise",
+    "mockery",
+    "odbc",
+    "pkgbuild",
+    "pkgload",
+    "readr",
+    "remotes",
+    "urlchecker",
+    "vroom",
+    "withr",
+    "xml2"
+  )
+}
+
 pkg_data <- function(emails = c("james.f.hester@gmail.com", "jim.hester@rstudio.com", "james.hester@rstudio.com")) {
-  get_releases(get_pkgs(emails)) %>%
+  get_releases(jim_pkgs) %>%
     mutate(
       type = "pkg",
       link = str_glue("https://CRAN.R-project.org/package={package}"),
