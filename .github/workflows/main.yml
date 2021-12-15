@@ -28,8 +28,6 @@ jobs:
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
           key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-renv-estore-keys: r-
       - name: Install packages
         run: |
           R -e 'install.packages("renv")'
