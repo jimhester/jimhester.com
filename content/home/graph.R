@@ -78,7 +78,7 @@ get_releases <- function(data) {
   map_dfr(out, ~ list(version = names(.x$timeline), date = readr::parse_datetime(map_chr(.x$timeline, function(y) y %||% NA_character_))), .id = "package")
 }
 
-jim_pkgs <- function() {
+jim_pkgs <- 
   c("devtools",
     "available",
     "bench",
@@ -108,7 +108,6 @@ jim_pkgs <- function() {
     "withr",
     "xml2"
   )
-}
 
 pkg_data <- function(emails = c("james.f.hester@gmail.com", "jim.hester@rstudio.com", "james.hester@rstudio.com")) {
   get_releases(jim_pkgs) %>%
