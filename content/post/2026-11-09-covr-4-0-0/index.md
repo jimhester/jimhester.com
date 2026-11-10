@@ -82,20 +82,12 @@ are no longer counted twice.
 
 ## Faster
 
-I timed covr 3.6.5 and 4.0.0 measuring the coverage of seven CRAN packages
-with their own tests, then creating the HTML report:
+I timed covr 3.6.5 and 4.0.0 measuring the coverage of CRAN packages with
+their own tests, then creating the HTML report:
 
-| Package | `package_coverage()` 3.6.5 | `package_coverage()` 4.0.0 | `report()` 3.6.5 | `report()` 4.0.0 |
-|---|---|---|---|---|
-| forcats | 4.8 s | 4.9 s | 1.3 s | 0.2 s |
-| checkmate | 13.5 s | 13.4 s | 6.2 s | 0.5 s |
-| devtools | 30.6 s | 28.2 s | 3.5 s | 0.3 s |
-| lintr | 68.6 s | 48.2 s | 27.1 s | 0.8 s |
-| dplyr | 58.6 s | 53.9 s | 38.0 s | 0.9 s |
-| data.table | 105.8 s | 57.6 s | 87.2 s | 2.9 s |
-| Luminescence | 198.7 s | 125.5 s | 350.7 s | 3.2 s |
+![Time taken by covr 4.0.0 for package_coverage() and report() on each package, as a percentage of the time taken by covr 3.6.5](benchmarks.png)
 
-(R 4.6.2 on Linux, `package_coverage()` is the median of 3 runs. The
+(R 4.6.2 on Linux, the median of 3 runs. The full table, the
 [scripts and raw results](https://github.com/r-lib/covr/tree/blog-post-benchmarks/blog/performance)
 are in the covr repository.)
 
@@ -230,14 +222,6 @@ The new [`report_html()`](https://covr.r-lib.org/reference/report_html.html)
 returns the report as HTML to include in an R Markdown or Quarto document.
 
 ## CI and pull requests
-
-### Coverage of your changes
-
-[`diff_coverage()`](https://covr.r-lib.org/reference/diff_coverage.html)
-reports the coverage of the lines you changed relative to a git branch,
-including uncommitted edits and untracked files, and lists the changed lines
-your tests did not run. With branch coverage, it lists the missed branches
-too. Use it to check whether your tests run the code in a pull request.
 
 ### Badges without a coverage service
 
