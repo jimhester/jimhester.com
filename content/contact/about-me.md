@@ -65,17 +65,23 @@ on GitHub. I enjoyed working with open source software and being part of the R
 community, so looked for opportunities that allowed me to continue to do so,
 which eventually landed me at RStudio.
 
-At RStudio I have worked on numerious [projects](/projects) including writing
-and/or maintaining 25+ R packages on CRAN. I have also given a number of [talks
-and workshops](/talks) about R and R packages, which has allowed my to travel
+At RStudio I worked on numerous [projects](/projects) including writing
+and/or maintaining 25+ R packages on CRAN. I also gave a number of [talks
+and workshops](/talks) about R and R packages, which allowed me to travel
 to Europe and Australia, as well as throughout the United States.
 
-<img src="jim-kangaroo.jpg" class="center-block" alt="OHSU Research Week Poster" style="width:60%;height:60%;">
-
 After a number of years at RStudio I decided to pursue an exciting opportunity
-and Netflix, building infrastructure and supporting the R community there.
+at Netflix, where I build analytics infrastructure that helps data
+practitioners turn their analyses into reliable applications and reusable data
+products. I lead Netflix's internal Posit Connect platform, used to deploy R
+and Python dashboards, APIs, reports and interactive applications, including
+Shiny, Streamlit and Plotly Dash. I also build AI-assisted tooling that lets
+engineers and analysts create, deploy and troubleshoot data applications with
+agents, and continue to provide technical leadership for R at Netflix while
+expanding support for Python.
 
 In my free time, I love spending time with my family, my two daughters and my
 dog Reese.
 
-You can follow my current work [on GitHub](https://github.com/jimhester).
+You can follow my current work [on GitHub](https://github.com/jimhester) and
+[LinkedIn](https://www.linkedin.com/in/jim-hester/).

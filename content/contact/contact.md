@@ -1,7 +1,7 @@
 ---
 active: true
-autolink: false
-email_form: 2
+autolink: true
+email_form: 0
 headless: true
 subtitle: ""
 title: Hi there!
