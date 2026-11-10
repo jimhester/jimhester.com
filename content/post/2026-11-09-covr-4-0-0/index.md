@@ -116,6 +116,29 @@ with callr or parallel workers.
 Finally, `report()` previously built an HTML element for every line of every
 file. It now builds the report as text.
 
+### Tests that start other R processes
+
+Every R process that loads your package, such as a callr session, a future
+worker or a Shiny app started by the tests, saves its own coverage when it
+exits, and covr adds these together at the end. covr 3.6.5 read every one of
+these files into memory before adding them up, and each held a full copy of
+the package's counters. For packages whose tests start hundreds of processes,
+this could fail at the very end of a long run.
+
+[languageserver](https://github.com/REditorSupport/languageserver) is an
+extreme case: its tests start 177 language servers and about 830 R processes
+in total. Its tests take 9 minutes without coverage. With covr 3.6.5 they took
+80 minutes, and covr then ran out of memory merging 5.2 GB of coverage files.
+With covr 4.0.0 the tests take 13 minutes, the coverage files come to 8 MB, and
+merging them takes one second and 144 MB of memory. Its maintainers had split
+their coverage job across 8 parallel CI jobs to keep it manageable.
+
+covr 4.0.0 also writes these files atomically, so a process killed at the end
+of the tests no longer leaves a truncated file that makes the whole run fail
+with `error reading from connection`. covr 3.6.5 failed this way on the tests
+of mlr3 and future; 4.0.0 measures them and warns about how many processes'
+coverage was lost.
+
 ## Branch coverage
 
 Line coverage tells you a line ran; it does not tell you whether both sides of
