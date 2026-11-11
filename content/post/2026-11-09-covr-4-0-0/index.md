@@ -82,29 +82,34 @@ are no longer counted twice.
 
 ## Faster
 
-I timed covr 3.6.5 and 4.0.0 measuring the coverage of CRAN packages with
-their own tests, then creating the HTML report:
+I timed covr 3.6.5 and 4.0.0 measuring the coverage of 27 CRAN packages with
+their own tests. For the packages that take more than 30 seconds:
 
-![Time taken by covr 4.0.0 for package_coverage() and report() on each package, as a percentage of the time taken by covr 3.6.5](benchmarks.png)
+![The time covr 3.6.5 and 4.0.0 took to run package_coverage() on each package, three runs each](benchmarks.png)
 
-(R 4.6.2 on Linux, the median of 3 runs. The full table, the
+The other packages change little, as most of their time is spent installing
+the package and starting R rather than running instrumented code: forcats 4 →
+4 s, purrr 10 → 9 s, tidyr 17 → 16 s, testthat 28 → 21 s, devtools 30 → 28 s.
+insight, the slowest, went from 715 to 682 s. (R 4.6.2 on Linux, three runs of
+each version on an otherwise idle machine. The full table, the
 [scripts and raw results](https://github.com/r-lib/covr/tree/blog-post-benchmarks/blog/performance)
 are in the covr repository.)
 
-In these benchmarks data.table and Luminescence took 35–45% less time to
-measure. Small packages like forcats and checkmate see little difference, as
-most of their time is spent installing the package and starting R rather than
-running instrumented code. `report()` is faster for every package; for
-Luminescence it went from almost six minutes to three seconds, and from 1.2 GB
-of memory to 330 MB.
+cli, data.table and targets now take about half the time, and ggplot2 and
+Luminescence about 40% less.
+
+`report()` is faster for every package, by 6 to 230 times. For Luminescence
+it went from 4.5 minutes to 1.2 seconds, and its peak memory from 1.2 GB to
+310 MB. For igraph it took covr 3.6.5 more than an hour; 4.0.0 takes 10
+seconds.
 
 covr measures coverage by inserting a call to a counter before every
 expression in your package (the
 [How does covr work?](https://covr.r-lib.org/articles/how_it_works.html)
 vignette describes this in detail). That counter was an R function, which
-cost about a microsecond each time it ran. Luminescence's tests run about 20
-million expressions, so this added more than 20 seconds. The counter is now a
-call into C with about a sixth of the overhead.
+cost about 1.4 microseconds each time it ran. Luminescence's tests run about
+20 million expressions, so this added almost 30 seconds. The counter is now a
+call into C, which costs about 0.4 microseconds.
 
 covr also used to insert the counters each time an R process loaded your
 package, and R then compiled the modified functions again as they ran. covr
