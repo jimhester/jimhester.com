@@ -119,6 +119,24 @@ it went from 4.5 minutes to 1.2 seconds, and its peak memory from 1.2 GB to
 310 MB. For igraph it took covr 3.6.5 more than an hour; 4.0.0 takes 10
 seconds.
 
+The functions you use after measuring coverage are faster too. Most of them,
+including `print()`, `percent_coverage()` and `zero_coverage()`, go through
+`tally_coverage()`, which no longer splits the package's source into files
+once for every file. The exporters that send coverage to CI services were
+sped up as well. On Luminescence:
+
+| Function | covr 3.6.5 | covr 4.0.0 |
+|---|---|---|
+| `tally_coverage()` | 2.2 s | 0.86 s |
+| `print()` | 2.8 s | 1.5 s |
+| `codecov()`, building the upload | 2.9 s | 0.96 s |
+| `to_cobertura()` | 10.2 s | 9.4 s |
+| `to_sonarqube()` | 5.8 s | 4.2 s |
+
+<!-- TODO before publishing: rerun bench-post.R after #745 (tally_coverage)
+and #755 (Cobertura/SonarQube) merge, update this table, use the renamed
+cobertura()/sonarqube() from #750, and add the median across all packages. -->
+
 ### Tests that start other R processes
 
 Every R process that loads your package, such as a callr session, a future
