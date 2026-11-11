@@ -119,23 +119,25 @@ it went from 4.5 minutes to 1.2 seconds, and its peak memory from 1.2 GB to
 310 MB. For igraph it took covr 3.6.5 more than an hour; 4.0.0 takes 10
 seconds.
 
-The functions you use after measuring coverage are faster too. Most of them,
-including `print()`, `percent_coverage()` and `zero_coverage()`, go through
-`tally_coverage()`, which no longer splits the package's source into files
-once for every file. The exporters that send coverage to CI services were
-sped up as well. On Luminescence:
+The functions you use after measuring coverage are faster too. `print()`,
+`percent_coverage()` and `zero_coverage()` all go through `tally_coverage()`,
+which is now more than ten times faster on large packages, and building the
+upload for `codecov()` went from three seconds to a quarter of a second. On
+Luminescence (median of `bench::mark()` runs):
 
 | Function | covr 3.6.5 | covr 4.0.0 |
 |---|---|---|
-| `tally_coverage()` | 2.2 s | 0.86 s |
-| `print()` | 2.8 s | 1.5 s |
-| `codecov()`, building the upload | 2.9 s | 0.96 s |
-| `to_cobertura()` | 10.2 s | 9.4 s |
-| `to_sonarqube()` | 5.8 s | 4.2 s |
+| `tally_coverage()` | 2.3 s | 0.20 s |
+| `percent_coverage()` | 2.4 s | 0.19 s |
+| `zero_coverage()` | 2.4 s | 0.18 s |
+| `print()` | 2.8 s | 0.23 s |
+| `codecov()`, building the upload | 3.2 s | 0.26 s |
+| `cobertura()` | 10.0 s | 8.0 s |
+| `sonarqube()` | 6.1 s | 3.5 s |
 
-<!-- TODO before publishing: rerun bench-post.R after #745 (tally_coverage)
-and #755 (Cobertura/SonarQube) merge, update this table, use the renamed
-cobertura()/sonarqube() from #750, and add the median across all packages. -->
+<!-- TODO before publishing: rerun bench-post.R after #755 (Cobertura and
+SonarQube) merges, update the last two rows, and add the median across all
+packages from ~/covr-bench/cov. -->
 
 ### Tests that start other R processes
 
