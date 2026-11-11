@@ -240,9 +240,15 @@ classes.
 
 `report()` has been rewritten. It no longer depends on DT, jQuery or
 Bootstrap, lists the least covered files first, keeps the Files and Source
-tabs in view as you scroll, and follows your browser's dark mode (pictured
-above). If green and red are hard for you to tell apart, you can set other
-colors for the report and the console:
+tabs in view as you scroll, and follows your browser's dark mode. Here is the
+report for forcats, made with covr 4.0.0; click a file to see its source, or
+use the button in the corner to switch themes:
+
+<iframe src="/reports/covr-4-0-0-forcats/" title="covr report for forcats" style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 4px;" loading="lazy"></iframe>
+
+([Open it in a new tab](/reports/covr-4-0-0-forcats/).) If green
+and red are hard for you to tell apart, you can set other colors for the
+report and the console:
 
 ```r
 options(covr.report_colors = c(covered = "#0072B2", missed = "#E69F00"))
