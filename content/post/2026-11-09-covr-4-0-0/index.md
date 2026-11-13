@@ -98,19 +98,25 @@ rendering them to HTML one at a time took nearly all of the 4.5 minutes. The
 report now builds each file's source table as text in a single vectorized
 step, and only uses htmltools for the page around it.
 
-To see what this adds up to, I timed covr 3.6.5 and 4.0.0 measuring the
-coverage of 27 CRAN packages with their own tests. For the packages that take
-more than 30 seconds:
+To see what this adds up to, I ran the tests of 27 CRAN packages three times
+each way: without coverage, and with `package_coverage()` from covr 3.6.5 and
+4.0.0 (times exclude installing the package). For the packages that took
+covr 3.6.5 between 30 seconds and 5 minutes:
 
-![The time covr 3.6.5 and 4.0.0 took to run package_coverage() on each package, three runs each](benchmarks.png)
+![Time to run each package's tests without coverage, with covr 3.6.5 and with covr 4.0.0, three runs each; the labels show what covr 4.0.0 adds to the time without coverage](benchmarks.png)
 
-cli, data.table and targets now take about half the time, and ggplot2 and
-Luminescence about 40% less. The other packages change little, as most of
-their time is spent installing the package and starting R rather than running
-instrumented code: forcats 4 → 4 s, purrr 10 → 9 s, tidyr 17 → 16 s, testthat
-28 → 21 s, devtools 30 → 28 s. insight, the slowest, went from 715 to 682 s.
-(R 4.6.2 on Linux, three runs of each version on an otherwise idle machine.
-The full table, the
+The grey triangles are the tests without coverage, and the labels on the
+right show what measuring coverage with covr 4.0.0 adds to that. For most of
+these packages that is now 10–40%, where covr 3.6.5 often doubled or tripled
+the time: data.table went from 2.4 minutes to 48 seconds, against 28 seconds
+without coverage. igraph and collapse still take about twice as long; most of
+their code is C and C++, which is compiled with coverage instrumentation and
+without optimization.
+
+The smaller packages take a few seconds either way (forcats 2 s without
+coverage, 4 s with either covr; testthat 20 s, 27 s), and insight's long suite
+goes from 671 s with covr 3.6.5 to 661 s, against 646 s without coverage.
+(R 4.6.2 on Linux, on an otherwise idle machine. The full table, the
 [scripts and raw results](https://github.com/r-lib/covr/tree/blog-post-benchmarks/blog/performance)
 are in the covr repository.)
 
