@@ -13,8 +13,8 @@ package_release: true
 draft: true
 ---
 
-I'm excited to announce that [*covr*](https://covr.r-lib.org) 4.0.0 is now on
-CRAN! *covr* tracks the test coverage of R packages, reporting which lines of
+I'm excited to announce that [covr](https://covr.r-lib.org) 4.0.0 is now on
+CRAN! covr tracks the test coverage of R packages, reporting which lines of
 your R, C, C++ and now **Rust** code are run by your tests.
 
 You can install it from CRAN with:
@@ -23,12 +23,12 @@ You can install it from CRAN with:
 install.packages("covr")
 ```
 
-This is the first major release of *covr* since 2017, and by far the largest
+This is the first major release of covr since 2017, and by far the largest
 since the original version: it has more than 80 entries in the change log and
 96 merged pull requests, while no previous release had more than 15 entries or
 22 pull requests. This post covers the
 changes to how coverage is counted, the performance improvements,
-experimental branch coverage, new kinds of code *covr* can measure, and new
+experimental branch coverage, new kinds of code covr can measure, and new
 tools for CI and pull requests. See the
 [change log](https://covr.r-lib.org/news/index.html) for a full list of
 changes and bug fixes.
@@ -37,12 +37,12 @@ changes and bug fixes.
 
 ### Coverage is counted more precisely
 
-*covr* 4.0.0 counts coverage more consistently, so the same tests may report
+covr 4.0.0 counts coverage more consistently, so the same tests may report
 slightly lower coverage. For most packages this is a small correction, but if
 your CI enforces a coverage threshold, check the new numbers when you upgrade.
 
 The main change is to `if` and `switch()` written without braces. Because of
-the way R records source references, *covr* 3.6.5 gave each branch of an `if`
+the way R records source references, covr 3.6.5 gave each branch of an `if`
 with braces its own counter, but treated an `if` without braces as a single
 expression. Two functions that do the same thing, tested with `half(4)` and
 `half_braces(4)`, got different results:
@@ -52,17 +52,17 @@ half <- function(x) if (x > 0) x / 2 else 0
 half_braces <- function(x) if (x > 0) { x / 2 } else { 0 }
 ```
 
-| | *covr* 3.6.5 | *covr* 4.0.0 |
+| | covr 3.6.5 | covr 4.0.0 |
 |---|---|---|
 | `half()` | 100% | 0% |
 | `half_braces()` | 0% | 0% |
 
-*covr* 4.0.0 counts both the same way: the `else` branch never ran, and a line
+covr 4.0.0 counts both the same way: the `else` branch never ran, and a line
 only counts as covered when all of its expressions ran.
 
 The other breaking changes are smaller:
 
-* *covr* now requires R 4.0.0 or later.
+* covr now requires R 4.0.0 or later.
 * Line coverage is computed the same way by `print()`, `report()`, `codecov()`,
   `coveralls()` and the other outputs, which used to disagree slightly.
 * S4 methods are named after their generic and signature, e.g.
@@ -74,19 +74,19 @@ See the [change log](https://covr.r-lib.org/news/index.html) for the rest.
 
 ## Faster
 
-Three changes make *covr* 4.0.0 faster.
+Three changes make covr 4.0.0 faster.
 
-**Counting in C.** *covr* measures coverage by inserting a call to a counter
+**Counting in C.** covr measures coverage by inserting a call to a counter
 before every expression in your package (the
-[How does *covr* work?](https://covr.r-lib.org/articles/how_it_works.html)
+[How does covr work?](https://covr.r-lib.org/articles/how_it_works.html)
 vignette describes this in detail). That counter was an R function, which
 cost about 1.4 microseconds each time it ran. [*Luminescence*](https://r-lum.github.io/Luminescence)'s tests run about
 20 million expressions, so this added almost 30 seconds. The counter is now a
 call into C, which costs about 0.4 microseconds.
 
-**Instrumenting once.** *covr* used to insert the counters each time an R
+**Instrumenting once.** covr used to insert the counters each time an R
 process loaded your package, and R then compiled the modified functions again
-as they ran. *covr* now does this once, after installing the package, and
+as they ran. covr now does this once, after installing the package, and
 byte-compiles the result into the installed package. *Luminescence* now loads in
 0.3 seconds rather than 4.6, which adds up for tests that start many R
 processes, e.g. with [*callr*](https://callr.r-lib.org) or parallel workers.
@@ -99,31 +99,31 @@ report now builds each file's source table as text in a single vectorized
 step, and only uses *htmltools* for the page around it.
 
 To see what this adds up to, I ran the tests of 27 CRAN packages three times
-each way: without coverage, and with `package_coverage()` from *covr* 3.6.5 and
+each way: without coverage, and with `package_coverage()` from covr 3.6.5 and
 4.0.0 (times exclude installing the package). For the packages that took
-*covr* 3.6.5 between 30 seconds and 5 minutes:
+covr 3.6.5 between 30 seconds and 5 minutes:
 
 ![Time to run each package's tests without coverage, with covr 3.6.5 and with covr 4.0.0, three runs each; the labels show what covr 4.0.0 adds to the time without coverage](benchmarks.png)
 
 The grey triangles are the tests without coverage, and the labels on the
-right show what measuring coverage with *covr* 4.0.0 adds to that. For 10 of
-these 13 packages that is now between 7% and 45%, where *covr* 3.6.5 often
-doubled or tripled the time. [*data.table*](https://r-datatable.com) went from 2.4 minutes with *covr* 3.6.5
+right show what measuring coverage with covr 4.0.0 adds to that. For 10 of
+these 13 packages that is now between 7% and 45%, where covr 3.6.5 often
+doubled or tripled the time. [*data.table*](https://r-datatable.com) went from 2.4 minutes with covr 3.6.5
 to 48 seconds, against 28 seconds without coverage (+70%). [*igraph*](https://r.igraph.org) and
 [*collapse*](https://fastverse.org/collapse) still take about twice as long; most of
 their code is C and C++, which is compiled with coverage instrumentation and
 without optimization.
 
 The smaller packages take a few seconds either way ([*forcats*](https://forcats.tidyverse.org) 2 s without
-coverage, 4 s with either *covr*; [*testthat*](https://testthat.r-lib.org) 20 s, 27 s), and [*insight*](https://easystats.github.io/insight)'s long suite
-goes from 671 s with *covr* 3.6.5 to 661 s, against 646 s without coverage.
+coverage, 4 s with either covr; [*testthat*](https://testthat.r-lib.org) 20 s, 27 s), and [*insight*](https://easystats.github.io/insight)'s long suite
+goes from 671 s with covr 3.6.5 to 661 s, against 646 s without coverage.
 (R 4.6.2 on Linux, on an otherwise idle machine. The full table, the
 [scripts and raw results](https://github.com/r-lib/covr/tree/blog-post-benchmarks/blog/performance)
-are in the *covr* repository.)
+are in the covr repository.)
 
 `report()` is faster for every package, by 6 to 230 times. For *Luminescence*
 it went from 4.5 minutes to 1.2 seconds, and its peak memory from 1.2 GB to
-310 MB. For *igraph* it took *covr* 3.6.5 more than an hour; 4.0.0 takes 10
+310 MB. For *igraph* it took covr 3.6.5 more than an hour; 4.0.0 takes 10
 seconds.
 
 The functions you use after measuring coverage are faster too. `print()`,
@@ -132,7 +132,7 @@ which is now more than ten times faster on large packages, and building the
 upload for `codecov()` went from three seconds to a quarter of a second. On
 *Luminescence* (median of `bench::mark()` runs):
 
-| Function | *covr* 3.6.5 | *covr* 4.0.0 |
+| Function | covr 3.6.5 | covr 4.0.0 |
 |---|---|---|
 | `tally_coverage()` | 2.3 s | 0.20 s |
 | `percent_coverage()` | 2.4 s | 0.19 s |
@@ -150,7 +150,7 @@ packages from ~/covr-bench/cov. -->
 
 Every R process that loads your package, such as a *callr* session, a [*future*](https://future.futureverse.org)
 worker or a Shiny app started by the tests, saves its own coverage when it
-exits, and *covr* adds these together at the end. *covr* 3.6.5 read every one of
+exits, and covr adds these together at the end. covr 3.6.5 read every one of
 these files into memory before adding them up, and each held a full copy of
 the package's counters. For packages whose tests start hundreds of processes,
 this could fail at the very end of a long run.
@@ -163,19 +163,19 @@ jobs to keep it manageable.
 | *languageserver* | Tests | Coverage files | Merging them |
 |---|---|---|---|
 | Without coverage | 9 min | — | — |
-| *covr* 3.6.5 | 80 min | 5.2 GB | runs out of memory |
-| *covr* 4.0.0 | 13 min | 8 MB | 1 s, 144 MB |
+| covr 3.6.5 | 80 min | 5.2 GB | runs out of memory |
+| covr 4.0.0 | 13 min | 8 MB | 1 s, 144 MB |
 
-*covr* 4.0.0 also writes these files atomically, so a process killed at the end
+covr 4.0.0 also writes these files atomically, so a process killed at the end
 of the tests no longer leaves a truncated file that makes the whole run fail
-with `error reading from connection`. *covr* 3.6.5 failed this way on the tests
+with `error reading from connection`. covr 3.6.5 failed this way on the tests
 of [*mlr3*](https://mlr3.mlr-org.com) and *future*; 4.0.0 measures them and warns about how many processes'
 coverage was lost.
 
 ## Branch coverage
 
 Line coverage tells you a line ran; it does not tell you whether both sides of
-an `if` on that line ran. *covr* 4.0.0 can now record this, with
+an `if` on that line ran. covr 4.0.0 can now record this, with
 `options(covr.branch_coverage = TRUE)`. Take these two functions in a
 package:
 
@@ -219,7 +219,7 @@ Codecov and Coveralls show partly covered lines. `report()` does not show
 branches yet.
 
 Branch coverage is off by default and experimental, so what counts as a
-branch and how branches are stored may still change. Without the option *covr*
+branch and how branches are stored may still change. Without the option covr
 instruments your code as before. See
 [`?covr.branch_coverage`](https://covr.r-lib.org/reference/covr.branch_coverage.html)
 for the details.
@@ -257,7 +257,7 @@ It loads the package with `pkgload::load_all()` and only recompiles the files
 that changed, so it is much faster than `package_coverage()`. This also means
 `devtools::test_coverage_active_file()` now works for C, C++ and Fortran files.
 
-*covr* can also now measure the coverage of installed packages, functions
+covr can also now measure the coverage of installed packages, functions
 stored in lists or created with `local()` (with
 `Config/covr/full_traversal: true` in your DESCRIPTION), code run by
 `parallel::mclapply()` in `file_coverage()`, and the property callbacks of [*S7*](https://rconsortium.github.io/S7)
@@ -268,7 +268,7 @@ classes.
 `report()` has been rewritten. It no longer depends on [*DT*](https://github.com/rstudio/DT), jQuery or
 Bootstrap, lists the least covered files first, keeps the Files and Source
 tabs in view as you scroll, and follows your browser's dark mode. Here is the
-report for *forcats*, made with *covr* 4.0.0; click a file to see its source, or
+report for *forcats*, made with covr 4.0.0; click a file to see its source, or
 use the button in the corner to switch themes:
 
 <iframe src="/reports/covr-4-0-0-forcats/" title="covr report for forcats" style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 4px;" loading="lazy"></iframe>
@@ -290,7 +290,7 @@ document.
 ### Badges without a coverage service
 
 [`to_badge()`](https://covr.r-lib.org/reference/to_badge.html) writes an SVG
-coverage badge. *covr* includes a GitHub Actions workflow that publishes the
+coverage badge. covr includes a GitHub Actions workflow that publishes the
 badge on every push, so your README can show coverage without uploading it to
 Codecov or Coveralls. Copy
 `system.file("workflows", "test-coverage-badge.yaml", package = "covr")` to
@@ -312,11 +312,11 @@ bug fixes in this release.
 
 ## Eleven years of covr
 
-I [first released *covr*](/post/2015-05-20-covr/) in May 2015, when R had few
+I [first released covr](/post/2015-05-20-covr/) in May 2015, when R had few
 tools for measuring test coverage. Today 2,333 CRAN packages list
-*covr* in Suggests, and about
+covr in Suggests, and about
 [28,000 `DESCRIPTION` files on GitHub](https://github.com/search?q=covr+path%3ADESCRIPTION&type=code)
-mention it. Thank you to everyone who has used *covr* over the years and
+mention it. Thank you to everyone who has used covr over the years and
 reported the problems that shaped this release; many of the issues fixed in
 4.0.0 were opened years ago by people who took the time to describe what they
 needed.
@@ -349,6 +349,6 @@ issues or submitting pull requests:
 ---
 
 Starting in 2027 I'll be taking on consulting work for the first time, on R
-package development, testing and performance. If *covr*, or any of the other
+package development, testing and performance. If covr, or any of the other
 packages I've worked on, is part of something you're building, email me at
 [james.f.hester@gmail.com](mailto:james.f.hester@gmail.com).
