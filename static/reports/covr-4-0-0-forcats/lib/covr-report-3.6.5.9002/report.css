@@ -1,0 +1,384 @@
+.covr-report table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.covr-report pre {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.covr-report table tr:hover td {
+  font-weight:bold;text-decoration:none
+}
+.covr-report table tr.never td {
+  background-color:transparent
+}
+
+.covr-report table tbody {
+  border-style: solid;
+  border: 1px solid rgba(0,0,0,0.1)
+}
+
+.covr-report table .num {
+  border-right: 1px solid rgba(0,0,0,0.1)
+}
+
+.covr-report td.coverage em {
+  opacity: 0.5;
+}
+
+.covr-report table td.coverage {
+  border-right: 1px solid rgba(0,0,0,0.1);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* The list of files, styled like DataTables' tables with borders between the
+   rows */
+.covr-report table.covr-file-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.covr-report table.covr-file-table > tbody {
+  border: 0;
+}
+
+.covr-report table.covr-file-table > thead > tr > th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.covr-report table.covr-file-table > tbody > tr > td {
+  padding: 8px 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.covr-report table.covr-file-table > tbody > tr:first-child > td {
+  border-top: 0;
+}
+
+.covr-report table.covr-file-table .covr-num {
+  text-align: right;
+}
+
+/* The numeric columns are as narrow as their content, so the file column
+   takes the rest of the width, and long paths wrap rather than make the table
+   wider than the report */
+.covr-report table.covr-file-table .covr-num {
+  width: 1%;
+}
+
+.covr-report table.covr-file-table td.covr-num {
+  white-space: nowrap;
+}
+
+.covr-report table.covr-file-table td.covr-file {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.covr-report button.covr-sort {
+  padding: 0;
+  font: inherit;
+  font-weight: bold;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.covr-report button.covr-sort::after {
+  display: inline-block;
+  width: 1em;
+  margin-left: 4px;
+  opacity: 0.3;
+  content: "\2195";
+}
+
+.covr-report th[aria-sort="ascending"] button.covr-sort::after {
+  opacity: 0.8;
+  content: "\25B2";
+}
+
+.covr-report th[aria-sort="descending"] button.covr-sort::after {
+  opacity: 0.8;
+  content: "\25BC";
+}
+.covr-report table.table-condensed pre {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 11px;
+}
+.covr-report div.covr-files td {
+  padding: 0;
+  padding-left: 5px;
+}
+
+.covr-report div.covr-files td.num {
+  padding-right: 5px;
+}
+
+.covr-report table.table-condensed {
+  font-size: 11px;
+}
+
+/* The colors of the code highlighted by highlight.js, based on RStudio's */
+.covr-report pre .operator,
+.covr-report pre .paren {
+  color: rgb(104, 118, 135);
+}
+
+.covr-report pre .literal {
+  color: rgb(88, 72, 246);
+}
+
+.covr-report pre .number {
+  color: rgb(0, 0, 205);
+}
+
+.covr-report pre .comment {
+  color: rgb(76, 136, 107);
+  font-style: italic;
+}
+
+.covr-report pre .keyword,
+.covr-report pre .id {
+  color: rgb(0, 0, 255);
+}
+
+.covr-report pre .identifier {
+  color: rgb(0, 0, 0);
+}
+
+.covr-report pre .string,
+.covr-report pre .attribute {
+  color: rgb(3, 106, 7);
+}
+
+.covr-report pre .doctype {
+  color: rgb(104, 104, 92);
+}
+
+.covr-report pre .tag,
+.covr-report pre .title {
+  color: rgb(4, 29, 140);
+}
+
+.covr-report pre .value {
+  color: rgb(13, 105, 18);
+}
+
+.covr-report td.covr-source {
+  width: 100%;
+}
+
+.covr-report .covr-hidden {
+  display: none;
+}
+
+/* The tabs, styled like Bootstrap 3's, which the report doesn't need, so it
+   can be included in documents that use another version of Bootstrap or none */
+.covr-report ul.covr-tabs {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.covr-report ul.covr-tabs > li {
+  margin: 0 0 -1px 0;
+}
+
+.covr-report ul.covr-tabs > li > a {
+  display: block;
+  margin-right: 2px;
+  padding: 10px 15px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+
+.covr-report ul.covr-tabs > li > a:hover,
+.covr-report ul.covr-tabs > li > a:focus {
+  background-color: #eee;
+  border-color: #eee #eee #ddd;
+}
+
+.covr-report ul.covr-tabs > li.active > a,
+.covr-report ul.covr-tabs > li.active > a:hover,
+.covr-report ul.covr-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border-color: #ddd #ddd transparent;
+}
+
+.covr-report .covr-tab-content > .covr-tab-pane {
+  display: none;
+}
+
+.covr-report .covr-tab-content > .covr-tab-pane.active {
+  display: block;
+}
+
+.covr-report .covr-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.covr-report .covr-header h2 {
+  margin-right: 10px;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.covr-report .covr-theme-toggle {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.covr-report .covr-theme-toggle:hover,
+.covr-report .covr-theme-toggle:focus {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.covr-report .covr-theme-toggle svg {
+  display: block;
+}
+
+.covr-report .covr-theme-toggle .covr-icon-sun,
+html.covr-dark .covr-report .covr-theme-toggle .covr-icon-moon {
+  display: none;
+}
+
+html.covr-dark .covr-report .covr-theme-toggle .covr-icon-sun {
+  display: block;
+}
+
+/* Dark theme, used when `theme.js` adds the `covr-dark` class to <html>. Only
+   the reports are styled, so they can be included in other documents. The
+   shadow gives a report in a light document a margin of the dark background,
+   without changing its layout. */
+html.covr-dark .covr-report {
+  color-scheme: dark;
+  box-shadow: 0 0 0 10px #212529;
+}
+
+html.covr-dark .covr-report,
+html.covr-dark .covr-report ul.covr-tabs {
+  background-color: #212529;
+  color: #dee2e6;
+}
+
+html.covr-dark .covr-report a {
+  color: #6ea8fe;
+}
+
+html.covr-dark .covr-report a:hover,
+html.covr-dark .covr-report a:focus {
+  color: #9ec5fe;
+}
+
+html.covr-dark .covr-report pre {
+  color: #dee2e6;
+}
+
+html.covr-dark .covr-report ul.covr-tabs {
+  border-bottom-color: #495057;
+}
+
+html.covr-dark .covr-report ul.covr-tabs > li > a:hover,
+html.covr-dark .covr-report ul.covr-tabs > li > a:focus {
+  background-color: #343a40;
+  border-color: #343a40 #343a40 #495057;
+}
+
+html.covr-dark .covr-report ul.covr-tabs > li.active > a,
+html.covr-dark .covr-report ul.covr-tabs > li.active > a:hover,
+html.covr-dark .covr-report ul.covr-tabs > li.active > a:focus {
+  color: #dee2e6;
+  background-color: #212529;
+  border-color: #495057 #495057 transparent;
+}
+
+html.covr-dark .covr-report .covr-theme-toggle {
+  color: #dee2e6;
+  background-color: #343a40;
+  border-color: #495057;
+}
+
+html.covr-dark .covr-report .covr-theme-toggle:hover,
+html.covr-dark .covr-report .covr-theme-toggle:focus {
+  color: #fff;
+  background-color: #495057;
+  border-color: #6c757d;
+}
+
+html.covr-dark .covr-report table tbody,
+html.covr-dark .covr-report table .num,
+html.covr-dark .covr-report table td.coverage {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+html.covr-dark .covr-report table.covr-file-table,
+html.covr-dark .covr-report table.covr-file-table > thead > tr > th {
+  border-color: #6c757d;
+}
+
+html.covr-dark .covr-report table.covr-file-table > tbody > tr > td {
+  border-top-color: #495057;
+}
+
+/* Based on the Tomorrow Night theme */
+html.covr-dark .covr-report pre .operator,
+html.covr-dark .covr-report pre .paren,
+html.covr-dark .covr-report pre .identifier {
+  color: #c5c8c6;
+}
+
+html.covr-dark .covr-report pre .literal,
+html.covr-dark .covr-report pre .number {
+  color: #de935f;
+}
+
+html.covr-dark .covr-report pre .comment,
+html.covr-dark .covr-report pre .doctype {
+  color: #969896;
+}
+
+html.covr-dark .covr-report pre .keyword,
+html.covr-dark .covr-report pre .id {
+  color: #b294bb;
+}
+
+html.covr-dark .covr-report pre .string,
+html.covr-dark .covr-report pre .attribute,
+html.covr-dark .covr-report pre .value {
+  color: #b5bd68;
+}
+
+html.covr-dark .covr-report pre .tag,
+html.covr-dark .covr-report pre .title {
+  color: #81a2be;
+}
