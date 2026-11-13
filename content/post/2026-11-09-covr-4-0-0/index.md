@@ -106,10 +106,11 @@ covr 3.6.5 between 30 seconds and 5 minutes:
 ![Time to run each package's tests without coverage, with covr 3.6.5 and with covr 4.0.0, three runs each; the labels show what covr 4.0.0 adds to the time without coverage](benchmarks.png)
 
 The grey triangles are the tests without coverage, and the labels on the
-right show what measuring coverage with covr 4.0.0 adds to that. For most of
-these packages that is now 10–40%, where covr 3.6.5 often doubled or tripled
-the time: data.table went from 2.4 minutes to 48 seconds, against 28 seconds
-without coverage. igraph and collapse still take about twice as long; most of
+right show what measuring coverage with covr 4.0.0 adds to that. For 10 of
+these 13 packages that is now between 7% and 45%, where covr 3.6.5 often
+doubled or tripled the time. data.table went from 2.4 minutes with covr 3.6.5
+to 48 seconds, against 28 seconds without coverage (+70%). igraph and
+collapse still take about twice as long; most of
 their code is C and C++, which is compiled with coverage instrumentation and
 without optimization.
 
