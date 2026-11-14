@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<link href="lib/covr-report-3.6.5.9002/report.css" rel="stylesheet" />
+<script src="lib/covr-report-3.6.5.9002/theme.js"></script>
+<script src="lib/covr-report-3.6.5.9002/report.js"></script>
+<script src="lib/covr-highlight.js-11.11.1/highlight.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<style type="text/css">/* The page of a standalone report: the report is in a centered column taking
+   two thirds of wide screens */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.covr-page {
+  padding: 0 30px;
+}
+
+@media (min-width: 992px) {
+  .covr-page {
+    width: 66.66666667%;
+    margin-left: 16.66666667%;
+  }
+}
+
+/* The page uses the dark theme along with the report */
+html.covr-dark {
+  color-scheme: dark;
+}
+
+html.covr-dark body {
+  background-color: #212529;
+  color: #dee2e6;
+}</style>
+<div class="covr-page">
+  <div class="covr-report covr-colors-0e2c2af7">
+    <style>.covr-report.covr-colors-0e2c2af7 table tr.covered td{
+  background-color:rgba(0,114,178,0.3)
+}
+.covr-report.covr-colors-0e2c2af7 table tr:hover.covered .num{
+  background-color:rgba(0,114,178,0.7)
+}
+.covr-report.covr-colors-0e2c2af7 table tr.covered:hover td{
+  -webkit-box-shadow:0 -2px 0 0 #0072b2 inset;
+  -moz-box-shadow:0 -2px 0 0 #0072b2 inset;
+  box-shadow:0 -2px 0 0 #0072b2 inset
+}
+.covr-report.covr-colors-0e2c2af7 table tr.missed td{
+  background-color:rgba(213,94,0,0.3)
+}
+.covr-report.covr-colors-0e2c2af7 table tr:hover.missed .num{
+  background-color:rgba(213,94,0,0.7)
+}
+.covr-report.covr-colors-0e2c2af7 table tr.missed:hover td{
+  -webkit-box-shadow:0 -2px 0 0 #d55e00 inset;
+  -moz-box-shadow:0 -2px 0 0 #d55e00 inset;
+  box-shadow:0 -2px 0 0 #d55e00 inset
+}
+.covr-report.covr-colors-0e2c2af7 table tr.partial td{
+  background-color:rgba(240,228,66,0.3)
+}
+.covr-report.covr-colors-0e2c2af7 table tr:hover.partial .num{
+  background-color:rgba(240,228,66,0.7)
+}
+.covr-report.covr-colors-0e2c2af7 table tr.partial:hover td{
+  -webkit-box-shadow:0 -2px 0 0 #f0e442 inset;
+  -moz-box-shadow:0 -2px 0 0 #f0e442 inset;
+  box-shadow:0 -2px 0 0 #f0e442 inset
+}
+.covr-report.covr-colors-0e2c2af7 .covr-branch-missed{
+  background-color:rgba(213,94,0,0.3)
+}
+.covr-report.covr-colors-0e2c2af7{
+  --covr-bar-high:#e0eef6;
+  --covr-bar-mid:#fdfce8;
+  --covr-bar-low:#faece0;
+}
+html.covr-dark .covr-report.covr-colors-0e2c2af7{
+  --covr-bar-high:#15415a;
+  --covr-bar-mid:#6c6a32;
+  --covr-bar-low:#623a1a;
+}
+</style>
+    <div class="covr-header">
+      <h2>b64 coverage - 22.18% (branches 16.67%)</h2>
+      <button type="button" class="covr-theme-toggle" aria-pressed="false" aria-label="Dark mode" title="Toggle dark mode"><svg class="covr-icon-moon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M8.14 1.5A6.5 6.5 0 1 0 14.5 7.86A4.5 4.5 0 0 1 8.14 1.5Z"/></svg><svg class="covr-icon-sun" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="3.2" fill="currentColor"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1.1 1.1M11.9 11.9 13 13M3 13l1.1-1.1M11.9 4.1 13 3"/></svg></button>
+    </div>
+    <div class="covr-tabset">
+      <ul class="covr-tabs">
+        <li class="active">
+          <a href="#" data-value="Files">Files</a>
+        </li>
+        <li>
+          <a href="#" data-value="Source">Source</a>
+        </li>
+      </ul>
+      <div class="covr-tab-content">
+        <div class="covr-tab-pane active" data-value="Files">
+          <table class="covr-file-table">
+            <thead>
+              <tr>
+                <th aria-sort="none">
+                  <button type="button" class="covr-sort">File</button>
+                </th>
+                <th class="covr-num" aria-sort="none">
+                  <button type="button" class="covr-sort">Lines</button>
+                </th>
+                <th class="covr-num" aria-sort="none">
+                  <button type="button" class="covr-sort">Relevant</button>
+                </th>
+                <th class="covr-num" aria-sort="none">
+                  <button type="button" class="covr-sort">Covered</button>
+                </th>
+                <th class="covr-num" aria-sort="none">
+                  <button type="button" class="covr-sort">Missed</button>
+                </th>
+                <th class="covr-num" title="Average number of times each relevant line was run" aria-sort="none">
+                  <button type="button" class="covr-sort">Hits/line</button>
+                </th>
+                <th class="covr-num" aria-sort="none">
+                  <button type="button" class="covr-sort">Branches</button>
+                </th>
+                <th class="covr-num" aria-sort="none">
+                  <button type="button" class="covr-sort">Coverage</button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="covr-file" data-sort="R/config.R">
+                  <a href="#" class="covr-file-link">R/config.R</a>
+                </td>
+                <td class="covr-num" data-sort="51">51</td>
+                <td class="covr-num" data-sort="11">11</td>
+                <td class="covr-num" data-sort="0">0</td>
+                <td class="covr-num" data-sort="11">11</td>
+                <td class="covr-num" data-sort="0.0">0.0</td>
+                <td class="covr-num" data-sort=""></td>
+                <td class="covr-num" style="background:linear-gradient(90deg, var(--covr-bar-low) 0.00%, transparent 0.00%)" data-sort="0.00">0.00%</td>
+              </tr>
+              <tr>
+                <td class="covr-file" data-sort="R/engine.R">
+                  <a href="#" class="covr-file-link">R/engine.R</a>
+                </td>
+                <td class="covr-num" data-sort="63">63</td>
+                <td class="covr-num" data-sort="17">17</td>
+                <td class="covr-num" data-sort="3">3</td>
+                <td class="covr-num" data-sort="14">14</td>
+                <td class="covr-num" data-sort="0.9">0.9</td>
+                <td class="covr-num" data-sort="0.00">0.00%</td>
+                <td class="covr-num" style="background:linear-gradient(90deg, var(--covr-bar-low) 17.65%, transparent 17.65%)" data-sort="17.65">17.65%</td>
+              </tr>
+              <tr>
+                <td class="covr-file" data-sort="src/rust/src/lib.rs">
+                  <a href="#" class="covr-file-link">src/rust/src/lib.rs</a>
+                </td>
+                <td class="covr-num" data-sort="377">377</td>
+                <td class="covr-num" data-sort="195">195</td>
+                <td class="covr-num" data-sort="36">36</td>
+                <td class="covr-num" data-sort="159">159</td>
+                <td class="covr-num" data-sort="1.0">1.0</td>
+                <td class="covr-num" data-sort=""></td>
+                <td class="covr-num" style="background:linear-gradient(90deg, var(--covr-bar-low) 18.46%, transparent 18.46%)" data-sort="18.46">18.46%</td>
+              </tr>
+              <tr>
+                <td class="covr-file" data-sort="R/encode.R">
+                  <a href="#" class="covr-file-link">R/encode.R</a>
+                </td>
+                <td class="covr-num" data-sort="94">94</td>
+                <td class="covr-num" data-sort="19">19</td>
+                <td class="covr-num" data-sort="6">6</td>
+                <td class="covr-num" data-sort="13">13</td>
+                <td class="covr-num" data-sort="1.3">1.3</td>
+                <td class="covr-num" data-sort="16.67">16.67%</td>
+                <td class="covr-num" style="background:linear-gradient(90deg, var(--covr-bar-low) 31.58%, transparent 31.58%)" data-sort="31.58">31.58%</td>
+              </tr>
+              <tr>
+                <td class="covr-file" data-sort="R/extendr-wrappers.R">
+                  <a href="#" class="covr-file-link">R/extendr-wrappers.R</a>
+                </td>
+                <td class="covr-num" data-sort="78">78</td>
+                <td class="covr-num" data-sort="17">17</td>
+                <td class="covr-num" data-sort="6">6</td>
+                <td class="covr-num" data-sort="11">11</td>
+                <td class="covr-num" data-sort="2.5">2.5</td>
+                <td class="covr-num" data-sort=""></td>
+                <td class="covr-num" style="background:linear-gradient(90deg, var(--covr-bar-low) 35.29%, transparent 35.29%)" data-sort="35.29">35.29%</td>
+              </tr>
+              <tr>
+                <td class="covr-file" data-sort="R/alphabet.R">
+                  <a href="#" class="covr-file-link">R/alphabet.R</a>
+                </td>
+                <td class="covr-num" data-sort="67">67</td>
+                <td class="covr-num" data-sort="14">14</td>
+                <td class="covr-num" data-sort="8">8</td>
+                <td class="covr-num" data-sort="6">6</td>
+                <td class="covr-num" data-sort="4.3">4.3</td>
+                <td class="covr-num" data-sort="50.00">50.00%</td>
+                <td class="covr-num" style="background:linear-gradient(90deg, var(--covr-bar-low) 57.14%, transparent 57.14%)" data-sort="57.14">57.14%</td>
+              </tr>
+              <tr>
+                <td class="covr-file" data-sort="src/entrypoint.c">
+                  <a href="#" class="covr-file-link">src/entrypoint.c</a>
+                </td>
+                <td class="covr-num" data-sort="8">8</td>
+                <td class="covr-num" data-sort="2">2</td>
+                <td class="covr-num" data-sort="2">2</td>
+                <td class="covr-num" data-sort="0">0</td>
+                <td class="covr-num" data-sort="3.0">3.0</td>
+                <td class="covr-num" data-sort=""></td>
+                <td class="covr-num" style="background:linear-gradient(90deg, var(--covr-bar-high) 100.00%, transparent 100.00%)" data-sort="100.00">100.00%</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="covr-file" data-sort="Total">Total</td>
+                <td class="covr-num" data-sort="738">738</td>
+                <td class="covr-num" data-sort="275">275</td>
+                <td class="covr-num" data-sort="61">61</td>
+                <td class="covr-num" data-sort="214">214</td>
+                <td class="covr-num" data-sort="1.2">1.2</td>
+                <td class="covr-num" data-sort="16.67">16.67%</td>
+                <td class="covr-num" style="background:linear-gradient(90deg, var(--covr-bar-low) 22.18%, transparent 22.18%)" data-sort="22.18">22.18%</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="covr-tab-pane" data-value="Source"><div class="covr-files"><div data-file="R/extendr-wrappers.R" class="covr-hidden"><table class="table-condensed"><tbody>
+<tr class="never"><td class="num">1</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"># Generated by extendr: Do not edit by hand</pre></td></tr>
+<tr class="never"><td class="num">2</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">3</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"># nolint start</pre></td></tr>
+<tr class="never"><td class="num">4</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">5</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#</pre></td></tr>
+<tr class="never"><td class="num">6</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"># This file was created with the following call:</pre></td></tr>
+<tr class="never"><td class="num">7</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#   .Call("wrap__make_b64_wrappers", use_symbols = TRUE, package_name = "b64")</pre></td></tr>
+<tr class="never"><td class="num">8</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">9</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @usage NULL</pre></td></tr>
+<tr class="never"><td class="num">10</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @useDynLib b64, .registration = TRUE</pre></td></tr>
+<tr class="never"><td class="num">11</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">NULL</pre></td></tr>
+<tr class="never"><td class="num">12</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">13</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">encode_ &lt;- function(what, engine) .Call(wrap__encode_, what, engine)</pre></td></tr>
+<tr class="never"><td class="num">14</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">15</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">encode_file_ &lt;- function(path, engine) .Call(wrap__encode_file_, path, engine)</pre></td></tr>
+<tr class="never"><td class="num">16</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">17</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">encode_vectorized_ &lt;- function(what, engine) .Call(wrap__encode_vectorized_, what, engine)</pre></td></tr>
+<tr class="never"><td class="num">18</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">19</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">decode_ &lt;- function(input, engine) .Call(wrap__decode_, input, engine)</pre></td></tr>
+<tr class="never"><td class="num">20</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">21</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">decode_file_ &lt;- function(path, engine) .Call(wrap__decode_file_, path, engine)</pre></td></tr>
+<tr class="never"><td class="num">22</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">23</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">decode_vectorized_ &lt;- function(what, engine) .Call(wrap__decode_vectorized_, what, engine)</pre></td></tr>
+<tr class="never"><td class="num">24</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">25</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">decode_as_string_ &lt;- function(what, split, engine) .Call(wrap__decode_as_string_, what, split, engine)</pre></td></tr>
+<tr class="never"><td class="num">26</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">27</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">alphabet_ &lt;- function(which) .Call(wrap__alphabet_, which)</pre></td></tr>
+<tr class="never"><td class="num">28</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">29</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">new_alphabet_ &lt;- function(chars) .Call(wrap__new_alphabet_, chars)</pre></td></tr>
+<tr class="never"><td class="num">30</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">31</td><td class="coverage">18<em>x</em></td><td class="covr-source"><pre class="language-r">get_alphabet_ &lt;- function(alphabet) .Call(wrap__get_alphabet_, alphabet)</pre></td></tr>
+<tr class="never"><td class="num">32</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">33</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">new_engine_ &lt;- function(alphabet, config) .Call(wrap__new_engine_, alphabet, config)</pre></td></tr>
+<tr class="never"><td class="num">34</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">35</td><td class="coverage">5<em>x</em></td><td class="covr-source"><pre class="language-r">engine_ &lt;- function(which) .Call(wrap__engine_, which)</pre></td></tr>
+<tr class="never"><td class="num">36</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">37</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">print_engine_ &lt;- function(engine) .Call(wrap__print_engine_, engine)</pre></td></tr>
+<tr class="never"><td class="num">38</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">39</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">new_config_ &lt;- function(encode_padding, decode_padding_trailing_bits, decode_padding_mode) .Call(wrap__new_config_, encode_padding, decode_padding_trailing_bits, decode_padding_mode)</pre></td></tr>
+<tr class="never"><td class="num">40</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">41</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">print_config_ &lt;- function(config) .Call(wrap__print_config_, config)</pre></td></tr>
+<tr class="never"><td class="num">42</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">43</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' Utility Functions</pre></td></tr>
+<tr class="never"><td class="num">44</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">45</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' Functions to perform common tasks when working with base64 encoded strings.</pre></td></tr>
+<tr class="never"><td class="num">46</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">47</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @details</pre></td></tr>
+<tr class="never"><td class="num">48</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">49</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' `b64_chunk()` splits a character vector of base64 encoded strings into chunks of a</pre></td></tr>
+<tr class="never"><td class="num">50</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' specified width.</pre></td></tr>
+<tr class="never"><td class="num">51</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">52</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' `b64_wrap()` wraps a character vector of base64 encoded strings with a newline character.</pre></td></tr>
+<tr class="never"><td class="num">53</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">54</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @returns</pre></td></tr>
+<tr class="never"><td class="num">55</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">56</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `b64_chunk()` returns a list of character vectors.</pre></td></tr>
+<tr class="never"><td class="num">57</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `b64_wrap()` returns a scalar character vector.</pre></td></tr>
+<tr class="never"><td class="num">58</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">59</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @examples</pre></td></tr>
+<tr class="never"><td class="num">60</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' encoded &lt;- encode("Hello, world!")</pre></td></tr>
+<tr class="never"><td class="num">61</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' chunked &lt;- b64_chunk(encoded, 4)</pre></td></tr>
+<tr class="never"><td class="num">62</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' chunked</pre></td></tr>
+<tr class="never"><td class="num">63</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">64</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' b64_wrap(chunked, "\n")</pre></td></tr>
+<tr class="never"><td class="num">65</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param width a numeric scalar defining the width of the chunks. Must be divisible by 4.</pre></td></tr>
+<tr class="never"><td class="num">66</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param encoded a character vector of base64 encoded strings.</pre></td></tr>
+<tr class="never"><td class="num">67</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">68</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @rdname utils</pre></td></tr>
+<tr class="missed"><td class="num">69</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">b64_chunk &lt;- function(encoded, width) .Call(wrap__b64_chunk, encoded, width)</pre></td></tr>
+<tr class="never"><td class="num">70</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">71</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param chunks a character vector of base64 encoded strings.</pre></td></tr>
+<tr class="never"><td class="num">72</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param newline a character scalar defining the newline character.</pre></td></tr>
+<tr class="never"><td class="num">73</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">74</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @rdname utils</pre></td></tr>
+<tr class="missed"><td class="num">75</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">b64_wrap &lt;- function(chunks, newline) .Call(wrap__b64_wrap, chunks, newline)</pre></td></tr>
+<tr class="never"><td class="num">76</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">77</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">78</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"># nolint end</pre></td></tr>
+</tbody></table></div>
+<div data-file="R/engine.R" class="covr-hidden"><table class="table-condensed"><tbody>
+<tr class="never"><td class="num">1</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' Create an encoding engine</pre></td></tr>
+<tr class="never"><td class="num">2</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">3</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param which default `"standard"`. The base64 encoding engine to be used.</pre></td></tr>
+<tr class="never"><td class="num">4</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  See details for more.</pre></td></tr>
+<tr class="never"><td class="num">5</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param .alphabet an object of class `alphabet` as created with</pre></td></tr>
+<tr class="never"><td class="num">6</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  [`alphabet()`] or [`new_alphabet()`]</pre></td></tr>
+<tr class="never"><td class="num">7</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param .config an object of class `engine_config` as created with</pre></td></tr>
+<tr class="never"><td class="num">8</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  [new_config()]</pre></td></tr>
+<tr class="never"><td class="num">9</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @details</pre></td></tr>
+<tr class="never"><td class="num">10</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">11</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' ## Engines</pre></td></tr>
+<tr class="never"><td class="num">12</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">13</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' By default, the "standard" base64 engine is used which is specified in</pre></td></tr>
+<tr class="never"><td class="num">14</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648#section-4).</pre></td></tr>
+<tr class="never"><td class="num">15</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">16</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  Additional pre-configured base64 engines are provided these are:</pre></td></tr>
+<tr class="never"><td class="num">17</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">18</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  - `"standard_no_pad"`: uses the standard engine without padding</pre></td></tr>
+<tr class="never"><td class="num">19</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  - `"url_safe"`: uses a url-safe alphabet with padding</pre></td></tr>
+<tr class="never"><td class="num">20</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  - `"url_safe_no_pad"`: uses a url-safe alphabet without padding</pre></td></tr>
+<tr class="never"><td class="num">21</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">22</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  See [base64 crate](https://docs.rs/base64/latest/base64/engine/general_purpose/index.html#constants) for more.</pre></td></tr>
+<tr class="never"><td class="num">23</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">24</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @return an object of class `engine`.</pre></td></tr>
+<tr class="never"><td class="num">25</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">26</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @examples</pre></td></tr>
+<tr class="never"><td class="num">27</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' engine()</pre></td></tr>
+<tr class="never"><td class="num">28</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' new_engine(alphabet("bcrypt"), new_config())</pre></td></tr>
+<tr class="never"><td class="num">29</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">engine &lt;- function(which = "standard") {</pre></td></tr>
+<tr class="covered"><td class="num">30</td><td class="coverage">5<em>x</em></td><td class="covr-source"><pre class="language-r">  provided &lt;- c("standard", "standard_no_pad", "url_safe", "url_safe_no_pad")</pre></td></tr>
+<tr class="covered"><td class="num">31</td><td class="coverage">5<em>x</em></td><td class="covr-source"><pre class="language-r">  match.arg(which, choices = provided)</pre></td></tr>
+<tr class="covered"><td class="num">32</td><td class="coverage">5<em>x</em></td><td class="covr-source"><pre class="language-r">  structure(engine_(which), class = "engine")</pre></td></tr>
+<tr class="never"><td class="num">33</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">34</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">35</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">36</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @rdname engine</pre></td></tr>
+<tr class="never"><td class="num">37</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">new_engine &lt;- function(.alphabet = alphabet(), .config = new_config()) {</pre></td></tr>
+<tr class="never"><td class="num">38</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">39</td><td class="coverage">!<span class="covr-branches" tabindex="0">0/2<span class="covr-branch-detail"><span class="covr-branch covr-branch-missed">TRUE: 0</span><span class="covr-branch covr-branch-missed">FALSE: 0</span></span></span></td><td class="covr-source"><pre class="language-r">  if (!inherits(.alphabet, "alphabet")) {</pre></td></tr>
+<tr class="missed"><td class="num">40</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    stop(</pre></td></tr>
+<tr class="missed"><td class="num">41</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">      paste(</pre></td></tr>
+<tr class="missed"><td class="num">42</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        "`.alphabet` is not an object of class 'alphabet'.\n" ,</pre></td></tr>
+<tr class="missed"><td class="num">43</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        "Use `alphabet()` for a standard base64 alphabet."</pre></td></tr>
+<tr class="never"><td class="num">44</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">      )</pre></td></tr>
+<tr class="never"><td class="num">45</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    )</pre></td></tr>
+<tr class="missed"><td class="num">46</td><td class="coverage">!<span class="covr-branches" tabindex="0">0/2<span class="covr-branch-detail"><span class="covr-branch covr-branch-missed">TRUE: 0</span><span class="covr-branch covr-branch-missed">FALSE: 0</span></span></span></td><td class="covr-source"><pre class="language-r">  } else if (!inherits(.config, "engine_config")) {</pre></td></tr>
+<tr class="missed"><td class="num">47</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    stop(</pre></td></tr>
+<tr class="missed"><td class="num">48</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">      paste(</pre></td></tr>
+<tr class="missed"><td class="num">49</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        "`.config` is not an object of class 'engine_config'.\n" ,</pre></td></tr>
+<tr class="missed"><td class="num">50</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        "Create one with `new_config()`."</pre></td></tr>
+<tr class="never"><td class="num">51</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">      )</pre></td></tr>
+<tr class="never"><td class="num">52</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    )</pre></td></tr>
+<tr class="never"><td class="num">53</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  }</pre></td></tr>
+<tr class="never"><td class="num">54</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">55</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  res &lt;- new_engine_(.alphabet, .config)</pre></td></tr>
+<tr class="missed"><td class="num">56</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  structure(res, class = "engine")</pre></td></tr>
+<tr class="never"><td class="num">57</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">58</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">59</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">60</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">print.engine &lt;- function(x, ...) {</pre></td></tr>
+<tr class="missed"><td class="num">61</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  cat("&lt;engine&gt;")</pre></td></tr>
+<tr class="missed"><td class="num">62</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  invisible(x)</pre></td></tr>
+<tr class="never"><td class="num">63</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+</tbody></table></div>
+<div data-file="R/encode.R" class="covr-hidden"><table class="table-condensed"><tbody>
+<tr class="never"><td class="num">1</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' Encode and decode using base64</pre></td></tr>
+<tr class="never"><td class="num">2</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">3</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @details</pre></td></tr>
+<tr class="never"><td class="num">4</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">5</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' ## Encoding</pre></td></tr>
+<tr class="never"><td class="num">6</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">7</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `encode()` takes a character vector, list of raw vectors (or blob class), or a raw vector and encodes them into base64 strings.</pre></td></tr>
+<tr class="never"><td class="num">8</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `encode_file()` takes a path to a file and encodes it as a base64 string.</pre></td></tr>
+<tr class="never"><td class="num">9</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">10</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' ## Decoding</pre></td></tr>
+<tr class="never"><td class="num">11</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">12</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `decode()` will decode either a base64 encoded character scalar, a raw vector, or a list of raw vectors (see blob package).</pre></td></tr>
+<tr class="never"><td class="num">13</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `decode_file()` will decode a base64 encoded file into a raw vector.</pre></td></tr>
+<tr class="never"><td class="num">14</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `decode_as_string()` is designed to decode a base64 encoded string to a utf-8 string. By default, it will decode a chunked base64 encoded strings using `\n` as the separator. Use the `newline` argument to determine how to split the input string prior to decoding.</pre></td></tr>
+<tr class="never"><td class="num">15</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">16</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">17</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param what a character, raw, or blob vector</pre></td></tr>
+<tr class="never"><td class="num">18</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param eng a base64 engine. See [engine()] for details.</pre></td></tr>
+<tr class="never"><td class="num">19</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param path a path to a base64 encoded file.</pre></td></tr>
+<tr class="never"><td class="num">20</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param newline a character sequence to split in the input base64 encoded string on before decoding.</pre></td></tr>
+<tr class="never"><td class="num">21</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">22</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @return</pre></td></tr>
+<tr class="never"><td class="num">23</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' Both `encode()` and `decode()` are vectorized. They will return a character</pre></td></tr>
+<tr class="never"><td class="num">24</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' and blob vector the same length as `what`, respectively.</pre></td></tr>
+<tr class="never"><td class="num">25</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">26</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' `decode_as_string()` returns a character scalar.</pre></td></tr>
+<tr class="never"><td class="num">27</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">28</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @name encode</pre></td></tr>
+<tr class="never"><td class="num">29</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @examples</pre></td></tr>
+<tr class="never"><td class="num">30</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' # encode hello world</pre></td></tr>
+<tr class="never"><td class="num">31</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' encoded &lt;- encode("Hello world")</pre></td></tr>
+<tr class="never"><td class="num">32</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' encoded</pre></td></tr>
+<tr class="never"><td class="num">33</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">34</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' # decode to a blob</pre></td></tr>
+<tr class="never"><td class="num">35</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' decoded &lt;- decode(encoded)</pre></td></tr>
+<tr class="never"><td class="num">36</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' decoded</pre></td></tr>
+<tr class="never"><td class="num">37</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">38</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' # convert back to a character</pre></td></tr>
+<tr class="never"><td class="num">39</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' rawToChar(decoded[[1]])</pre></td></tr>
+<tr class="never"><td class="num">40</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">encode &lt;- function(what, eng = engine()) {</pre></td></tr>
+<tr class="covered"><td class="num">41</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">  n &lt;- length(what)</pre></td></tr>
+<tr class="partial"><td class="num">42</td><td class="coverage">4<em>x</em><span class="covr-branches" tabindex="0">1/2<span class="covr-branch-detail"><span class="covr-branch">TRUE: 4</span><span class="covr-branch covr-branch-missed">FALSE: 0</span></span></span></td><td class="covr-source"><pre class="language-r">  if (inherits(what, "raw") || (n == 1 &amp; inherits(what, "character"))) {</pre></td></tr>
+<tr class="covered"><td class="num">43</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">    encode_(what, eng)</pre></td></tr>
+<tr class="never"><td class="num">44</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  } else {</pre></td></tr>
+<tr class="missed"><td class="num">45</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    encode_vectorized_(what, eng)</pre></td></tr>
+<tr class="never"><td class="num">46</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  }</pre></td></tr>
+<tr class="never"><td class="num">47</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">48</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">49</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">50</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @rdname encode</pre></td></tr>
+<tr class="never"><td class="num">51</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">decode &lt;- function(what, eng = engine()) {</pre></td></tr>
+<tr class="covered"><td class="num">52</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">  n &lt;- length(what)</pre></td></tr>
+<tr class="partial"><td class="num">53</td><td class="coverage">4<em>x</em><span class="covr-branches" tabindex="0">1/2<span class="covr-branch-detail"><span class="covr-branch">TRUE: 4</span><span class="covr-branch covr-branch-missed">FALSE: 0</span></span></span></td><td class="covr-source"><pre class="language-r">  if (inherits(what, "raw") || (n == 1 &amp; inherits(what, "character"))) {</pre></td></tr>
+<tr class="covered"><td class="num">54</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">    decode_(what, eng)</pre></td></tr>
+<tr class="never"><td class="num">55</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  } else {</pre></td></tr>
+<tr class="missed"><td class="num">56</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    decode_vectorized_(what, eng)</pre></td></tr>
+<tr class="never"><td class="num">57</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  }</pre></td></tr>
+<tr class="never"><td class="num">58</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">59</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">60</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">61</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @rdname encode</pre></td></tr>
+<tr class="never"><td class="num">62</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">decode_as_string &lt;- function(what, newline = "\n", eng = engine()) {</pre></td></tr>
+<tr class="missed"><td class="num">63</td><td class="coverage">!<span class="covr-branches" tabindex="0">0/2<span class="covr-branch-detail"><span class="covr-branch covr-branch-missed">TRUE: 0</span><span class="covr-branch covr-branch-missed">FALSE: 0</span></span></span></td><td class="covr-source"><pre class="language-r">  if (!inherits(what, "character") || length(what) != 1) {</pre></td></tr>
+<tr class="missed"><td class="num">64</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    stop("`what` must be a scalar character vector")</pre></td></tr>
+<tr class="never"><td class="num">65</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  }</pre></td></tr>
+<tr class="never"><td class="num">66</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">67</td><td class="coverage">!<span class="covr-branches" tabindex="0">0/2<span class="covr-branch-detail"><span class="covr-branch covr-branch-missed">TRUE: 0</span><span class="covr-branch covr-branch-missed">FALSE: 0</span></span></span></td><td class="covr-source"><pre class="language-r">  if (!inherits(newline, "character") || length(newline) != 1) {</pre></td></tr>
+<tr class="missed"><td class="num">68</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    stop("`newline` must be a scalar character vector")</pre></td></tr>
+<tr class="never"><td class="num">69</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  }</pre></td></tr>
+<tr class="never"><td class="num">70</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">71</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  decode_as_string_(what, newline, eng)</pre></td></tr>
+<tr class="never"><td class="num">72</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">73</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">74</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">75</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">76</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @name encode</pre></td></tr>
+<tr class="never"><td class="num">77</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">encode_file &lt;- function(path, eng = engine()) {</pre></td></tr>
+<tr class="missed"><td class="num">78</td><td class="coverage">!<span class="covr-branches" tabindex="0">0/2<span class="covr-branch-detail"><span class="covr-branch covr-branch-missed">TRUE: 0</span><span class="covr-branch covr-branch-missed">FALSE: 0</span></span></span></td><td class="covr-source"><pre class="language-r">  if (!file.exists(path)) {</pre></td></tr>
+<tr class="missed"><td class="num">79</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    stop(paste0("`", path, "` does not exist"))</pre></td></tr>
+<tr class="never"><td class="num">80</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  }</pre></td></tr>
+<tr class="never"><td class="num">81</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">82</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  encode_file_(path, eng)</pre></td></tr>
+<tr class="never"><td class="num">83</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">84</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">85</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">86</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">87</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @rdname encode</pre></td></tr>
+<tr class="never"><td class="num">88</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">decode_file &lt;- function(path, eng = engine()) {</pre></td></tr>
+<tr class="missed"><td class="num">89</td><td class="coverage">!<span class="covr-branches" tabindex="0">0/2<span class="covr-branch-detail"><span class="covr-branch covr-branch-missed">TRUE: 0</span><span class="covr-branch covr-branch-missed">FALSE: 0</span></span></span></td><td class="covr-source"><pre class="language-r">  if (!file.exists(path)) {</pre></td></tr>
+<tr class="missed"><td class="num">90</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    stop(paste0("`", path, "` does not exist"))</pre></td></tr>
+<tr class="never"><td class="num">91</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  }</pre></td></tr>
+<tr class="never"><td class="num">92</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">93</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  decode_file_(path, eng)</pre></td></tr>
+<tr class="never"><td class="num">94</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+</tbody></table></div>
+<div data-file="R/alphabet.R" class="covr-hidden"><table class="table-condensed"><tbody>
+<tr class="never"><td class="num">1</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' Standard base64 alphabets</pre></td></tr>
+<tr class="never"><td class="num">2</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">3</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' Create an alphabet from a set of standard base64 alphabets, or use your own.</pre></td></tr>
+<tr class="never"><td class="num">4</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">5</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param which default `"standard"`. Which base64 alphabet to use.</pre></td></tr>
+<tr class="never"><td class="num">6</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  See details for other values.</pre></td></tr>
+<tr class="never"><td class="num">7</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param chars a character scalar contains 64 unique characters.</pre></td></tr>
+<tr class="never"><td class="num">8</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">9</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @details</pre></td></tr>
+<tr class="never"><td class="num">10</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">11</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `"bcrypt"`: bcrypt alphabet</pre></td></tr>
+<tr class="never"><td class="num">12</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `"bin_hex"`: alphabet used in BinHex 4.0 files</pre></td></tr>
+<tr class="never"><td class="num">13</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `"crypt"`: crypt(3) alphabet (with . and / as the first two characters)</pre></td></tr>
+<tr class="never"><td class="num">14</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `"imap_mutf7"`: alphabet used in IMAP-modified UTF-7 (with + and ,)</pre></td></tr>
+<tr class="never"><td class="num">15</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `"standard"`: standard alphabet (with + and /) specified in RFC 4648</pre></td></tr>
+<tr class="never"><td class="num">16</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `"url_safe"`: URL-safe alphabet (with - and _) specified in RFC 4648</pre></td></tr>
+<tr class="never"><td class="num">17</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">18</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' See [base64 crate](https://docs.rs/base64/latest/base64/alphabet/index.html#constants)</pre></td></tr>
+<tr class="never"><td class="num">19</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' from where these definitions come.</pre></td></tr>
+<tr class="never"><td class="num">20</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">21</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">22</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @examples</pre></td></tr>
+<tr class="never"><td class="num">23</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' alphabet("standard")</pre></td></tr>
+<tr class="never"><td class="num">24</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' alphabet("bcrypt")</pre></td></tr>
+<tr class="never"><td class="num">25</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' alphabet("bin_hex")</pre></td></tr>
+<tr class="never"><td class="num">26</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' alphabet("crypt")</pre></td></tr>
+<tr class="never"><td class="num">27</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' alphabet("imap_mutf7")</pre></td></tr>
+<tr class="never"><td class="num">28</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' alphabet("url_safe")</pre></td></tr>
+<tr class="never"><td class="num">29</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">30</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' new_alphabet("qwertyuiop[]asdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890")</pre></td></tr>
+<tr class="never"><td class="num">31</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @returns an object of class `alphabet`</pre></td></tr>
+<tr class="never"><td class="num">32</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">alphabet &lt;- function(which = "standard") {</pre></td></tr>
+<tr class="covered"><td class="num">33</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">  match.arg(</pre></td></tr>
+<tr class="covered"><td class="num">34</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">    which,</pre></td></tr>
+<tr class="covered"><td class="num">35</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">    choices = c("standard", "bcrypt", "bin_hex", "crypt", "imap_mutf7", "url_safe")</pre></td></tr>
+<tr class="never"><td class="num">36</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  )</pre></td></tr>
+<tr class="covered"><td class="num">37</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">  structure(alphabet_(which), class = "alphabet")</pre></td></tr>
+<tr class="never"><td class="num">38</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">39</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">40</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">41</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @rdname alphabet</pre></td></tr>
+<tr class="never"><td class="num">42</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">new_alphabet &lt;- function(chars) {</pre></td></tr>
+<tr class="covered"><td class="num">43</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">  n &lt;- nchar(chars)</pre></td></tr>
+<tr class="partial"><td class="num">44</td><td class="coverage">6<em>x</em><span class="covr-branches" tabindex="0">1/2<span class="covr-branch-detail"><span class="covr-branch covr-branch-missed">TRUE: 0</span><span class="covr-branch">FALSE: 6</span></span></span></td><td class="covr-source"><pre class="language-r">  if (nchar(chars) != 64) {</pre></td></tr>
+<tr class="missed"><td class="num">45</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    stop(</pre></td></tr>
+<tr class="missed"><td class="num">46</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">      paste(</pre></td></tr>
+<tr class="missed"><td class="num">47</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        "`chars` must contain 64 unique characters. Only", n, "characters were provided."</pre></td></tr>
+<tr class="never"><td class="num">48</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">      )</pre></td></tr>
+<tr class="never"><td class="num">49</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    )</pre></td></tr>
+<tr class="never"><td class="num">50</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  }</pre></td></tr>
+<tr class="never"><td class="num">51</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">52</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">  structure(new_alphabet_(chars), class = "alphabet")</pre></td></tr>
+<tr class="never"><td class="num">53</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">54</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">55</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">56</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">57</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">print.alphabet &lt;- function(x, ...) {</pre></td></tr>
+<tr class="missed"><td class="num">58</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  cat("&lt;alphabet&gt;\n")</pre></td></tr>
+<tr class="missed"><td class="num">59</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  cat(get_alphabet_(x))</pre></td></tr>
+<tr class="missed"><td class="num">60</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  invisible(x)</pre></td></tr>
+<tr class="never"><td class="num">61</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">62</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">63</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">64</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">65</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">as.character.alphabet &lt;- function(x, ...) {</pre></td></tr>
+<tr class="covered"><td class="num">66</td><td class="coverage">18<em>x</em></td><td class="covr-source"><pre class="language-r">  get_alphabet_(x)</pre></td></tr>
+<tr class="never"><td class="num">67</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+</tbody></table></div>
+<div data-file="R/config.R" class="covr-hidden"><table class="table-condensed"><tbody>
+<tr class="never"><td class="num">1</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' Create a custom encoding engine</pre></td></tr>
+<tr class="never"><td class="num">2</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">3</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @details</pre></td></tr>
+<tr class="never"><td class="num">4</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">5</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' See [base64 crate](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html#method.with_encode_padding) for more details.</pre></td></tr>
+<tr class="never"><td class="num">6</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">7</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' ## Decode Padding Modes</pre></td></tr>
+<tr class="never"><td class="num">8</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">9</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' There are three modes that can be used for `decode_padding_mode` argument.</pre></td></tr>
+<tr class="never"><td class="num">10</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">11</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `"canonical"`: padding must consist of 0, 1, or 2 `=` characters</pre></td></tr>
+<tr class="never"><td class="num">12</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `"none"`: there must be no padding characters present</pre></td></tr>
+<tr class="never"><td class="num">13</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' - `"indifferent"`: canonical padding is used, but omitted padding</pre></td></tr>
+<tr class="never"><td class="num">14</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'  characters are also permitted</pre></td></tr>
+<tr class="never"><td class="num">15</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#'</pre></td></tr>
+<tr class="never"><td class="num">16</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param encode_padding default `TRUE` add 1-2 trailing `=` to pad results</pre></td></tr>
+<tr class="never"><td class="num">17</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param decode_padding_trailing_bits default `FALSE`. "If invalid trailing bits are present and this is true, those bits will be silently ignored." (See details for reference).</pre></td></tr>
+<tr class="never"><td class="num">18</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @param decode_padding_mode default `"canonical"`. Other values are `"indifferent"` and `"none"`. See details for more.</pre></td></tr>
+<tr class="never"><td class="num">19</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">20</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @return an object of class `engine_config`</pre></td></tr>
+<tr class="never"><td class="num">21</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @examples</pre></td></tr>
+<tr class="never"><td class="num">22</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' # create a new nonsensicle config</pre></td></tr>
+<tr class="never"><td class="num">23</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' new_config(FALSE, TRUE, "none")</pre></td></tr>
+<tr class="never"><td class="num">24</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">new_config &lt;- function(</pre></td></tr>
+<tr class="never"><td class="num">25</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    encode_padding = TRUE,</pre></td></tr>
+<tr class="never"><td class="num">26</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    decode_padding_trailing_bits = FALSE,</pre></td></tr>
+<tr class="never"><td class="num">27</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    decode_padding_mode = c("canonical", "indifferent", "none")</pre></td></tr>
+<tr class="never"><td class="num">28</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">) {</pre></td></tr>
+<tr class="never"><td class="num">29</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">30</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  padding_mode &lt;- match.arg(</pre></td></tr>
+<tr class="missed"><td class="num">31</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    decode_padding_mode,</pre></td></tr>
+<tr class="missed"><td class="num">32</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    choices = c("canonical", "indifferent", "none")</pre></td></tr>
+<tr class="never"><td class="num">33</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  )</pre></td></tr>
+<tr class="never"><td class="num">34</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">35</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  res &lt;- new_config_(</pre></td></tr>
+<tr class="missed"><td class="num">36</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    encode_padding,</pre></td></tr>
+<tr class="missed"><td class="num">37</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    decode_padding_trailing_bits,</pre></td></tr>
+<tr class="missed"><td class="num">38</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    padding_mode</pre></td></tr>
+<tr class="never"><td class="num">39</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">  )</pre></td></tr>
+<tr class="never"><td class="num">40</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">41</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  structure(res, class = "engine_config")</pre></td></tr>
+<tr class="never"><td class="num">42</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">43</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">44</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#' @export</pre></td></tr>
+<tr class="never"><td class="num">45</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">print.engine_config &lt;- function(x, ...) {</pre></td></tr>
+<tr class="missed"><td class="num">46</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  y &lt;- print_config_(x)</pre></td></tr>
+<tr class="missed"><td class="num">47</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  cat("&lt;engine_config&gt;\n")</pre></td></tr>
+<tr class="missed"><td class="num">48</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">  invisible(x)</pre></td></tr>
+<tr class="never"><td class="num">49</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">50</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">51</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+</tbody></table></div>
+<div data-file="src/entrypoint.c" class="covr-hidden"><table class="table-condensed"><tbody>
+<tr class="never"><td class="num">1</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// We need to forward routine registration from C to Rust</pre></td></tr>
+<tr class="never"><td class="num">2</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// to avoid the linker removing the static library.</pre></td></tr>
+<tr class="never"><td class="num">3</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">4</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">void R_init_b64_extendr(void *dll);</pre></td></tr>
+<tr class="never"><td class="num">5</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">6</td><td class="coverage">3<em>x</em></td><td class="covr-source"><pre class="language-r">void R_init_b64(void *dll) {</pre></td></tr>
+<tr class="covered"><td class="num">7</td><td class="coverage">3<em>x</em></td><td class="covr-source"><pre class="language-r">    R_init_b64_extendr(dll);</pre></td></tr>
+<tr class="never"><td class="num">8</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+</tbody></table></div>
+<div data-file="src/rust/src/lib.rs" class="covr-hidden"><table class="table-condensed"><tbody>
+<tr class="never"><td class="num">1</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">use base64::{</pre></td></tr>
+<tr class="never"><td class="num">2</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    alphabet,</pre></td></tr>
+<tr class="never"><td class="num">3</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    engine::{general_purpose, DecodePaddingMode, GeneralPurpose, GeneralPurposeConfig},</pre></td></tr>
+<tr class="never"><td class="num">4</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    prelude::*,</pre></td></tr>
+<tr class="never"><td class="num">5</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    read::DecoderReader,</pre></td></tr>
+<tr class="never"><td class="num">6</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    write::EncoderStringWriter,</pre></td></tr>
+<tr class="never"><td class="num">7</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">};</pre></td></tr>
+<tr class="never"><td class="num">8</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">use extendr_api::prelude::*;</pre></td></tr>
+<tr class="never"><td class="num">9</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">use itertools::{Either, Itertools};</pre></td></tr>
+<tr class="never"><td class="num">10</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">use std::io::Read;</pre></td></tr>
+<tr class="never"><td class="num">11</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">12</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="covered"><td class="num">13</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">fn encode_(what: Either&lt;String, Raw&gt;, engine: Robj) -&gt; String {</pre></td></tr>
+<tr class="covered"><td class="num">14</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">    let eng: ExternalPtr&lt;GeneralPurpose&gt; = engine.try_into().unwrap();</pre></td></tr>
+<tr class="covered"><td class="num">15</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">    match what {</pre></td></tr>
+<tr class="covered"><td class="num">16</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">        Either::Left(s) =&gt; eng.encode(s),</pre></td></tr>
+<tr class="missed"><td class="num">17</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Either::Right(r) =&gt; eng.encode(r.as_slice()),</pre></td></tr>
+<tr class="never"><td class="num">18</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    }</pre></td></tr>
+<tr class="never"><td class="num">19</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">20</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">21</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">22</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn encode_vectorized_(what: Either&lt;Strings, List&gt;, engine: Robj) -&gt; Strings {</pre></td></tr>
+<tr class="missed"><td class="num">23</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let eng: ExternalPtr&lt;GeneralPurpose&gt; = engine.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">24</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    match what {</pre></td></tr>
+<tr class="missed"><td class="num">25</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Either::Left(s) =&gt; s</pre></td></tr>
+<tr class="missed"><td class="num">26</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .into_iter()</pre></td></tr>
+<tr class="missed"><td class="num">27</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .map(|s| {</pre></td></tr>
+<tr class="missed"><td class="num">28</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                if s.is_na() {</pre></td></tr>
+<tr class="missed"><td class="num">29</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    Rstr::na()</pre></td></tr>
+<tr class="never"><td class="num">30</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                } else {</pre></td></tr>
+<tr class="missed"><td class="num">31</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    let to_encode = s.as_bytes();</pre></td></tr>
+<tr class="missed"><td class="num">32</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    Rstr::from(eng.encode(to_encode))</pre></td></tr>
+<tr class="never"><td class="num">33</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                }</pre></td></tr>
+<tr class="never"><td class="num">34</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">            })</pre></td></tr>
+<tr class="missed"><td class="num">35</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .collect::&lt;Strings&gt;(),</pre></td></tr>
+<tr class="missed"><td class="num">36</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Either::Right(r) =&gt; r</pre></td></tr>
+<tr class="missed"><td class="num">37</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .into_iter()</pre></td></tr>
+<tr class="missed"><td class="num">38</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .map(|(_, b)| {</pre></td></tr>
+<tr class="missed"><td class="num">39</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                if b.is_null() {</pre></td></tr>
+<tr class="missed"><td class="num">40</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    Rstr::na()</pre></td></tr>
+<tr class="never"><td class="num">41</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                } else {</pre></td></tr>
+<tr class="missed"><td class="num">42</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    let raw: Raw = b.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">43</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    Rstr::from(eng.encode(raw.as_slice()))</pre></td></tr>
+<tr class="never"><td class="num">44</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                }</pre></td></tr>
+<tr class="never"><td class="num">45</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">            })</pre></td></tr>
+<tr class="missed"><td class="num">46</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .collect::&lt;Strings&gt;(),</pre></td></tr>
+<tr class="never"><td class="num">47</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    }</pre></td></tr>
+<tr class="never"><td class="num">48</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">49</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">50</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">51</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn encode_file_(path: &amp;str, engine: Robj) -&gt; String {</pre></td></tr>
+<tr class="missed"><td class="num">52</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let eng: ExternalPtr&lt;GeneralPurpose&gt; = engine.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">53</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let eng = eng.addr();</pre></td></tr>
+<tr class="missed"><td class="num">54</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let file = std::fs::File::open(path).unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">55</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let mut reader = std::io::BufReader::new(file);</pre></td></tr>
+<tr class="missed"><td class="num">56</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let mut encoder = EncoderStringWriter::new(eng);</pre></td></tr>
+<tr class="missed"><td class="num">57</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    std::io::copy(&amp;mut reader, &amp;mut encoder).unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">58</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    encoder.into_inner()</pre></td></tr>
+<tr class="never"><td class="num">59</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">60</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">61</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// Utility Functions</pre></td></tr>
+<tr class="never"><td class="num">62</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">///</pre></td></tr>
+<tr class="never"><td class="num">63</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// Functions to perform common tasks when working with base64 encoded strings.</pre></td></tr>
+<tr class="never"><td class="num">64</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">///</pre></td></tr>
+<tr class="never"><td class="num">65</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @details</pre></td></tr>
+<tr class="never"><td class="num">66</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">///</pre></td></tr>
+<tr class="never"><td class="num">67</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// `b64_chunk()` splits a character vector of base64 encoded strings into chunks of a</pre></td></tr>
+<tr class="never"><td class="num">68</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// specified width.</pre></td></tr>
+<tr class="never"><td class="num">69</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">///</pre></td></tr>
+<tr class="never"><td class="num">70</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// `b64_wrap()` wraps a character vector of base64 encoded strings with a newline character.</pre></td></tr>
+<tr class="never"><td class="num">71</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">///</pre></td></tr>
+<tr class="never"><td class="num">72</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @returns</pre></td></tr>
+<tr class="never"><td class="num">73</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">///</pre></td></tr>
+<tr class="never"><td class="num">74</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// - `b64_chunk()` returns a list of character vectors.</pre></td></tr>
+<tr class="never"><td class="num">75</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// - `b64_wrap()` returns a scalar character vector.</pre></td></tr>
+<tr class="never"><td class="num">76</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">///</pre></td></tr>
+<tr class="never"><td class="num">77</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @examples</pre></td></tr>
+<tr class="never"><td class="num">78</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// encoded &lt;- encode("Hello, world!")</pre></td></tr>
+<tr class="never"><td class="num">79</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// chunked &lt;- b64_chunk(encoded, 4)</pre></td></tr>
+<tr class="never"><td class="num">80</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// chunked</pre></td></tr>
+<tr class="never"><td class="num">81</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">///</pre></td></tr>
+<tr class="never"><td class="num">82</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// b64_wrap(chunked, "\n")</pre></td></tr>
+<tr class="never"><td class="num">83</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @param width a numeric scalar defining the width of the chunks. Must be divisible by 4.</pre></td></tr>
+<tr class="never"><td class="num">84</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @param encoded a character vector of base64 encoded strings.</pre></td></tr>
+<tr class="never"><td class="num">85</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @export</pre></td></tr>
+<tr class="never"><td class="num">86</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @rdname utils</pre></td></tr>
+<tr class="never"><td class="num">87</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">88</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn b64_chunk(encoded: Strings, width: Either&lt;i32, f64&gt;) -&gt; List {</pre></td></tr>
+<tr class="missed"><td class="num">89</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let width = match width {</pre></td></tr>
+<tr class="missed"><td class="num">90</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Left(l) =&gt; l,</pre></td></tr>
+<tr class="missed"><td class="num">91</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Right(r) =&gt; r as i32,</pre></td></tr>
+<tr class="never"><td class="num">92</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    };</pre></td></tr>
+<tr class="never"><td class="num">93</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">94</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    if width % 4 != 0 {</pre></td></tr>
+<tr class="missed"><td class="num">95</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        extendr_api::throw_r_error("Chunk size must be a multiple of 4.");</pre></td></tr>
+<tr class="never"><td class="num">96</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    }</pre></td></tr>
+<tr class="missed"><td class="num">97</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    encoded</pre></td></tr>
+<tr class="missed"><td class="num">98</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        .into_iter()</pre></td></tr>
+<tr class="missed"><td class="num">99</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        .map(|s| {</pre></td></tr>
+<tr class="missed"><td class="num">100</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            if s.is_na() {</pre></td></tr>
+<tr class="missed"><td class="num">101</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                Strings::new(0)</pre></td></tr>
+<tr class="never"><td class="num">102</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">            } else {</pre></td></tr>
+<tr class="missed"><td class="num">103</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                s.chars()</pre></td></tr>
+<tr class="missed"><td class="num">104</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    .chunks(width as usize)</pre></td></tr>
+<tr class="missed"><td class="num">105</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    .into_iter()</pre></td></tr>
+<tr class="missed"><td class="num">106</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    .map(|chunk| chunk.collect::&lt;String&gt;())</pre></td></tr>
+<tr class="missed"><td class="num">107</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    .collect::&lt;Strings&gt;()</pre></td></tr>
+<tr class="never"><td class="num">108</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">            }</pre></td></tr>
+<tr class="never"><td class="num">109</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">        })</pre></td></tr>
+<tr class="missed"><td class="num">110</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        .collect::&lt;List&gt;()</pre></td></tr>
+<tr class="never"><td class="num">111</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">112</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">113</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @param chunks a character vector of base64 encoded strings.</pre></td></tr>
+<tr class="never"><td class="num">114</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @param newline a character scalar defining the newline character.</pre></td></tr>
+<tr class="never"><td class="num">115</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @export</pre></td></tr>
+<tr class="never"><td class="num">116</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">/// @rdname utils</pre></td></tr>
+<tr class="never"><td class="num">117</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">118</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn b64_wrap(chunks: Either&lt;List, Strings&gt;, newline: &amp;str) -&gt; Strings {</pre></td></tr>
+<tr class="missed"><td class="num">119</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    match chunks {</pre></td></tr>
+<tr class="missed"><td class="num">120</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Left(l) =&gt; l</pre></td></tr>
+<tr class="missed"><td class="num">121</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .into_iter()</pre></td></tr>
+<tr class="missed"><td class="num">122</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .map(|(_, s)| {</pre></td></tr>
+<tr class="missed"><td class="num">123</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                if s.is_na() {</pre></td></tr>
+<tr class="missed"><td class="num">124</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    Rstr::na()</pre></td></tr>
+<tr class="never"><td class="num">125</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                } else {</pre></td></tr>
+<tr class="missed"><td class="num">126</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    let s = Strings::try_from(s).unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">127</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    Rstr::from(b64_wrap_(s, newline))</pre></td></tr>
+<tr class="never"><td class="num">128</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                }</pre></td></tr>
+<tr class="never"><td class="num">129</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">            })</pre></td></tr>
+<tr class="missed"><td class="num">130</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .collect::&lt;Strings&gt;(),</pre></td></tr>
+<tr class="missed"><td class="num">131</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Right(r) =&gt; b64_wrap_(r, newline).into(),</pre></td></tr>
+<tr class="never"><td class="num">132</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    }</pre></td></tr>
+<tr class="never"><td class="num">133</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">134</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">135</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn b64_wrap_(chunks: Strings, newline: &amp;str) -&gt; String {</pre></td></tr>
+<tr class="missed"><td class="num">136</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    chunks.into_iter().join(newline)</pre></td></tr>
+<tr class="never"><td class="num">137</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">138</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">139</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="covered"><td class="num">140</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">fn decode_(input: Either&lt;String, Raw&gt;, engine: Robj) -&gt; List {</pre></td></tr>
+<tr class="covered"><td class="num">141</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">    let eng: ExternalPtr&lt;GeneralPurpose&gt; = engine.try_into().unwrap();</pre></td></tr>
+<tr class="covered"><td class="num">142</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">    let res = match input {</pre></td></tr>
+<tr class="covered"><td class="num">143</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">        Either::Left(s) =&gt; {</pre></td></tr>
+<tr class="covered"><td class="num">144</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">            let res = eng.decode(s);</pre></td></tr>
+<tr class="covered"><td class="num">145</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">            match res {</pre></td></tr>
+<tr class="covered"><td class="num">146</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">                Ok(d) =&gt; d,</pre></td></tr>
+<tr class="missed"><td class="num">147</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                Err(e) =&gt; throw_r_error(e.to_string().as_str()),</pre></td></tr>
+<tr class="never"><td class="num">148</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">            }</pre></td></tr>
+<tr class="never"><td class="num">149</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">        }</pre></td></tr>
+<tr class="missed"><td class="num">150</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Either::Right(r) =&gt; match eng.decode(r.as_slice()) {</pre></td></tr>
+<tr class="missed"><td class="num">151</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            Ok(d) =&gt; d,</pre></td></tr>
+<tr class="missed"><td class="num">152</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            Err(e) =&gt; throw_r_error(e.to_string().as_str()),</pre></td></tr>
+<tr class="never"><td class="num">153</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">        },</pre></td></tr>
+<tr class="never"><td class="num">154</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    };</pre></td></tr>
+<tr class="never"><td class="num">155</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">156</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">    list!(Raw::from_bytes(&amp;res))</pre></td></tr>
+<tr class="covered"><td class="num">157</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">        .set_class(&amp;["blob", "vctrs_list_of", "vctrs_vctr", "list"])</pre></td></tr>
+<tr class="covered"><td class="num">158</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">        .unwrap()</pre></td></tr>
+<tr class="covered"><td class="num">159</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">        .clone()</pre></td></tr>
+<tr class="never"><td class="num">160</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">161</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">162</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">163</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn decode_vectorized_(what: Either&lt;Strings, List&gt;, engine: Robj) -&gt; List {</pre></td></tr>
+<tr class="missed"><td class="num">164</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let eng: ExternalPtr&lt;GeneralPurpose&gt; = engine.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">165</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    match what {</pre></td></tr>
+<tr class="missed"><td class="num">166</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Either::Left(s) =&gt; s</pre></td></tr>
+<tr class="missed"><td class="num">167</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .into_iter()</pre></td></tr>
+<tr class="missed"><td class="num">168</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .map(|s| {</pre></td></tr>
+<tr class="missed"><td class="num">169</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                if s.is_na() {</pre></td></tr>
+<tr class="missed"><td class="num">170</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    ().into_robj()</pre></td></tr>
+<tr class="never"><td class="num">171</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                } else {</pre></td></tr>
+<tr class="missed"><td class="num">172</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    let to_encode = s.as_str();</pre></td></tr>
+<tr class="missed"><td class="num">173</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    let decoded = eng.decode(to_encode);</pre></td></tr>
+<tr class="missed"><td class="num">174</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    match decoded {</pre></td></tr>
+<tr class="missed"><td class="num">175</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                        Ok(d) =&gt; {</pre></td></tr>
+<tr class="missed"><td class="num">176</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                            let r = Raw::from_bytes(&amp;d);</pre></td></tr>
+<tr class="missed"><td class="num">177</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                            r.into_robj()</pre></td></tr>
+<tr class="never"><td class="num">178</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                        }</pre></td></tr>
+<tr class="missed"><td class="num">179</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                        Err(_) =&gt; ().into_robj(),</pre></td></tr>
+<tr class="never"><td class="num">180</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                    }</pre></td></tr>
+<tr class="never"><td class="num">181</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                }</pre></td></tr>
+<tr class="never"><td class="num">182</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">            })</pre></td></tr>
+<tr class="missed"><td class="num">183</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .collect::&lt;List&gt;()</pre></td></tr>
+<tr class="missed"><td class="num">184</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .set_class(&amp;["blob", "vctrs_list_of", "vctrs_vctr", "list"])</pre></td></tr>
+<tr class="missed"><td class="num">185</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .unwrap()</pre></td></tr>
+<tr class="missed"><td class="num">186</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .clone(),</pre></td></tr>
+<tr class="missed"><td class="num">187</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Either::Right(r) =&gt; r</pre></td></tr>
+<tr class="missed"><td class="num">188</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .into_iter()</pre></td></tr>
+<tr class="missed"><td class="num">189</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .map(|(_, b)| {</pre></td></tr>
+<tr class="missed"><td class="num">190</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                let raw = Raw::try_from(b);</pre></td></tr>
+<tr class="missed"><td class="num">191</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                match raw {</pre></td></tr>
+<tr class="missed"><td class="num">192</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    Ok(r) =&gt; {</pre></td></tr>
+<tr class="missed"><td class="num">193</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                        let decoded = eng.decode(r.as_slice());</pre></td></tr>
+<tr class="missed"><td class="num">194</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                        match decoded {</pre></td></tr>
+<tr class="missed"><td class="num">195</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                            Ok(d) =&gt; Raw::from_bytes(&amp;d).into_robj(),</pre></td></tr>
+<tr class="missed"><td class="num">196</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                            Err(_) =&gt; ().into_robj(),</pre></td></tr>
+<tr class="never"><td class="num">197</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                        }</pre></td></tr>
+<tr class="never"><td class="num">198</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                    }</pre></td></tr>
+<tr class="missed"><td class="num">199</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    Err(_) =&gt; ().into_robj(),</pre></td></tr>
+<tr class="never"><td class="num">200</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                }</pre></td></tr>
+<tr class="never"><td class="num">201</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">            })</pre></td></tr>
+<tr class="missed"><td class="num">202</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .collect::&lt;List&gt;()</pre></td></tr>
+<tr class="missed"><td class="num">203</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .set_class(&amp;["blob", "vctrs_list_of", "vctrs_vctr", "list"])</pre></td></tr>
+<tr class="missed"><td class="num">204</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .unwrap()</pre></td></tr>
+<tr class="missed"><td class="num">205</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            .clone(),</pre></td></tr>
+<tr class="never"><td class="num">206</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    }</pre></td></tr>
+<tr class="never"><td class="num">207</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">208</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">209</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">210</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn decode_as_string_(what: String, split: Option&lt;String&gt;, engine: Robj) -&gt; Result&lt;String&gt; {</pre></td></tr>
+<tr class="missed"><td class="num">211</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let eng: ExternalPtr&lt;GeneralPurpose&gt; = engine.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">212</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    match split {</pre></td></tr>
+<tr class="missed"><td class="num">213</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Some(sp) =&gt; {</pre></td></tr>
+<tr class="missed"><td class="num">214</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            let res = what</pre></td></tr>
+<tr class="missed"><td class="num">215</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                .split(&amp;sp)</pre></td></tr>
+<tr class="missed"><td class="num">216</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                .map(|split| {</pre></td></tr>
+<tr class="missed"><td class="num">217</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    let bytes = eng</pre></td></tr>
+<tr class="missed"><td class="num">218</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                        .decode(split)</pre></td></tr>
+<tr class="missed"><td class="num">219</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                        .map_err(|_| throw_r_error("Failed to decode split"))</pre></td></tr>
+<tr class="missed"><td class="num">220</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                        .unwrap();</pre></td></tr>
+<tr class="never"><td class="num">221</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">222</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                    String::from_utf8(bytes)</pre></td></tr>
+<tr class="missed"><td class="num">223</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                        .map_err(|_| throw_r_error("Failed to parse decoded bytes as a string"))</pre></td></tr>
+<tr class="missed"><td class="num">224</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                        .unwrap()</pre></td></tr>
+<tr class="never"><td class="num">225</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">                })</pre></td></tr>
+<tr class="missed"><td class="num">226</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                .collect::&lt;String&gt;();</pre></td></tr>
+<tr class="missed"><td class="num">227</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            Ok(res)</pre></td></tr>
+<tr class="never"><td class="num">228</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">        }</pre></td></tr>
+<tr class="never"><td class="num">229</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">        None =&gt; {</pre></td></tr>
+<tr class="missed"><td class="num">230</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            let res = eng</pre></td></tr>
+<tr class="missed"><td class="num">231</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                .decode(what)</pre></td></tr>
+<tr class="missed"><td class="num">232</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                .map_err(|_| throw_r_error("Failed to decode input string"))</pre></td></tr>
+<tr class="missed"><td class="num">233</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                .unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">234</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            let res = String::from_utf8(res)</pre></td></tr>
+<tr class="missed"><td class="num">235</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                .map_err(|_| throw_r_error("Failed to parse decoded bytes to a string"))</pre></td></tr>
+<tr class="missed"><td class="num">236</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">                .unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">237</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">            Ok(res)</pre></td></tr>
+<tr class="never"><td class="num">238</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">        }</pre></td></tr>
+<tr class="never"><td class="num">239</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    }</pre></td></tr>
+<tr class="never"><td class="num">240</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">241</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">242</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">243</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn decode_file_(path: &amp;str, engine: Robj) -&gt; Vec&lt;u8&gt; {</pre></td></tr>
+<tr class="missed"><td class="num">244</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let eng: ExternalPtr&lt;GeneralPurpose&gt; = engine.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">245</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let eng = eng.addr();</pre></td></tr>
+<tr class="missed"><td class="num">246</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let file = std::fs::File::open(path).unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">247</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let mut reader = std::io::BufReader::new(file);</pre></td></tr>
+<tr class="missed"><td class="num">248</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let mut decoder = DecoderReader::new(&amp;mut reader, eng);</pre></td></tr>
+<tr class="missed"><td class="num">249</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let mut result = Vec::new();</pre></td></tr>
+<tr class="missed"><td class="num">250</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    decoder.read_to_end(&amp;mut result).unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">251</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    result</pre></td></tr>
+<tr class="never"><td class="num">252</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">253</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">254</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// use a built-in alphabet</pre></td></tr>
+<tr class="never"><td class="num">255</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="covered"><td class="num">256</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">fn alphabet_(which: &amp;str) -&gt; ExternalPtr&lt;alphabet::Alphabet&gt; {</pre></td></tr>
+<tr class="covered"><td class="num">257</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">    match which {</pre></td></tr>
+<tr class="covered"><td class="num">258</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">        "bcrypt" =&gt; ExternalPtr::new(alphabet::BCRYPT),</pre></td></tr>
+<tr class="covered"><td class="num">259</td><td class="coverage">5<em>x</em></td><td class="covr-source"><pre class="language-r">        "bin_hex" =&gt; ExternalPtr::new(alphabet::BIN_HEX),</pre></td></tr>
+<tr class="covered"><td class="num">260</td><td class="coverage">4<em>x</em></td><td class="covr-source"><pre class="language-r">        "crypt" =&gt; ExternalPtr::new(alphabet::CRYPT),</pre></td></tr>
+<tr class="covered"><td class="num">261</td><td class="coverage">3<em>x</em></td><td class="covr-source"><pre class="language-r">        "imap_mutf7" =&gt; ExternalPtr::new(alphabet::IMAP_MUTF7),</pre></td></tr>
+<tr class="covered"><td class="num">262</td><td class="coverage">2<em>x</em></td><td class="covr-source"><pre class="language-r">        "standard" =&gt; ExternalPtr::new(alphabet::STANDARD),</pre></td></tr>
+<tr class="covered"><td class="num">263</td><td class="coverage">1<em>x</em></td><td class="covr-source"><pre class="language-r">        "url_safe" =&gt; ExternalPtr::new(alphabet::URL_SAFE),</pre></td></tr>
+<tr class="missed"><td class="num">264</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        _ =&gt; extendr_api::throw_r_error(format!("Unknown alphabet: {}", which)),</pre></td></tr>
+<tr class="never"><td class="num">265</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    }</pre></td></tr>
+<tr class="never"><td class="num">266</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">267</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">268</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// Create new alphabet</pre></td></tr>
+<tr class="never"><td class="num">269</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="covered"><td class="num">270</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">fn new_alphabet_(chars: &amp;str) -&gt; ExternalPtr&lt;alphabet::Alphabet&gt; {</pre></td></tr>
+<tr class="covered"><td class="num">271</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">    let res = alphabet::Alphabet::new(chars);</pre></td></tr>
+<tr class="never"><td class="num">272</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="covered"><td class="num">273</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">    match res {</pre></td></tr>
+<tr class="covered"><td class="num">274</td><td class="coverage">6<em>x</em></td><td class="covr-source"><pre class="language-r">        Ok(r) =&gt; ExternalPtr::new(r),</pre></td></tr>
+<tr class="missed"><td class="num">275</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        Err(e) =&gt; extendr_api::throw_r_error(format!("Error creating alphabet: {}", e)),</pre></td></tr>
+<tr class="never"><td class="num">276</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    }</pre></td></tr>
+<tr class="never"><td class="num">277</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">278</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">279</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// get alphabet as a string for printing</pre></td></tr>
+<tr class="never"><td class="num">280</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="covered"><td class="num">281</td><td class="coverage">18<em>x</em></td><td class="covr-source"><pre class="language-r">fn get_alphabet_(alphabet: Robj) -&gt; String {</pre></td></tr>
+<tr class="covered"><td class="num">282</td><td class="coverage">18<em>x</em></td><td class="covr-source"><pre class="language-r">    let alph: ExternalPtr&lt;alphabet::Alphabet&gt; = alphabet.try_into().unwrap();</pre></td></tr>
+<tr class="covered"><td class="num">283</td><td class="coverage">18<em>x</em></td><td class="covr-source"><pre class="language-r">    alph.as_str().to_string()</pre></td></tr>
+<tr class="never"><td class="num">284</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">285</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">286</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// default configs</pre></td></tr>
+<tr class="never"><td class="num">287</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// padding = true,</pre></td></tr>
+<tr class="never"><td class="num">288</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// decode_allow_trailing_bits = false,</pre></td></tr>
+<tr class="never"><td class="num">289</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// and decode_padding_mode = DecodePaddingMode::RequireCanonicalPadding</pre></td></tr>
+<tr class="never"><td class="num">290</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">291</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn new_config_(</pre></td></tr>
+<tr class="missed"><td class="num">292</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    encode_padding: bool,</pre></td></tr>
+<tr class="missed"><td class="num">293</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    decode_padding_trailing_bits: bool,</pre></td></tr>
+<tr class="missed"><td class="num">294</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    decode_padding_mode: &amp;str,</pre></td></tr>
+<tr class="missed"><td class="num">295</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">) -&gt; ExternalPtr&lt;GeneralPurposeConfig&gt; {</pre></td></tr>
+<tr class="missed"><td class="num">296</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let pad_mode = match decode_padding_mode {</pre></td></tr>
+<tr class="missed"><td class="num">297</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        "indifferent" =&gt; DecodePaddingMode::Indifferent,</pre></td></tr>
+<tr class="missed"><td class="num">298</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        "canonical" =&gt; DecodePaddingMode::RequireCanonical,</pre></td></tr>
+<tr class="missed"><td class="num">299</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        "none" =&gt; DecodePaddingMode::RequireNone,</pre></td></tr>
+<tr class="missed"><td class="num">300</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        _ =&gt; extendr_api::throw_r_error(format!("Unknown padding mode: {}", decode_padding_mode)),</pre></td></tr>
+<tr class="never"><td class="num">301</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    };</pre></td></tr>
+<tr class="never"><td class="num">302</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">303</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let config = GeneralPurposeConfig::new()</pre></td></tr>
+<tr class="missed"><td class="num">304</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        .with_encode_padding(encode_padding)</pre></td></tr>
+<tr class="missed"><td class="num">305</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        .with_decode_allow_trailing_bits(decode_padding_trailing_bits)</pre></td></tr>
+<tr class="missed"><td class="num">306</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        .with_decode_padding_mode(pad_mode);</pre></td></tr>
+<tr class="never"><td class="num">307</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="missed"><td class="num">308</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    ExternalPtr::new(config)</pre></td></tr>
+<tr class="never"><td class="num">309</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">310</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">311</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">312</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn print_config_(config: Robj) -&gt; String {</pre></td></tr>
+<tr class="missed"><td class="num">313</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let conf: ExternalPtr&lt;GeneralPurposeConfig&gt; = config.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">314</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    format!("{:#?}", conf)</pre></td></tr>
+<tr class="never"><td class="num">315</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">316</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">317</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="covered"><td class="num">318</td><td class="coverage">5<em>x</em></td><td class="covr-source"><pre class="language-r">fn engine_(which: &amp;str) -&gt; ExternalPtr&lt;GeneralPurpose&gt; {</pre></td></tr>
+<tr class="covered"><td class="num">319</td><td class="coverage">5<em>x</em></td><td class="covr-source"><pre class="language-r">    match which {</pre></td></tr>
+<tr class="covered"><td class="num">320</td><td class="coverage">5<em>x</em></td><td class="covr-source"><pre class="language-r">        "standard" =&gt; ExternalPtr::new(general_purpose::STANDARD),</pre></td></tr>
+<tr class="covered"><td class="num">321</td><td class="coverage">3<em>x</em></td><td class="covr-source"><pre class="language-r">        "standard_no_pad" =&gt; ExternalPtr::new(general_purpose::STANDARD_NO_PAD),</pre></td></tr>
+<tr class="covered"><td class="num">322</td><td class="coverage">2<em>x</em></td><td class="covr-source"><pre class="language-r">        "url_safe" =&gt; ExternalPtr::new(general_purpose::URL_SAFE),</pre></td></tr>
+<tr class="covered"><td class="num">323</td><td class="coverage">1<em>x</em></td><td class="covr-source"><pre class="language-r">        "url_safe_no_pad" =&gt; ExternalPtr::new(general_purpose::URL_SAFE_NO_PAD),</pre></td></tr>
+<tr class="missed"><td class="num">324</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">        _ =&gt; extendr_api::throw_r_error(format!("Unknown engine: {}", which)),</pre></td></tr>
+<tr class="never"><td class="num">325</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    }</pre></td></tr>
+<tr class="never"><td class="num">326</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">327</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">328</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// need to figure out a nice print pattern here</pre></td></tr>
+<tr class="never"><td class="num">329</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">330</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn print_engine_(engine: Robj) -&gt; String {</pre></td></tr>
+<tr class="missed"><td class="num">331</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let eng: ExternalPtr&lt;GeneralPurpose&gt; = engine.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">332</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    format!("{:#?}", eng)</pre></td></tr>
+<tr class="never"><td class="num">333</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">334</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">335</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">#[extendr]</pre></td></tr>
+<tr class="missed"><td class="num">336</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">fn new_engine_(alphabet: Robj, config: Robj) -&gt; ExternalPtr&lt;GeneralPurpose&gt; {</pre></td></tr>
+<tr class="missed"><td class="num">337</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let alph: ExternalPtr&lt;alphabet::Alphabet&gt; = alphabet.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">338</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let conf: ExternalPtr&lt;GeneralPurposeConfig&gt; = config.try_into().unwrap();</pre></td></tr>
+<tr class="missed"><td class="num">339</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let inner = conf.addr();</pre></td></tr>
+<tr class="missed"><td class="num">340</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    let engine = general_purpose::GeneralPurpose::new(&amp;alph, *inner);</pre></td></tr>
+<tr class="missed"><td class="num">341</td><td class="coverage">!</td><td class="covr-source"><pre class="language-r">    ExternalPtr::new(engine)</pre></td></tr>
+<tr class="never"><td class="num">342</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+<tr class="never"><td class="num">343</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">344</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// Macro to generate exports.</pre></td></tr>
+<tr class="never"><td class="num">345</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// This ensures exported functions are registered with R.</pre></td></tr>
+<tr class="never"><td class="num">346</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">// See corresponding C code in `entrypoint.c`.</pre></td></tr>
+<tr class="never"><td class="num">347</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">extendr_module! {</pre></td></tr>
+<tr class="never"><td class="num">348</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    mod b64;</pre></td></tr>
+<tr class="never"><td class="num">349</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    // encoding</pre></td></tr>
+<tr class="never"><td class="num">350</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn encode_;</pre></td></tr>
+<tr class="never"><td class="num">351</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn encode_file_;</pre></td></tr>
+<tr class="never"><td class="num">352</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn encode_vectorized_;</pre></td></tr>
+<tr class="never"><td class="num">353</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">354</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    // decoding</pre></td></tr>
+<tr class="never"><td class="num">355</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn decode_;</pre></td></tr>
+<tr class="never"><td class="num">356</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn decode_file_;</pre></td></tr>
+<tr class="never"><td class="num">357</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn decode_vectorized_;</pre></td></tr>
+<tr class="never"><td class="num">358</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn decode_as_string_;</pre></td></tr>
+<tr class="never"><td class="num">359</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">360</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    // alphabets</pre></td></tr>
+<tr class="never"><td class="num">361</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn alphabet_;</pre></td></tr>
+<tr class="never"><td class="num">362</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn new_alphabet_;</pre></td></tr>
+<tr class="never"><td class="num">363</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn get_alphabet_;</pre></td></tr>
+<tr class="never"><td class="num">364</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">365</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    // engines</pre></td></tr>
+<tr class="never"><td class="num">366</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn new_engine_;</pre></td></tr>
+<tr class="never"><td class="num">367</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn engine_;</pre></td></tr>
+<tr class="never"><td class="num">368</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn print_engine_;</pre></td></tr>
+<tr class="never"><td class="num">369</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">370</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    // config</pre></td></tr>
+<tr class="never"><td class="num">371</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn new_config_;</pre></td></tr>
+<tr class="never"><td class="num">372</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn print_config_;</pre></td></tr>
+<tr class="never"><td class="num">373</td><td class="coverage"></td><td class="covr-source"><pre class="language-r"></pre></td></tr>
+<tr class="never"><td class="num">374</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    // helpers</pre></td></tr>
+<tr class="never"><td class="num">375</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn b64_chunk;</pre></td></tr>
+<tr class="never"><td class="num">376</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">    fn b64_wrap;</pre></td></tr>
+<tr class="never"><td class="num">377</td><td class="coverage"></td><td class="covr-source"><pre class="language-r">}</pre></td></tr>
+</tbody></table></div>
+<script>(function(script) {
+  var files = script ? script.parentNode : document;
+  files.querySelectorAll('div.covr-files pre').forEach(function(block) {
+    covrHljs.highlightElement(block);
+  });
+})(document.currentScript);</script></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
