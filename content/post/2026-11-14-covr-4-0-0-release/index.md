@@ -71,9 +71,9 @@ The other breaking changes are smaller: covr now requires R 4.1.0 or later;
 line coverage is calculated the same way by all of the outputs, which used to
 disagree slightly; S4 methods are named more precisely (e.g.
 `show,MyClass-method`), so you may need to update your `function_exclusions`;
-and `codecov()` now signals an error when the upload fails, so your CI fails
-instead of silently passing. `to_cobertura()` and `to_sonarqube()` are
-deprecated in favor of `cobertura()` and `sonarqube()`.
+and [`codecov()`](https://covr.r-lib.org/reference/codecov.html) now signals an error when the upload fails, so your CI fails
+instead of silently passing. [`to_cobertura()`](https://covr.r-lib.org/reference/covr-deprecated.html) and [`to_sonarqube()`](https://covr.r-lib.org/reference/covr-deprecated.html) are
+deprecated in favor of [`cobertura()`](https://covr.r-lib.org/reference/cobertura.html) and [`sonarqube()`](https://covr.r-lib.org/reference/sonarqube.html).
 
 ## Improved performance
 
@@ -86,7 +86,7 @@ counted expression, rather than 1.3–1.4 microseconds.
 We also changed when the instrumentation happens. covr used to instrument your
 package each time an R process loaded it, and R then had to compile the
 modified functions again as they ran. covr 4.0.0 instruments and byte-compiles
-the package once, when `package_coverage()` installs it, so each process that
+the package once, when [`package_coverage()`](https://covr.r-lib.org/reference/package_coverage.html) installs it, so each process that
 loads the package starts faster (0.3 seconds rather than 4.6 for
 [*Luminescence*](https://r-lum.github.io/Luminescence)).
 
@@ -112,18 +112,19 @@ exclude installing the package, with R 4.6.2 on Linux. The
 are in the covr repository.)
 
 We also spent time improving the functions you run after coverage is
-measured, in particular `report()`, which creates an HTML report of the
+measured, in particular [`report()`](https://covr.r-lib.org/reference/report.html), which creates an HTML report of the
 coverage. Previous versions of `report()` built the table of each file
 iteratively, by repeatedly calling into
 [*htmltools*](https://rstudio.github.io/htmltools) for every line. covr 4.0.0
 writes the table directly as HTML, which is 6 to 230 times faster on the
 packages I measured. For *Luminescence*, `report()` went from 4.5 minutes to
 1.2 seconds, and its peak memory from 1.2 GB to 310 MB. For
-[*igraph*](https://r.igraph.org) it went from more than an hour to 10 seconds.
+[*igraph*](https://r.igraph.org), covr 3.6.5's `report()` had not finished
+after nearly an hour; covr 4.0.0 takes 10 seconds.
 
 Other functions you run on the coverage are also faster. Across 23 packages,
-the median speedup is about 6 times for `tally_coverage()`,
-`percent_coverage()` and `codecov()`, 9 times for `print()`, and 16 to 20
+the median speedup is about 6 times for [`tally_coverage()`](https://covr.r-lib.org/reference/tally_coverage.html),
+[`percent_coverage()`](https://covr.r-lib.org/reference/percent_coverage.html) and `codecov()`, 9 times for [`print()`](https://covr.r-lib.org/reference/print.coverage.html), and 16 to 20
 times for `sonarqube()` and `cobertura()`. For *Luminescence*, `print()` went
 from 2.9 seconds to 0.2 seconds, and `cobertura()` from 9.6 seconds to 0.4.
 
@@ -133,9 +134,10 @@ processes for a long time, but it merged their coverage in memory, and slowly.
 For packages whose tests start hundreds or thousands of R processes, such as
 [*languageserver*](https://github.com/REditorSupport/languageserver), this
 slowed things down considerably: its tests took 9 minutes without coverage,
-but more than 80 minutes with covr 3.6.5, and then ran out of memory on CI
-services such as GitHub Actions. With covr 4.0.0 they finish in 12–13
-minutes. We have also made writing the coverage of these processes more
+but 80 minutes with covr 3.6.5, and covr then ran out of memory adding up the
+coverage of the 1,000 processes, needing more than 7 GB. With covr 4.0.0 the
+tests finish in about 13 minutes, and adding up their coverage takes a
+second and 144 MB. We have also made writing the coverage of these processes more
 robust, so packages whose coverage used to fail, such as
 [*mlr3*](https://mlr3.mlr-org.com) and
 [*future*](https://future.futureverse.org), now work.
@@ -179,8 +181,8 @@ tally_coverage(cov, by = "branch")
 (The `filename` column is left out.) No test makes `x` negative, so the first `if` in `clamp()` never took its
 `TRUE` branch, and `half()` never took its `else`. The branches are also shown
 by `print(cov, missing = TRUE)` and `report()`, which marks lines with a
-branch that was never taken as partly covered, and are included by `lcov()`,
-`cobertura()`, `codecov()` and `coveralls()`. Branch coverage is off by
+branch that was never taken as partly covered, and are included by [`lcov()`](https://covr.r-lib.org/reference/lcov.html),
+`cobertura()`, `codecov()` and [`coveralls()`](https://covr.r-lib.org/reference/coveralls.html). Branch coverage is off by
 default and still experimental, so what counts as a branch may change; see
 [`?covr.branch_coverage`](https://covr.r-lib.org/reference/covr.branch_coverage.html)
 for the details.
@@ -292,10 +294,10 @@ including apps in packages.
 
 ## Additional features
 
-`file_coverage()` and
-[*devtools*](https://devtools.r-lib.org)' `test_coverage_active_file()` now
+[`file_coverage()`](https://covr.r-lib.org/reference/file_coverage.html) and
+[*devtools*](https://devtools.r-lib.org)' [`test_coverage_active_file()`](https://devtools.r-lib.org/reference/test.html) now
 work for C, C++, Fortran and Rust code as well as R code. They load the
-package with `pkgload::load_all()` and build an instrumented copy of it,
+package with [`pkgload::load_all()`](https://pkgload.r-lib.org/reference/load_all.html) and build an instrumented copy of it,
 recompiling only the files that changed since the last run, so you get a
 tight development cycle and can work on compiled code the same way as on R
 code:
@@ -326,7 +328,7 @@ report and the console:
 options(covr.report_colors = covr::colorblind_palette)
 ```
 
-The new `report_html()` returns the report as HTML, so you can embed it in
+The new [`report_html()`](https://covr.r-lib.org/reference/report_html.html) returns the report as HTML, so you can embed it in
 other documents, such as R Markdown or Quarto documents. Here is the report of
 *b64*, a small package that uses Rust
 through *extendr*, measured with branch coverage and the colorblind palette.
@@ -340,7 +342,7 @@ button in the corner to switch to the dark theme:
 ## CI and pull requests
 
 covr is most often used in CI, and this release has several improvements for
-that. The new `badge()` writes an SVG coverage badge, so you can show your
+that. The new [`badge()`](https://covr.r-lib.org/reference/badge.html) writes an SVG coverage badge, so you can show your
 coverage in your README without relying on an external service like Codecov
 or Coveralls; covr includes an example GitHub Actions workflow that publishes
 it. `codecov()` now uses Codecov's current upload API, and `coveralls()`
@@ -348,11 +350,11 @@ detects the CI service, so it now works natively on GitHub Actions.
 
 `lcov()` writes coverage in the popular
 [LCOV](https://github.com/linux-test-project/lcov) format, and
-`coverage_to_markdown()` creates a Markdown table of your coverage, e.g. for a
+[`coverage_to_markdown()`](https://covr.r-lib.org/reference/coverage_to_markdown.html) creates a Markdown table of your coverage, e.g. for a
 GitHub Actions job summary or a pull request comment.
 
 For use locally or by coding agents, `print(cov, missing = TRUE)` and
-`annotate_coverage()` show the lines your tests missed as plain text. For the
+[`annotate_coverage()`](https://covr.r-lib.org/reference/annotate_coverage.html) show the lines your tests missed as plain text. For the
 functions above:
 
 ```r
@@ -367,7 +369,7 @@ annotate_coverage(cov)
 #>   7 |  !!0 | half <- function(x) if (x > 0) x / 2 else 0  <- not taken: FALSE
 ```
 
-Finally, `c()` now combines coverage from separate runs, such as tests run in
+Finally, [`c()`](https://covr.r-lib.org/reference/c.coverage.html) now combines coverage from separate runs, such as tests run in
 several CI jobs, without any additional code.
 
 ## Thanks
