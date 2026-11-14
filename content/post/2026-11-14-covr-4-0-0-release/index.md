@@ -140,7 +140,16 @@ tests finish in about 13 minutes, and adding up their coverage takes a
 second and 144 MB. We have also made writing the coverage of these processes more
 robust, so packages whose coverage used to fail, such as
 [*mlr3*](https://mlr3.mlr-org.com) and
-[*future*](https://future.futureverse.org), now work.
+[*future*](https://future.futureverse.org), now work:
+
+| Package | Without coverage | covr 3.6.5 | covr 4.0.0 |
+|---|---|---|---|
+| *mlr3* | 177 s | fails after 673 s | 247 s (+40%) |
+| *future* | 230 s | fails after 1,176 s | 281 s (+22%) |
+
+(With covr 4.0.0, the tests of *future* also needed a
+[small fix](https://github.com/futureverse/future/pull/850) to a test that
+relied on how covr 3.6.5 set up the library paths of R processes.)
 
 ## Branch coverage
 
