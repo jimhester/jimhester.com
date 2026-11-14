@@ -72,7 +72,8 @@ line coverage is calculated the same way by all of the outputs, which used to
 disagree slightly; S4 methods are named more precisely (e.g.
 `show,MyClass-method`), so you may need to update your `function_exclusions`;
 and [`codecov()`](https://covr.r-lib.org/reference/codecov.html) now signals an error when the upload fails, so your CI fails
-instead of silently passing. [`to_cobertura()`](https://covr.r-lib.org/reference/covr-deprecated.html) and [`to_sonarqube()`](https://covr.r-lib.org/reference/covr-deprecated.html) are
+instead of silently passing (rate limits and Codecov outages only give a
+warning). [`to_cobertura()`](https://covr.r-lib.org/reference/covr-deprecated.html) and [`to_sonarqube()`](https://covr.r-lib.org/reference/covr-deprecated.html) are
 deprecated in favor of [`cobertura()`](https://covr.r-lib.org/reference/cobertura.html) and [`sonarqube()`](https://covr.r-lib.org/reference/sonarqube.html).
 
 ## Improved performance
@@ -156,8 +157,9 @@ relied on how covr 3.6.5 set up the library paths of R processes.)
 One of the longest-standing open issues in covr, opened in
 [August 2017](https://github.com/r-lib/covr/issues/279), was branch coverage.
 Branch coverage tracks which branches of each conditional were taken, such as
-the `TRUE` and `FALSE` cases of an `if`. Line coverage can tell you a line
-ran, but not whether both sides of an `if` on that line did. covr 4.0.0 can
+the `TRUE` and `FALSE` cases of an `if`. Line coverage tells you whether the
+code on a line ran, but not which way each `if` went, including the `FALSE`
+case of an `if` without an `else`, which runs no code at all. covr 4.0.0 can
 now measure branch coverage, with the experimental
 `options(covr.branch_coverage = TRUE)`. Take these two functions in a package:
 
@@ -284,13 +286,16 @@ test_that("the app describes even numbers", {
 ```
 
 `shiny_app_coverage()` runs the test, which starts the app in another R
-process, and returns the coverage of the code the app ran:
+process, and returns the coverage of the code the app ran. *shinytest2* skips
+its tests on CRAN, so set `NOT_CRAN` when running them
+yourself:
 
 ```r
-cov <- shiny_app_coverage("app")
+Sys.setenv(NOT_CRAN = "true")
+app_cov <- shiny_app_coverage("app")
 #> [ FAIL 0 | WARN 0 | SKIP 0 | PASS 1 ]
 
-print(cov, missing = TRUE)
+print(app_cov, missing = TRUE)
 #> Coverage: 75.00%
 #> app.R: 75.00%  missed 10, 12
 ```
@@ -364,7 +369,7 @@ GitHub Actions job summary or a pull request comment.
 
 For use locally or by coding agents, `print(cov, missing = TRUE)` and
 [`annotate_coverage()`](https://covr.r-lib.org/reference/annotate_coverage.html) show the lines your tests missed as plain text. For the
-functions above:
+functions in the [branch coverage](#branch-coverage) example:
 
 ```r
 annotate_coverage(cov)
