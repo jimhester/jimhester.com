@@ -35,8 +35,9 @@ and it is mentioned in more than 25,000 `DESCRIPTION` files on GitHub.
 
 This is by far the largest release of covr since that first one. It closes 99
 issues with 112 pull requests, which change about 12,000 lines of R and C code
-and add 15,000 lines of tests. Much of this work went into making covr faster
-and into measuring new kinds of code, including Rust code and Shiny apps. See
+and add 15,000 lines of tests. This post covers the changes to how coverage
+is counted, how much faster covr is, and the new things it can do: branch
+coverage, Rust code, Shiny apps, better reports, and new tools for CI. See
 the [change log](https://covr.r-lib.org/news/index.html) for a full list of
 changes.
 
@@ -61,26 +62,18 @@ half_braces <- function(x) if (x > 0) { x / 2 } else { 0 }
 
 covr 3.6.5 gave the branches of `half_braces()` their own counters, but
 counted all of `half()` as one expression, so the `else` that never ran was
-reported as covered. covr 4.0.0 counts both the same way. The new behavior is
-more correct, and for most packages it makes only a small difference to the
-coverage. It also means you can write your code in whichever style you prefer
-without it changing the coverage covr reports.
+reported as covered. covr 4.0.0 counts both the same way, so you can write
+your code in whichever style you prefer without it changing your coverage.
+For most packages the difference is small.
 
-The other breaking changes are smaller. covr now requires R 4.1.0 or later.
-All of the outputs now calculate line coverage the same way; previously they
-could disagree slightly. S4 methods have more precise names, such as
-`show,MyClass-method`, so you may need to update your `function_exclusions`.
-
-[`codecov()`](https://covr.r-lib.org/reference/codecov.html) now signals an
-error when an upload fails, so your CI fails instead of silently passing. Rate
-limits and Codecov outages still only give a warning. Finally,
-[`to_cobertura()`](https://covr.r-lib.org/reference/covr-deprecated.html) and
-[`to_sonarqube()`](https://covr.r-lib.org/reference/covr-deprecated.html) are
-deprecated in favor of
-[`cobertura()`](https://covr.r-lib.org/reference/cobertura.html) and
-[`sonarqube()`](https://covr.r-lib.org/reference/sonarqube.html).
+There are a few smaller breaking changes, e.g. covr now requires R 4.1.0, and
+[`codecov()`](https://covr.r-lib.org/reference/codecov.html) now fails your CI
+when an upload fails; see the
+[change log](https://covr.r-lib.org/news/index.html) for the full list.
 
 ## Improved performance
+
+### Running your tests
 
 Previous versions of covr counted which expressions ran by adding calls to a
 small R function throughout your code, which kept the counts in an R
@@ -117,6 +110,8 @@ on Linux. The
 [scripts and full results](https://github.com/r-lib/covr/tree/blog-post-benchmarks/blog/performance)
 are in the covr repository.
 
+### Reports and other output
+
 We also spent time improving the functions you run after coverage is
 measured, in particular [`report()`](https://covr.r-lib.org/reference/report.html), which creates an HTML report of the
 coverage. Previous versions of `report()` built the table of each file
@@ -132,13 +127,16 @@ Other functions that summarize or export coverage are also faster. Across 23
 packages, the median speedup ranges from about 6 times for
 [`tally_coverage()`](https://covr.r-lib.org/reference/tally_coverage.html),
 [`percent_coverage()`](https://covr.r-lib.org/reference/percent_coverage.html)
-and `codecov()` to 16–20 times for `sonarqube()` and `cobertura()`, with
+and `codecov()` to 16–20 times for
+[`sonarqube()`](https://covr.r-lib.org/reference/sonarqube.html) and
+[`cobertura()`](https://covr.r-lib.org/reference/cobertura.html), with
 [`print()`](https://covr.r-lib.org/reference/print.coverage.html) in between
 at 9 times.
 
-Another major area of improvement is measuring the coverage of tests that
-start other R processes. covr has been able to measure the coverage of these
-processes for a long time, but it merged their coverage in memory, and slowly.
+### Tests that start other R processes
+
+covr has been able to measure the coverage of R processes started by your
+tests for a long time, but it merged their coverage in memory, and slowly.
 For packages whose tests start hundreds or thousands of R processes, such as
 [*languageserver*](https://github.com/REditorSupport/languageserver), this
 slowed things down considerably: its tests took 9 minutes without coverage,
