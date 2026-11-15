@@ -1,7 +1,7 @@
 ---
 title: covr v4.0.0
 date: '2026-11-14'
-slug: covr-4-0-0-release
+slug: covr-4-0-0
 tags: [package]
 subtitle: ''
 summary: 'covr 4.0.0 is faster, counts coverage more precisely, and adds branch coverage and the coverage of Rust code and Shiny apps.'
