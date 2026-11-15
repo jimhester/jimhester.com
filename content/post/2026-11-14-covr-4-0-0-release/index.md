@@ -6,7 +6,7 @@ tags: [package]
 subtitle: ''
 summary: 'covr 4.0.0 is faster, counts coverage more precisely, and adds branch coverage and the coverage of Rust code and Shiny apps.'
 image:
-  caption: 'The covr 4.0.0 report of the Rust code of b64, with the colorblind palette'
+  caption: 'The covr 4.0.0 report of the Rust code of b64, in dark mode with the colorblind palette'
   focal_point: Top
 projects: [covr]
 package_release: true
@@ -81,7 +81,7 @@ environment. covr 4.0.0 uses a counter written in C instead, which uses less
 memory and takes about 0.4 microseconds per counted expression, rather than
 1.3–1.4 microseconds.
 
-We also changed when covr adds these counters. It used to add them each time
+I also changed when covr adds these counters. It used to add them each time
 an R process loaded your package, and R then had to compile the modified
 functions again as they ran. covr 4.0.0 adds the counters and byte-compiles
 the package once, when [`package_coverage()`](https://covr.r-lib.org/reference/package_coverage.html) installs it, so each process that
@@ -112,7 +112,7 @@ are in the covr repository.
 
 ### Reports and other output
 
-We also spent time improving the functions you run after coverage is
+I also spent time improving the functions you run after coverage is
 measured, in particular [`report()`](https://covr.r-lib.org/reference/report.html), which creates an HTML report of the
 coverage. Previous versions of `report()` built the table of each file
 iteratively, by repeatedly calling into
@@ -143,7 +143,7 @@ slowed things down considerably: its tests took 9 minutes without coverage,
 but 80 minutes with covr 3.6.5, and covr then ran out of memory adding up the
 coverage of the 1,000 processes, needing more than 7 GB. With covr 4.0.0 the
 tests finish in about 13 minutes, and adding up their coverage takes a
-second and 144 MB. We have also made writing the coverage of these processes more
+second and 144 MB. I have also made writing the coverage of these processes more
 robust, so packages whose coverage used to fail, such as
 [*mlr3*](https://mlr3.mlr-org.com) and
 [*future*](https://future.futureverse.org), now work:
