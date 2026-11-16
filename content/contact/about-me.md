@@ -80,7 +80,7 @@ engineers and analysts create, deploy and troubleshoot data applications with
 agents, and continue to provide technical leadership for R at Netflix while
 expanding support for Python.
 
-In my free time, I love spending time with my family and my two daughters.
+In my free time, I love spending time with my family, especially my two daughters.
 
 You can follow my current work [on GitHub](https://github.com/jimhester) and
 [LinkedIn](https://www.linkedin.com/in/jim-hester/).
