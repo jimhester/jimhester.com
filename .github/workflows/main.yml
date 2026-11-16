@@ -38,8 +38,6 @@ jobs:
           R -e 'blogdown::install_hugo(version = "0.58.2", use_brew = FALSE)'
       - name: Build site
         run: |
-          # We need to update the timestamps so this is re-built
-          touch content/home/demo.Rmd
           R -e 'blogdown::build_site(TRUE)'
       - name: Install npm
         uses: actions/setup-node@v1
