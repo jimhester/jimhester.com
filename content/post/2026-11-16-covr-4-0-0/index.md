@@ -1,6 +1,6 @@
 ---
 title: covr v4.0.0
-date: '2026-11-14'
+date: '2026-11-16'
 slug: covr-4-0-0
 tags: [package]
 subtitle: ''
@@ -10,7 +10,6 @@ image:
   focal_point: Top
 projects: [covr]
 package_release: true
-draft: true
 ---
 
 I'm very excited to announce that [covr](https://covr.r-lib.org) 4.0.0 is now

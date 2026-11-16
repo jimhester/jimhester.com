@@ -1,0 +1,70 @@
+I'm very excited to announce that covr 4.0.0 is now on CRAN! covr tracks test coverage for R, C/C++/FORTRAN and **Rust** code in your R packages, R scripts and **Shiny Applications**.
+Since its initial release in 2015, covr has become the de facto test coverage package for the R community, now used in well over 2 thousand package on CRAN and over 25,000 packages with code on Github.
+Test coverage is used to track how much of your package's code is ran (or covered) when you run your tests. 
+This is one way to help guage the quality of a package, as packages with more thorough tests are less likely to have bugs due to code paths that aren't checked for correctness.
+While it is definitely true that packages with 100% coverage can still contain bugs, test coverage is a valuable tool when you are developing a package yourself or reviewing a package to see if you should depend on it.
+
+This release of covr is by far the larget set of changes we have had since the initial covr release in YMD. 
+We have over XXX distinct issues addressed with over XXX PRs changing XXX lines of code.
+We have also spent time greatly improving the speed of covr, as well as giving it new capabilities, including new support for R packages and a Shiny applications. For a full list of changes in this release, see the [change log](xxx).
+
+### Breaking changes
+
+Coverage is now counted more precisely, which may mean the coverage counts in your package may be slightly higher or lower than in the previous release. In particular, because of the way that R adds source references to expressions covr used to treat conditionals (if statements) differently if the children had braces vs if they did not. This can be illustrated by the following example code.
+
+(show half vs half_braces example)
+
+The new behavior is more correct, and for most packages should have a small change in amount of code covered. It also means you can use whatever style you prefer without consequences with how covr reports the coverage.
+
+Other minor breaking changes include covr requiring R >= 4.1.0, uninification in how we calculated line coverage for all the output types, S4 method names being more precise (you may need to update your function_exclusions appropirately) and `covdecov()` now signaling an error when the upload fails.
+
+### Improved performance
+
+Previous versions of covr tracked coverage by instrumenting your code with calls to a small R function that used an R environment to keep track of the counts. This function is now implemented in C with a set of parallel arrays, which uses less memory and processing time each time the function is called. In practice this lets us count in about 0.4 microseconds vs 1.3-1.4 microseconds with the previous technique.
+
+Additionally we modified how this instrumentation happens, it now happens once when your package is installed during a call to `package_coverage()` vs installing, then instrumenting. These along with some other minor improvments should make coverage take less time (sometimes considerably less) than previous versions. This plot shows a selection of packages whose tests took at least 30 seconds to run with the amount of time to run the tests without coverage (grey), with covr 3.6.5 (yellow) and 4.0.0 (blue). Packages that finished in less time in general were speed up less (XXX% for YYY pakckages)
+
+We also spent time to improve the performance of functions run after coverage was calculated. In particular the `report()` function which generated a HTML report of coverage was improved greatly. Previous versions of `report()` constructed the tables used in the report iteratively by repeatadly calling into htmltools. covr 4.0.0 instead creates the table directly into HTML, which is anywhere from 6-230x faster on measured packages. e.g. Luminense went from xxx to yyy and igraph went from xxx to yyy, and the amount of memory used went from xxx to yyy.
+
+Other functions, such as tally_coverage, print, percent_coverage and codecov were also improved, on average they should run around xxx faster.
+
+Another major area of performance improvements was coverage tracking for packages that spawn child R processes. Covr has been able to track coverage of these packages in the past, but merging the coverage of all the child processes was done in memory and slowly, for packages that use 100s or 1000s of child processes in their tests like languageserver this could slow down considerabley, going from running tests for 9 minutes without coverage to over 80 minutes and running out of memory on CI systems like github actions. In covr 4.0.0 the languageserver coverage tests finish in 12-13 minutes. We've also improved the robustness of writing coverage files from child processes and previous packages which used to fail during these tests (like mlr3 and future) now work.
+
+### Branch coverage
+
+One of the long standing open issues (originally opened in xxx) in covr was how to track and report on branch coverage. Branch coverage is tracking the coverage when you have a conditional branch (think the true and false cases in an if statement). covr 4.0.0 now supports tracking branch coverage by setting an experimental option(). 
+(talk through clamp() and half() example.
+The branch coverage can be viewed by using print(by="branch"), or in report() if the option is enabled.
+
+### Rust coverage
+
+Another new feature is coverage of Rust code in your R packages. Covr has long has support for C/C++ and FORTRAN code in your package, and in covr 4.0.0 we exapnd this support to Rust. It is designed to work sith the extender or savvy frameworks, or custom frameworks as well (is this true???). While the number of R package with Rust bindings is still relatively small, we expect this to continue to grow and hopefully this will make using Rust in your R packages more appealing in the future.
+
+### Shiny apps
+
+covr could technically be used to trck test coverage of Shiny applications, I had done a proof of concept for this as far back as XXX. However it was difficult to setup because in a shiny application your R code runs in a separate R process. Additionally many Shiny apps do not have an assosciated R package, so they did not fit cleanly into the existing APIs available in covr. covr 4.0.0 has direct support for using shinytest2 in R packages, so these packages can get test coverage by using package_coverage() directly. Additionally for shiny applications outside of an R package these is a new `shiny_app_coverage()` function which will run your shinytest2 tests and report the test coverage. (embed a small POC shiny app). See the vignetee for more details
+
+### Additional features
+
+We improved the behavior of `file_coverage()` and `test_coverage_active_file()` in devtools, to work better when developing C/C++ FORTRAN and Rust code. These functions now automaticlaly reload and recompile (through pkgload::load_all()) the corresponding code, so you can have a very tight deveolpment cycle and use the same process for writing compiled code as you do for R code.
+Another long standing open issue, functions embedded within lists and other objects like (ggproto) can be enabled by setting (Config/covr/full_traversal). 
+
+### Improved Reports
+
+Apart from the improved speed mentiond in the performance section (reports is now XXX faster) it now has no external dependencies, we removed the DT, jQUery and Boostrap depedencies. It also automatically shows least coverage files first, has sticky tabs and a new dark mode.
+For users who would like the report to show colors other than the red and green defaults (like those who are red/green colorblind) there are new options to set the colors explirictly, and a colorblind friendly palette (`options(xxx=colorbind_friendly`)
+We also made it possible to embed the report in any HTML output (like quarto, r markdown or shiny) application using htmlwidgets, so you can embed things like this example report in your web content. (show live report exhibiting all these features, ideally showing rust or a shiny app)
+
+### CI and pull requests
+
+covr is most commonly included in CI pipelines, and we have made some improvements specifically for that use case. There is a new `badge()` funciton to generate the coverage badge, so you can include a badge in your readme without relying on an external service like codecov or coveralls. Additionaly we've updated the `codecov()` function to use their newer upload API and improved `coveralls()` CI detection so it now works natively on Github Actions.
+`lcov()` outputs coverage to the popular [lcov](xxx) coverage formap, and `covreage_to_markdown()` can be used to create a markdown table of your coverage results.
+Designed for local or agentic use, `annotate_covreage()` and print(missing=TRUE) both output your coverage results as text, and `c()` can now be used to merge different coverage runs together without any additoinal code.
+
+### Thanks
+
+The first commit of covr was on Dec 19th, 2014, when my oldest daughter was only 4 months old. She is now almost 12 and a half and it is amazing to look at how she has grown and how the community and use of covr has grown in the nearly 12 months since those first commits. Thank you for beign a part of the R community and for your interest in my package, I hope this release will make it an even stronger choice for your package development.
+
+I'd also like to thank all of the people who opened issues or contributed code that was closed in this release. (use_tidy_thanks())
+
+For the first time i'm going to be doing R package, testing or peformance consulting starting in 2027. If you have projects you think I would be a good fit for i'd love to hear about them, please write to me at james.f.hester@gmail.com.
