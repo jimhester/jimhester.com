@@ -9,7 +9,7 @@ active: true # Activate this widget? true/false
 weight:  50  # Order that this section will appear.
 
 title: ""
-subtitle: "Open source activity at RStudio, 2016–2020"
+subtitle: "Open source activity at RStudio, 2016–2021"
 
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -27,7 +27,8 @@ ul.nav > li {
 </style>
 
 <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#year-2020">2020</a></li>
+  <li class="active"><a data-toggle="tab" href="#year-2021">2021</a></li>
+  <li><a data-toggle="tab" href="#year-2020">2020</a></li>
   <li><a data-toggle="tab" href="#year-2019">2019</a></li>
   <li><a data-toggle="tab" href="#year-2018">2018</a></li>
   <li><a data-toggle="tab" href="#year-2017">2017</a></li>
@@ -35,28 +36,33 @@ ul.nav > li {
 </ul>
 
 <div class="tab-content">
-  <div id="year-2020" class="tab-pane fade active show">
-```{r 2020, echo = FALSE, cache = TRUE, warning = FALSE}
+  <div id="year-2021" class="tab-pane fade active show">
+```{r 2021, echo = FALSE, warning = FALSE}
+calendar_plot(data = calendar_data(from = "2021-01-01"))
+```
+  </div>
+  <div id="year-2020" class="tab-pane fade">
+```{r 2020, echo = FALSE, warning = FALSE}
 calendar_plot(data = calendar_data(from = "2020-01-01"))
 ```
   </div>
   <div id="year-2019" class="tab-pane fade">
-```{r 2019, echo = FALSE, cache = TRUE, warning = FALSE}
+```{r 2019, echo = FALSE, warning = FALSE}
 calendar_plot(data = calendar_data(from = "2019-01-01"))
 ```
   </div>
   <div id="year-2018" class="tab-pane fade">
-```{r 2018, echo = FALSE, cache = TRUE, warning = FALSE}
+```{r 2018, echo = FALSE, warning = FALSE}
 calendar_plot(data = calendar_data(from = "2018-01-01"))
 ```
   </div>
   <div id="year-2017" class="tab-pane fade">
-```{r 2017, echo = FALSE, cache = TRUE, warning = FALSE}
+```{r 2017, echo = FALSE, warning = FALSE}
 calendar_plot(data = calendar_data(from = "2017-01-01"))
 ```
   </div>
   <div id="year-2016" class="tab-pane fade">
-```{r 2016, echo = FALSE, cache = TRUE, warning = FALSE}
+```{r 2016, echo = FALSE, warning = FALSE}
 calendar_plot(data = calendar_data(from = "2016-01-01"))
 ```
   </div>

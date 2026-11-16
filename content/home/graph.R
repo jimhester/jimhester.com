@@ -1,29 +1,46 @@
 library(tidyverse)
-library(rvest)
 library(lubridate)
-library(crandb)
 library(ggthemes)
 library(ggiraph)
 
-github_data <- function(from = NULL, user = "jimhester") {
-  if (is.null(from)) {
-    url <- str_glue("https://github.com/users/{user}/contributions")
-  } else {
-    url <- str_glue("https://github.com/users/{user}/contributions?from={from}")
-  }
+# GitHub contributions and CRAN releases are snapshotted to CSV so rendering
+# needs no network access. The graph covers 2016-2021, my time at RStudio;
+# rerun `update_activity_data()` to refresh the snapshots.
+activity_years <- 2016:2021
+github_csv <- here::here("R/activity/github-contributions.csv")
+cran_csv <- here::here("R/activity/cran-releases.csv")
 
-  html <- xml2::read_html(url)
-
-  calendar <- html_node(html, ".js-calendar-graph-svg")
-  calendar_days <- html_nodes(calendar, "rect")
-  gh_data <- tibble(
-    date = as.Date(xml_attr(calendar_days, "data-date")),
-    count = xml_attr(calendar_days, "data-count"),
-    type = "github",
-    tip = str_glue("{count} contributions"),
-    link = str_glue("https://github.com/{user}?from={date}&to={date}&tab=overview")
+fetch_github_contributions <- function(year, user = "jimhester") {
+  query <- "
+    query($user: String!, $from: DateTime!, $to: DateTime!) {
+      user(login: $user) {
+        contributionsCollection(from: $from, to: $to) {
+          contributionCalendar {
+            weeks { contributionDays { date contributionCount } }
+          }
+        }
+      }
+    }"
+  res <- gh::gh_gql(query, variables = list(
+    user = user,
+    from = str_glue("{year}-01-01T00:00:00Z"),
+    to = str_glue("{year}-12-31T23:59:59Z")
+  ))
+  weeks <- res$data$user$contributionsCollection$contributionCalendar$weeks
+  days <- flatten(map(weeks, "contributionDays"))
+  tibble(
+    date = as.Date(map_chr(days, "date")),
+    count = map_int(days, "contributionCount")
   )
-  gh_data
+}
+
+github_data <- function(user = "jimhester") {
+  read_csv(github_csv, col_types = "Di") %>%
+    mutate(
+      type = "github",
+      tip = str_glue("{count} contributions"),
+      link = str_glue("https://github.com/{user}?from={date}&to={date}&tab=overview")
+    )
 }
 
 post_data <- function() {
@@ -63,19 +80,10 @@ talk_data <- function() {
     select(-is_workshop)
 }
 
-get_pkgs <- function(emails) {
-  emails <- glue::glue_collapse(glue::double_quote(emails), ",")
-  url <- str_glue("http://crandb.r-pkg.org/-/maintainer?keys=[{emails}]")
+fetch_cran_releases <- function(pkgs) {
+  out <- map(set_names(pkgs), ~ crandb::package(.x, "all"))
 
-  res <- jsonlite::read_json(url)
-
-  map_chr(res, 2L)
-}
-
-get_releases <- function(data) {
-  out <- map(set_names(data), ~ crandb::package(.x, "all"))
-
-  map_dfr(out, ~ list(version = names(.x$timeline), date = readr::parse_datetime(map_chr(.x$timeline, function(y) y %||% NA_character_))), .id = "package")
+  map_dfr(out, ~ list(version = names(.x$timeline), date = as.Date(readr::parse_datetime(map_chr(.x$timeline, function(y) y %||% NA_character_)))), .id = "package")
 }
 
 jim_pkgs <- 
@@ -95,7 +103,6 @@ jim_pkgs <-
     "brio",
     "cpp11",
     "decor",
-    "devtools",
     "memoise",
     "mockery",
     "odbc",
@@ -109,27 +116,30 @@ jim_pkgs <-
     "xml2"
   )
 
-pkg_data <- function(emails = c("james.f.hester@gmail.com", "jim.hester@rstudio.com", "james.hester@rstudio.com")) {
-  get_releases(jim_pkgs) %>%
+pkg_data <- function() {
+  read_csv(cran_csv, col_types = "ccD") %>%
     mutate(
       type = "pkg",
       link = str_glue("https://CRAN.R-project.org/package={package}"),
-      tip = str_glue("{package}: {version}"),
-      date = as.Date(date)
+      tip = str_glue("{package}: {version}")
     )
 }
 
+update_activity_data <- function() {
+  github <- map_dfr(activity_years, fetch_github_contributions)
+  write_csv(github, github_csv)
 
-calendar_data <- function(from = NULL, to = from + years(1), github_user = "jimhester", email = c("james.f.hester@gmail.com", "jim.hester@rstudio.com", "james.hester@rstudio.com")) {
-  github_data <- github_data(from, github_user)
-  if (is.null(from)) {
-    from <- today() - years(1)
-  } else {
-    from <- lubridate::as_date(from)
-  }
+  cran <- fetch_cran_releases(jim_pkgs) %>%
+    filter(year(date) %in% activity_years) %>%
+    arrange(date, package)
+  write_csv(cran, cran_csv)
+}
 
-  to <- lubridate::as_date(to)
+calendar_data <- function(from, to = from + years(1) - days(1)) {
+  from <- as_date(from)
+  to <- as_date(to)
 
+  github_data <- github_data()
 
   all_data <- bind_rows(
     select(filter(github_data, count > 0), date, type, tip, link, count),
@@ -172,8 +182,8 @@ calendar_plot <- function(data = calendar_data()) {
   rebase <- ggthemes:::solarized_rebase()
 
   p <- ggplot() +
-    geom_tile(data = filter(p_data, is.na(type)), width = 6, height = .8, aes(x, y, fill = type), key_glyph = draw_key_point) +
-    geom_tile_interactive(data = filter(p_data, !is.na(type)), width = 6, height = .8, aes(x, y, fill = type, alpha = log(as.numeric(count)), tooltip = tip, onclick = on_click, data_id = data_id), key_glyph = draw_key_point) +
+    geom_tile(data = filter(p_data, is.na(type)), width = 6, height = .8, aes(x, y, fill = type), key_glyph = draw_key_point, show.legend = TRUE) +
+    geom_tile_interactive(data = filter(p_data, !is.na(type)), width = 6, height = .8, aes(x, y, fill = type, alpha = log(as.numeric(count)), tooltip = tip, onclick = on_click, data_id = data_id), show.legend = FALSE) +
     scale_fill_manual(
       values = c("github" = my_pal[[1]], "video" = my_pal[[2]], "post" = my_pal[[3]], "talk" = my_pal[[4]], workshop = my_pal[[5]], pkg = my_pal[[6]]),
       breaks = c("github", "video", "post", "talk", "workshop", "pkg"),
@@ -193,16 +203,24 @@ calendar_plot <- function(data = calendar_data()) {
       alpha = "none",
       fill = guide_legend(
         title = NULL,
-        override.aes = list(shape = 'square filled', size = 3),
-        keywidth = 3,
-        label.theme = element_text(family = "Lato", size = 7),
+        override.aes = list(shape = 'square filled', size = 3, stroke = 0.5),
+        theme = theme(
+          legend.key.width = unit(3, "lines"),
+          legend.text = element_text(family = "Lato", size = 7, colour = "black")
+        ),
         label.position = "bottom",
         nrow = 1
       )
       ) +
     labs(x = NULL, y = NULL)
 
-  x <- girafe(code = print(p), width_svg = 6, height_svg = 2)
+  # Register Lato for text metrics, but drop the font files ggiraph would
+  # bundle: the site theme already loads Lato from Google Fonts.
+  gdtools::register_gfont("Lato")
+  fonts <- gdtools::font_set(sans = "Lato")
+  fonts$dependencies <- list()
+
+  x <- girafe(code = print(p), width_svg = 6, height_svg = 2, font_set = fonts)
 
   tooltip_css <- "background: #002b36; opacity: 1; color: #839496; border-radius: 5px; 
   padding: 5px; box-shadow: 3px 3px 5px 0px #888888;
